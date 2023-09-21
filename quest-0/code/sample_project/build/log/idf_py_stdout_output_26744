@@ -1,0 +1,165 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 20 2023 21:52:18[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a364h ( 41828) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a38c vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001c4ec vaddr=40080000 size=03b2ch ( 15148) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16238h ( 90680) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=00036260 vaddr=40083b2c size=084b8h ( 33976) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (186) boot: Disabling RNG early entropy source...[0m
+[0;32mI (198) cpu_start: Multicore app[0m
+[0;32mI (198) cpu_start: Pro cpu up.[0m
+[0;32mI (198) cpu_start: Starting app cpu, entry point is 0x400810e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) cpu_start: Application information:[0m
+[0;32mI (221) cpu_start: Project name:     main[0m
+[0;32mI (226) cpu_start: App version:      cf42c42-dirty[0m
+[0;32mI (231) cpu_start: Compile time:     Sep 21 2023 13:05:20[0m
+[0;32mI (237) cpu_start: ELF file SHA256:  bb46ed4624c38bde...[0m
+[0;32mI (243) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (248) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (253) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (258) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (263) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (270) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFB29D8 len 0002D628 (181 KiB): DRAM[0m
+[0;32mI (282) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (295) heap_init: At 4008BFE4 len 0001401C (80 KiB): IRAM[0m
+[0;32mI (302) spi_flash: detected chip: gd[0m
+[0;32mI (305) spi_flash: flash io: dio[0m
+[0;33mW (309) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (322) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (331) app_start: Starting scheduler on CPU0[0m
+[0;32mI (336) app_start: Starting scheduler on CPU1[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (346) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+[0;32mI (346) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+Characterized using eFuse Vref
+Raw: 2156	Voltage: 1846mV
+Raw: 1796	Temp: 27.870920 C
+[0;32mI (366) main_task: Returned from app_main()[0m
+Raw: 2100	Voltage: 1802mV
+Raw: 1801	Temp: 27.742765 C
+Raw: 2101	Voltage: 1802mV
+Raw: 1806	Temp: 27.614740 C
+Raw: 2110	Voltage: 1809mV
+Raw: 1806	Temp: 27.614740 C
+Raw: 2160	Voltage: 1849mV
+Raw: 1808	Temp: 27.550789 C
+Raw: 2156	Voltage: 1846mV
+Raw: 1812	Temp: 27.454914 C
+Raw: 2155	Voltage: 1845mV
+Raw: 1808	Temp: 27.550789 C
+Raw: 2150	Voltage: 1841mV
+Raw: 1786	Temp: 28.127665 C
+Raw: 2160	Voltage: 1849mV
+Raw: 1748	Temp: 29.095808 C
+Raw: 2135	Voltage: 1829mV
+Raw: 1715	Temp: 29.942129 C
+Raw: 2131	Voltage: 1826mV
+Raw: 1689	Temp: 30.598066 C
+Raw: 2116	Voltage: 1814mV
+Raw: 1669	Temp: 31.126076 C
+Raw: 2096	Voltage: 1798mV
+Raw: 1652	Temp: 31.590569 C
+Raw: 2124	Voltage: 1820mV
+Raw: 1643	Temp: 31.823713 C
+Raw: 2107	Voltage: 1807mV
+Raw: 1631	Temp: 32.124359 C
+Raw: 2131	Voltage: 1826mV
+Raw: 1622	Temp: 32.358929 C
+Raw: 2130	Voltage: 1825mV
+Raw: 1613	Temp: 32.594124 C
+Raw: 2133	Voltage: 1828mV
+Raw: 1610	Temp: 32.695137 C
+Raw: 2132	Voltage: 1827mV
+Raw: 1602	Temp: 32.897488 C
+Raw: 2149	Voltage: 1840mV
+Raw: 1600	Temp: 32.965042 C
+Raw: 2135	Voltage: 1829mV
+Raw: 1593	Temp: 33.134190 C
+Raw: 2145	Voltage: 1837mV
+Raw: 1590	Temp: 33.201958 C
+Raw: 2144	Voltage: 1836mV
+Raw: 1585	Temp: 33.337627 C
+Raw: 2137	Voltage: 1831mV
+Raw: 1583	Temp: 33.405552 C
+Raw: 2130	Voltage: 1825mV
+Raw: 1579	Temp: 33.507538 C
+Raw: 2120	Voltage: 1817mV
+Raw: 1579	Temp: 33.507538 C
+Raw: 2115	Voltage: 1813mV
+Raw: 1575	Temp: 33.609657 C
+Raw: 2111	Voltage: 1810mV
+Raw: 1578	Temp: 33.541557 C
+Raw: 2112	Voltage: 1811mV
+Raw: 1584	Temp: 33.371586 C
+Raw: 2110	Voltage: 1809mV
+Raw: 1592	Temp: 33.168060 C
+Raw: 2096	Voltage: 1798mV
+Raw: 1599	Temp: 32.965042 C
+Raw: 2087	Voltage: 1791mV
+Raw: 1605	Temp: 32.829987 C
+Raw: 2109	Voltage: 1809mV
+Raw: 1611	Temp: 32.661457 C
+Raw: 2104	Voltage: 1805mV
+Raw: 1620	Temp: 32.426071 C
+Raw: 2101	Voltage: 1802mV
+Raw: 1624	Temp: 32.325371 C
+Raw: 2068	Voltage: 1776mV
+Raw: 1633	Temp: 32.090916 C
+Raw: 2075	Voltage: 1782mV
+Raw: 1641	Temp: 31.857056 C
+Raw: 2095	Voltage: 1798mV
+Raw: 1644	Temp: 31.790358 C
+Raw: 2080	Voltage: 1786mV
+Raw: 1650	Temp: 31.623837 C
+Raw: 2094	Voltage: 1797mV
+Raw: 1656	Temp: 31.457605 C
+Raw: 2095	Voltage: 1798mV
+Raw: 1661	Temp: 31.324846 C
+Raw: 2097	Voltage: 1799mV
+Raw: 1666	Temp: 31.192289 C
+Raw: 2106	Voltage: 1806mV
+Raw: 1670	Temp: 31.092979 C
+Raw: 2095	Voltage: 1798mV
+Raw: 1673	Temp: 31.026831 C
+Raw: 2093	Voltage: 1796mV
+Raw: 1680	Temp: 30.828707 C
+Raw: 2077	Voltage: 1783mV
+Raw: 1684	Temp: 30.729784 C
+Raw: 2082	Voltage: 1787mV
+Raw: 1688	Temp: 30.630968 C
+Raw: 2104	Voltage: 1805mV
+Raw: 1694	Temp: 30.466528 C
+Raw: 2128	Voltage: 1824mV
+Raw: 1698	Temp: 30.367990 C

@@ -1,111 +1,63 @@
-PU1[ets Jun  8 2016 00:22:57
+[1/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\benja\Code\School\EC444\Team2-Gilbert-Robitshek\quest-0\code\sample_project\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/main/main.c:7:
+C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/main/main.c:8:
+C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+[3/8] Linking C static library esp-idf\main\libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable main.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/main.bin
+[7/8] cmd.exe /C "cd /D C:\Users\benja\Code\School\EC444\Team2-Gilbert-Robitshek\quest-0\code\sample_project\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/partition_table/partition-table.bin C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/main.bin"
+main.bin binary size 0x2e790 bytes. Smallest app partition is 0x100000 bytes. 0xd1870 bytes (82%) free.
+[7/8] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.1.1-2\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.1.1-2 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build -P C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM7 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev1
+Serial port COM7
+Connecting......
+Chip is ESP32-D0WDQ6 (revision v1.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 80:7d:3a:80:8e:34
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x0003efff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16684...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007690... (100 %)
+Wrote 26640 bytes (16684 compressed) at 0x00001000 in 0.9 seconds (effective 226.2 kbit/s)...
+Hash of data verified.
+Compressed 190352 bytes to 105146...
+Writing at 0x00010000... (14 %)
+Writing at 0x0001ca5f... (28 %)
+Writing at 0x00022405... (42 %)
+Writing at 0x000282ae... (57 %)
+Writing at 0x0002e730... (71 %)
+Writing at 0x0003631a... (85 %)
+Writing at 0x0003c0a6... (100 %)
+Wrote 190352 bytes (105146 compressed) at 0x00010000 in 3.1 seconds (effective 495.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 334.2 kbit/s)...
+Hash of data verified.
 
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:7080
-load:0x40078000,len:15584
-load:0x40080400,len:4
-ho 8 tail 4 room 4
-load:0x40080404,len:3876
-entry 0x4008064c
-[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
-[0;32mI (31) boot: compile time Sep 20 2023 21:52:18[0m
-[0;32mI (31) boot: Multicore bootloader[0m
-[0;32mI (35) boot: chip revision: v1.0[0m
-[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
-[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
-[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
-[0;32mI (52) boot: Enabling RNG early entropy source...[0m
-[0;32mI (58) boot: Partition Table:[0m
-[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
-[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
-[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
-[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
-[0;32mI (91) boot: End of partition table[0m
-[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a33ch ( 41788) map[0m
-[0;32mI (119) esp_image: segment 1: paddr=0001a364 vaddr=3ffb0000 size=02158h (  8536) load[0m
-[0;32mI (122) esp_image: segment 2: paddr=0001c4c4 vaddr=40080000 size=03b54h ( 15188) load[0m
-[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15c54h ( 89172) map[0m
-[0;32mI (165) esp_image: segment 4: paddr=00035c7c vaddr=40083b54 size=08490h ( 33936) load[0m
-[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
-[0;32mI (186) boot: Disabling RNG early entropy source...[0m
-[0;32mI (197) cpu_start: Multicore app[0m
-[0;32mI (198) cpu_start: Pro cpu up.[0m
-[0;32mI (198) cpu_start: Starting app cpu, entry point is 0x400810e8[0m
-[0;32mI (0) cpu_start: App cpu up.[0m
-[0;32mI (216) cpu_start: Pro cpu start user code[0m
-[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
-[0;32mI (216) cpu_start: Application information:[0m
-[0;32mI (220) cpu_start: Project name:     main[0m
-[0;32mI (225) cpu_start: App version:      1d31fe6[0m
-[0;32mI (230) cpu_start: Compile time:     Sep 20 2023 21:53:01[0m
-[0;32mI (236) cpu_start: ELF file SHA256:  cc68492512ac8ab1...[0m
-[0;32mI (242) cpu_start: ESP-IDF:          v5.1.1[0m
-[0;32mI (247) cpu_start: Min chip rev:     v0.0[0m
-[0;32mI (252) cpu_start: Max chip rev:     v3.99 [0m
-[0;32mI (256) cpu_start: Chip rev:         v1.0[0m
-[0;32mI (261) heap_init: Initializing. RAM available for dynamic allocation:[0m
-[0;32mI (269) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (274) heap_init: At 3FFB29D8 len 0002D628 (181 KiB): DRAM[0m
-[0;32mI (281) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
-[0;32mI (287) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
-[0;32mI (294) heap_init: At 4008BFE4 len 0001401C (80 KiB): IRAM[0m
-[0;32mI (301) spi_flash: detected chip: gd[0m
-[0;32mI (304) spi_flash: flash io: dio[0m
-[0;33mW (308) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
-[0;33mW (321) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
-[0;32mI (330) app_start: Starting scheduler on CPU0[0m
-[0;32mI (334) app_start: Starting scheduler on CPU1[0m
-[0;32mI (334) main_task: Started on CPU0[0m
-[0;32mI (344) main_task: Calling app_main()[0m
-eFuse Two Point: NOT supported
-eFuse Vref: Supported
-[0;32mI (344) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
-Characterized using eFuse Vref
-Raw: 871	Voltage: 830mV
-[0;32mI (364) main_task: Returned from app_main()[0m
-Raw: 930	Voltage: 877mV
-Raw: 993	Voltage: 927mV
-Raw: 831	Voltage: 799mV
-Raw: 810	Voltage: 782mV
-Raw: 860	Voltage: 822mV
-Raw: 834	Voltage: 801mV
-Raw: 832	Voltage: 799mV
-Raw: 861	Voltage: 822mV
-Raw: 874	Voltage: 833mV
-Raw: 959	Voltage: 900mV
-Raw: 924	Voltage: 872mV
-Raw: 993	Voltage: 927mV
-Raw: 986	Voltage: 921mV
-Raw: 900	Voltage: 853mV
-Raw: 855	Voltage: 818mV
-Raw: 805	Voltage: 778mV
-Raw: 824	Voltage: 793mV
-Raw: 816	Voltage: 787mV
-Raw: 849	Voltage: 813mV
-Raw: 845	Voltage: 810mV
-Raw: 830	Voltage: 798mV
-Raw: 829	Voltage: 797mV
-Raw: 841	Voltage: 807mV
-Raw: 847	Voltage: 811mV
-Raw: 1058	Voltage: 978mV
-Raw: 855	Voltage: 818mV
-Raw: 1035	Voltage: 960mV
-Raw: 1216	Voltage: 1103mV
-Raw: 81	Voltage: 206mV
-Raw: 77	Voltage: 203mV
-Raw: 1207	Voltage: 1096mV
-Raw: 154	Voltage: 264mV
-Raw: 1183	Voltage: 1077mV
-Raw: 43	Voltage: 176mV
-Raw: 1143	Voltage: 1045mV
-Raw: 61	Voltage: 190mV
-Raw: 50	Voltage: 182mV
-Raw: 51	Voltage: 182mV
-Raw: 973	Voltage: 911mV
-Raw: 1177	Voltage: 1072mV
-Raw: 102	Voltage: 223mV
-Raw: 1171	Voltage: 1067mV
-Raw: 1046	Voltage: 969mV
+Leaving...
+Hard resetting via RTS pin...

@@ -26,6 +26,8 @@ void init()
 {
     gpio_reset_pin(ALARM_PIN);
     gpio_set_direction(ALARM_PIN, GPIO_MODE_OUTPUT);
+    gpio_reset_pin(THERMO_ALARM_PIN);
+    gpio_set_direction(THERMO_ALARM_PIN, GPIO_MODE_OUTPUT);
 }
 
 static void check_efuse(void)
@@ -90,10 +92,10 @@ void photoresistor_task()
         adc_reading_photo /= NO_OF_SAMPLES;
         // Convert adc_reading to voltage in mV
         uint32_t voltage = esp_adc_cal_raw_to_voltage(adc_reading_photo, adc_chars);
-        printf("Raw: %ld\tVoltage: %ldmV\n", adc_reading_photo, voltage);
+        printf("Photoresistor Voltage: %ldmV\n", voltage);
         if (voltage >= 500)
         {
-
+            printf("LIGHT DETECTED\n");
             light_alarm_state = 1;
         }
         else
@@ -126,13 +128,18 @@ void thermistor_task()
         }
         adc_reading_thermo /= NO_OF_SAMPLES;
         // Convert adc_reading to voltage in mV
-        float voltage = esp_adc_cal_raw_to_voltage(adc_reading_thermo, adc_chars);
-        float resistance = 10000 * voltage / (3300 - voltage);
-        float temperature = (1 / ((1 / 298.15) + (1 / 3435) * log(resistance / 10000))) - 273.1;
-        printf("Thermo Raw: %ld\tTemperature: %f C\n", adc_reading_thermo, temperature);
+        // float voltage = esp_adc_cal_raw_to_voltage(adc_reading_thermo, adc_chars);
+        // float resistance = 10000.0 * voltage / (3300.0 - voltage);
+        float voltage = (adc_reading_thermo / 4095.0) * 3.3;
+        float resistance = 10000.0 * voltage / (3.0 - voltage);
+        // float resistance = 33000.0 / (voltage / 1000.0) - 10000.0;
+        float temperature = (1.0 / 298.15) + ((1.0 / 3435.0) * (log(resistance / 10000.0)));
+        temperature = (1.0 / temperature) - 273.1;
+        printf("Temperature: %f oC\n", temperature);
+
         if (temperature > 27)
         {
-
+            printf("BODY HEAT DETECTED\n");
             thermo_alarm_state = 1;
         }
         else

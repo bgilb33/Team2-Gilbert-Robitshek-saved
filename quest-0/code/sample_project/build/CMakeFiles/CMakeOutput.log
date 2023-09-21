@@ -424,3 +424,12 @@ Run Build Command(s):C:/Espressif/tools/ninja/1.10.2/ninja.exe cmTC_61a5b && [1/
 
 
 
+Performing C SOURCE FILE Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS succeeded with the following output:
+Change Dir: C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Espressif/tools/ninja/1.10.2/ninja.exe cmTC_d4fe0 && [1/2] Building C object CMakeFiles/cmTC_d4fe0.dir/src.c.obj
+[2/2] Linking C executable cmTC_d4fe0
+
+
+Source file was:
+int main(void) { return 0; }
