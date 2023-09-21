@@ -1,0 +1,17 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink/build/bootloader/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.9_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink/build/bootloader/bootloader.bin
+Bootloader binary size 0x6910 bytes. 0x6f0 bytes (6%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ButtonBlink.c.obj
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable ButtonBlink.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.7.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink/build/ButtonBlink.bin
+[9/9] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink/build/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.9_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink/build/partition_table/partition-table.bin /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink/build/ButtonBlink.bin
+ButtonBlink.bin binary size 0x2d850 bytes. Smallest app partition is 0x100000 bytes. 0xd27b0 bytes (82%) free.
