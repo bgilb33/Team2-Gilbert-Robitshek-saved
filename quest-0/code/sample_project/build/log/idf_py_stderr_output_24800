@@ -6,4 +6,40 @@
 [0m
 [0;33m0x400810e8: call_start_cpu1 at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esp_system/port/cpu_start.c:154
 [0m
+[0;33m0x400d8c2b: task_wdt_timeout_handling at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esp_system/task_wdt/task_wdt.c:461 (discriminator 3)
+[0m
+[0;33m0x400d8db2: task_wdt_isr at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esp_system/task_wdt/task_wdt.c:585
+[0m
+[0;33m0x40082981: _xt_lowint1 at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x400d4ee7: uart_ll_get_txfifo_len at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/hal/esp32/include/hal/uart_ll.h:313 (discriminator 1)
+ (inlined by) uart_tx_char at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/vfs/vfs_uart.c:164 (discriminator 1)
+[0m
+[0;33m0x400d56ab: uart_write at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/vfs/vfs_uart.c:217
+[0m
+[0;33m0x400d457b: console_write at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/vfs/vfs_console.c:73
+[0m
+[0;33m0x400d4142: esp_vfs_write at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/vfs/vfs.c:445 (discriminator 4)
+[0m
+[0;33m0x4000bd83: _write_r in ROM
+[0m
+[0;33m0x4000117d: __swrite in ROM
+[0m
+[0;33m0x400592fe: __sflush_r in ROM
+[0m
+[0;33m0x4005937a: _fflush_r in ROM
+[0m
+[0;33m0x400db1f3: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+[0m
+[0;33m0x400e307b: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+[0m
+[0;33m0x400dec76: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1777 (discriminator 1)
+[0m
+[0;33m0x400db3a1: printf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/printf.c:56 (discriminator 5)
+[0m
+[0;33m0x400d5890: print_reading_task at C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/main/main.c:164
+[0m
+[0;33m0x40087c15: vPortTaskWrapper at C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
 [0m

@@ -12,6 +12,15 @@
 #define NO_OF_SAMPLES 64  // Multisampling
 #define ALARM_PIN 13
 #define THERMO_ALARM_PIN 12
+#define BUTTON_ALARM_PIN 15
+#define RESET_BUTTON 39
+
+// Button Code
+#define GPIO_INPUT_IO_1 4
+#define ESP_INTR_FLAG_DEFAULT 0
+#define GPIO_INPUT_PIN_SEL 1ULL << GPIO_INPUT_IO_1
+int button_alarm = 0;
+int flag = 0; // Flag for signaling from ISR
 
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc1_channel_t thermistor_channel = ADC_CHANNEL_5;
@@ -21,6 +30,14 @@ static const adc_unit_t unit = ADC_UNIT_1;
 
 int light_alarm_state = 0;
 int thermo_alarm_state = 0;
+float temperature = 0;
+uint32_t photo_voltage = 0;
+
+static void IRAM_ATTR gpio_isr_handler(void *arg)
+{
+    button_alarm = 1;
+    gpio_set_level(GPIO_INPUT_IO_1, 1);
+}
 
 void init()
 {
@@ -28,6 +45,26 @@ void init()
     gpio_set_direction(ALARM_PIN, GPIO_MODE_OUTPUT);
     gpio_reset_pin(THERMO_ALARM_PIN);
     gpio_set_direction(THERMO_ALARM_PIN, GPIO_MODE_OUTPUT);
+    gpio_reset_pin(BUTTON_ALARM_PIN);
+    gpio_set_direction(BUTTON_ALARM_PIN, GPIO_MODE_OUTPUT);
+    gpio_reset_pin(RESET_BUTTON);
+    gpio_set_direction(RESET_BUTTON, GPIO_MODE_INPUT);
+
+    gpio_config_t io_conf;
+    // interrupt of rising edge
+    io_conf.intr_type = GPIO_INTR_POSEDGE;
+    // bit mask of the pins, use GPIO4 here
+    io_conf.pin_bit_mask = GPIO_INPUT_PIN_SEL;
+    // set as input mode
+    io_conf.mode = GPIO_MODE_INPUT;
+    // enable pull-up mode
+    io_conf.pull_up_en = 1;
+    gpio_config(&io_conf);
+    gpio_intr_enable(GPIO_INPUT_IO_1);
+    // install gpio isr service
+    gpio_install_isr_service(ESP_INTR_FLAG_LEVEL3);
+    // hook isr handler for specific gpio pin
+    gpio_isr_handler_add(GPIO_INPUT_IO_1, gpio_isr_handler, (void *)GPIO_INPUT_IO_1);
 }
 
 static void check_efuse(void)
@@ -91,18 +128,16 @@ void photoresistor_task()
         }
         adc_reading_photo /= NO_OF_SAMPLES;
         // Convert adc_reading to voltage in mV
-        uint32_t voltage = esp_adc_cal_raw_to_voltage(adc_reading_photo, adc_chars);
-        printf("Photoresistor Voltage: %ldmV\n", voltage);
-        if (voltage >= 500)
+        photo_voltage = esp_adc_cal_raw_to_voltage(adc_reading_photo, adc_chars);
+        if (photo_voltage >= 500)
         {
-            printf("LIGHT DETECTED\n");
             light_alarm_state = 1;
         }
         else
         {
             light_alarm_state = 0;
         }
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
@@ -128,25 +163,20 @@ void thermistor_task()
         }
         adc_reading_thermo /= NO_OF_SAMPLES;
         // Convert adc_reading to voltage in mV
-        // float voltage = esp_adc_cal_raw_to_voltage(adc_reading_thermo, adc_chars);
-        // float resistance = 10000.0 * voltage / (3300.0 - voltage);
         float voltage = (adc_reading_thermo / 4095.0) * 3.3;
         float resistance = 10000.0 * voltage / (3.0 - voltage);
-        // float resistance = 33000.0 / (voltage / 1000.0) - 10000.0;
-        float temperature = (1.0 / 298.15) + ((1.0 / 3435.0) * (log(resistance / 10000.0)));
+        temperature = (1.0 / 298.15) + ((1.0 / 3435.0) * (log(resistance / 10000.0)));
         temperature = (1.0 / temperature) - 273.1;
-        printf("Temperature: %f oC\n", temperature);
 
         if (temperature > 27)
         {
-            printf("BODY HEAT DETECTED\n");
             thermo_alarm_state = 1;
         }
         else
         {
             thermo_alarm_state = 0;
         }
-        vTaskDelay(2000 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
@@ -154,24 +184,50 @@ void sound_alarm_task()
 {
     while (1)
     {
-        if (light_alarm_state == 1)
+        gpio_set_level(ALARM_PIN, light_alarm_state);
+        gpio_set_level(THERMO_ALARM_PIN, thermo_alarm_state);
+        if (flag)
         {
-            gpio_set_level(ALARM_PIN, 1);
-        }
-        else
-        {
-            gpio_set_level(ALARM_PIN, 0);
-        }
 
-        if (thermo_alarm_state == 1)
-        {
-            gpio_set_level(THERMO_ALARM_PIN, 1);
+            flag = 0;
         }
-        else
-        {
-            gpio_set_level(THERMO_ALARM_PIN, 0);
-        }
+        gpio_set_level(BUTTON_ALARM_PIN, button_alarm);
         vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+}
+
+void print_reading_task()
+{
+    while (1)
+    {
+        printf("Button Pressed: %i   Temperature: %f oC\n", button_alarm, temperature);
+
+        if (thermo_alarm_state)
+        {
+            printf("HEAT DETECTED\n");
+        }
+        if (light_alarm_state)
+        {
+            printf("LIGHT DETECTED\n");
+        }
+        if (button_alarm)
+        {
+            printf("PRESSURE PLATE DETECTED\n");
+        }
+        vTaskDelay(2000 / portTICK_PERIOD_MS);
+    }
+}
+
+void reset_task()
+{
+    while (1)
+    {
+        if (gpio_get_level(RESET_BUTTON) && button_alarm)
+        {
+            printf("RESET PRESSURE PLATE\n");
+            button_alarm = 0;
+        }
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
@@ -199,6 +255,8 @@ void app_main(void)
 
     // Create Tasks
     xTaskCreate(sound_alarm_task, "sound_alarm_task", 1024 * 2, NULL, configMAX_PRIORITIES, NULL);
-    xTaskCreate(photoresistor_task, "photoresistor_task", 1024 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
-    xTaskCreate(thermistor_task, "thermistore_task", 1024 * 2, NULL, configMAX_PRIORITIES - 2, NULL);
+    xTaskCreate(reset_task, "reset_task", 1024 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
+    xTaskCreate(print_reading_task, "print_reading_task", 1024 * 2, NULL, configMAX_PRIORITIES - 2, NULL);
+    xTaskCreate(photoresistor_task, "photoresistor_task", 1024 * 2, NULL, configMAX_PRIORITIES - 3, NULL);
+    xTaskCreate(thermistor_task, "thermistore_task", 1024 * 2, NULL, configMAX_PRIORITIES - 4, NULL);
 }

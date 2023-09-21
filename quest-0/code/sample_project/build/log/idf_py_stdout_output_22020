@@ -1,0 +1,495 @@
+2mI�[0;32mI (13) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Sep 20 2023 21:52:18[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (16) boot: chip revision: v1.0[0m
+[0;32mI (20) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (25) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (29) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (34) boot: Enabling RNG early entropy source...[0m
+[0;32mI (39) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (50) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a50ch ( 42252) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a534 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001c694 vaddr=40080000 size=03984h ( 14724) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16714h ( 91924) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=0003673c vaddr=40083984 size=0881ch ( 34844) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: Pro cpu up.[0m
+[0;32mI (181) cpu_start: Starting app cpu, entry point is 0x400810f4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (199) cpu_start: Pro cpu start user code[0m
+[0;32mI (199) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (199) cpu_start: Application information:[0m
+[0;32mI (203) cpu_start: Project name:     main[0m
+[0;32mI (208) cpu_start: App version:      f2c9aea-dirty[0m
+[0;32mI (214) cpu_start: Compile time:     Sep 21 2023 13:55:56[0m
+[0;32mI (220) cpu_start: ELF file SHA256:  5ce62e2170605e35...[0m
+[0;32mI (226) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (231) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (235) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (240) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (245) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (252) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFB29E8 len 0002D618 (181 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 4008C1A0 len 00013E60 (79 KiB): IRAM[0m
+[0;32mI (285) spi_flash: detected chip: gd[0m
+[0;32mI (287) spi_flash: flash io: dio[0m
+[0;33mW (291) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (305) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (313) app_start: Starting scheduler on CPU0[0m
+[0;32mI (318) app_start: Starting scheduler on CPU1[0m
+[0;32mI (318) main_task: Started on CPU0[0m
+[0;32mI (328) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+[0;32mI (328) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (338) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (348) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+Characterized using eFuse Vref
+Button Pressed: 0   Temperature: 0.000000   Photoresistor Voltage: 0
+[0;32mI (388) main_task: Returned from app_main()[0m
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1716
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1700
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.768290   Photoresistor Voltage: 1686
+LIGHT DETECTED
+Button Pressed: 1   Temperature: 22.658575   Photoresistor Voltage: 1637
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 1   Temperature: 22.740839   Photoresistor Voltage: 1654
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 1   Temperature: 22.658575   Photoresistor Voltage: 1641
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 1   Temperature: 22.713413   Photoresistor Voltage: 1626
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 1   Temperature: 22.685991   Photoresistor Voltage: 1589
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 1   Temperature: 22.658575   Photoresistor Voltage: 1618
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1616
+LIGHT DETECTED
+Button Pressed: 1   Temperature: 22.685991   Photoresistor Voltage: 1620
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1607
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1613
+LIGHT DETECTED
+Button Pressed: 1   Temperature: 22.658575   Photoresistor Voltage: 1618
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 1   Temperature: 22.685991   Photoresistor Voltage: 1625
+LIGHT DETECTED
+PRESSURE PLATE DETECTED
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1622
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1615
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.685991   Photoresistor Voltage: 972
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 215
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 770
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.631145   Photoresistor Voltage: 1591
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.685991   Photoresistor Voltage: 1569
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.290262   Photoresistor Voltage: 1566
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.200470   Photoresistor Voltage: 1577
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.227064   Photoresistor Voltage: 1587
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.232855   Photoresistor Voltage: 1582
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.048635   Photoresistor Voltage: 1573
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.869865   Photoresistor Voltage: 1583
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.439625   Photoresistor Voltage: 1613
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.668375   Photoresistor Voltage: 1618
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.725634   Photoresistor Voltage: 1613
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.754271   Photoresistor Voltage: 1613
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.696981   Photoresistor Voltage: 1613
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.696981   Photoresistor Voltage: 1612
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.553947   Photoresistor Voltage: 1591
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.439625   Photoresistor Voltage: 1607
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.382519   Photoresistor Voltage: 1604
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.325455   Photoresistor Voltage: 1606
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.239889   Photoresistor Voltage: 1600
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.125912   Photoresistor Voltage: 1611
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 28.068964   Photoresistor Voltage: 1583
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.926716   Photoresistor Voltage: 1598
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.841438   Photoresistor Voltage: 1599
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.784643   Photoresistor Voltage: 1600
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.699488   Photoresistor Voltage: 1598
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.557693   Photoresistor Voltage: 1603
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.472710   Photoresistor Voltage: 1602
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.387774   Photoresistor Voltage: 1601
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.274607   Photoresistor Voltage: 1601
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.218088   Photoresistor Voltage: 1590
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.161568   Photoresistor Voltage: 1598
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 27.048635   Photoresistor Voltage: 1609
+HEAT DETECTED
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.907600   Photoresistor Voltage: 1610
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.766737   Photoresistor Voltage: 1611
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.738581   Photoresistor Voltage: 1592
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.654165   Photoresistor Voltage: 1475
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.569775   Photoresistor Voltage: 1564
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.513561   Photoresistor Voltage: 1575
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.373133   Photoresistor Voltage: 1568
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.316994   Photoresistor Voltage: 1568
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.232855   Photoresistor Voltage: 1604
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.176769   Photoresistor Voltage: 1602
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.064701   Photoresistor Voltage: 1597
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 26.008698   Photoresistor Voltage: 1601
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.952738   Photoresistor Voltage: 1605
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.840836   Photoresistor Voltage: 1612
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.756987   Photoresistor Voltage: 1613
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.701099   Photoresistor Voltage: 1610
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.589428   Photoresistor Voltage: 1609
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.561514   Photoresistor Voltage: 1608
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.477819   Photoresistor Voltage: 1608
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.422058   Photoresistor Voltage: 1607
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.282753   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.282753   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.199217   Photoresistor Voltage: 1607
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.143557   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 25.115746   Photoresistor Voltage: 1608
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.976707   Photoresistor Voltage: 1609
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.976707   Photoresistor Voltage: 1613
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.865576   Photoresistor Voltage: 1609
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.865576   Photoresistor Voltage: 1610
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.837818   Photoresistor Voltage: 1611
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.782293   Photoresistor Voltage: 1609
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.782293   Photoresistor Voltage: 1610
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.726791   Photoresistor Voltage: 1611
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.643564   Photoresistor Voltage: 1608
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.643564   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.560385   Photoresistor Voltage: 1576
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.588114   Photoresistor Voltage: 1573
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.504965   Photoresistor Voltage: 1582
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.449566   Photoresistor Voltage: 1601
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.366493   Photoresistor Voltage: 1609
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.338806   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.283449   Photoresistor Voltage: 1558
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.255798   Photoresistor Voltage: 1556
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.228132   Photoresistor Voltage: 1584
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.172813   Photoresistor Voltage: 1594
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.172813   Photoresistor Voltage: 1592
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.089876   Photoresistor Voltage: 1590
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.089876   Photoresistor Voltage: 1598
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.062241   Photoresistor Voltage: 1542
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.979366   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 24.034611   Photoresistor Voltage: 1310
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.951750   Photoresistor Voltage: 1621
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.896536   Photoresistor Voltage: 1598
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.868937   Photoresistor Voltage: 1614
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.924141   Photoresistor Voltage: 1591
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.868937   Photoresistor Voltage: 1592
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.813753   Photoresistor Voltage: 1596
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.813753   Photoresistor Voltage: 1603
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.758570   Photoresistor Voltage: 1616
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.813753   Photoresistor Voltage: 1627
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.758570   Photoresistor Voltage: 1640
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.675842   Photoresistor Voltage: 1671
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.648264   Photoresistor Voltage: 1598
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.648264   Photoresistor Voltage: 1599
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.675842   Photoresistor Voltage: 1612
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.648264   Photoresistor Voltage: 1564
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.593142   Photoresistor Voltage: 1624
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.482958   Photoresistor Voltage: 1459
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.510487   Photoresistor Voltage: 1376
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.510487   Photoresistor Voltage: 1347
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.510487   Photoresistor Voltage: 1382
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.400345   Photoresistor Voltage: 1533
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.455416   Photoresistor Voltage: 1647
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.455416   Photoresistor Voltage: 1645
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.400345   Photoresistor Voltage: 1643
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.345293   Photoresistor Voltage: 1660
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.345293   Photoresistor Voltage: 1658
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.290262   Photoresistor Voltage: 1667
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.235254   Photoresistor Voltage: 1646
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.235254   Photoresistor Voltage: 1640
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.207756   Photoresistor Voltage: 1647
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.207756   Photoresistor Voltage: 1628
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.125275   Photoresistor Voltage: 1617
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.207756   Photoresistor Voltage: 1617
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.180264   Photoresistor Voltage: 1615
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.180264   Photoresistor Voltage: 1621
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.180264   Photoresistor Voltage: 1610
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.180264   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.152777   Photoresistor Voltage: 1607
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.152777   Photoresistor Voltage: 1597
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.125275   Photoresistor Voltage: 1596
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.070305   Photoresistor Voltage: 1593
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.097797   Photoresistor Voltage: 1605
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.125275   Photoresistor Voltage: 1602
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.070305   Photoresistor Voltage: 1596
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.987902   Photoresistor Voltage: 1596
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.015358   Photoresistor Voltage: 1602
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.042839   Photoresistor Voltage: 1603
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.015358   Photoresistor Voltage: 1608
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.015358   Photoresistor Voltage: 1594
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.987902   Photoresistor Voltage: 1572
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.015358   Photoresistor Voltage: 1594
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.932962   Photoresistor Voltage: 1612
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.987902   Photoresistor Voltage: 1613
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 23.042839   Photoresistor Voltage: 1626
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.960428   Photoresistor Voltage: 1631
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.878065   Photoresistor Voltage: 1649
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.905500   Photoresistor Voltage: 1627
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.932962   Photoresistor Voltage: 1628
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.878065   Photoresistor Voltage: 1655
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.905500   Photoresistor Voltage: 1634
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.850613   Photoresistor Voltage: 1640
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.823168   Photoresistor Voltage: 1647
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.850613   Photoresistor Voltage: 1643
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.850613   Photoresistor Voltage: 1648
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.878065   Photoresistor Voltage: 1683
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.878065   Photoresistor Voltage: 1677
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.850613   Photoresistor Voltage: 1657
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.850613   Photoresistor Voltage: 1649
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1647
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.878065   Photoresistor Voltage: 1632
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1627
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1621
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.768290   Photoresistor Voltage: 1614
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.768290   Photoresistor Voltage: 1608
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.823168   Photoresistor Voltage: 1608
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1607
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1604
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1613
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1612
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1609
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1602
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1604
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1606
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.768290   Photoresistor Voltage: 1613
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1621
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.795727   Photoresistor Voltage: 1630
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.658575   Photoresistor Voltage: 1621
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.740839   Photoresistor Voltage: 1621
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1622
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.658575   Photoresistor Voltage: 1632
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.658575   Photoresistor Voltage: 1628
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.685991   Photoresistor Voltage: 1626
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.685991   Photoresistor Voltage: 1613
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1609
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.713413   Photoresistor Voltage: 1611
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.631145   Photoresistor Voltage: 1619
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.685991   Photoresistor Voltage: 1628
+LIGHT DETECTED
+Button Pressed: 0   Temperature: 22.658575   Photoresistor Voltage: 1631
+LIGHT DETECTED

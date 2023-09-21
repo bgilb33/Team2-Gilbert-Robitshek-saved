@@ -1,4 +1,4 @@
-ets Jun  8 2016 00:22:57
+(35ets Jun  8 2016 00:22:57
 
 rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 configsip: 0, SPIWP:0xee
@@ -24,11 +24,11 @@ entry 0x4008064c
 [0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
 [0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
 [0;32mI (91) boot: End of partition table[0m
-[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a36ch ( 41836) map[0m
-[0;32mI (119) esp_image: segment 1: paddr=0001a394 vaddr=3ffb0000 size=02158h (  8536) load[0m
-[0;32mI (122) esp_image: segment 2: paddr=0001c4f4 vaddr=40080000 size=03b24h ( 15140) load[0m
-[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16288h ( 90760) map[0m
-[0;32mI (166) esp_image: segment 4: paddr=000362b0 vaddr=40083b24 size=084c0h ( 33984) load[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a3ach ( 41900) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a3d4 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001c534 vaddr=40080000 size=03ae4h ( 15076) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=162c4h ( 90820) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=000362ec vaddr=40083ae4 size=08500h ( 34048) load[0m
 [0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
 [0;32mI (186) boot: Disabling RNG early entropy source...[0m
 [0;32mI (198) cpu_start: Multicore app[0m
@@ -39,16 +39,16 @@ entry 0x4008064c
 [0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
 [0;32mI (216) cpu_start: Application information:[0m
 [0;32mI (221) cpu_start: Project name:     main[0m
-[0;32mI (226) cpu_start: App version:      cf42c42-dirty[0m
-[0;32mI (231) cpu_start: Compile time:     Sep 21 2023 13:05:20[0m
-[0;32mI (237) cpu_start: ELF file SHA256:  1fa20f3f37c1cbe5...[0m
+[0;32mI (226) cpu_start: App version:      f2c9aea-dirty[0m
+[0;32mI (231) cpu_start: Compile time:     Sep 21 2023 13:55:56[0m
+[0;32mI (237) cpu_start: ELF file SHA256:  0b25d72672e0e48d...[0m
 [0;32mI (243) cpu_start: ESP-IDF:          v5.1.1[0m
 [0;32mI (248) cpu_start: Min chip rev:     v0.0[0m
 [0;32mI (253) cpu_start: Max chip rev:     v3.99 [0m
 [0;32mI (258) cpu_start: Chip rev:         v1.0[0m
 [0;32mI (263) heap_init: Initializing. RAM available for dynamic allocation:[0m
 [0;32mI (270) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
-[0;32mI (276) heap_init: At 3FFB29D8 len 0002D628 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFB29E0 len 0002D620 (181 KiB): DRAM[0m
 [0;32mI (282) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
 [0;32mI (288) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
 [0;32mI (295) heap_init: At 4008BFE4 len 0001401C (80 KiB): IRAM[0m
@@ -63,337 +63,1547 @@ entry 0x4008064c
 eFuse Two Point: NOT supported
 eFuse Vref: Supported
 [0;32mI (346) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (356) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
 Characterized using eFuse Vref
-Raw: 2240	Voltage: 1912mV
-Temp: 19.525457	Resistance: 12429.752930
-[0;32mI (366) main_task: Returned from app_main()[0m
-Raw: 2227	Voltage: 1902mV
-Temp: 19.498358	Resistance: 12443.275391
-Raw: 2234	Voltage: 1907mV
-Temp: 19.959356	Resistance: 12215.590820
-Raw: 2236	Voltage: 1909mV
-Temp: 20.040777	Resistance: 12175.890625
-Raw: 2233	Voltage: 1907mV
-Temp: 20.067938	Resistance: 12162.688477
-Raw: 2232	Voltage: 1906mV
-Temp: 20.122229	Resistance: 12136.332031
-Raw: 2234	Voltage: 1907mV
-Temp: 20.502508	Resistance: 11953.573242
-Raw: 2229	Voltage: 1903mV
-Temp: 20.420965	Resistance: 11992.480469
-Raw: 2229	Voltage: 1903mV
-Temp: 20.665625	Resistance: 11876.168945
-Raw: 2230	Voltage: 1904mV
-Temp: 20.720007	Resistance: 11850.488281
-Raw: 2230	Voltage: 1904mV
-Temp: 20.883276	Resistance: 11773.806641
-Raw: 2234	Voltage: 1907mV
-Temp: 20.720007	Resistance: 11850.488281
-Raw: 2235	Voltage: 1908mV
-Temp: 21.046606	Resistance: 11697.663086
-Raw: 2234	Voltage: 1907mV
-Temp: 20.801611	Resistance: 11812.081055
-Raw: 2233	Voltage: 1907mV
-Temp: 20.828833	Resistance: 11799.308594
-Raw: 2233	Voltage: 1907mV
-Temp: 21.155554	Resistance: 11647.195312
-Raw: 2228	Voltage: 1903mV
-Temp: 20.366644	Resistance: 12018.496094
-Raw: 2229	Voltage: 1903mV
-Temp: 21.291784	Resistance: 11584.440430
-Raw: 2230	Voltage: 1904mV
-Temp: 21.237280	Resistance: 11609.499023
-Raw: 2233	Voltage: 1907mV
-Temp: 21.264532	Resistance: 11596.962891
-Raw: 2237	Voltage: 1910mV
-Temp: 21.319036	Resistance: 11571.933594
-Raw: 2213	Voltage: 1891mV
-Temp: 21.373571	Resistance: 11546.961914
-Raw: 2209	Voltage: 1888mV
-Temp: 21.810217	Resistance: 11349.251953
-Raw: 2210	Voltage: 1888mV
-Temp: 22.165564	Resistance: 11191.264648
-Raw: 2210	Voltage: 1888mV
-Temp: 19.986517	Resistance: 12202.341797
-Raw: 2209	Voltage: 1888mV
-Temp: 18.631964	Resistance: 12884.766602
-Raw: 2223	Voltage: 1899mV
-Temp: 17.874945	Resistance: 13285.568359
-Raw: 2222	Voltage: 1898mV
-Temp: 17.091589	Resistance: 13715.759766
-Raw: 2224	Voltage: 1900mV
-Temp: 16.173559	Resistance: 14240.809570
-Raw: 2222	Voltage: 1898mV
-Temp: 15.417364	Resistance: 14690.986328
-Raw: 2254	Voltage: 1923mV
-Temp: 15.363348	Resistance: 14723.782227
-Raw: 2240	Voltage: 1912mV
-Temp: -273.100006	Resistance: 0.000000
-Raw: 2239	Voltage: 1911mV
-Temp: 14.498419	Resistance: 15260.625000
-Raw: 2236	Voltage: 1909mV
-Temp: 14.390234	Resistance: 15329.375977
-Raw: 2226	Voltage: 1901mV
-Temp: 14.363165	Resistance: 15346.621094
-Raw: 2224	Voltage: 1900mV
-Temp: 14.119635	Resistance: 15502.895508
-Raw: 2227	Voltage: 1902mV
-Temp: 13.767675	Resistance: 15732.060547
-Raw: 2247	Voltage: 1918mV
-Temp: 13.794744	Resistance: 15714.286133
-Raw: 1981	Voltage: 1707mV
-Temp: 13.469641	Resistance: 15929.208008
-Raw: 2009	Voltage: 1730mV
-Temp: 13.686407	Resistance: 15785.530273
-Raw: 2035	Voltage: 1750mV
-Temp: 13.523840	Resistance: 15893.138672
-Raw: 2041	Voltage: 1755mV
-Temp: 13.686407	Resistance: 15785.530273
-Raw: 1986	Voltage: 1711mV
-Temp: 13.848913	Resistance: 15678.812500
-Raw: 2045	Voltage: 1758mV
-Temp: 14.227911	Resistance: 15433.203125
-Raw: 2100	Voltage: 1802mV
-Temp: 13.957220	Resistance: 15608.153320
-Raw: 2028	Voltage: 1745mV
-Temp: -273.100006	Resistance: 0.000000
-Raw: 2006	Voltage: 1727mV
-Temp: -273.100006	Resistance: 0.000000
-Raw: 2198	Voltage: 1879mV
-Temp: 32.460518	Resistance: 7562.293945
-Raw: 2219	Voltage: 1896mV
-Temp: 32.609535	Resistance: 7520.965820
-Raw: 2215	Voltage: 1892mV
-Temp: 32.998238	Resistance: 7414.416504
-Raw: 2211	Voltage: 1889mV
-Temp: 33.208290	Resistance: 7357.579590
-Raw: 2215	Voltage: 1892mV
-Temp: 33.268410	Resistance: 7341.407227
-Raw: 2212	Voltage: 1890mV
-Temp: 33.781136	Resistance: 7205.160156
-Raw: 2169	Voltage: 1856mV
-Temp: 34.510658	Resistance: 7016.413574
-Raw: 1623	Voltage: 1425mV
-Temp: 34.510658	Resistance: 7016.413574
-Raw: 2191	Voltage: 1873mV
-Temp: 34.510658	Resistance: 7016.413574
-Raw: 2188	Voltage: 1871mV
-Temp: 34.755348	Resistance: 6954.415527
-Raw: 2190	Voltage: 1873mV
-Temp: 34.847298	Resistance: 6931.282715
-Raw: 2190	Voltage: 1873mV
-Temp: 34.541206	Resistance: 7008.639160
-Raw: 2191	Voltage: 1873mV
-Temp: 34.877968	Resistance: 6923.585938
-Raw: 2195	Voltage: 1877mV
-Temp: 34.970070	Resistance: 6900.537109
-Raw: 1784	Voltage: 1552mV
-Temp: 34.785988	Resistance: 6946.697754
-Raw: 2207	Voltage: 1886mV
-Temp: 35.154640	Resistance: 6854.625977
-Raw: 2184	Voltage: 1868mV
-Temp: 33.479134	Resistance: 7285.044922
-Raw: 2132	Voltage: 1827mV
-Temp: 33.449013	Resistance: 7293.074219
-Raw: 2204	Voltage: 1884mV
-Temp: 34.939369	Resistance: 6908.212891
-Raw: 2218	Voltage: 1895mV
-Temp: 34.785988	Resistance: 6946.697754
-Raw: 2209	Voltage: 1888mV
-Temp: 34.571754	Resistance: 7000.871582
-Raw: 2161	Voltage: 1850mV
-Temp: 34.632912	Resistance: 6985.357910
-Raw: 2167	Voltage: 1854mV
-Temp: 34.571754	Resistance: 7000.871582
-Raw: 2170	Voltage: 1857mV
-Temp: 34.510658	Resistance: 7016.413574
-Raw: 2166	Voltage: 1854mV
-Temp: 34.510658	Resistance: 7016.413574
-Raw: 2147	Voltage: 1839mV
-Temp: 33.660194	Resistance: 7237.024902
-Raw: 2155	Voltage: 1845mV
-Temp: 33.781136	Resistance: 7205.160156
-Raw: 2208	Voltage: 1887mV
-Temp: 33.418861	Resistance: 7301.110840
-Raw: 2146	Voltage: 1838mV
-Temp: 33.058205	Resistance: 7398.139160
-Raw: 2128	Voltage: 1824mV
-Temp: 32.998238	Resistance: 7414.416504
-Raw: 2184	Voltage: 1868mV
-Temp: 32.728951	Resistance: 7488.041992
-Raw: 2187	Voltage: 1870mV
-Temp: 32.639381	Resistance: 7512.722168
-Raw: 2196	Voltage: 1877mV
-Temp: 32.520088	Resistance: 7545.739258
-Raw: 2208	Voltage: 1887mV
-Temp: 32.549904	Resistance: 7537.473633
-Raw: 2242	Voltage: 1914mV
-Temp: 32.490303	Resistance: 7554.012695
-Raw: 2170	Voltage: 1857mV
-Temp: 32.044594	Resistance: 7679.057617
-Raw: 2166	Voltage: 1854mV
-Temp: 31.985357	Resistance: 7695.864746
-Raw: 2174	Voltage: 1860mV
-Temp: 32.044594	Resistance: 7679.057617
-Raw: 2161	Voltage: 1850mV
-Temp: 31.689672	Resistance: 7780.382812
-Raw: 2160	Voltage: 1849mV
-Temp: 31.807837	Resistance: 7746.479004
-Raw: 2159	Voltage: 1848mV
-Temp: 31.542212	Resistance: 7822.945312
-Raw: 2160	Voltage: 1849mV
-Temp: 31.394964	Resistance: 7865.713379
-Raw: 2162	Voltage: 1851mV
-Temp: 31.306738	Resistance: 7891.471680
-Raw: 2169	Voltage: 1856mV
-Temp: 31.159887	Resistance: 7934.568359
-Raw: 2174	Voltage: 1860mV
-Temp: 31.101233	Resistance: 7951.865234
-Raw: 2173	Voltage: 1859mV
-Temp: 31.130560	Resistance: 7943.212402
-Raw: 2184	Voltage: 1868mV
-Temp: 30.866888	Resistance: 8021.388672
-Raw: 2185	Voltage: 1869mV
-Temp: 30.691534	Resistance: 8073.884766
-Raw: 2189	Voltage: 1872mV
-Temp: 30.808386	Resistance: 8038.853516
-Raw: 2179	Voltage: 1864mV
-Temp: 30.370855	Resistance: 8170.926270
-Raw: 2173	Voltage: 1859mV
-Temp: 30.341772	Resistance: 8179.799805
-Raw: 2176	Voltage: 1862mV
-Temp: 30.283606	Resistance: 8197.574219
-Raw: 2208	Voltage: 1887mV
-Temp: 30.341772	Resistance: 8179.799805
-Raw: 2188	Voltage: 1871mV
-Temp: 30.458227	Resistance: 8144.356934
-Raw: 2214	Voltage: 1892mV
-Temp: 29.906347	Resistance: 8313.953125
-Raw: 2200	Voltage: 1881mV
-Temp: 29.935308	Resistance: 8304.948242
-Raw: 2216	Voltage: 1893mV
-Temp: 29.761633	Resistance: 8359.111328
-Raw: 2207	Voltage: 1886mV
-Temp: 29.472784	Resistance: 8450.101562
-Raw: 2193	Voltage: 1875mV
-Temp: 29.732702	Resistance: 8368.169922
-Raw: 2197	Voltage: 1878mV
-Temp: 29.357489	Resistance: 8486.750000
-Raw: 2157	Voltage: 1847mV
-Temp: 29.530493	Resistance: 8431.832031
-Raw: 2201	Voltage: 1881mV
-Temp: 29.299902	Resistance: 8505.128906
-Raw: 2206	Voltage: 1885mV
-Temp: 29.415136	Resistance: 8468.407227
-Raw: 2223	Voltage: 1899mV
-Temp: 28.983648	Resistance: 8606.870117
-Raw: 2193	Voltage: 1875mV
-Temp: 28.983648	Resistance: 8606.870117
-Raw: 2150	Voltage: 1841mV
-Temp: 29.127295	Resistance: 8560.486328
-Raw: 2209	Voltage: 1888mV
-Temp: 28.782904	Resistance: 8672.199219
-Raw: 2194	Voltage: 1876mV
-Temp: 28.868902	Resistance: 8644.144531
-Raw: 2195	Voltage: 1877mV
-Temp: 28.840216	Resistance: 8653.487305
-Raw: 2193	Voltage: 1875mV
-Temp: 28.725622	Resistance: 8690.948242
-Raw: 2108	Voltage: 1808mV
-Temp: 28.811560	Resistance: 8662.837891
-Raw: 1906	Voltage: 1648mV
-Temp: 28.639746	Resistance: 8719.143555
-Raw: 1912	Voltage: 1653mV
-Temp: 28.496771	Resistance: 8766.326172
-Raw: 1988	Voltage: 1713mV
-Temp: 28.211370	Resistance: 8861.406250
-Raw: 2082	Voltage: 1787mV
-Temp: 28.182867	Resistance: 8870.967773
-Raw: 2072	Voltage: 1779mV
-Temp: 28.325445	Resistance: 8823.258789
-Raw: 2028	Voltage: 1745mV
-Temp: 28.268408	Resistance: 8842.313477
-Raw: 2053	Voltage: 1764mV
-Temp: 27.926702	Resistance: 8957.456055
-Raw: 1965	Voltage: 1695mV
-Temp: 28.268408	Resistance: 8842.313477
-Raw: 1772	Voltage: 1542mV
-Temp: 28.154394	Resistance: 8880.538086
-Raw: 1583	Voltage: 1393mV
-Temp: -273.100006	Resistance: 0.000000
-Raw: 2096	Voltage: 1798mV
-Temp: 18.631964	Resistance: 12884.766602
-Raw: 2033	Voltage: 1749mV
-Temp: 18.767248	Resistance: 12814.640625
-Raw: 1867	Voltage: 1617mV
-Temp: 18.956671	Resistance: 12717.186523
-Raw: 2161	Voltage: 1850mV
-Temp: 19.092047	Resistance: 12648.083984
-Raw: 2162	Voltage: 1851mV
-Temp: 17.037603	Resistance: 13746.014648
-Raw: 1657	Voltage: 1451mV
-Temp: 18.550817	Resistance: 12927.047852
-Raw: 1758	Voltage: 1531mV
-Temp: -273.100006	Resistance: 0.000000
-Raw: 2001	Voltage: 1723mV
-Temp: -273.100006	Resistance: 0.000000
-Raw: 2130	Voltage: 1825mV
-Temp: 18.199286	Resistance: 13112.088867
-Raw: 2142	Voltage: 1835mV
-Temp: 18.172247	Resistance: 13126.448242
-Raw: 2137	Voltage: 1831mV
-Temp: 17.820929	Resistance: 13314.734375
-Raw: 2132	Voltage: 1827mV
-Temp: 17.766882	Resistance: 13343.973633
-Raw: 2153	Voltage: 1843mV
-Temp: 17.415686	Resistance: 13535.835938
-Raw: 2104	Voltage: 1805mV
-Temp: 17.469702	Resistance: 13506.113281
-Raw: 2126	Voltage: 1822mV
-Temp: 17.631781	Resistance: 13417.396484
-Raw: 2111	Voltage: 1810mV
-Temp: 17.523748	Resistance: 13476.466797
-Raw: 2128	Voltage: 1824mV
-Temp: 17.631781	Resistance: 13417.396484
-Raw: 2119	Voltage: 1817mV
-Temp: 17.469702	Resistance: 13506.113281
-Raw: 2113	Voltage: 1812mV
-Temp: 17.739843	Resistance: 13358.621094
-Raw: 2117	Voltage: 1815mV
-Temp: 17.766882	Resistance: 13343.973633
-Raw: 2129	Voltage: 1824mV
-Temp: 17.766882	Resistance: 13343.973633
-Raw: 2135	Voltage: 1829mV
-Temp: 17.847937	Resistance: 13300.141602
-Raw: 2134	Voltage: 1828mV
-Temp: 18.064123	Resistance: 13184.057617
-Raw: 2138	Voltage: 1832mV
-Temp: 17.956030	Resistance: 13241.955078
-Raw: 2135	Voltage: 1829mV
-Temp: 18.064123	Resistance: 13184.057617
-Raw: 2137	Voltage: 1831mV
-Temp: 18.280401	Resistance: 13069.122070
-Raw: 2129	Voltage: 1824mV
-Temp: 18.226324	Resistance: 13097.749023
-Raw: 2128	Voltage: 1824mV
-Temp: 18.523748	Resistance: 12941.176758
-Raw: 2126	Voltage: 1822mV
-Temp: 18.388556	Resistance: 13012.082031
-Raw: 2130	Voltage: 1825mV
-Temp: 18.523748	Resistance: 12941.176758
-Raw: 2137	Voltage: 1831mV
-Temp: 18.631964	Resistance: 12884.766602
-Raw: 2140	Voltage: 1833mV
-Temp: 18.686071	Resistance: 12856.665039
-Raw: 2140	Voltage: 1833mV
-Temp: 18.631964	Resistance: 12884.766602
-Raw: 2147	Voltage: 1839mV
-Temp: 20.366644	Resistance: 12018.496094
-Raw: 2129	Voltage: 1824mV
-Temp: 18.686071	Resistance: 12856.665039
-Raw: 2137	Voltage: 1831mV
-Temp: 18.794287	Resistance: 12800.666992
-Raw: 2132	Voltage: 1827mV
-Temp: 18.929602	Resistance: 12731.057617
-Raw: 2150	Voltage: 1841mV
-Temp: 18.631964	Resistance: 12884.766602
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.00000[0;31mE (5346) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (5346) task_wdt:  - IDLE (CPU 0)[0m
+[0;31mE (5346) task_wdt: Tasks currently running:[0m
+[0;31mE (5346) task_wdt: CPU 0: print_reading_t[0m
+[0;31mE (5346) task_wdt: CPU 1: IDLE[0m
+[0;31mE (5346) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D8C2B:0x3FFB0D20 0x400D8DB2:0x3FFB0D40 0x40082981:0x3FFB0D60 0x400D4EE7:0x3FFB6670 0x400D56AB:0x3FFB66A0 0x400D457B:0x3FFB66C0 0x400D4142:0x3FFB66E0 0x4000BD83:0x3FFB6700 0x4000117D:0x3FFB6720 0x400592FE:0x3FFB6740 0x4005937A:0x3FFB6760 0x400DB1F3:0x3FFB6780 0x400E307B:0x3FFB67B0 0x400DEC76:0x3FFB67D0 0x400DB3A1:0x3FFB6AF0 0x400D5890:0x3FFB6B40 0x40087C15:0x3FFB6B60
+
+0   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
+Temperature: 0.000000   Photoresistor Voltage: 0
