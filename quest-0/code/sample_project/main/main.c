@@ -1,5 +1,6 @@
 // This code is from the esp-idf ADC1 example. I changed the pins to fit my circuit.
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -200,20 +201,40 @@ void print_reading_task()
 {
     while (1)
     {
-        printf("Button Pressed: %i   Temperature: %f oC\n", button_alarm, temperature);
-
-        if (thermo_alarm_state)
+        char buttonOutput[13];
+        char lightOutput[13];
+        char thermoOutput[13];
+        if (button_alarm)
         {
-            printf("HEAT DETECTED\n");
+            strcpy(buttonOutput, "Detected");
+        }
+        else
+        {
+            strcpy(buttonOutput, "Not Detected");
         }
         if (light_alarm_state)
         {
-            printf("LIGHT DETECTED\n");
+            strcpy(lightOutput, "Detected");
         }
-        if (button_alarm)
+        else
         {
-            printf("PRESSURE PLATE DETECTED\n");
+            strcpy(lightOutput, "Not Detected");
         }
+        if (thermo_alarm_state)
+        {
+            strcpy(thermoOutput, "Detected");
+        }
+        else
+        {
+            strcpy(thermoOutput, "Not Detected");
+        }
+
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        printf("       Status          Value\n");
+        printf("Button: %s             %i \n", buttonOutput, button_alarm);
+        printf("Light:  %s             %ld mV\n", lightOutput, photo_voltage);
+        printf("Heat:   %s             %f oC\n", thermoOutput, temperature);
+
         vTaskDelay(2000 / portTICK_PERIOD_MS);
     }
 }

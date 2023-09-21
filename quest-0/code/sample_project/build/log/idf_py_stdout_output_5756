@@ -1,63 +1,104 @@
-[1/10] Performing build step for 'bootloader'
-[1/1] cmd.exe /C "cd /D C:\Users\benja\Code\School\EC444\Team2-Gilbert-Robitshek\quest-0\code\sample_project\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader/bootloader.bin"
-Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
-[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
-In file included from C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/main/main.c:7:
-C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
-   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
-      |  ^~~~~~~
-In file included from C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/main/main.c:8:
-C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
-   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
-      |  ^~~~~~~
-[3/8] Linking C static library esp-idf\main\libmain.a
-[4/8] Generating ld/sections.ld
-[5/8] Linking CXX executable main.elf
-[6/8] Generating binary image from built executable
-esptool.py v4.7.dev1
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-Generated C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/main.bin
-[7/8] cmd.exe /C "cd /D C:\Users\benja\Code\School\EC444\Team2-Gilbert-Robitshek\quest-0\code\sample_project\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.1_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/partition_table/partition-table.bin C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/main.bin"
-main.bin binary size 0x2e7a0 bytes. Smallest app partition is 0x100000 bytes. 0xd1860 bytes (82%) free.
-[7/8] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.1.1-2\components\esptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.1.1-2 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.1_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build -P C:/Espressif/frameworks/esp-idf-v5.1.1-2/components/esptool_py/run_serial_tool.cmake"
-esptool.py --chip esp32 -p COM7 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
-esptool.py v4.7.dev1
-Serial port COM7
-Connecting.....
-Chip is ESP32-D0WDQ6 (revision v1.0)
-Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
-Crystal is 40MHz
-MAC: 80:7d:3a:80:8e:34
-Uploading stub...
-Running stub...
-Stub running...
-Changing baud rate to 460800
-Changed.
-Configuring flash size...
-Flash will be erased from 0x00001000 to 0x00007fff...
-Flash will be erased from 0x00010000 to 0x0003efff...
-Flash will be erased from 0x00008000 to 0x00008fff...
-Compressed 26640 bytes to 16684...
-Writing at 0x00001000... (50 %)
-Writing at 0x00007690... (100 %)
-Wrote 26640 bytes (16684 compressed) at 0x00001000 in 0.9 seconds (effective 232.2 kbit/s)...
-Hash of data verified.
-Compressed 190368 bytes to 105133...
-Writing at 0x00010000... (14 %)
-Writing at 0x0001ca5e... (28 %)
-Writing at 0x00022409... (42 %)
-Writing at 0x000282b9... (57 %)
-Writing at 0x0002e746... (71 %)
-Writing at 0x00036347... (85 %)
-Writing at 0x0003c0cf... (100 %)
-Wrote 190368 bytes (105133 compressed) at 0x00010000 in 3.1 seconds (effective 493.3 kbit/s)...
-Hash of data verified.
-Compressed 3072 bytes to 103...
-Writing at 0x00008000... (100 %)
-Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 309.4 kbit/s)...
-Hash of data verified.
-
-Leaving...
-Hard resetting via RTS pin...
+put�[0;32mI (13) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Sep 20 2023 21:52:18[0m
+[0;32mI (13) boot: Multicore bootloader[0m
+[0;32mI (16) boot: chip revision: v1.0[0m
+[0;32mI (20) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (25) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (29) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (34) boot: Enabling RNG early entropy source...[0m
+[0;32mI (39) boot: Partition Table:[0m
+[0;32mI (43) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (50) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (58) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (77) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a584h ( 42372) map[0m
+[0;32mI (100) esp_image: segment 1: paddr=0001a5ac vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001c70c vaddr=40080000 size=0390ch ( 14604) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16818h ( 92184) map[0m
+[0;32mI (148) esp_image: segment 4: paddr=00036840 vaddr=4008390c size=0888ch ( 34956) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (181) cpu_start: Pro cpu up.[0m
+[0;32mI (181) cpu_start: Starting app cpu, entry point is 0x400810f0[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (199) cpu_start: Pro cpu start user code[0m
+[0;32mI (199) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (199) cpu_start: Application information:[0m
+[0;32mI (204) cpu_start: Project name:     main[0m
+[0;32mI (208) cpu_start: App version:      1736920-dirty[0m
+[0;32mI (214) cpu_start: Compile time:     Sep 21 2023 15:01:27[0m
+[0;32mI (220) cpu_start: ELF file SHA256:  51fcb260eab9baa7...[0m
+[0;32mI (226) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (231) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (235) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (240) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (245) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (252) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (258) heap_init: At 3FFB29E8 len 0002D618 (181 KiB): DRAM[0m
+[0;32mI (264) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (271) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (277) heap_init: At 4008C198 len 00013E68 (79 KiB): IRAM[0m
+[0;32mI (285) spi_flash: detected chip: gd[0m
+[0;32mI (288) spi_flash: flash io: dio[0m
+[0;33mW (292) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (305) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (313) app_start: Starting scheduler on CPU0[0m
+[0;32mI (318) app_start: Starting scheduler on CPU1[0m
+[0;32mI (318) main_task: Started on CPU0[0m
+[0;32mI (328) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+[0;32mI (328) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (338) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (348) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (358) gpio: GPIO[39]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (368) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+Characterized using eFuse Vref
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Not Detected             0 
+Heat:   Not Detected             0 oC
+[0;32mI (408) main_task: Returned from app_main()[0m
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detecte            0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detecte            0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detecte            0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detect             0oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected             0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detecte             0 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected            0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected           0 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected             0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected            0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detecte             0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected            0 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected             oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detected             0 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       Status          ValueButton: Not Detected             0 
+Light:  Detected             1 
+Heat:   Not Detecte              oC

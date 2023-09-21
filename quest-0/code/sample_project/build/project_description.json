@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "main",
-    "project_version":    "f2c9aea-dirty",
+    "project_version":    "1736920-dirty",
     "project_path":       "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project",
     "idf_path":           "C:/Espressif/frameworks/esp-idf-v5.1.1-2",
     "build_dir":          "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build",
