@@ -1,0 +1,345 @@
+urn�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 20 2023 21:52:18[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a374h ( 41844) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a39c vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (123) esp_image: segment 2: paddr=0001c4fc vaddr=40080000 size=03b1ch ( 15132) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16234h ( 90676) map[0m
+[0;32mI (166) esp_image: segment 4: paddr=0003625c vaddr=40083b1c size=084c8h ( 33992) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (186) boot: Disabling RNG early entropy source...[0m
+[0;32mI (198) cpu_start: Multicore app[0m
+[0;32mI (198) cpu_start: Pro cpu up.[0m
+[0;32mI (198) cpu_start: Starting app cpu, entry point is 0x400810e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) cpu_start: Application information:[0m
+[0;32mI (221) cpu_start: Project name:     main[0m
+[0;32mI (226) cpu_start: App version:      1d31fe6[0m
+[0;32mI (231) cpu_start: Compile time:     Sep 20 2023 21:53:01[0m
+[0;32mI (237) cpu_start: ELF file SHA256:  3e69d6cc94b95ff0...[0m
+[0;32mI (243) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (248) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (252) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (257) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (262) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (269) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFB29D8 len 0002D628 (181 KiB): DRAM[0m
+[0;32mI (281) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (294) heap_init: At 4008BFE4 len 0001401C (80 KiB): IRAM[0m
+[0;32mI (302) spi_flash: detected chip: gd[0m
+[0;32mI (305) spi_flash: flash io: dio[0m
+[0;33mW (308) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (322) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (330) app_start: Starting scheduler on CPU0[0m
+[0;32mI (335) app_start: Starting scheduler on CPU1[0m
+[0;32mI (335) main_task: Started on CPU0[0m
+[0;32mI (345) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+[0;32mI (345) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+Characterized using eFuse Vref
+Raw: 619	Voltage: 631mV
+Thermo Raw: 1876	Temperature: 25.049999 C
+[0;32mI (365) main_task: Returned from app_main()[0m
+Raw: 621	Voltage: 633mV
+Thermo Raw: 1937	Temperature: 25.049999 C
+Raw: 643	Voltage: 650mV
+Thermo Raw: 1998	Temperature: 25.049999 C
+Raw: 651	Voltage: 656mV
+Thermo Raw: 2057	Temperature: 25.049999 C
+Raw: 679	Voltage: 679mV
+Thermo Raw: 2101	Temperature: 25.049999 C
+Raw: 663	Voltage: 666mV
+Thermo Raw: 2129	Temperature: 25.049999 C
+Raw: 649	Voltage: 655mV
+Thermo Raw: 2151	Temperature: 25.049999 C
+Raw: 652	Voltage: 657mV
+Thermo Raw: 2174	Temperature: 25.049999 C
+Raw: 627	Voltage: 637mV
+Thermo Raw: 2196	Temperature: 25.049999 C
+Raw: 618	Voltage: 630mV
+Thermo Raw: 2217	Temperature: 25.049999 C
+Raw: 646	Voltage: 653mV
+Thermo Raw: 2224	Temperature: 25.049999 C
+Raw: 657	Voltage: 661mV
+Thermo Raw: 2240	Temperature: 25.049999 C
+Raw: 681	Voltage: 680mV
+Thermo Raw: 2256	Temperature: 25.049999 C
+Raw: 673	Voltage: 674mV
+Thermo Raw: 2270	Temperature: 25.049999 C
+Raw: 667	Voltage: 669mV
+Thermo Raw: 2280	Temperature: 25.049999 C
+Raw: 655	Voltage: 660mV
+Thermo Raw: 2288	Temperature: 25.049999 C
+Raw: 635	Voltage: 644mV
+Thermo Raw: 2294	Temperature: 25.049999 C
+Raw: 623	Voltage: 634mV
+Thermo Raw: 2289	Temperature: 25.049999 C
+Raw: 616	Voltage: 629mV
+Thermo Raw: 2288	Temperature: 25.049999 C
+Raw: 618	Voltage: 630mV
+Thermo Raw: 2285	Temperature: 25.049999 C
+Raw: 621	Voltage: 633mV
+Thermo Raw: 2281	Temperature: 25.049999 C
+Raw: 620	Voltage: 632mV
+Thermo Raw: 2276	Temperature: 25.049999 C
+Raw: 634	Voltage: 643mV
+Thermo Raw: 2281	Temperature: 25.049999 C
+Raw: 644	Voltage: 651mV
+Thermo Raw: 2289	Temperature: 25.049999 C
+Raw: 665	Voltage: 668mV
+Thermo Raw: 2298	Temperature: 25.049999 C
+Raw: 673	Voltage: 674mV
+Thermo Raw: 2301	Temperature: 25.049999 C
+Raw: 691	Voltage: 688mV
+Thermo Raw: 2302	Temperature: 25.049999 C
+Raw: 719	Voltage: 710mV
+Thermo Raw: 2296	Temperature: 25.049999 C
+Raw: 676	Voltage: 676mV
+Thermo Raw: 2295	Temperature: 25.049999 C
+Raw: 706	Voltage: 700mV
+Thermo Raw: 2287	Temperature: 25.049999 C
+Raw: 667	Voltage: 669mV
+Thermo Raw: 2280	Temperature: 25.049999 C
+Raw: 324	Voltage: 398mV
+Thermo Raw: 2275	Temperature: 25.049999 C
+Raw: 647	Voltage: 653mV
+Thermo Raw: 2264	Temperature: 25.049999 C
+Raw: 603	Voltage: 619mV
+Thermo Raw: 2260	Temperature: 25.049999 C
+Raw: 609	Voltage: 623mV
+Thermo Raw: 2255	Temperature: 25.049999 C
+Raw: 678	Voltage: 678mV
+Thermo Raw: 2252	Temperature: 25.049999 C
+Raw: 688	Voltage: 686mV
+Thermo Raw: 2244	Temperature: 25.049999 C
+Raw: 700	Voltage: 695mV
+Thermo Raw: 2236	Temperature: 25.049999 C
+Raw: 699	Voltage: 694mV
+Thermo Raw: 2230	Temperature: 25.049999 C
+Raw: 695	Voltage: 691mV
+Thermo Raw: 2225	Temperature: 25.049999 C
+Raw: 707	Voltage: 701mV
+Thermo Raw: 2222	Temperature: 25.049999 C
+Raw: 660	Voltage: 664mV
+Thermo Raw: 2218	Temperature: 25.049999 C
+Raw: 704	Voltage: 698mV
+Thermo Raw: 2211	Temperature: 25.049999 C
+Raw: 732	Voltage: 720mV
+Thermo Raw: 2204	Temperature: 25.049999 C
+Raw: 728	Voltage: 717mV
+Thermo Raw: 2197	Temperature: 25.049999 C
+Raw: 720	Voltage: 711mV
+Thermo Raw: 2193	Temperature: 25.049999 C
+Raw: 706	Voltage: 700mV
+Thermo Raw: 2190	Temperature: 25.049999 C
+Raw: 691	Voltage: 688mV
+Thermo Raw: 2183	Temperature: 25.049999 C
+Raw: 639	Voltage: 647mV
+Thermo Raw: 2176	Temperature: 25.049999 C
+Raw: 604	Voltage: 619mV
+Thermo Raw: 2172	Temperature: 25.049999 C
+Raw: 607	Voltage: 622mV
+Thermo Raw: 2169	Temperature: 25.049999 C
+Raw: 608	Voltage: 622mV
+Thermo Raw: 2160	Temperature: 25.049999 C
+Raw: 610	Voltage: 624mV
+Thermo Raw: 2157	Temperature: 25.049999 C
+Raw: 615	Voltage: 628mV
+Thermo Raw: 2152	Temperature: 25.049999 C
+Raw: 622	Voltage: 634mV
+Thermo Raw: 2149	Temperature: 25.049999 C
+Raw: 629	Voltage: 639mV
+Thermo Raw: 2140	Temperature: 25.049999 C
+Raw: 637	Voltage: 645mV
+Thermo Raw: 2135	Temperature: 25.049999 C
+Raw: 644	Voltage: 651mV
+Thermo Raw: 2129	Temperature: 25.049999 C
+Raw: 650	Voltage: 656mV
+Thermo Raw: 2126	Temperature: 25.049999 C
+Raw: 655	Voltage: 660mV
+Thermo Raw: 2122	Temperature: 25.049999 C
+Raw: 662	Voltage: 665mV
+Thermo Raw: 2117	Temperature: 25.049999 C
+Raw: 665	Voltage: 668mV
+Thermo Raw: 2115	Temperature: 25.049999 C
+Raw: 665	Voltage: 668mV
+Thermo Raw: 2109	Temperature: 25.049999 C
+Raw: 664	Voltage: 667mV
+Thermo Raw: 2105	Temperature: 25.049999 C
+Raw: 661	Voltage: 664mV
+Thermo Raw: 2101	Temperature: 25.049999 C
+Raw: 658	Voltage: 662mV
+Thermo Raw: 2097	Temperature: 25.049999 C
+Raw: 655	Voltage: 660mV
+Thermo Raw: 2093	Temperature: 25.049999 C
+Raw: 650	Voltage: 656mV
+Thermo Raw: 2089	Temperature: 25.049999 C
+Raw: 649	Voltage: 655mV
+Thermo Raw: 2086	Temperature: 25.049999 C
+Raw: 644	Voltage: 651mV
+Thermo Raw: 2084	Temperature: 25.049999 C
+Raw: 643	Voltage: 650mV
+Thermo Raw: 2078	Temperature: 25.049999 C
+Raw: 641	Voltage: 649mV
+Thermo Raw: 2076	Temperature: 25.049999 C
+Raw: 639	Voltage: 647mV
+Thermo Raw: 2072	Temperature: 25.049999 C
+Raw: 638	Voltage: 646mV
+Thermo Raw: 2071	Temperature: 25.049999 C
+Raw: 638	Voltage: 646mV
+Thermo Raw: 2064	Temperature: 25.049999 C
+Raw: 638	Voltage: 646mV
+Thermo Raw: 2061	Temperature: 25.049999 C
+Raw: 638	Voltage: 646mV
+Thermo Raw: 2056	Temperature: 25.049999 C
+Raw: 640	Voltage: 648mV
+Thermo Raw: 2052	Temperature: 25.049999 C
+Raw: 687	Voltage: 685mV
+Thermo Raw: 2049	Temperature: 25.049999 C
+Raw: 712	Voltage: 705mV
+Thermo Raw: 2043	Temperature: 25.049999 C
+Raw: 670	Voltage: 671mV
+Thermo Raw: 2039	Temperature: 25.049999 C
+Raw: 649	Voltage: 655mV
+Thermo Raw: 2036	Temperature: 25.049999 C
+Raw: 652	Voltage: 657mV
+Thermo Raw: 2031	Temperature: 25.049999 C
+Raw: 656	Voltage: 660mV
+Thermo Raw: 2028	Temperature: 25.049999 C
+Raw: 654	Voltage: 659mV
+Thermo Raw: 2027	Temperature: 25.049999 C
+Raw: 653	Voltage: 658mV
+Thermo Raw: 2024	Temperature: 25.049999 C
+Raw: 651	Voltage: 656mV
+Thermo Raw: 2021	Temperature: 25.049999 C
+Raw: 650	Voltage: 656mV
+Thermo Raw: 2019	Temperature: 25.049999 C
+Raw: 650	Voltage: 656mV
+Thermo Raw: 2016	Temperature: 25.049999 C
+Raw: 642	Voltage: 649mV
+Thermo Raw: 2013	Temperature: 25.049999 C
+Raw: 638	Voltage: 646mV
+Thermo Raw: 2011	Temperature: 25.049999 C
+Raw: 634	Voltage: 643mV
+Thermo Raw: 2010	Temperature: 25.049999 C
+Raw: 625	Voltage: 636mV
+Thermo Raw: 2006	Temperature: 25.049999 C
+Raw: 620	Voltage: 632mV
+Thermo Raw: 2002	Temperature: 25.049999 C
+Raw: 613	Voltage: 626mV
+Thermo Raw: 1999	Temperature: 25.049999 C
+Raw: 609	Voltage: 623mV
+Thermo Raw: 1999	Temperature: 25.049999 C
+Raw: 606	Voltage: 621mV
+Thermo Raw: 1995	Temperature: 25.049999 C
+Raw: 609	Voltage: 623mV
+Thermo Raw: 1993	Temperature: 25.049999 C
+Raw: 610	Voltage: 624mV
+Thermo Raw: 1992	Temperature: 25.049999 C
+Raw: 619	Voltage: 631mV
+Thermo Raw: 1989	Temperature: 25.049999 C
+Raw: 633	Voltage: 642mV
+Thermo Raw: 1987	Temperature: 25.049999 C
+Raw: 644	Voltage: 651mV
+Thermo Raw: 1985	Temperature: 25.049999 C
+Raw: 656	Voltage: 660mV
+Thermo Raw: 1984	Temperature: 25.049999 C
+Raw: 660	Voltage: 664mV
+Thermo Raw: 1982	Temperature: 25.049999 C
+Raw: 664	Voltage: 667mV
+Thermo Raw: 1978	Temperature: 25.049999 C
+Raw: 658	Voltage: 662mV
+Thermo Raw: 1977	Temperature: 25.049999 C
+Raw: 648	Voltage: 654mV
+Thermo Raw: 1976	Temperature: 25.049999 C
+Raw: 635	Voltage: 644mV
+Thermo Raw: 1972	Temperature: 25.049999 C
+Raw: 622	Voltage: 634mV
+Thermo Raw: 1971	Temperature: 25.049999 C
+Raw: 614	Voltage: 627mV
+Thermo Raw: 1967	Temperature: 25.049999 C
+Raw: 609	Voltage: 623mV
+Thermo Raw: 1968	Temperature: 25.049999 C
+Raw: 607	Voltage: 622mV
+Thermo Raw: 1967	Temperature: 25.049999 C
+Raw: 669	Voltage: 671mV
+Thermo Raw: 1965	Temperature: 25.049999 C
+Raw: 604	Voltage: 619mV
+Thermo Raw: 1960	Temperature: 25.049999 C
+Raw: 605	Voltage: 620mV
+Thermo Raw: 1960	Temperature: 25.049999 C
+Raw: 606	Voltage: 621mV
+Thermo Raw: 1957	Temperature: 25.049999 C
+Raw: 605	Voltage: 620mV
+Thermo Raw: 1954	Temperature: 25.049999 C
+Raw: 605	Voltage: 620mV
+Thermo Raw: 1953	Temperature: 25.049999 C
+Raw: 605	Voltage: 620mV
+Thermo Raw: 1952	Temperature: 25.049999 C
+Raw: 605	Voltage: 620mV
+Thermo Raw: 1953	Temperature: 25.049999 C
+Raw: 606	Voltage: 621mV
+Thermo Raw: 1951	Temperature: 25.049999 C
+Raw: 607	Voltage: 622mV
+Thermo Raw: 1949	Temperature: 25.049999 C
+Raw: 606	Voltage: 621mV
+Thermo Raw: 1948	Temperature: 25.049999 C
+Raw: 605	Voltage: 620mV
+Thermo Raw: 1946	Temperature: 25.049999 C
+Raw: 606	Voltage: 621mV
+Thermo Raw: 1947	Temperature: 25.049999 C
+Raw: 609	Voltage: 623mV
+Thermo Raw: 1943	Temperature: 25.049999 C
+Raw: 610	Voltage: 624mV
+Thermo Raw: 1942	Temperature: 25.049999 C
+Raw: 614	Voltage: 627mV
+Thermo Raw: 1938	Temperature: 25.049999 C
+Raw: 619	Voltage: 631mV
+Thermo Raw: 1938	Temperature: 25.049999 C
+Raw: 621	Voltage: 633mV
+Thermo Raw: 1937	Temperature: 25.049999 C
+Raw: 627	Voltage: 637mV
+Thermo Raw: 1937	Temperature: 25.049999 C
+Raw: 634	Voltage: 643mV
+Thermo Raw: 1930	Temperature: 25.049999 C
+Raw: 640	Voltage: 648mV
+Thermo Raw: 1935	Temperature: 25.049999 C
+Raw: 644	Voltage: 651mV
+Thermo Raw: 1932	Temperature: 25.049999 C
+Raw: 649	Voltage: 655mV
+Thermo Raw: 1934	Temperature: 25.049999 C
+Raw: 654	Voltage: 659mV
+Thermo Raw: 1932	Temperature: 25.049999 C
+Raw: 658	Voltage: 662mV
+Thermo Raw: 1932	Temperature: 25.049999 C
+Raw: 660	Voltage: 664mV
+Thermo Raw: 1933	Temperature: 25.049999 C
+Raw: 658	Voltage: 662mV
+Thermo Raw: 1933	Temperature: 25.049999 C

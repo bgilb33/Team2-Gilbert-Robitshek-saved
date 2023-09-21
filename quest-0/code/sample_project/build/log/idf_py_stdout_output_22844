@@ -1,0 +1,1077 @@
+age�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 20 2023 21:52:18[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09bach ( 39852) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019bd4 vaddr=3ffb0000 size=02100h (  8448) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bcdc vaddr=40080000 size=0433ch ( 17212) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14b78h ( 84856) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034ba0 vaddr=4008433c size=07ca8h ( 31912) load[0m
+[0;32mI (183) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (183) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Multicore app[0m
+[0;32mI (194) cpu_start: Pro cpu up.[0m
+[0;32mI (195) cpu_start: Starting app cpu, entry point is 0x400810e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (212) cpu_start: Pro cpu start user code[0m
+[0;32mI (212) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) cpu_start: Application information:[0m
+[0;32mI (217) cpu_start: Project name:     main[0m
+[0;32mI (222) cpu_start: App version:      1d31fe6[0m
+[0;32mI (227) cpu_start: Compile time:     Sep 20 2023 21:53:01[0m
+[0;32mI (233) cpu_start: ELF file SHA256:  527f342c3dfabdcd...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (244) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (253) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (258) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (265) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (271) heap_init: At 3FFB2980 len 0002D680 (181 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (290) heap_init: At 4008BFE4 len 0001401C (80 KiB): IRAM[0m
+[0;32mI (298) spi_flash: detected chip: gd[0m
+[0;32mI (301) spi_flash: flash io: dio[0m
+[0;33mW (305) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (318) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (331) app_start: Starting scheduler on CPU1[0m
+[0;32mI (331) main_task: Started on CPU0[0m
+[0;32mI (341) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+Raw: 942	Voltage: 886mV
+ALARM
+[0;32mI (351) main_task: Returned from app_main()[0m
+Raw: 992	Voltage: 926mV
+ALARM
+Raw: 995	Voltage: 928mV
+ALARM
+Raw: 996	Voltage: 929mV
+ALARM
+Raw: 998	Voltage: 931mV
+ALARM
+Raw: 1001	Voltage: 933mV
+ALARM
+Raw: 1001	Voltage: 933mV
+ALARM
+Raw: 1002	Voltage: 934mV
+ALARM
+Raw: 1004	Voltage: 935mV
+ALARM
+Raw: 1007	Voltage: 938mV
+ALARM
+Raw: 1010	Voltage: 940mV
+ALARM
+Raw: 1015	Voltage: 944mV
+ALARM
+Raw: 955	Voltage: 897mV
+ALARM
+Raw: 1060	Voltage: 980mV
+ALARM
+Raw: 1070	Voltage: 988mV
+ALARM
+Raw: 1072	Voltage: 989mV
+ALARM
+Raw: 1077	Voltage: 993mV
+ALARM
+Raw: 918	Voltage: 867mV
+ALARM
+Raw: 788	Voltage: 765mV
+ALARM
+Raw: 383	Voltage: 445mV
+Raw: 92	Voltage: 215mV
+Raw: 92	Voltage: 215mV
+Raw: 102	Voltage: 223mV
+Raw: 109	Voltage: 228mV
+Raw: 104	Voltage: 224mV
+Raw: 112	Voltage: 231mV
+Raw: 115	Voltage: 233mV
+Raw: 118	Voltage: 235mV
+Raw: 124	Voltage: 240mV
+Raw: 838	Voltage: 804mV
+ALARM
+Raw: 962	Voltage: 902mV
+ALARM
+Raw: 1003	Voltage: 935mV
+ALARM
+Raw: 910	Voltage: 861mV
+ALARM
+Raw: 1005	Voltage: 936mV
+ALARM
+Raw: 1092	Voltage: 1005mV
+ALARM
+Raw: 787	Voltage: 764mV
+ALARM
+Raw: 208	Voltage: 306mV
+Raw: 124	Voltage: 240mV
+Raw: 129	Voltage: 244mV
+Raw: 134	Voltage: 248mV
+Raw: 142	Voltage: 254mV
+Raw: 137	Voltage: 250mV
+Raw: 140	Voltage: 253mV
+Raw: 142	Voltage: 254mV
+Raw: 140	Voltage: 253mV
+Raw: 142	Voltage: 254mV
+Raw: 148	Voltage: 259mV
+Raw: 151	Voltage: 261mV
+Raw: 149	Voltage: 260mV
+Raw: 850	Voltage: 814mV
+ALARM
+Raw: 972	Voltage: 910mV
+ALARM
+Raw: 1071	Voltage: 988mV
+ALARM
+Raw: 1061	Voltage: 980mV
+ALARM
+Raw: 1067	Voltage: 985mV
+ALARM
+Raw: 1066	Voltage: 984mV
+ALARM
+Raw: 1003	Voltage: 935mV
+ALARM
+Raw: 981	Voltage: 917mV
+ALARM
+Raw: 966	Voltage: 905mV
+ALARM
+Raw: 923	Voltage: 871mV
+ALARM
+Raw: 898	Voltage: 852mV
+ALARM
+Raw: 899	Voltage: 852mV
+ALARM
+Raw: 900	Voltage: 853mV
+ALARM
+Raw: 904	Voltage: 856mV
+ALARM
+Raw: 915	Voltage: 865mV
+ALARM
+Raw: 922	Voltage: 871mV
+ALARM
+Raw: 923	Voltage: 871mV
+ALARM
+Raw: 920	Voltage: 869mV
+ALARM
+Raw: 922	Voltage: 871mV
+ALARM
+Raw: 931	Voltage: 878mV
+ALARM
+Raw: 927	Voltage: 875mV
+ALARM
+Raw: 950	Voltage: 893mV
+ALARM
+Raw: 984	Voltage: 920mV
+ALARM
+Raw: 1004	Voltage: 935mV
+ALARM
+Raw: 1030	Voltage: 956mV
+ALARM
+Raw: 1049	Voltage: 971mV
+ALARM
+Raw: 1062	Voltage: 981mV
+ALARM
+Raw: 1066	Voltage: 984mV
+ALARM
+Raw: 1066	Voltage: 984mV
+ALARM
+Raw: 1045	Voltage: 968mV
+ALARM
+Raw: 1034	Voltage: 959mV
+ALARM
+Raw: 1023	Voltage: 950mV
+ALARM
+Raw: 1018	Voltage: 946mV
+ALARM
+Raw: 1015	Voltage: 944mV
+ALARM
+Raw: 1010	Voltage: 940mV
+ALARM
+Raw: 1009	Voltage: 939mV
+ALARM
+Raw: 1006	Voltage: 937mV
+ALARM
+Raw: 999	Voltage: 931mV
+ALARM
+Raw: 997	Voltage: 930mV
+ALARM
+Raw: 995	Voltage: 928mV
+ALARM
+Raw: 993	Voltage: 927mV
+ALARM
+Raw: 988	Voltage: 923mV
+ALARM
+Raw: 987	Voltage: 922mV
+ALARM
+Raw: 983	Voltage: 919mV
+ALARM
+Raw: 979	Voltage: 916mV
+ALARM
+Raw: 975	Voltage: 912mV
+ALARM
+Raw: 974	Voltage: 912mV
+ALARM
+Raw: 972	Voltage: 910mV
+ALARM
+Raw: 970	Voltage: 909mV
+ALARM
+Raw: 970	Voltage: 909mV
+ALARM
+Raw: 967	Voltage: 906mV
+ALARM
+Raw: 966	Voltage: 905mV
+ALARM
+Raw: 968	Voltage: 907mV
+ALARM
+Raw: 967	Voltage: 906mV
+ALARM
+Raw: 964	Voltage: 904mV
+ALARM
+Raw: 963	Voltage: 903mV
+ALARM
+Raw: 965	Voltage: 905mV
+ALARM
+Raw: 966	Voltage: 905mV
+ALARM
+Raw: 973	Voltage: 911mV
+ALARM
+Raw: 991	Voltage: 925mV
+ALARM
+Raw: 990	Voltage: 924mV
+ALARM
+Raw: 979	Voltage: 916mV
+ALARM
+Raw: 976	Voltage: 913mV
+ALARM
+Raw: 976	Voltage: 913mV
+ALARM
+Raw: 971	Voltage: 909mV
+ALARM
+Raw: 973	Voltage: 911mV
+ALARM
+Raw: 978	Voltage: 915mV
+ALARM
+Raw: 989	Voltage: 924mV
+ALARM
+Raw: 995	Voltage: 928mV
+ALARM
+Raw: 986	Voltage: 921mV
+ALARM
+Raw: 972	Voltage: 910mV
+ALARM
+Raw: 997	Voltage: 930mV
+ALARM
+Raw: 994	Voltage: 928mV
+ALARM
+Raw: 971	Voltage: 909mV
+ALARM
+Raw: 961	Voltage: 901mV
+ALARM
+Raw: 942	Voltage: 886mV
+ALARM
+Raw: 939	Voltage: 884mV
+ALARM
+Raw: 938	Voltage: 883mV
+ALARM
+Raw: 939	Voltage: 884mV
+ALARM
+Raw: 938	Voltage: 883mV
+ALARM
+Raw: 937	Voltage: 882mV
+ALARM
+Raw: 936	Voltage: 882mV
+ALARM
+Raw: 935	Voltage: 881mV
+ALARM
+Raw: 935	Voltage: 881mV
+ALARM
+Raw: 934	Voltage: 880mV
+ALARM
+Raw: 934	Voltage: 880mV
+ALARM
+Raw: 933	Voltage: 879mV
+ALARM
+Raw: 933	Voltage: 879mV
+ALARM
+Raw: 934	Voltage: 880mV
+ALARM
+Raw: 934	Voltage: 880mV
+ALARM
+Raw: 934	Voltage: 880mV
+ALARM
+Raw: 934	Voltage: 880mV
+ALARM
+Raw: 935	Voltage: 881mV
+ALARM
+Raw: 936	Voltage: 882mV
+ALARM
+Raw: 936	Voltage: 882mV
+ALARM
+Raw: 938	Voltage: 883mV
+ALARM
+Raw: 939	Voltage: 884mV
+ALARM
+Raw: 940	Voltage: 885mV
+ALARM
+Raw: 940	Voltage: 885mV
+ALARM
+Raw: 944	Voltage: 888mV
+ALARM
+Raw: 946	Voltage: 890mV
+ALARM
+Raw: 947	Voltage: 890mV
+ALARM
+Raw: 950	Voltage: 893mV
+ALARM
+Raw: 952	Voltage: 894mV
+ALARM
+Raw: 955	Voltage: 897mV
+ALARM
+Raw: 957	Voltage: 898mV
+ALARM
+Raw: 959	Voltage: 900mV
+ALARM
+Raw: 962	Voltage: 902mV
+ALARM
+Raw: 963	Voltage: 903mV
+ALARM
+Raw: 966	Voltage: 905mV
+ALARM
+Raw: 968	Voltage: 907mV
+ALARM
+Raw: 947	Voltage: 890mV
+ALARM
+Raw: 939	Voltage: 884mV
+ALARM
+Raw: 943	Voltage: 887mV
+ALARM
+Raw: 888	Voltage: 844mV
+ALARM
+Raw: 926	Voltage: 874mV
+ALARM
+Raw: 952	Voltage: 894mV
+ALARM
+Raw: 958	Voltage: 899mV
+ALARM
+Raw: 968	Voltage: 907mV
+ALARM
+Raw: 973	Voltage: 911mV
+ALARM
+Raw: 973	Voltage: 911mV
+ALARM
+Raw: 977	Voltage: 914mV
+ALARM
+Raw: 976	Voltage: 913mV
+ALARM
+Raw: 951	Voltage: 894mV
+ALARM
+Raw: 921	Voltage: 870mV
+ALARM
+Raw: 899	Voltage: 852mV
+ALARM
+Raw: 862	Voltage: 823mV
+ALARM
+Raw: 871	Voltage: 830mV
+ALARM
+Raw: 863	Voltage: 824mV
+ALARM
+Raw: 859	Voltage: 821mV
+ALARM
+Raw: 860	Voltage: 822mV
+ALARM
+Raw: 861	Voltage: 822mV
+ALARM
+Raw: 861	Voltage: 822mV
+ALARM
+Raw: 864	Voltage: 825mV
+ALARM
+Raw: 866	Voltage: 826mV
+ALARM
+Raw: 868	Voltage: 828mV
+ALARM
+Raw: 876	Voltage: 834mV
+ALARM
+Raw: 885	Voltage: 841mV
+ALARM
+Raw: 892	Voltage: 847mV
+ALARM
+Raw: 893	Voltage: 848mV
+ALARM
+Raw: 895	Voltage: 849mV
+ALARM
+Raw: 896	Voltage: 850mV
+ALARM
+Raw: 896	Voltage: 850mV
+ALARM
+Raw: 897	Voltage: 851mV
+ALARM
+Raw: 899	Voltage: 852mV
+ALARM
+Raw: 900	Voltage: 853mV
+ALARM
+Raw: 900	Voltage: 853mV
+ALARM
+Raw: 901	Voltage: 854mV
+ALARM
+Raw: 901	Voltage: 854mV
+ALARM
+Raw: 901	Voltage: 854mV
+ALARM
+Raw: 901	Voltage: 854mV
+ALARM
+Raw: 906	Voltage: 858mV
+ALARM
+Raw: 910	Voltage: 861mV
+ALARM
+Raw: 898	Voltage: 852mV
+ALARM
+Raw: 898	Voltage: 852mV
+ALARM
+Raw: 896	Voltage: 850mV
+ALARM
+Raw: 906	Voltage: 858mV
+ALARM
+Raw: 899	Voltage: 852mV
+ALARM
+Raw: 902	Voltage: 855mV
+ALARM
+Raw: 914	Voltage: 864mV
+ALARM
+Raw: 925	Voltage: 873mV
+ALARM
+Raw: 927	Voltage: 875mV
+ALARM
+Raw: 938	Voltage: 883mV
+ALARM
+Raw: 943	Voltage: 887mV
+ALARM
+Raw: 951	Voltage: 894mV
+ALARM
+Raw: 959	Voltage: 900mV
+ALARM
+Raw: 965	Voltage: 905mV
+ALARM
+Raw: 964	Voltage: 904mV
+ALARM
+Raw: 956	Voltage: 897mV
+ALARM
+Raw: 948	Voltage: 891mV
+ALARM
+Raw: 947	Voltage: 890mV
+ALARM
+Raw: 947	Voltage: 890mV
+ALARM
+Raw: 954	Voltage: 896mV
+ALARM
+Raw: 964	Voltage: 904mV
+ALARM
+Raw: 974	Voltage: 912mV
+ALARM
+Raw: 998	Voltage: 931mV
+ALARM
+Raw: 1013	Voltage: 943mV
+ALARM
+Raw: 1032	Voltage: 958mV
+ALARM
+Raw: 1035	Voltage: 960mV
+ALARM
+Raw: 1031	Voltage: 957mV
+ALARM
+Raw: 1030	Voltage: 956mV
+ALARM
+Raw: 1026	Voltage: 953mV
+ALARM
+Raw: 1026	Voltage: 953mV
+ALARM
+Raw: 1023	Voltage: 950mV
+ALARM
+Raw: 1023	Voltage: 950mV
+ALARM
+Raw: 1031	Voltage: 957mV
+ALARM
+Raw: 1033	Voltage: 958mV
+ALARM
+Raw: 1032	Voltage: 958mV
+ALARM
+Raw: 993	Voltage: 927mV
+ALARM
+Raw: 899	Voltage: 852mV
+ALARM
+Raw: 861	Voltage: 822mV
+ALARM
+Raw: 869	Voltage: 829mV
+ALARM
+Raw: 913	Voltage: 864mV
+ALARM
+Raw: 965	Voltage: 905mV
+ALARM
+Raw: 977	Voltage: 914mV
+ALARM
+Raw: 977	Voltage: 914mV
+ALARM
+Raw: 974	Voltage: 912mV
+ALARM
+Raw: 970	Voltage: 909mV
+ALARM
+Raw: 968	Voltage: 907mV
+ALARM
+Raw: 968	Voltage: 907mV
+ALARM
+Raw: 966	Voltage: 905mV
+ALARM
+Raw: 963	Voltage: 903mV
+ALARM
+Raw: 963	Voltage: 903mV
+ALARM
+Raw: 962	Voltage: 902mV
+ALARM
+Raw: 959	Voltage: 900mV
+ALARM
+Raw: 957	Voltage: 898mV
+ALARM
+Raw: 956	Voltage: 897mV
+ALARM
+Raw: 955	Voltage: 897mV
+ALARM
+Raw: 953	Voltage: 895mV
+ALARM
+Raw: 946	Voltage: 890mV
+ALARM
+Raw: 929	Voltage: 876mV
+ALARM
+Raw: 864	Voltage: 825mV
+ALARM
+Raw: 755	Voltage: 739mV
+ALARM
+Raw: 751	Voltage: 735mV
+ALARM
+Raw: 759	Voltage: 742mV
+ALARM
+Raw: 759	Voltage: 742mV
+ALARM
+Raw: 776	Voltage: 755mV
+ALARM
+Raw: 769	Voltage: 750mV
+ALARM
+Raw: 747	Voltage: 732mV
+ALARM
+Raw: 727	Voltage: 717mV
+ALARM
+Raw: 704	Voltage: 698mV
+ALARM
+Raw: 690	Voltage: 687mV
+ALARM
+Raw: 694	Voltage: 690mV
+ALARM
+Raw: 677	Voltage: 677mV
+ALARM
+Raw: 671	Voltage: 672mV
+ALARM
+Raw: 661	Voltage: 664mV
+ALARM
+Raw: 660	Voltage: 664mV
+ALARM
+Raw: 648	Voltage: 654mV
+ALARM
+Raw: 624	Voltage: 635mV
+ALARM
+Raw: 604	Voltage: 619mV
+ALARM
+Raw: 689	Voltage: 686mV
+ALARM
+Raw: 819	Voltage: 789mV
+ALARM
+Raw: 843	Voltage: 808mV
+ALARM
+Raw: 858	Voltage: 820mV
+ALARM
+Raw: 859	Voltage: 821mV
+ALARM
+Raw: 850	Voltage: 814mV
+ALARM
+Raw: 773	Voltage: 753mV
+ALARM
+Raw: 723	Voltage: 713mV
+ALARM
+Raw: 517	Voltage: 551mV
+ALARM
+Raw: 49	Voltage: 181mV
+Raw: 12	Voltage: 151mV
+Raw: 11	Voltage: 151mV
+Raw: 267	Voltage: 353mV
+Raw: 627	Voltage: 637mV
+ALARM
+Raw: 792	Voltage: 768mV
+ALARM
+Raw: 803	Voltage: 777mV
+ALARM
+Raw: 820	Voltage: 790mV
+ALARM
+Raw: 815	Voltage: 786mV
+ALARM
+Raw: 811	Voltage: 783mV
+ALARM
+Raw: 811	Voltage: 783mV
+ALARM
+Raw: 809	Voltage: 781mV
+ALARM
+Raw: 805	Voltage: 778mV
+ALARM
+Raw: 800	Voltage: 774mV
+ALARM
+Raw: 799	Voltage: 773mV
+ALARM
+Raw: 794	Voltage: 769mV
+ALARM
+Raw: 793	Voltage: 769mV
+ALARM
+Raw: 789	Voltage: 766mV
+ALARM
+Raw: 786	Voltage: 763mV
+ALARM
+Raw: 784	Voltage: 762mV
+ALARM
+Raw: 782	Voltage: 760mV
+ALARM
+Raw: 781	Voltage: 759mV
+ALARM
+Raw: 784	Voltage: 762mV
+ALARM
+Raw: 783	Voltage: 761mV
+ALARM
+Raw: 785	Voltage: 762mV
+ALARM
+Raw: 789	Voltage: 766mV
+ALARM
+Raw: 790	Voltage: 766mV
+ALARM
+Raw: 788	Voltage: 765mV
+ALARM
+Raw: 790	Voltage: 766mV
+ALARM
+Raw: 794	Voltage: 769mV
+ALARM
+Raw: 801	Voltage: 775mV
+ALARM
+Raw: 806	Voltage: 779mV
+ALARM
+Raw: 811	Voltage: 783mV
+ALARM
+Raw: 816	Voltage: 787mV
+ALARM
+Raw: 821	Voltage: 791mV
+ALARM
+Raw: 826	Voltage: 795mV
+ALARM
+Raw: 833	Voltage: 800mV
+ALARM
+Raw: 841	Voltage: 807mV
+ALARM
+Raw: 849	Voltage: 813mV
+ALARM
+Raw: 872	Voltage: 831mV
+ALARM
+Raw: 908	Voltage: 860mV
+ALARM
+Raw: 945	Voltage: 889mV
+ALARM
+Raw: 966	Voltage: 905mV
+ALARM
+Raw: 961	Voltage: 901mV
+ALARM
+Raw: 957	Voltage: 898mV
+ALARM
+Raw: 958	Voltage: 899mV
+ALARM
+Raw: 968	Voltage: 907mV
+ALARM
+Raw: 983	Voltage: 919mV
+ALARM
+Raw: 994	Voltage: 928mV
+ALARM
+Raw: 1015	Voltage: 944mV
+ALARM
+Raw: 1038	Voltage: 962mV
+ALARM
+Raw: 1058	Voltage: 978mV
+ALARM
+Raw: 1074	Voltage: 991mV
+ALARM
+Raw: 1086	Voltage: 1000mV
+ALARM
+Raw: 1087	Voltage: 1001mV
+ALARM
+Raw: 1091	Voltage: 1004mV
+ALARM
+Raw: 1106	Voltage: 1016mV
+ALARM
+Raw: 1140	Voltage: 1043mV
+ALARM
+Raw: 1170	Voltage: 1067mV
+ALARM
+Raw: 1170	Voltage: 1067mV
+ALARM
+Raw: 1169	Voltage: 1066mV
+ALARM
+Raw: 1143	Voltage: 1045mV
+ALARM
+Raw: 1109	Voltage: 1018mV
+ALARM
+Raw: 1099	Voltage: 1010mV
+ALARM
+Raw: 1096	Voltage: 1008mV
+ALARM
+Raw: 1095	Voltage: 1007mV
+ALARM
+Raw: 1093	Voltage: 1006mV
+ALARM
+Raw: 1088	Voltage: 1002mV
+ALARM
+Raw: 1080	Voltage: 995mV
+ALARM
+Raw: 1069	Voltage: 987mV
+ALARM
+Raw: 1071	Voltage: 988mV
+ALARM
+Raw: 1087	Voltage: 1001mV
+ALARM
+Raw: 999	Voltage: 931mV
+ALARM
+Raw: 979	Voltage: 916mV
+ALARM
+Raw: 949	Voltage: 892mV
+ALARM
+Raw: 919	Voltage: 868mV
+ALARM
+Raw: 973	Voltage: 911mV
+ALARM
+Raw: 1105	Voltage: 1015mV
+ALARM
+Raw: 1120	Voltage: 1027mV
+ALARM
+Raw: 1124	Voltage: 1030mV
+ALARM
+Raw: 1127	Voltage: 1033mV
+ALARM
+Raw: 1156	Voltage: 1056mV
+ALARM
+Raw: 1165	Voltage: 1063mV
+ALARM
+Raw: 1160	Voltage: 1059mV
+ALARM
+Raw: 1157	Voltage: 1056mV
+ALARM
+Raw: 1155	Voltage: 1055mV
+ALARM
+Raw: 1153	Voltage: 1053mV
+ALARM
+Raw: 1149	Voltage: 1050mV
+ALARM
+Raw: 1144	Voltage: 1046mV
+ALARM
+Raw: 1138	Voltage: 1041mV
+ALARM
+Raw: 1133	Voltage: 1037mV
+ALARM
+Raw: 1128	Voltage: 1033mV
+ALARM
+Raw: 1126	Voltage: 1032mV
+ALARM
+Raw: 1120	Voltage: 1027mV
+ALARM
+Raw: 1101	Voltage: 1012mV
+ALARM
+Raw: 1084	Voltage: 999mV
+ALARM
+Raw: 1079	Voltage: 995mV
+ALARM
+Raw: 1079	Voltage: 995mV
+ALARM
+Raw: 1075	Voltage: 992mV
+ALARM
+Raw: 1070	Voltage: 988mV
+ALARM
+Raw: 1065	Voltage: 984mV
+ALARM
+Raw: 1068	Voltage: 986mV
+ALARM
+Raw: 1071	Voltage: 988mV
+ALARM
+Raw: 1068	Voltage: 986mV
+ALARM
+Raw: 1071	Voltage: 988mV
+ALARM
+Raw: 1075	Voltage: 992mV
+ALARM
+Raw: 1078	Voltage: 994mV
+ALARM
+Raw: 1079	Voltage: 995mV
+ALARM
+Raw: 1082	Voltage: 997mV
+ALARM
+Raw: 1086	Voltage: 1000mV
+ALARM
+Raw: 1086	Voltage: 1000mV
+ALARM
+Raw: 1087	Voltage: 1001mV
+ALARM
+Raw: 1087	Voltage: 1001mV
+ALARM
+Raw: 1089	Voltage: 1003mV
+ALARM
+Raw: 1091	Voltage: 1004mV
+ALARM
+Raw: 1094	Voltage: 1007mV
+ALARM
+Raw: 1097	Voltage: 1009mV
+ALARM
+Raw: 1074	Voltage: 991mV
+ALARM
+Raw: 1006	Voltage: 937mV
+ALARM
+Raw: 1081	Voltage: 996mV
+ALARM
+Raw: 1110	Voltage: 1019mV
+ALARM
+Raw: 1112	Voltage: 1021mV
+ALARM
+Raw: 951	Voltage: 894mV
+ALARM
+Raw: 981	Voltage: 917mV
+ALARM
+Raw: 980	Voltage: 916mV
+ALARM
+Raw: 976	Voltage: 913mV
+ALARM
+Raw: 974	Voltage: 912mV
+ALARM
+Raw: 954	Voltage: 896mV
+ALARM
+Raw: 977	Voltage: 914mV
+ALARM
+Raw: 967	Voltage: 906mV
+ALARM
+Raw: 945	Voltage: 889mV
+ALARM
+Raw: 959	Voltage: 900mV
+ALARM
+Raw: 964	Voltage: 904mV
+ALARM
+Raw: 961	Voltage: 901mV
+ALARM
+Raw: 960	Voltage: 901mV
+ALARM
+Raw: 957	Voltage: 898mV
+ALARM
+Raw: 956	Voltage: 897mV
+ALARM
+Raw: 951	Voltage: 894mV
+ALARM
+Raw: 947	Voltage: 890mV
+ALARM
+Raw: 940	Voltage: 885mV
+ALARM
+Raw: 937	Voltage: 882mV
+ALARM
+Raw: 934	Voltage: 880mV
+ALARM
+Raw: 899	Voltage: 852mV
+ALARM
+Raw: 830	Voltage: 798mV
+ALARM
+Raw: 787	Voltage: 764mV
+ALARM
+Raw: 790	Voltage: 766mV
+ALARM
+Raw: 817	Voltage: 788mV
+ALARM
+Raw: 859	Voltage: 821mV
+ALARM
+Raw: 892	Voltage: 847mV
+ALARM
+Raw: 912	Voltage: 863mV
+ALARM
+Raw: 921	Voltage: 870mV
+ALARM
+Raw: 922	Voltage: 871mV
+ALARM
+Raw: 935	Voltage: 881mV
+ALARM
+Raw: 956	Voltage: 897mV
+ALARM
+Raw: 966	Voltage: 905mV
+ALARM
+Raw: 970	Voltage: 909mV
+ALARM
+Raw: 970	Voltage: 909mV
+ALARM
+Raw: 970	Voltage: 909mV
+ALARM
+Raw: 969	Voltage: 908mV
+ALARM
+Raw: 970	Voltage: 909mV
+ALARM
+Raw: 971	Voltage: 909mV
+ALARM
+Raw: 972	Voltage: 910mV
+ALARM
+Raw: 972	Voltage: 910mV
+ALARM
+Raw: 974	Voltage: 912mV
+ALARM
+Raw: 976	Voltage: 913mV
+ALARM
+Raw: 975	Voltage: 912mV
+ALARM
+Raw: 979	Voltage: 916mV
+ALARM
+Raw: 978	Voltage: 915mV
+ALARM
+Raw: 981	Voltage: 917mV
+ALARM
+Raw: 984	Voltage: 920mV
+ALARM
+Raw: 987	Voltage: 922mV
+ALARM
+Raw: 988	Voltage: 923mV
+ALARM
+Raw: 991	Voltage: 925mV
+ALARM
+Raw: 992	Voltage: 926mV
+ALARM
+Raw: 994	Voltage: 928mV
+ALARM
+Raw: 996	Voltage: 929mV
+ALARM
+Raw: 997	Voltage: 930mV
+ALARM
+Raw: 1000	Voltage: 932mV
+ALARM
+Raw: 1000	Voltage: 932mV
+ALARM
+Raw: 1002	Voltage: 934mV
+ALARM
+Raw: 1004	Voltage: 935mV
+ALARM
+Raw: 1006	Voltage: 937mV
+ALARM
+Raw: 1008	Voltage: 939mV
+ALARM
+Raw: 1010	Voltage: 940mV
+ALARM
+Raw: 1010	Voltage: 940mV
+ALARM
+Raw: 1009	Voltage: 939mV
+ALARM
+Raw: 1004	Voltage: 935mV
+ALARM
+Raw: 1013	Voltage: 943mV
+ALARM
+Raw: 1014	Voltage: 943mV
+ALARM
+Raw: 1015	Voltage: 944mV
+ALARM
+Raw: 1015	Voltage: 944mV
+ALARM
+Raw: 1020	Voltage: 948mV
+ALARM
+Raw: 1022	Voltage: 950mV
+ALARM
+Raw: 1026	Voltage: 953mV
+ALARM
+Raw: 1027	Voltage: 954mV
+ALARM
+Raw: 1030	Voltage: 956mV
+ALARM
+Raw: 1032	Voltage: 958mV
+ALARM
+Raw: 1035	Voltage: 960mV
+ALARM
+Raw: 1036	Voltage: 961mV
+ALARM
+Raw: 1038	Voltage: 962mV
+ALARM
+Raw: 1042	Voltage: 965mV
+ALARM
+Raw: 1044	Voltage: 967mV
+ALARM
+Raw: 1046	Voltage: 969mV
+ALARM
+Raw: 1033	Voltage: 958mV
+ALARM
+Raw: 991	Voltage: 925mV
+ALARM
+Raw: 988	Voltage: 923mV
+ALARM
+Raw: 1000	Voltage: 932mV
+ALARM
+Raw: 1001	Voltage: 933mV
+ALARM
+Raw: 1004	Voltage: 935mV
+ALARM
+Raw: 1008	Voltage: 939mV
+ALARM
+Raw: 1010	Voltage: 940mV
+ALARM
+Raw: 1011	Voltage: 941mV
+ALARM
+Raw: 1012	Voltage: 942mV
+ALARM
+Raw: 1014	Voltage: 943mV
+ALARM
+Raw: 1016	Voltage: 945mV
+ALARM
+Raw: 1017	Voltage: 946mV
+ALARM
+Raw: 1020	Voltage: 948mV
+ALARM
+Raw: 1020	Voltage: 948mV
+ALARM
+Raw: 1000	Voltage: 932mV
+ALARM
+Raw: 974	Voltage: 912mV
+ALARM
+Raw: 1020	Voltage: 948mV
+ALARM
+Raw: 1022	Voltage: 950mV
+ALARM
+Raw: 1023	Voltage: 950mV
+ALARM
+Raw: 1022	Voltage: 950mV
+ALARM
+Raw: 1018	Voltage: 946mV
+ALARM
+Raw: 1000	Voltage: 932mV
+ALARM
+Raw: 986	Voltage: 921mV
+ALARM
+Raw: 984	Voltage: 920mV
+ALARM
+Raw: 976	Voltage: 913mV
+ALARM
+Raw: 974	Voltage: 912mV
+ALARM
+Raw: 976	Voltage: 913mV
+ALARM

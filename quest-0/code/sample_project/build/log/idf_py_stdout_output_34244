@@ -1,0 +1,727 @@
+ARM �ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 20 2023 21:52:18[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09c3ch ( 39996) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=00019c64 vaddr=3ffb0000 size=02130h (  8496) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001bd9c vaddr=40080000 size=0427ch ( 17020) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14ce0h ( 85216) map[0m
+[0;32mI (163) esp_image: segment 4: paddr=00034d08 vaddr=4008427c size=07d68h ( 32104) load[0m
+[0;32mI (183) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (183) boot: Disabling RNG early entropy source...[0m
+[0;32mI (194) cpu_start: Multicore app[0m
+[0;32mI (195) cpu_start: Pro cpu up.[0m
+[0;32mI (195) cpu_start: Starting app cpu, entry point is 0x400810e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (213) cpu_start: Pro cpu start user code[0m
+[0;32mI (213) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (213) cpu_start: Application information:[0m
+[0;32mI (218) cpu_start: Project name:     main[0m
+[0;32mI (222) cpu_start: App version:      1d31fe6[0m
+[0;32mI (227) cpu_start: Compile time:     Sep 20 2023 21:53:01[0m
+[0;32mI (233) cpu_start: ELF file SHA256:  3c359a15b88ccd30...[0m
+[0;32mI (239) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (244) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (249) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (254) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB29B0 len 0002D650 (181 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008BFE4 len 0001401C (80 KiB): IRAM[0m
+[0;32mI (298) spi_flash: detected chip: gd[0m
+[0;32mI (301) spi_flash: flash io: dio[0m
+[0;33mW (305) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (318) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (327) app_start: Starting scheduler on CPU0[0m
+[0;32mI (332) app_start: Starting scheduler on CPU1[0m
+[0;32mI (332) main_task: Started on CPU0[0m
+[0;32mI (342) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+ALARM OFF[0;31mE (352) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 973	Voltage: 911mV
+ALARM
+[0;31mE (362) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+[0;32mI (362) main_task: Returned from app_main()[0m
+ALARM
+[0;31mE (372) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (382) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (392) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (402) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (412) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (422) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (432) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (442) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (452) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1031	Voltage: 957mV
+ALARM
+[0;31mE (462) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (472) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (482) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (492) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (502) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (512) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (522) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (532) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (542) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (552) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1032	Voltage: 958mV
+ALARM
+[0;31mE (562) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (572) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (582) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (592) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (602) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (612) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (622) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (632) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (642) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (652) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1032	Voltage: 958mV
+ALARM
+[0;31mE (662) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (672) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (682) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (692) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (702) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (712) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (722) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (732) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (742) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (752) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1032	Voltage: 958mV
+ALARM
+[0;31mE (762) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (772) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (782) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (792) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (802) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (812) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (822) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (832) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (842) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (852) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1035	Voltage: 960mV
+ALARM
+[0;31mE (862) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (872) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (882) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (892) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (902) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (912) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (922) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (932) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (942) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (952) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1035	Voltage: 960mV
+ALARM
+[0;31mE (962) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (972) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (982) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (992) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1002) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1012) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1022) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1032) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1042) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1052) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1036	Voltage: 961mV
+ALARM
+[0;31mE (1062) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1072) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1082) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1092) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1102) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1112) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1122) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1132) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1142) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1152) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1035	Voltage: 960mV
+ALARM
+[0;31mE (1162) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1172) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1182) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1192) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1202) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1212) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1222) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1232) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1242) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1252) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1038	Voltage: 962mV
+ALARM
+[0;31mE (1262) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1272) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1282) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1292) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1302) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1312) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1322) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1332) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1342) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1352) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1037	Voltage: 961mV
+ALARM
+[0;31mE (1362) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1372) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1382) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1392) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1402) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1412) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1422) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1432) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1442) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1452) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1038	Voltage: 962mV
+ALARM
+[0;31mE (1462) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1472) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1482) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1492) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1502) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1512) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1522) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1532) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1542) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1552) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1039	Voltage: 963mV
+ALARM
+[0;31mE (1562) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1572) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1582) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1592) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1602) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1612) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1622) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1632) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1642) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1652) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1040	Voltage: 964mV
+ALARM
+[0;31mE (1662) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1672) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1682) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1692) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1702) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1712) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1722) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1732) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1742) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1752) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1040	Voltage: 964mV
+ALARM
+[0;31mE (1762) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1772) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1782) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1792) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1802) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1812) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1822) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1832) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1842) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1852) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1041	Voltage: 965mV
+ALARM
+[0;31mE (1862) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1872) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1882) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1892) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1902) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1912) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1922) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1932) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1942) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1952) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1043	Voltage: 966mV
+ALARM
+[0;31mE (1962) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1972) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1982) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (1992) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2002) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2012) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2022) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2032) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2042) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2052) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1054	Voltage: 975mV
+ALARM
+[0;31mE (2062) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2072) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2082) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2092) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2102) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2112) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2122) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2132) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2142) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2152) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1061	Voltage: 980mV
+ALARM
+[0;31mE (2162) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2172) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2182) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2192) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2202) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2212) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2222) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2232) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2242) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2252) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1061	Voltage: 980mV
+ALARM
+[0;31mE (2262) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2272) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2282) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2292) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2302) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2312) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2322) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2332) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2342) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2352) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1060	Voltage: 980mV
+ALARM
+[0;31mE (2362) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2372) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2382) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2392) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2402) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2412) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2422) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2432) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2442) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2452) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1040	Voltage: 964mV
+ALARM
+[0;31mE (2462) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2472) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2482) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2492) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2502) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2512) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2522) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2532) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2542) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2552) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1053	Voltage: 974mV
+ALARM
+[0;31mE (2562) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2572) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2582) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2592) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2602) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2612) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2622) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2632) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2642) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2652) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1059	Voltage: 979mV
+ALARM
+[0;31mE (2662) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2672) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2682) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2692) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2702) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2712) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2722) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2732) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2742) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2752) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1056	Voltage: 977mV
+ALARM
+[0;31mE (2762) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2772) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2782) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2792) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2802) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2812) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2822) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2832) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2842) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2852) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1053	Voltage: 974mV
+ALARM
+[0;31mE (2862) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2872) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2882) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2892) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2902) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2912) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2922) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2932) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2942) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2952) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1044	Voltage: 967mV
+ALARM
+[0;31mE (2962) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2972) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2982) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (2992) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3002) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3012) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3022) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3032) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3042) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3052) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1038	Voltage: 962mV
+ALARM
+[0;31mE (3062) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3072) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3082) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3092) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3102) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3112) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3122) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3132) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3142) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3152) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1037	Voltage: 961mV
+ALARM
+[0;31mE (3162) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3172) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3182) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3192) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3202) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3212) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3222) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3232) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3242) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3252) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1035	Voltage: 960mV
+ALARM
+[0;31mE (3262) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3272) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3282) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3292) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3302) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3312) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3322) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3332) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3342) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3352) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1034	Voltage: 959mV
+ALARM
+[0;31mE (3362) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3372) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3382) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3392) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3402) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3412) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3422) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3432) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3442) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3452) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+Raw: 1035	Voltage: 960mV
+ALARM
+[0;31mE (3462) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3472) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3482) gpio: gpio_set_level(237): GPIO output gpio_num error[0m
+ALARM
+[0;31mE (3492) gpio: gpio_set_level(237): GPIO output gpio_num error[0m

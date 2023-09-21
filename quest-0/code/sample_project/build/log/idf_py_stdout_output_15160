@@ -1,0 +1,433 @@
+���ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7080
+load:0x40078000,len:15584
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF v5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Sep 20 2023 21:52:18[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a33ch ( 41788) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a364 vaddr=3ffb0000 size=02158h (  8536) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001c4c4 vaddr=40080000 size=03b54h ( 15188) load[0m
+[0;32mI (131) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=15c58h ( 89176) map[0m
+[0;32mI (165) esp_image: segment 4: paddr=00035c80 vaddr=40083b54 size=08490h ( 33936) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (186) boot: Disabling RNG early entropy source...[0m
+[0;32mI (197) cpu_start: Multicore app[0m
+[0;32mI (198) cpu_start: Pro cpu up.[0m
+[0;32mI (198) cpu_start: Starting app cpu, entry point is 0x400810e8[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (216) cpu_start: Pro cpu start user code[0m
+[0;32mI (216) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (216) cpu_start: Application information:[0m
+[0;32mI (220) cpu_start: Project name:     main[0m
+[0;32mI (225) cpu_start: App version:      1d31fe6[0m
+[0;32mI (230) cpu_start: Compile time:     Sep 20 2023 21:53:01[0m
+[0;32mI (236) cpu_start: ELF file SHA256:  466ed99d4a0a4b19...[0m
+[0;32mI (242) cpu_start: ESP-IDF:          v5.1.1[0m
+[0;32mI (247) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (252) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (256) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (261) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (269) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (274) heap_init: At 3FFB29D8 len 0002D628 (181 KiB): DRAM[0m
+[0;32mI (281) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (287) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (293) heap_init: At 4008BFE4 len 0001401C (80 KiB): IRAM[0m
+[0;32mI (301) spi_flash: detected chip: gd[0m
+[0;32mI (304) spi_flash: flash io: dio[0m
+[0;33mW (308) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (321) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (330) app_start: Starting scheduler on CPU0[0m
+[0;32mI (334) app_start: Starting scheduler on CPU1[0m
+[0;32mI (334) main_task: Started on CPU0[0m
+[0;32mI (344) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+[0;32mI (344) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+Characterized using eFuse Vref
+Raw: 1034	Voltage: 959mV
+[0;32mI (364) main_task: Returned from app_main()[0m
+Raw: 1059	Voltage: 979mV
+Raw: 1061	Voltage: 980mV
+Raw: 1059	Voltage: 979mV
+Raw: 1063	Voltage: 982mV
+Raw: 1062	Voltage: 981mV
+Raw: 1064	Voltage: 983mV
+Raw: 1063	Voltage: 982mV
+Raw: 1064	Voltage: 983mV
+Raw: 1065	Voltage: 984mV
+Raw: 1065	Voltage: 984mV
+Raw: 1066	Voltage: 984mV
+Raw: 1072	Voltage: 989mV
+Raw: 1087	Voltage: 1001mV
+Raw: 1088	Voltage: 1002mV
+Raw: 1089	Voltage: 1003mV
+Raw: 1089	Voltage: 1003mV
+Raw: 1089	Voltage: 1003mV
+Raw: 1090	Voltage: 1003mV
+Raw: 1095	Voltage: 1007mV
+Raw: 1094	Voltage: 1007mV
+Raw: 1032	Voltage: 958mV
+Raw: 696	Voltage: 692mV
+Raw: 414	Voltage: 469mV
+Raw: 242	Voltage: 333mV
+Raw: 165	Voltage: 272mV
+Raw: 222	Voltage: 317mV
+Raw: 237	Voltage: 329mV
+Raw: 360	Voltage: 426mV
+Raw: 446	Voltage: 494mV
+Raw: 1067	Voltage: 985mV
+Raw: 1090	Voltage: 1003mV
+Raw: 1094	Voltage: 1007mV
+Raw: 1097	Voltage: 1009mV
+Raw: 1097	Voltage: 1009mV
+Raw: 1099	Voltage: 1010mV
+Raw: 1100	Voltage: 1011mV
+Raw: 1105	Voltage: 1015mV
+Raw: 1106	Voltage: 1016mV
+Raw: 938	Voltage: 883mV
+Raw: 786	Voltage: 763mV
+Raw: 676	Voltage: 676mV
+Raw: 276	Voltage: 360mV
+Raw: 109	Voltage: 228mV
+Raw: 88	Voltage: 212mV
+Raw: 85	Voltage: 209mV
+Raw: 77	Voltage: 203mV
+Raw: 79	Voltage: 204mV
+Raw: 882	Voltage: 839mV
+Raw: 1085	Voltage: 999mV
+Raw: 1094	Voltage: 1007mV
+Raw: 1097	Voltage: 1009mV
+Raw: 1098	Voltage: 1010mV
+Raw: 1077	Voltage: 993mV
+Raw: 263	Voltage: 350mV
+Raw: 32	Voltage: 167mV
+Raw: 18	Voltage: 156mV
+Raw: 26	Voltage: 163mV
+Raw: 25	Voltage: 162mV
+Raw: 19	Voltage: 157mV
+Raw: 20	Voltage: 158mV
+Raw: 20	Voltage: 158mV
+Raw: 23	Voltage: 160mV
+Raw: 23	Voltage: 160mV
+Raw: 26	Voltage: 163mV
+Raw: 24	Voltage: 161mV
+Raw: 24	Voltage: 161mV
+Raw: 25	Voltage: 162mV
+Raw: 27	Voltage: 163mV
+Raw: 24	Voltage: 161mV
+Raw: 22	Voltage: 159mV
+Raw: 20	Voltage: 158mV
+Raw: 27	Voltage: 163mV
+Raw: 29	Voltage: 165mV
+Raw: 184	Voltage: 287mV
+Raw: 1039	Voltage: 963mV
+Raw: 1068	Voltage: 986mV
+Raw: 1075	Voltage: 992mV
+Raw: 1079	Voltage: 995mV
+Raw: 1080	Voltage: 995mV
+Raw: 1082	Voltage: 997mV
+Raw: 1082	Voltage: 997mV
+Raw: 1083	Voltage: 998mV
+Raw: 1083	Voltage: 998mV
+Raw: 1082	Voltage: 997mV
+Raw: 1083	Voltage: 998mV
+Raw: 1082	Voltage: 997mV
+Raw: 1082	Voltage: 997mV
+Raw: 1084	Voltage: 999mV
+Raw: 1082	Voltage: 997mV
+Raw: 1082	Voltage: 997mV
+Raw: 1084	Voltage: 999mV
+Raw: 1182	Voltage: 1076mV
+Raw: 1175	Voltage: 1071mV
+Raw: 1108	Voltage: 1018mV
+Raw: 1048	Voltage: 970mV
+Raw: 1047	Voltage: 969mV
+Raw: 1045	Voltage: 968mV
+Raw: 1044	Voltage: 967mV
+Raw: 1044	Voltage: 967mV
+Raw: 1045	Voltage: 968mV
+Raw: 1043	Voltage: 966mV
+Raw: 1032	Voltage: 958mV
+Raw: 1012	Voltage: 942mV
+Raw: 912	Voltage: 863mV
+Raw: 902	Voltage: 855mV
+Raw: 901	Voltage: 854mV
+Raw: 901	Voltage: 854mV
+Raw: 1000	Voltage: 932mV
+Raw: 1033	Voltage: 958mV
+Raw: 1013	Voltage: 943mV
+Raw: 999	Voltage: 931mV
+Raw: 1001	Voltage: 933mV
+Raw: 1001	Voltage: 933mV
+Raw: 2089	Voltage: 1793mV
+Raw: 2108	Voltage: 1808mV
+Raw: 2136	Voltage: 1830mV
+Raw: 2174	Voltage: 1860mV
+Raw: 2209	Voltage: 1888mV
+Raw: 2239	Voltage: 1911mV
+Raw: 2267	Voltage: 1934mV
+Raw: 2280	Voltage: 1944mV
+Raw: 2257	Voltage: 1926mV
+Raw: 2214	Voltage: 1892mV
+Raw: 2154	Voltage: 1844mV
+Raw: 2085	Voltage: 1790mV
+Raw: 1995	Voltage: 1719mV
+Raw: 1920	Voltage: 1659mV
+Raw: 1909	Voltage: 1651mV
+Raw: 1945	Voltage: 1679mV
+Raw: 1998	Voltage: 1721mV
+Raw: 2028	Voltage: 1745mV
+Raw: 2114	Voltage: 1813mV
+Raw: 2131	Voltage: 1826mV
+Raw: 2025	Voltage: 1742mV
+Raw: 1907	Voltage: 1649mV
+Raw: 1802	Voltage: 1566mV
+Raw: 1680	Voltage: 1470mV
+Raw: 1564	Voltage: 1378mV
+Raw: 1492	Voltage: 1321mV
+Raw: 1436	Voltage: 1277mV
+Raw: 1403	Voltage: 1251mV
+Raw: 1383	Voltage: 1235mV
+Raw: 1374	Voltage: 1228mV
+Raw: 1372	Voltage: 1226mV
+Raw: 1380	Voltage: 1233mV
+Raw: 1392	Voltage: 1242mV
+Raw: 1403	Voltage: 1251mV
+Raw: 1409	Voltage: 1255mV
+Raw: 1406	Voltage: 1253mV
+Raw: 1407	Voltage: 1254mV
+Raw: 1421	Voltage: 1265mV
+Raw: 1468	Voltage: 1302mV
+Raw: 1598	Voltage: 1405mV
+Raw: 1826	Voltage: 1585mV
+Raw: 2130	Voltage: 1825mV
+Raw: 2457	Voltage: 2084mV
+Raw: 2767	Voltage: 2329mV
+Raw: 2921	Voltage: 2444mV
+Raw: 2989	Voltage: 2493mV
+Raw: 2979	Voltage: 2485mV
+Raw: 2951	Voltage: 2464mV
+Raw: 2856	Voltage: 2399mV
+Raw: 2923	Voltage: 2445mV
+Raw: 3084	Voltage: 2561mV
+Raw: 3157	Voltage: 2613mV
+Raw: 3218	Voltage: 2655mV
+Raw: 3229	Voltage: 2663mV
+Raw: 3264	Voltage: 2686mV
+Raw: 3278	Voltage: 2695mV
+Raw: 3266	Voltage: 2687mV
+Raw: 3173	Voltage: 2624mV
+Raw: 3123	Voltage: 2589mV
+Raw: 3056	Voltage: 2542mV
+Raw: 2855	Voltage: 2398mV
+Raw: 2629	Voltage: 2220mV
+Raw: 2579	Voltage: 2180mV
+Raw: 2541	Voltage: 2150mV
+Raw: 2441	Voltage: 2071mV
+Raw: 1987	Voltage: 1712mV
+Raw: 1745	Voltage: 1521mV
+Raw: 1588	Voltage: 1397mV
+Raw: 1511	Voltage: 1336mV
+Raw: 1498	Voltage: 1326mV
+Raw: 1513	Voltage: 1338mV
+Raw: 1547	Voltage: 1365mV
+Raw: 1576	Voltage: 1387mV
+Raw: 1585	Voltage: 1395mV
+Raw: 1557	Voltage: 1372mV
+Raw: 1525	Voltage: 1347mV
+Raw: 1533	Voltage: 1353mV
+Raw: 1567	Voltage: 1380mV
+Raw: 1564	Voltage: 1378mV
+Raw: 1543	Voltage: 1361mV
+Raw: 1527	Voltage: 1349mV
+Raw: 1528	Voltage: 1350mV
+Raw: 1540	Voltage: 1359mV
+Raw: 1542	Voltage: 1361mV
+Raw: 1527	Voltage: 1349mV
+Raw: 1521	Voltage: 1344mV
+Raw: 1529	Voltage: 1350mV
+Raw: 1514	Voltage: 1338mV
+Raw: 1488	Voltage: 1318mV
+Raw: 1464	Voltage: 1299mV
+Raw: 1455	Voltage: 1292mV
+Raw: 1456	Voltage: 1293mV
+Raw: 1451	Voltage: 1289mV
+Raw: 1449	Voltage: 1287mV
+Raw: 1449	Voltage: 1287mV
+Raw: 1455	Voltage: 1292mV
+Raw: 1460	Voltage: 1296mV
+Raw: 1477	Voltage: 1309mV
+Raw: 1480	Voltage: 1312mV
+Raw: 1479	Voltage: 1311mV
+Raw: 1471	Voltage: 1304mV
+Raw: 1474	Voltage: 1307mV
+Raw: 1487	Voltage: 1317mV
+Raw: 1492	Voltage: 1321mV
+Raw: 1495	Voltage: 1323mV
+Raw: 1505	Voltage: 1331mV
+Raw: 1510	Voltage: 1335mV
+Raw: 1511	Voltage: 1336mV
+Raw: 1505	Voltage: 1331mV
+Raw: 1531	Voltage: 1352mV
+Raw: 1540	Voltage: 1359mV
+Raw: 1534	Voltage: 1354mV
+Raw: 1541	Voltage: 1360mV
+Raw: 1551	Voltage: 1368mV
+Raw: 1563	Voltage: 1377mV
+Raw: 1589	Voltage: 1398mV
+Raw: 1618	Voltage: 1421mV
+Raw: 1639	Voltage: 1437mV
+Raw: 1706	Voltage: 1490mV
+Raw: 1170	Voltage: 1067mV
+Raw: 1078	Voltage: 994mV
+Raw: 1070	Voltage: 988mV
+Raw: 1016	Voltage: 945mV
+Raw: 931	Voltage: 878mV
+Raw: 930	Voltage: 877mV
+Raw: 933	Voltage: 879mV
+Raw: 946	Voltage: 890mV
+Raw: 947	Voltage: 890mV
+Raw: 948	Voltage: 891mV
+Raw: 946	Voltage: 890mV
+Raw: 946	Voltage: 890mV
+Raw: 942	Voltage: 886mV
+Raw: 944	Voltage: 888mV
+Raw: 945	Voltage: 889mV
+Raw: 944	Voltage: 888mV
+Raw: 944	Voltage: 888mV
+Raw: 938	Voltage: 883mV
+Raw: 913	Voltage: 864mV
+Raw: 919	Voltage: 868mV
+Raw: 935	Voltage: 881mV
+Raw: 937	Voltage: 882mV
+Raw: 937	Voltage: 882mV
+Raw: 937	Voltage: 882mV
+Raw: 936	Voltage: 882mV
+Raw: 936	Voltage: 882mV
+Raw: 936	Voltage: 882mV
+Raw: 934	Voltage: 880mV
+Raw: 934	Voltage: 880mV
+Raw: 934	Voltage: 880mV
+Raw: 935	Voltage: 881mV
+Raw: 933	Voltage: 879mV
+Raw: 933	Voltage: 879mV
+Raw: 933	Voltage: 879mV
+Raw: 932	Voltage: 879mV
+Raw: 932	Voltage: 879mV
+Raw: 932	Voltage: 879mV
+Raw: 931	Voltage: 878mV
+Raw: 931	Voltage: 878mV
+Raw: 930	Voltage: 877mV
+Raw: 930	Voltage: 877mV
+Raw: 930	Voltage: 877mV
+Raw: 929	Voltage: 876mV
+Raw: 929	Voltage: 876mV
+Raw: 928	Voltage: 875mV
+Raw: 928	Voltage: 875mV
+Raw: 929	Voltage: 876mV
+Raw: 928	Voltage: 875mV
+Raw: 927	Voltage: 875mV
+Raw: 927	Voltage: 875mV
+Raw: 926	Voltage: 874mV
+Raw: 927	Voltage: 875mV
+Raw: 910	Voltage: 861mV
+Raw: 913	Voltage: 864mV
+Raw: 923	Voltage: 871mV
+Raw: 927	Voltage: 875mV
+Raw: 926	Voltage: 874mV
+Raw: 927	Voltage: 875mV
+Raw: 926	Voltage: 874mV
+Raw: 926	Voltage: 874mV
+Raw: 926	Voltage: 874mV
+Raw: 926	Voltage: 874mV
+Raw: 926	Voltage: 874mV
+Raw: 926	Voltage: 874mV
+Raw: 926	Voltage: 874mV
+Raw: 928	Voltage: 875mV
+Raw: 926	Voltage: 874mV
+Raw: 927	Voltage: 875mV
+Raw: 925	Voltage: 873mV
+Raw: 921	Voltage: 870mV
+Raw: 902	Voltage: 855mV
+Raw: 912	Voltage: 863mV
+Raw: 918	Voltage: 867mV
+Raw: 922	Voltage: 871mV
+Raw: 925	Voltage: 873mV
+Raw: 926	Voltage: 874mV
+Raw: 927	Voltage: 875mV
+Raw: 928	Voltage: 875mV
+Raw: 929	Voltage: 876mV
+Raw: 929	Voltage: 876mV
+Raw: 931	Voltage: 878mV
+Raw: 932	Voltage: 879mV
+Raw: 933	Voltage: 879mV
+Raw: 935	Voltage: 881mV
+Raw: 936	Voltage: 882mV
+Raw: 936	Voltage: 882mV
+Raw: 938	Voltage: 883mV
+Raw: 933	Voltage: 879mV
+Raw: 750	Voltage: 735mV
+Raw: 848	Voltage: 812mV
+Raw: 943	Voltage: 887mV
+Raw: 951	Voltage: 894mV
+Raw: 895	Voltage: 849mV
+Raw: 827	Voltage: 796mV
+Raw: 827	Voltage: 796mV
+Raw: 831	Voltage: 799mV
+Raw: 828	Voltage: 796mV
+Raw: 589	Voltage: 607mV
+Raw: 452	Voltage: 499mV
+Raw: 257	Voltage: 345mV
+Raw: 95	Voltage: 217mV
+Raw: 418	Voltage: 472mV
+Raw: 822	Voltage: 792mV
+Raw: 950	Voltage: 893mV
+Raw: 892	Voltage: 847mV
+Raw: 761	Voltage: 743mV
+Raw: 176	Voltage: 281mV
+Raw: 37	Voltage: 171mV
+Raw: 24	Voltage: 161mV
+Raw: 23	Voltage: 160mV
+Raw: 28	Voltage: 164mV
+Raw: 27	Voltage: 163mV
+Raw: 27	Voltage: 163mV
+Raw: 28	Voltage: 164mV
+Raw: 29	Voltage: 165mV
+Raw: 126	Voltage: 242mV
+Raw: 730	Voltage: 719mV
+Raw: 776	Voltage: 755mV
+Raw: 474	Voltage: 517mV
+Raw: 30	Voltage: 166mV
+Raw: 20	Voltage: 158mV
+Raw: 20	Voltage: 158mV
+Raw: 13	Voltage: 152mV
+Raw: 939	Voltage: 884mV
+Raw: 993	Voltage: 927mV
+Raw: 972	Voltage: 910mV
+Raw: 963	Voltage: 903mV
+Raw: 1002	Voltage: 934mV
+Raw: 1009	Voltage: 939mV
+Raw: 1012	Voltage: 942mV
+Raw: 1015	Voltage: 944mV
+Raw: 1017	Voltage: 946mV
+Raw: 1018	Voltage: 946mV
