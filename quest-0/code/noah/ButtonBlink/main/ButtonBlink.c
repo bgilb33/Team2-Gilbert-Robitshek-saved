@@ -13,6 +13,7 @@
 
 // Hardware interrupt definitions
 #define GPIO_INPUT_IO_1       4
+#define BUTTONPIN 27
 #define ESP_INTR_FLAG_DEFAULT 0
 #define GPIO_INPUT_PIN_SEL    1ULL<<GPIO_INPUT_IO_1
 #define LED_GPIO_PIN 13
@@ -63,6 +64,17 @@ void button_task(){
   }
 }
 
+void turnOffAlarm(){
+  while(1) {
+    if(gpio_get_level(BUTTONPIN)){
+      printf("reset alarms\n");
+      light = 0;
+    }
+
+    vTaskDelay(100 / portTICK_PERIOD_MS);
+  }
+}
+
 
 void app_main(void)
 {
@@ -71,5 +83,7 @@ void app_main(void)
 
   // Create task for button
   xTaskCreate(button_task, "button_task", 1024*2, NULL, configMAX_PRIORITIES, NULL);
+  xTaskCreate(turnOffAlarm, "turnOffAlarm", 1024*2, NULL, configMAX_PRIORITIES, NULL);
+
   printf("Everything initialized. Waiting for button presses...\n");
 }

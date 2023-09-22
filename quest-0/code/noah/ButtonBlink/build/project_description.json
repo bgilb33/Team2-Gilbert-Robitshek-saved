@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "ButtonBlink",
-    "project_version":    "1d31fe6",
+    "project_version":    "58ef3a0-dirty",
     "project_path":       "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink",
     "idf_path":           "/Users/noahrobitshek/esp/esp-idf",
     "build_dir":          "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/noah/ButtonBlink/build",
@@ -11,7 +11,7 @@
     "app_elf":            "ButtonBlink.elf",
     "app_bin":            "ButtonBlink.bin",
     "build_type":         "flash_app",
-    "git_revision":       "v5.2-dev-2934-g3b748a6cb7",
+    "git_revision":       "v5.2-dev-2934-g3b748a6cb7-dirty",
     "target":             "esp32",
     "rev":                "0",
     "min_rev":            "0",

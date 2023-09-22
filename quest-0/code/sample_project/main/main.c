@@ -11,10 +11,11 @@
 
 #define DEFAULT_VREF 1100 // Use adc2_vref_to_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES 64  // Multisampling
-#define ALARM_PIN 13
-#define THERMO_ALARM_PIN 12
-#define BUTTON_ALARM_PIN 15
+#define LIGHT_ALARM_PIN 15
+#define THERMO_ALARM_PIN 13
+#define BUTTON_ALARM_PIN 32
 #define RESET_BUTTON 39
+#define GREEN_PIN 12
 
 // Button Code
 #define GPIO_INPUT_IO_1 4
@@ -42,14 +43,22 @@ static void IRAM_ATTR gpio_isr_handler(void *arg)
 
 void init()
 {
-    gpio_reset_pin(ALARM_PIN);
-    gpio_set_direction(ALARM_PIN, GPIO_MODE_OUTPUT);
+    gpio_reset_pin(LIGHT_ALARM_PIN);
+    gpio_set_direction(LIGHT_ALARM_PIN, GPIO_MODE_OUTPUT);
+
     gpio_reset_pin(THERMO_ALARM_PIN);
     gpio_set_direction(THERMO_ALARM_PIN, GPIO_MODE_OUTPUT);
+
     gpio_reset_pin(BUTTON_ALARM_PIN);
     gpio_set_direction(BUTTON_ALARM_PIN, GPIO_MODE_OUTPUT);
+
     gpio_reset_pin(RESET_BUTTON);
     gpio_set_direction(RESET_BUTTON, GPIO_MODE_INPUT);
+
+    gpio_reset_pin(GREEN_PIN);
+    gpio_set_direction(GREEN_PIN, GPIO_MODE_OUTPUT);
+
+
 
     gpio_config_t io_conf;
     // interrupt of rising edge
@@ -185,15 +194,24 @@ void sound_alarm_task()
 {
     while (1)
     {
-        gpio_set_level(ALARM_PIN, light_alarm_state);
+        if(!light_alarm_state & !thermo_alarm_state & !button_alarm){
+            gpio_set_level(GREEN_PIN, 1);
+        }else{
+            gpio_set_level(GREEN_PIN, 0);
+        }
+
+        gpio_set_level(LIGHT_ALARM_PIN, light_alarm_state);
         gpio_set_level(THERMO_ALARM_PIN, thermo_alarm_state);
+        gpio_set_level(BUTTON_ALARM_PIN, button_alarm);
+
         if (flag)
         {
 
             flag = 0;
         }
-        gpio_set_level(BUTTON_ALARM_PIN, button_alarm);
+        
         vTaskDelay(10 / portTICK_PERIOD_MS);
+
     }
 }
 
