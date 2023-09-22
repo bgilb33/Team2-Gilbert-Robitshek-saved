@@ -5,18 +5,18 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "/Users/noahrobitshek/esp/esp-idf/components/bootloader/subproject"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader-prefix"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader-prefix/tmp"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader-prefix/src"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader"
+  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader-prefix"
+  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader-prefix/tmp"
+  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader-prefix/src/bootloader-stamp"
+  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader-prefix/src"
+  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

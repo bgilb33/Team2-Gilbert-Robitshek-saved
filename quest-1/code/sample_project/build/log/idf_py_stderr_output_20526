@@ -1,6 +1,0 @@
-[0;33m--- esp-idf-monitor 1.2.1 on /dev/cu.usbserial-01425E66 115200 ---[0m
-[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
-[0;33m0x400810f0: do_multicore_settings at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:332
-[0m
-[0;33mWarning: checksum mismatch between flashed and built applications. Checksum of built application is 4284689948b16943f4ced0102dc3d32ba37eab995c80686c29b180ce0ac8030d[0m
-[0m

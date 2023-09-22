@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
 
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-0/code/sample_project/main
+# Install script for directory: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-1/code/sample_project/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

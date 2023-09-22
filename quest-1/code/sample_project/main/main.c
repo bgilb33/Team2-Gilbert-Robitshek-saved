@@ -8,6 +8,8 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 #include <math.h>
+#include <time.h>
+
 
 #define DEFAULT_VREF 1100 // Use adc2_vref_to_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES 64  // Multisampling
@@ -34,6 +36,9 @@ int light_alarm_state = 0;
 int thermo_alarm_state = 0;
 float temperature = 0;
 uint32_t photo_voltage = 0;
+
+time_t rawtime;
+struct tm * timeinfo;
 
 static void IRAM_ATTR gpio_isr_handler(void *arg)
 {
@@ -248,6 +253,13 @@ void print_reading_task()
         }
 
         printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        time ( &rawtime );
+        timeinfo = localtime ( &rawtime );
+        printf("Current time: %02d:%02d\n", timeinfo->tm_min, timeinfo->tm_sec);
+
+        // printf ( "Current local time and date: %s", asctime (timeinfo) );
+
+        
         printf("       Status          Value\n");
         printf("Button: %s             %i \n", buttonOutput, button_alarm);
         printf("Light:  %s             %ld mV\n", lightOutput, photo_voltage);

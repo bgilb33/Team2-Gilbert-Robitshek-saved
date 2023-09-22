@@ -1,0 +1,862 @@
+  v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v1.0[it: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 0�[0;32mI (13) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Sep 22 2023 12:53:26[0m
+[0;32mI (14) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v1.0[0m
+[0;32mI (22) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0ae08h ( 44552) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001ae30 vaddr=3ffb0000 size=021ach (  8620) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=0001cfe4 vaddr=40080000 size=03034h ( 12340) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=19b04h (105220) map[0m
+[0;32mI (156) esp_image: segment 4: paddr=00039b2c vaddr=40083034 size=092c8h ( 37576) load[0m
+[0;32mI (178) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (178) boot: Disabling RNG early entropy source...[0m
+[0;32mI (189) cpu_start: Multicore app[0m
+[0;32mI (190) cpu_start: Pro cpu up.[0m
+[0;32mI (190) cpu_start: Starting app cpu, entry point is 0x4008103c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (208) cpu_start: Pro cpu start user code[0m
+[0;32mI (208) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (208) cpu_start: Application information:[0m
+[0;32mI (213) cpu_start: Project name:     main[0m
+[0;32mI (217) cpu_start: App version:      d14b0c2-dirty[0m
+[0;32mI (223) cpu_start: Compile time:     Sep 22 2023 12:53:11[0m
+[0;32mI (229) cpu_start: ELF file SHA256:  d0fac2bef04118b5...[0m
+[0;32mI (235) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (242) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (246) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (251) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2A80 len 0002D580 (181 KiB): DRAM[0m
+[0;32mI (276) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008C2FC len 00013D04 (79 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: gd[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (316) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (325) app_start: Starting scheduler on CPU0[0m
+[0;32mI (329) app_start: Starting scheduler on CPU1[0m
+[0;32mI (329) main_task: Started on CPU0[0m
+[0;32mI (339) main_task: Calling app_main()[0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+[0;32mI (339) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (349) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (359) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (369) gpio: GPIO[39]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (379) gpio: GPIO[12]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (389) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+Characterized using eFuse Vref
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 0
+       Status          Value
+Button: Not Detected             0 
+Light:  Not Detected             0 mV
+Heat:   Not Detected             0.000000 oC
+[0;32mI (429) main_task: Returned from app_main()[0m
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 2
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Deteted            22.028826 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 4
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1838 mV
+Heat:   Not Detected             22.08509 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 6
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not tected          2210859 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 8
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detected           22.13824 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 10
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detectd             2.220289 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 12
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1827 mV
+Heat:   Not Detected             22.247663 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 14
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1824 mV
+Heat:   Not Detected            22.27663 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 16
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1828 mV
+Heat:   Not Deecte             22.302389 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 18
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1832 mV
+Heat:   Not Deecte           22.30239 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 20
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1833 mV
+Heat:   Not Detected         22.384535 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 22
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1832 mV
+Heat:   Not Detected            22.302389 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 24
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1832 mV
+Heat:   Not Deected            22.384535 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 26
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1829 mV
+Heat:   Not etected            22.32978 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 28
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1833 mV
+Heat:   Not Detectd            22.411921 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 30
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1830 mV
+Heat:   Not tected           22.521513 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 32
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1829 mV
+Heat:   Not Detecte            22.46705 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 34
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1826 mV
+Heat:   Not Deecte            22.439310 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 36
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1825 mV
+Heat:   NotDetcted           22.521513 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 38
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1825 mV
+Heat:   Not Detecte           22.49406 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 40
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1821 mV
+Heat:   Notetected            22.603739 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 42
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1821 mV
+Heat:   Not Detected             22.521513 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 44
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1819 mV
+Heat:   Not Detected            22.71343 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 46
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1823 mV
+Heat:   Not Detected           22.521513 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 48
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1832 mV
+Heat:   Not Detected          22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 50
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1830 mV
+Heat:   Notetected             22.521513 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 52
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1833 mV
+Heat:   Not Detecte            22.68991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 54
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1833 mV
+Heat:   Not Detected             22.48903oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 56
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detecte             22.548903 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 58
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1838 mV
+Heat:   Not etected             22.57639 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 0
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1840 mV
+Heat:   Not Detecte            2.603739 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 2
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1845 mV
+Heat:   Not Detected           22.466705 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 4
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1846 mV
+Heat:   Not Detcted          22.61145oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 6
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1842 mV
+Heat:   Not Detcted           22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 8
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1842 mV
+Heat:   Not Detected           22.494106 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 10
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1838 mV
+Heat:   Not Detectd           22.65875 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 12
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1835 mV
+Heat:   NotDetecte             22.685991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 14
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1835 mV
+Heat:   Not Deected          .576319 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 16
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1835 mV
+Heat:   Not Detected          22.65855 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 18
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1828 mV
+Heat:   Not Deected          22.631145 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 20
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1833 mV
+Heat:   Not Detected            22.685991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 22
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1833 mV
+Heat:   Not Detected           22.439310 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 24
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Deected           2254890 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 26
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1838 mV
+Heat:   Not Detecte             22.658575 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 28
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1841 mV
+Heat:   Not Deected         263145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 30
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1839 mV
+Heat:   Not Detected           22.603739 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 32
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1837 mV
+Heat:   Not Detectd            22.576319oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 34
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1837 mV
+Heat:   Not Detecte             22.52513 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 36
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1838 mV
+Heat:   Not Detected            22.494106 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 38
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1842 mV
+Heat:   Not Detected           22.576319 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 40
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Detected            22.548903 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 42
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Detecte            22.658575 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 44
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1846 mV
+Heat:   Not Detectd           2260379 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 46
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1850 mV
+Heat:   Not etected             22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 48
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1851 mV
+Heat:   Not Detectd            22.658575 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 50
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1851 mV
+Heat:   Not Deecte           2.576319 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 52
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1849 mV
+Heat:   Not tected           22.548903 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 54
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1848 mV
+Heat:   Not tected            22.548903 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 56
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1846 mV
+Heat:   Not Detected            22.54893 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 58
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1847 mV
+Heat:   Not Detecte           22.685991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 0
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1847 mV
+Heat:   Not Detcted          22.65991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 2
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Detected           2265855 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 4
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1839 mV
+Heat:   Not Detcted             22.63145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 6
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detcted            22713413 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 8
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1832 mV
+Heat:   Not etected             22.54903 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 10
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1834 mV
+Heat:   Not Detected            22.713413 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 12
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Detected            22.658575oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 14
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1843 mV
+Heat:   Not Deected             2.57319 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 16
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1835 mV
+Heat:   Not tected            22.740839 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 18
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1845 mV
+Heat:   Not Detected           22.576319 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 20
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1847 mV
+Heat:   Not Detected          22.521513 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 22
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1852 mV
+Heat:   Not Detected             22.603739 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 24
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1850 mV
+Heat:   Not Detecte            22.52151 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 26
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1843 mV
+Heat:   Not Detecte            22.63145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 28
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1848 mV
+Heat:   Not Deecte          2658575 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 30
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1843 mV
+Heat:   Notetected            22.43910 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 32
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1846 mV
+Heat:   Not Deecte             22.631145 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 34
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1837 mV
+Heat:   Not Deected           22.685991 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 36
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detected             22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 38
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1845 mV
+Heat:   Not Deected             22.631145oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 40
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Deecte           22.576319 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 42
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detectd             22.60739oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 44
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1839 mV
+Heat:   Not Detecte            22.494106 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 46
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1842 mV
+Heat:   Not Detected           2.63145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 48
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1843 mV
+Heat:   Not Detecte            22.740839oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 50
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1845 mV
+Heat:   NotDetcted           22.76319 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 52
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1847 mV
+Heat:   Not etected            22.603739 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 54
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1850 mV
+Heat:   Not Detected             22.6319 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 56
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1843 mV
+Heat:   Not Detected            22.713413 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 58
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Detected             22.31145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 0
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1835 mV
+Heat:   Not Detected             22.68575 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 2
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1837 mV
+Heat:   Not Detcted             22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 4
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1840 mV
+Heat:   Not Detecte             2.713413 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 6
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Detcted           2.631145 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 8
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1845 mV
+Heat:   Not Detected             22.631145C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 10
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1844 mV
+Heat:   Not Detected           22.603739 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 12
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1846 mV
+Heat:   Not Detecte            22.65857 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 14
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1845 mV
+Heat:   Not Detectd            22.768290 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 16
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1845 mV
+Heat:   Not Detected             22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 18
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1841 mV
+Heat:   Not Deected             22.46705 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 20
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1839 mV
+Heat:   NotDetected           22.54803 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 22
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1840 mV
+Heat:   Not Detecte           22.60379 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 24
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1842 mV
+Heat:   Not Detecte             22.74089 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 26
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1843 mV
+Heat:   Not Detected            22.685991C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 28
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1846 mV
+Heat:   Not Detected             22.658575 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 30
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1843 mV
+Heat:   NotDetected             22.65575 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 32
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1840 mV
+Heat:   Not Detectd            22.658575 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 34
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Deected             22.63114oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 36
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1835 mV
+Heat:   Not Detectd             2.603739 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 38
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detecte           22.658575 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 40
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1839 mV
+Heat:   Not Detected            22.61145 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 42
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1834 mV
+Heat:   Not Detected            22.68599oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 44
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Deecte           2.65991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 46
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Deected          22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 48
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1837 mV
+Heat:   Not Deecte             22.68991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 50
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1839 mV
+Heat:   Not Deected             2.54903 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 52
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1839 mV
+Heat:   Not Detecte             22.603739 o
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 54
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1836 mV
+Heat:   Not Detecte           22.65855 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 56
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1832 mV
+Heat:   Not Deected           22.795727 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 58
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1830 mV
+Heat:   Not Detecte           .63114 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 0
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1832 mV
+Heat:   Not Detecte             22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 2
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1827 mV
+Heat:   Not Detcted           22.54893 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 4
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1825 mV
+Heat:   Not Detected            22.603739oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 6
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1825 mV
+Heat:   Not Detected            22.54903 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 8
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1824 mV
+Heat:   Not Detecte            22.713413 oC~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 10
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1821 mV
+Heat:   Not Detected            22.61145 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 12
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1819 mV
+Heat:   Not Detected             22.31145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 14
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1814 mV
+Heat:   Not Deecte             22.576319 C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 16
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1814 mV
+Heat:   Not Detecte            22.631145 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 18
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1815 mV
+Heat:   Not Detectd            22.68991 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 20
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1820 mV
+Heat:   NotDetecte            22.68591 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 22
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1822 mV
+Heat:   NotDetecte             22.603739 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 24
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1819 mV
+Heat:   Not Detectd            22.71313 oC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 26
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1821 mV
+Heat:   Not Detected             22.03739C
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current seconds: 28
+       Status          Value
+Button: Not Detected             0 
+Light:  Detected             1820 mV
+Heat:   Not Detecte           2.60373 oC
