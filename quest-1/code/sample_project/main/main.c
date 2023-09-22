@@ -1,4 +1,3 @@
-// This code is from the esp-idf ADC1 example. I changed the pins to fit my circuit.
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -8,46 +7,54 @@
 #include "driver/adc.h"
 #include "esp_adc_cal.h"
 #include <math.h>
-#include <time.h>
 
-
+// Defines from ADC1 Example and are used in photocell and thermistor measurements
 #define DEFAULT_VREF 1100 // Use adc2_vref_to_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES 64  // Multisampling
+
+// LED Pin and Reset Button definitions
 #define LIGHT_ALARM_PIN 15
 #define THERMO_ALARM_PIN 13
 #define BUTTON_ALARM_PIN 32
 #define RESET_BUTTON 39
 #define GREEN_PIN 12
 
-// Button Code
+// Definitions for Pressure Plate Button that uses a hardware interupt
 #define GPIO_INPUT_IO_1 4
 #define ESP_INTR_FLAG_DEFAULT 0
 #define GPIO_INPUT_PIN_SEL 1ULL << GPIO_INPUT_IO_1
-int button_alarm = 0;
+
 int flag = 0; // Flag for signaling from ISR
 
+// Declarations and initializations for ADC readings of thermistor and photosensor
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc1_channel_t thermistor_channel = ADC_CHANNEL_5;
 static const adc_channel_t channel = ADC_CHANNEL_6; // 34
 static const adc_atten_t atten = ADC_ATTEN_DB_11;
 static const adc_unit_t unit = ADC_UNIT_1;
 
+// Alarm states
+// 0: Not Detected
+// 1: Detected
+int button_alarm = 0;
 int light_alarm_state = 0;
 int thermo_alarm_state = 0;
+
+// Global variables for temperature and photosensor voltage readings from the thermistor and photosensor
 float temperature = 0;
 uint32_t photo_voltage = 0;
 
-time_t rawtime;
-struct tm * timeinfo;
-
+// GPIO ISR Handler from Design Pattern -- Interrupts example in skill 12 assignment
 static void IRAM_ATTR gpio_isr_handler(void *arg)
 {
+    // Sets pressure plate detection (button_alarm) to 1 if pressure plate button is pressed
     button_alarm = 1;
     gpio_set_level(GPIO_INPUT_IO_1, 1);
 }
 
 void init()
 {
+    // Initializes LED Pins as outputs
     gpio_reset_pin(LIGHT_ALARM_PIN);
     gpio_set_direction(LIGHT_ALARM_PIN, GPIO_MODE_OUTPUT);
 
@@ -57,13 +64,15 @@ void init()
     gpio_reset_pin(BUTTON_ALARM_PIN);
     gpio_set_direction(BUTTON_ALARM_PIN, GPIO_MODE_OUTPUT);
 
-    gpio_reset_pin(RESET_BUTTON);
-    gpio_set_direction(RESET_BUTTON, GPIO_MODE_INPUT);
-
     gpio_reset_pin(GREEN_PIN);
     gpio_set_direction(GREEN_PIN, GPIO_MODE_OUTPUT);
 
+    // Initializes reset button as an input
+    gpio_reset_pin(RESET_BUTTON);
+    gpio_set_direction(RESET_BUTTON, GPIO_MODE_INPUT);
 
+    // Configures the hardware interrupt for the pressure plate button
+    // This segment of code is from the Design Pattern -- Interrupts example in skill 12 assignment
 
     gpio_config_t io_conf;
     // interrupt of rising edge
@@ -82,6 +91,7 @@ void init()
     gpio_isr_handler_add(GPIO_INPUT_IO_1, gpio_isr_handler, (void *)GPIO_INPUT_IO_1);
 }
 
+// Check eFuse function from ADC1 example in skill 07 assignment
 static void check_efuse(void)
 {
     // Check TP is burned into eFuse
@@ -105,6 +115,7 @@ static void check_efuse(void)
     }
 }
 
+// Print Char Val Type function from ADC1 example in skill 07 assignment
 static void print_char_val_type(esp_adc_cal_value_t val_type)
 {
     if (val_type == ESP_ADC_CAL_VAL_EFUSE_TP)
@@ -121,6 +132,7 @@ static void print_char_val_type(esp_adc_cal_value_t val_type)
     }
 }
 
+// Task that continually samples the adc from the photoresistor, converts that value to voltage, and changes the alarm state triggered by the photoresistor (light_alarm_state) if the voltage passes the threshold
 void photoresistor_task()
 {
     // Continuously sample ADC1
@@ -144,6 +156,9 @@ void photoresistor_task()
         adc_reading_photo /= NO_OF_SAMPLES;
         // Convert adc_reading to voltage in mV
         photo_voltage = esp_adc_cal_raw_to_voltage(adc_reading_photo, adc_chars);
+
+        // Sets light_alarm_state to 1 if the photoresistor voltage is greater than or equal to 500mv
+        // Sets light_alarm_state to 0 if the photoresistor voltage is less than to 500mv
         if (photo_voltage >= 500)
         {
             light_alarm_state = 1;
@@ -156,6 +171,7 @@ void photoresistor_task()
     }
 }
 
+// Task that continually samples the adc from the thermistor, converts that value to degress Celcius, and changes the alarm state triggered by the thermistor (thermo_alarm_state) if the temperature passes the threshold
 void thermistor_task()
 {
     // Continuously sample ADC1
@@ -179,10 +195,14 @@ void thermistor_task()
         adc_reading_thermo /= NO_OF_SAMPLES;
         // Convert adc_reading to voltage in mV
         float voltage = (adc_reading_thermo / 4095.0) * 3.3;
+        // Calculates the photoresistor resistance based on the voltage
         float resistance = 10000.0 * voltage / (3.0 - voltage);
+        // Calculates the temperature in degrees Celcius using the Steinhart equation
         temperature = (1.0 / 298.15) + ((1.0 / 3435.0) * (log(resistance / 10000.0)));
         temperature = (1.0 / temperature) - 273.1;
 
+        // Sets thermo_alarm_state to 1 if the temperature is greater than 27 degrees Celcius
+        // Sets thermo_alarm_state to 0 if the temperature is less than or equal to 27 degrees Celcius
         if (temperature > 27)
         {
             thermo_alarm_state = 1;
@@ -195,35 +215,51 @@ void thermistor_task()
     }
 }
 
+// Continuously checks the status of the three alarms and lights the correct LED if the alarm state is equal to 1
+// Lights the green LED if all alarm states are equal to 0
 void sound_alarm_task()
 {
     while (1)
     {
-        if(!light_alarm_state & !thermo_alarm_state & !button_alarm){
+        // Lights the green LED if no alarms are triggered
+        if (!light_alarm_state & !thermo_alarm_state & !button_alarm)
+        {
             gpio_set_level(GREEN_PIN, 1);
-        }else{
+        }
+        else
+        {
             gpio_set_level(GREEN_PIN, 0);
         }
 
+        // Lights the yellow LED if the light_alarm_state is equal to 1
         gpio_set_level(LIGHT_ALARM_PIN, light_alarm_state);
+        // Lights the red LED if the thermo_alarm_state is equal to 1
         gpio_set_level(THERMO_ALARM_PIN, thermo_alarm_state);
+        // Lights the blue LED if the button_alarm is equal to 1
         gpio_set_level(BUTTON_ALARM_PIN, button_alarm);
 
+        // Resets the flag after a hardware interrupt from the pressure plate button occurs
         if (flag)
         {
 
             flag = 0;
         }
-        
-        vTaskDelay(10 / portTICK_PERIOD_MS);
 
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }
 
+// Prints the values and status of the sensors every 2 seconds
+// If an alarm state is 1, it's status will be printed as "Detected"
+// If an alarm state is 0, it's status will be printed as "Not Detected"
+// Value of button will be: 1 for pressed, 0 for not pressed
+// Value of thermistor will be in degrees Celcius
+// Value of photoresistor will be in mV
 void print_reading_task()
 {
     while (1)
     {
+        // Get string values for a sensor's status based on its alarm state
         char buttonOutput[13];
         char lightOutput[13];
         char thermoOutput[13];
@@ -252,14 +288,8 @@ void print_reading_task()
             strcpy(thermoOutput, "Not Detected");
         }
 
+        // Formats the print and prints it to the console
         printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-        time ( &rawtime );
-        timeinfo = localtime ( &rawtime );
-        printf("Current time: %02d:%02d\n", timeinfo->tm_min, timeinfo->tm_sec);
-
-        // printf ( "Current local time and date: %s", asctime (timeinfo) );
-
-        
         printf("       Status          Value\n");
         printf("Button: %s             %i \n", buttonOutput, button_alarm);
         printf("Light:  %s             %ld mV\n", lightOutput, photo_voltage);
@@ -269,6 +299,7 @@ void print_reading_task()
     }
 }
 
+// Resets the pressure plate button alarm state when the reset button is pressed using the polling design pattern
 void reset_task()
 {
     while (1)
@@ -286,6 +317,7 @@ void app_main(void)
 {
     // Check if Two Point or Vref are burned into eFuse
     check_efuse();
+    // Initialize pins and hardware interrupt
     init();
 
     // Configure ADC
@@ -305,6 +337,7 @@ void app_main(void)
     print_char_val_type(val_type);
 
     // Create Tasks
+    // Tasks in priority order (high to low): Sound Alarm, Reset Pressure Plate Alarm, Print Current Readings, Photoresistor Reading, Thermistor Reading
     xTaskCreate(sound_alarm_task, "sound_alarm_task", 1024 * 2, NULL, configMAX_PRIORITIES, NULL);
     xTaskCreate(reset_task, "reset_task", 1024 * 2, NULL, configMAX_PRIORITIES - 1, NULL);
     xTaskCreate(print_reading_task, "print_reading_task", 1024 * 2, NULL, configMAX_PRIORITIES - 2, NULL);
