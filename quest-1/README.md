@@ -7,13 +7,13 @@ Date: 9/22/2023
 ### Summary
 For this quest we will use a photocell to detect changes in light level caused by an intruder occluding overhead lights. Similarly, we use a thermistor to detect changes in room temperature (for example, caused by the physical exertion of character Ethan Hunt). Lastly, we will simulate a floor contact sensor using a pushbutton (if he touches the floor, an alarm is triggered).
 
-In terms of alarm reporting, your solution should turn on LEDs indicating each type of fault: 
+In terms of alarm reporting, our solution turns on LEDs indicating each type of fault: 
 - green (all clear)
 - red (temperature change)
 - yellow (light change)
 - blue (floor touch). 
 
-Meanwhile, data on each input should be displayed as text on the console I/O (from the ESP32 over the serial channel to your laptop console window).
+Meanwhile, each data alarm is displayed as text on the console I/O (from the ESP32 over the serial channel to your laptop console window).
 
 
 ## Rubric
