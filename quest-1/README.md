@@ -16,17 +16,16 @@ In terms of alarm reporting, your solution should turn on LEDs indicating each t
 Meanwhile, data on each input should be displayed as text on the console I/O (from the ESP32 over the serial channel to your laptop console window).
 
 
-### Self-Assessment 
+## Rubric
 
 | Objective Criterion | Rating | Max Value  | 
 |---------------------------------------------|:-----------:|:---------:|
-| Objective One | 1 |  1     | 
-| Objective Two | 1 |  1     | 
-| Objective Three | 1 |  1     | 
-| Objective Four | 1 |  1     | 
-| Objective Five | 1 |  1     | 
-| Objective Six | 1 |  1     | 
-| Objective Seven | 1 |  1     | 
+| 1. Reports time to console along with sensor readings  | 1 |  1     | 
+| 2. Measures input from photocell | 1 |  1     | 
+| 3. Measures and reports temperature in Engineering units  | 1 |  1     | 
+| 4. Cyclic behavior at design frequency  | 1 |  1     | 
+| 5. Uses hardware interrupt for button press   | 1 |  1     | 
+| 6. Lights up correct LEDs on alarms    | 1 |  1     | 
 
 
 ### Solution Design
@@ -60,7 +59,6 @@ Below is a skematic for the circuit used in this quest. The photocell and thermi
 - [Link to video demo](https://drive.google.com/file/d/1c9LHJ-mZjBCGq3O0sDQTOOuJa9f9g_Yx/view?usp=sharing). Not to exceed 120s
 
 
-### Modules, Tools, Source Used Including Attribution
 
 ### AI Use
 I used GPT-3.5 and github copilot was used sparcly fix typos and provide assistance with the documentation. 
