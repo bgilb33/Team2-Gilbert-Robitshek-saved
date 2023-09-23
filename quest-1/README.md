@@ -61,7 +61,7 @@ Below is a skematic for the circuit used in this quest. The photocell and thermi
 
 
 ### AI Use
-I used GPT-3.5 and github copilot was used sparcly fix typos and provide assistance with the documentation. 
+I used GPT-3.5 and github copilot was used fix typos and provide assistance with the documentation. 
 
 <!-- I used {chat.openai.com GPT-3.5} on {8/30/2023} with the following prompt: -->
 
