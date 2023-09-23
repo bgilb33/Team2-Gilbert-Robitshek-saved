@@ -1,6 +1,6 @@
 # Code Readme
 
-Author: Benjamin Gilbert
+Author: Benjamin Gilbert and Noah Robitshek
 
 Date: 2023-09-19
 
