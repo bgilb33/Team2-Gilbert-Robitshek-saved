@@ -1,0 +1,6910 @@
+[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu up.[0m
+[0;32mI (208) cpu_start: Start�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  3 2023 22:23:11[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b1e8h ( 45544) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=0001b210 vaddr=3ffb0000 size=0217ch (  8572) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001d394 vaddr=40080000 size=02c84h ( 11396) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16e98h ( 93848) map[0m
+[0;32mI (171) esp_image: segment 4: paddr=00036ec0 vaddr=40082c84 size=0aa78h ( 43640) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu up.[0m
+[0;32mI (208) cpu_start: Starting app cpu, entry point is 0x40081150[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (226) cpu_start: Pro cpu start user code[0m
+[0;32mI (226) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (226) cpu_start: Application information:[0m
+[0;32mI (231) cpu_start: Project name:     accel[0m
+[0;32mI (236) cpu_start: App version:      9ee5dcb[0m
+[0;32mI (241) cpu_start: Compile time:     Oct  3 2023 22:23:04[0m
+[0;32mI (247) cpu_start: ELF file SHA256:  9314b0caf...[0m
+[0;32mI (252) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (259) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (264) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (269) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (281) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (287) heap_init: At 3FFB2A08 len 0002D5F8 (181 KiB): DRAM[0m
+[0;32mI (293) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (299) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (306) heap_init: At 4008D6FC len 00012904 (74 KiB): IRAM[0m
+[0;32mI (313) spi_flash: detected chip: generic[0m
+[0;32mI (316) spi_flash: flash io: dio[0m
+[0;33mW (320) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (334) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (345) app_start: Starting scheduler on CPU0[0m
+[0;32mI (349) app_start: Starting scheduler on CPU1[0m
+[0;32mI (349) main_task: Started on CPU0[0m
+[0;32mI (359) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x53
+
+>> Found ADAXL343
+- Range:         +/- 16  g
+- Data Rate:    0.10  Hz
+
+
+>> Polling ADAXL343
+hello
+[0;32mI (399) main_task: Returned from app_main()[0m
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 5.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 5.12 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 5.12 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 4.67 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.78 	 Z: 10.04
+roll: 4.47 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.67 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 9.96
+roll: 4.95 	 pitch: 4.93 
+The magnitude is: 10.04
+The step count is: 0
+hello
+X: -0.98 	 Y: 0.82 	 Z: 9.96
+roll: 4.73 	 pitch: 5.60 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.67 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.90 	 Z: 10.16
+roll: 5.08 	 pitch: 4.84 
+The magnitude is: 10.24
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 5.12 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.00
+roll: 4.93 	 pitch: 4.91 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.67 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.66 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.66 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 5.12 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 5.10 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.86 	 Z: 10.00
+roll: 4.93 	 pitch: 4.69 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 4.67 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 5.09 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 4.87 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 5.11 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 5.12 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 5.09 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 5.09 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 5.12 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.00
+roll: 4.93 	 pitch: 4.91 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 4.64 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 4.67 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 4.86 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 4.67 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.82 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 4.66 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 4.90 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 5.08 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.82 	 Z: 10.00
+roll: 4.71 	 pitch: 4.91 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.94 	 Z: 10.20
+roll: 5.27 	 pitch: 4.82 
+The magnitude is: 10.28
+The step count is: 0
+hello
+X: -0.78 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: 4.47 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -0.78 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.40
+roll: 8.16 	 pitch: -4.49 
+The magnitude is: 10.53
+The step count is: 0
+hello
+X: 0.39 	 Y: 1.22 	 Z: 10.16
+roll: 6.83 	 pitch: -2.20 
+The magnitude is: 10.24
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.10 	 Z: 10.12
+roll: 6.19 	 pitch: -0.88 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.20 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: -1.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.08 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -0.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.12 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: -0.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.14 	 Z: 10.12
+roll: 6.41 	 pitch: -0.88 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: -0.89 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.20 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: -1.11 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.06 	 Z: 10.00
+roll: 6.04 	 pitch: -0.89 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: -0.89 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.12 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: -0.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.06 	 Z: 10.08
+roll: 6.00 	 pitch: -0.89 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: -0.89 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.12 	 Y: 1.06 	 Z: 10.08
+roll: 6.00 	 pitch: -0.67 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.06 	 Z: 10.08
+roll: 6.00 	 pitch: -0.89 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: -0.89 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.12 	 Y: 1.06 	 Z: 10.12
+roll: 5.97 	 pitch: -0.66 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.12 	 Y: 1.06 	 Z: 10.08
+roll: 6.00 	 pitch: -0.67 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: -0.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.04 	 Y: 1.02 	 Z: 10.04
+roll: 5.80 	 pitch: -0.22 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.55 	 Z: 10.00
+roll: 3.14 	 pitch: 2.47 
+The magnitude is: 10.03
+The step count is: 0
+hello
+X: -0.39 	 Y: 1.10 	 Z: 9.81
+roll: 6.39 	 pitch: 2.28 
+The magnitude is: 9.88
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 9.96
+roll: 4.73 	 pitch: 2.92 
+The magnitude is: 10.01
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 9.92
+roll: 5.19 	 pitch: 2.93 
+The magnitude is: 9.98
+The step count is: 0
+hello
+X: 0.00 	 Y: 1.45 	 Z: 9.77
+roll: 8.45 	 pitch: -0.00 
+The magnitude is: 9.87
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: 3.10 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: 3.13 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 3.10 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: 3.09 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 3.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.59 	 Y: 1.02 	 Z: 10.16
+roll: 5.73 	 pitch: 3.30 
+The magnitude is: 10.23
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: 3.13 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: 2.68 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: 2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: 2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 3.09 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 3.10 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.47
+roll: 5.14 	 pitch: 2.56 
+The magnitude is: 10.53
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 3.33 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: 2.91 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: 2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 3.09 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.44 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.39 	 Y: 0.75 	 Z: 10.08
+roll: 4.23 	 pitch: 2.22 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 3.10 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 2.88 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 2.88 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.00
+roll: 4.93 	 pitch: 2.68 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.34 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 2.68 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 3.10 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 3.12 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 3.33 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 3.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: 2.68 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: 2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 2.65 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 3.09 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 3.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 3.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.24
+roll: 4.60 	 pitch: 2.84 
+The magnitude is: 10.28
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.43 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.86 	 Z: 10.16
+roll: 4.86 	 pitch: 2.42 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.33 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.00
+roll: 4.93 	 pitch: 2.91 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.16
+roll: 5.08 	 pitch: 2.64 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: 3.31 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.67 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: 3.78 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.82 	 Z: 9.89
+roll: 4.76 	 pitch: 3.17 
+The magnitude is: 9.93
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: 2.91 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 9.92
+roll: 4.97 	 pitch: 2.71 
+The magnitude is: 9.97
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.00
+roll: 4.93 	 pitch: 2.91 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.39 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: 2.24 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.16
+roll: 5.29 	 pitch: 2.86 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.45 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.43 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.27 	 Y: 0.63 	 Z: 10.08
+roll: 3.56 	 pitch: 1.56 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: 2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.43 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 3.10 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.00
+roll: 4.93 	 pitch: 2.91 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 3.33 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 1.02 	 Z: 10.12
+roll: 5.75 	 pitch: 2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: 3.13 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.20 	 Y: 0.82 	 Z: 10.28
+roll: 4.58 	 pitch: 1.09 
+The magnitude is: 10.31
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: 3.34 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.24 	 Y: 0.75 	 Z: 10.12
+roll: 4.21 	 pitch: 1.33 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 2.65 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 3.09 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: 3.32 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.43 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 2.43 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 2.68 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.34 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 3.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.45 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.04
+roll: 4.91 	 pitch: 2.90 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.78 	 Z: 10.08
+roll: 4.45 	 pitch: 2.44 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.00
+roll: 4.71 	 pitch: 2.91 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: 2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.59 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: 3.34 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 3.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 3.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: 3.10 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.45 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: 3.13 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 3.12 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.82 	 Z: 10.04
+roll: 4.69 	 pitch: 2.45 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: 2.87 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.86 	 Z: 10.12
+roll: 4.87 	 pitch: 2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.63 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: 3.56 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.39 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 2.22 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.98 	 Z: 10.00
+roll: 5.60 	 pitch: 3.13 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: 3.13 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.78 	 Z: 10.08
+roll: 4.45 	 pitch: 2.44 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: 2.45 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.55 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: 3.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.63 	 Y: 0.67 	 Z: 10.00
+roll: 3.81 	 pitch: 3.58 
+The magnitude is: 10.04
+The step count is: 0
+hello
+X: -0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: 2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: 2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.43 	 Y: 1.02 	 Z: 9.85
+roll: 5.91 	 pitch: 2.50 
+The magnitude is: 9.91
+The step count is: 0
+hello
+X: -0.20 	 Y: 0.82 	 Z: 10.08
+roll: 4.67 	 pitch: 1.11 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 2.59 	 Y: 1.18 	 Z: 11.85
+roll: 5.67 	 pitch: -12.27 
+The magnitude is: 12.18
+The step count is: 0
+hello
+X: 1.45 	 Y: 1.37 	 Z: 9.65
+roll: 8.10 	 pitch: -8.47 
+The magnitude is: 9.85
+The step count is: 0
+hello
+X: 1.41 	 Y: 1.18 	 Z: 10.00
+roll: 6.71 	 pitch: -7.98 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 1.06 	 Y: 1.26 	 Z: 9.96
+roll: 7.18 	 pitch: -6.02 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.08 	 Y: 1.77 	 Z: 9.85
+roll: 10.16 	 pitch: -0.45 
+The magnitude is: 10.00
+The step count is: 0
+hello
+X: 0.78 	 Y: 2.00 	 Z: 9.89
+roll: 11.44 	 pitch: -4.45 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 0.86 	 Y: 2.00 	 Z: 9.92
+roll: 11.40 	 pitch: -4.87 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 0.94 	 Y: 1.92 	 Z: 10.00
+roll: 10.88 	 pitch: -5.28 
+The magnitude is: 10.23
+The step count is: 0
+hello
+X: 0.94 	 Y: 1.92 	 Z: 9.89
+roll: 11.00 	 pitch: -5.34 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: 0.98 	 Y: 1.96 	 Z: 10.00
+roll: 11.09 	 pitch: -5.50 
+The magnitude is: 10.24
+The step count is: 0
+hello
+X: 1.06 	 Y: 1.92 	 Z: 9.96
+roll: 10.92 	 pitch: -5.96 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 1.02 	 Y: 1.84 	 Z: 10.00
+roll: 10.44 	 pitch: -5.73 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: 0.98 	 Y: 1.96 	 Z: 10.00
+roll: 11.09 	 pitch: -5.50 
+The magnitude is: 10.24
+The step count is: 0
+hello
+X: 1.02 	 Y: 1.92 	 Z: 10.04
+roll: 10.84 	 pitch: -5.70 
+The magnitude is: 10.28
+The step count is: 0
+hello
+X: 1.06 	 Y: 1.92 	 Z: 9.89
+roll: 11.00 	 pitch: -6.00 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 1.06 	 Y: 1.84 	 Z: 9.96
+roll: 10.48 	 pitch: -5.97 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 1.02 	 Y: 1.77 	 Z: 9.85
+roll: 10.16 	 pitch: -5.82 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 1.18 	 Y: 1.92 	 Z: 10.00
+roll: 10.88 	 pitch: -6.59 
+The magnitude is: 10.25
+The step count is: 0
+hello
+X: 1.18 	 Y: 2.08 	 Z: 10.04
+roll: 11.70 	 pitch: -6.55 
+The magnitude is: 10.32
+The step count is: 0
+hello
+X: 1.29 	 Y: 2.08 	 Z: 10.00
+roll: 11.74 	 pitch: -7.22 
+The magnitude is: 10.30
+The step count is: 0
+hello
+X: 1.41 	 Y: 1.92 	 Z: 9.96
+roll: 10.92 	 pitch: -7.92 
+The magnitude is: 10.25
+The step count is: 0
+hello
+X: 1.41 	 Y: 2.00 	 Z: 9.77
+roll: 11.58 	 pitch: -8.06 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: 1.53 	 Y: 2.00 	 Z: 9.92
+roll: 11.40 	 pitch: -8.59 
+The magnitude is: 10.24
+The step count is: 0
+hello
+X: 1.41 	 Y: 2.04 	 Z: 9.92
+roll: 11.62 	 pitch: -7.94 
+The magnitude is: 10.23
+The step count is: 0
+hello
+X: 1.37 	 Y: 1.96 	 Z: 9.85
+roll: 11.27 	 pitch: -7.79 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 1.41 	 Y: 2.08 	 Z: 9.89
+roll: 11.88 	 pitch: -7.96 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 1.41 	 Y: 2.08 	 Z: 9.81
+roll: 11.97 	 pitch: -8.02 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.96 	 Z: 10.08
+roll: 11.01 	 pitch: -7.18 
+The magnitude is: 10.35
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.73 	 Z: 9.57
+roll: 10.22 	 pitch: -7.35 
+The magnitude is: 9.81
+The step count is: 0
+hello
+X: 1.61 	 Y: 1.96 	 Z: 9.85
+roll: 11.27 	 pitch: -9.10 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 1.80 	 Y: 2.04 	 Z: 9.65
+roll: 11.94 	 pitch: -10.37 
+The magnitude is: 10.03
+The step count is: 0
+hello
+X: 1.77 	 Y: 2.04 	 Z: 9.89
+roll: 11.66 	 pitch: -9.92 
+The magnitude is: 10.25
+The step count is: 0
+hello
+X: 1.77 	 Y: 2.12 	 Z: 9.57
+roll: 12.48 	 pitch: -10.21 
+The magnitude is: 9.96
+The step count is: 0
+hello
+X: 1.80 	 Y: 2.12 	 Z: 9.65
+roll: 12.38 	 pitch: -10.35 
+The magnitude is: 10.04
+The step count is: 0
+hello
+X: 1.84 	 Y: 2.08 	 Z: 9.89
+roll: 11.88 	 pitch: -10.34 
+The magnitude is: 10.27
+The step count is: 0
+hello
+X: 1.77 	 Y: 2.00 	 Z: 9.49
+roll: 11.90 	 pitch: -10.31 
+The magnitude is: 9.86
+The step count is: 0
+hello
+X: 1.88 	 Y: 2.12 	 Z: 9.81
+roll: 12.19 	 pitch: -10.63 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: 1.57 	 Y: 1.84 	 Z: 9.92
+roll: 10.52 	 pitch: -8.84 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: 1.14 	 Y: 1.61 	 Z: 10.36
+roll: 8.83 	 pitch: -6.20 
+The magnitude is: 10.54
+The step count is: 0
+hello
+X: 1.33 	 Y: 1.77 	 Z: 9.96
+roll: 10.05 	 pitch: -7.51 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.77 	 Z: 9.73
+roll: 10.29 	 pitch: -7.46 
+The magnitude is: 9.97
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.73 	 Z: 9.89
+roll: 9.90 	 pitch: -7.35 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 1.45 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -8.19 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 1.41 	 Y: 1.84 	 Z: 9.96
+roll: 10.48 	 pitch: -7.93 
+The magnitude is: 10.23
+The step count is: 0
+hello
+X: 1.53 	 Y: 1.77 	 Z: 9.85
+roll: 10.16 	 pitch: -8.70 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.84 	 Z: 9.89
+roll: 10.57 	 pitch: -7.34 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.61 	 Z: 10.12
+roll: 9.03 	 pitch: -7.20 
+The magnitude is: 10.33
+The step count is: 0
+hello
+X: 1.41 	 Y: 1.84 	 Z: 10.08
+roll: 10.36 	 pitch: -7.85 
+The magnitude is: 10.35
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.80 	 Z: 9.89
+roll: 10.35 	 pitch: -7.12 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.73 	 Z: 9.92
+roll: 9.87 	 pitch: -7.32 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.77 	 Z: 9.96
+roll: 10.05 	 pitch: -7.07 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 1.22 	 Y: 1.77 	 Z: 9.89
+roll: 10.13 	 pitch: -6.91 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.80 	 Z: 9.96
+roll: 10.27 	 pitch: -7.29 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.77 	 Z: 9.96
+roll: 10.05 	 pitch: -7.07 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -7.10 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -7.10 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 1.22 	 Y: 1.73 	 Z: 9.92
+roll: 9.87 	 pitch: -6.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.73 	 Z: 9.92
+roll: 9.87 	 pitch: -7.32 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -7.32 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.69 	 Z: 9.89
+roll: 9.68 	 pitch: -7.36 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.73 	 Z: 9.92
+roll: 9.87 	 pitch: -7.10 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -7.10 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.73 	 Z: 9.96
+roll: 9.83 	 pitch: -7.08 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.69 	 Z: 9.92
+roll: 9.65 	 pitch: -7.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.73 	 Z: 9.92
+roll: 9.87 	 pitch: -7.10 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 1.22 	 Y: 1.77 	 Z: 9.89
+roll: 10.13 	 pitch: -6.91 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: 1.29 	 Y: 1.73 	 Z: 9.96
+roll: 9.83 	 pitch: -7.30 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 1.22 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -6.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.73 	 Z: 9.92
+roll: 9.87 	 pitch: -7.10 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.77 	 Z: 9.96
+roll: 10.05 	 pitch: -7.07 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.73 	 Z: 9.92
+roll: 9.87 	 pitch: -7.10 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.69 	 Z: 9.89
+roll: 9.68 	 pitch: -7.14 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.73 	 Z: 9.96
+roll: 9.83 	 pitch: -7.08 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.69 	 Z: 9.92
+roll: 9.65 	 pitch: -7.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 1.65 	 Y: 2.00 	 Z: 9.65
+roll: 11.71 	 pitch: -9.49 
+The magnitude is: 9.99
+The step count is: 0
+hello
+X: 0.86 	 Y: 0.55 	 Z: 10.47
+roll: 3.00 	 pitch: -4.70 
+The magnitude is: 10.52
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.10 	 Z: 10.47
+roll: 5.99 	 pitch: -0.85 
+The magnitude is: 10.53
+The step count is: 0
+hello
+X: -0.04 	 Y: 1.33 	 Z: 9.73
+roll: 7.81 	 pitch: 0.23 
+The magnitude is: 9.82
+The step count is: 0
+hello
+X: -0.35 	 Y: 1.37 	 Z: 10.20
+roll: 7.67 	 pitch: 1.96 
+The magnitude is: 10.30
+The step count is: 0
+hello
+X: -0.47 	 Y: 1.18 	 Z: 10.08
+roll: 6.66 	 pitch: 2.66 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.59 	 Y: 1.22 	 Z: 10.12
+roll: 6.85 	 pitch: 3.30 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: -0.63 	 Y: 1.18 	 Z: 10.00
+roll: 6.71 	 pitch: 3.57 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.71 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.00 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.71 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.01 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.08
+roll: 6.66 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.22 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.24 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.22 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.18 	 Z: 10.00
+roll: 6.71 	 pitch: 4.68 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.12
+roll: 6.41 	 pitch: 4.62 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.64 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.46 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.46 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 9.96
+roll: 6.51 	 pitch: 4.47 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.64 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.86 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.46 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.24 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.46 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.64 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.64 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.64 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.18 	 Z: 9.96
+roll: 6.74 	 pitch: 4.69 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.08
+roll: 6.66 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.90 	 Y: 1.18 	 Z: 10.08
+roll: 6.66 	 pitch: 5.08 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.20 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.23 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.64 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.18 	 Z: 10.00
+roll: 6.71 	 pitch: 4.68 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.46 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.46 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.64 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.18 	 Z: 10.00
+roll: 6.71 	 pitch: 4.23 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.64 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.46 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.68 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.46 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.46 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.46 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.68 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.00
+roll: 6.27 	 pitch: 4.46 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.64 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.71 	 Y: 1.06 	 Z: 10.08
+roll: 6.00 	 pitch: 3.98 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.08
+roll: 6.22 	 pitch: 4.20 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.46 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: 4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.71 	 Y: 1.14 	 Z: 10.20
+roll: 6.36 	 pitch: 3.94 
+The magnitude is: 10.29
+The step count is: 0
+hello
+X: -0.86 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: 4.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.10 	 Z: 10.12
+roll: 6.19 	 pitch: 4.19 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: -0.86 	 Y: 1.22 	 Z: 10.16
+roll: 6.83 	 pitch: 4.82 
+The magnitude is: 10.27
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.20 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: -0.75 	 Y: 1.06 	 Z: 10.04
+roll: 6.02 	 pitch: 4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 9.96
+roll: 6.51 	 pitch: 4.47 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: -0.82 	 Y: 1.14 	 Z: 10.08
+roll: 6.44 	 pitch: 4.64 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.06 	 Z: 9.89
+roll: 6.12 	 pitch: 4.51 
+The magnitude is: 9.97
+The step count is: 0
+hello
+X: -0.86 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: 4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.94 	 Y: 1.10 	 Z: 10.16
+roll: 6.17 	 pitch: 5.26 
+The magnitude is: 10.26
+The step count is: 0
+hello
+X: -0.78 	 Y: 1.18 	 Z: 10.04
+roll: 6.68 	 pitch: 4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -0.86 	 Y: 1.14 	 Z: 9.92
+roll: 6.54 	 pitch: 4.94 
+The magnitude is: 10.03
+The step count is: 0
+hello
+X: -0.94 	 Y: 0.98 	 Z: 9.81
+roll: 5.71 	 pitch: 5.46 
+The magnitude is: 9.90
+The step count is: 0
+hello
+X: -0.63 	 Y: 1.29 	 Z: 10.24
+roll: 7.21 	 pitch: 3.48 
+The magnitude is: 10.34
+The step count is: 0
+hello
+X: 1.29 	 Y: 2.94 	 Z: 9.81
+roll: 16.70 	 pitch: -7.21 
+The magnitude is: 10.32
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.96 	 Z: 9.96
+roll: 11.14 	 pitch: -4.86 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.84 	 Z: 10.04
+roll: 10.40 	 pitch: -4.83 
+The magnitude is: 10.25
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.92 	 Z: 9.96
+roll: 10.92 	 pitch: -4.64 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.92 	 Z: 10.00
+roll: 10.88 	 pitch: -4.40 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: 0.63 	 Y: 1.80 	 Z: 10.04
+roll: 10.19 	 pitch: -3.52 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.84 	 Z: 9.61
+roll: 10.86 	 pitch: -5.04 
+The magnitude is: 9.82
+The step count is: 0
+hello
+X: 1.06 	 Y: 1.88 	 Z: 10.00
+roll: 10.66 	 pitch: -5.94 
+The magnitude is: 10.23
+The step count is: 0
+hello
+X: 0.90 	 Y: 1.88 	 Z: 9.96
+roll: 10.70 	 pitch: -5.08 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 1.14 	 Y: 1.88 	 Z: 10.00
+roll: 10.66 	 pitch: -6.38 
+The magnitude is: 10.24
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.84 	 Z: 9.81
+roll: 10.65 	 pitch: -4.72 
+The magnitude is: 10.01
+The step count is: 0
+hello
+X: 1.06 	 Y: 1.96 	 Z: 10.08
+roll: 11.01 	 pitch: -5.89 
+The magnitude is: 10.32
+The step count is: 0
+hello
+X: 0.94 	 Y: 1.84 	 Z: 10.08
+roll: 10.36 	 pitch: -5.25 
+The magnitude is: 10.29
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.80 	 Z: 9.96
+roll: 10.27 	 pitch: -4.87 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 0.63 	 Y: 1.65 	 Z: 10.00
+roll: 9.35 	 pitch: -3.54 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.45 	 Z: 9.96
+roll: 8.29 	 pitch: -4.23 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.65 	 Z: 10.00
+roll: 9.35 	 pitch: -4.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.57 	 Z: 9.96
+roll: 8.95 	 pitch: -4.67 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.69 	 Z: 9.96
+roll: 9.61 	 pitch: -4.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.49 	 Z: 9.96
+roll: 8.51 	 pitch: -4.01 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.67 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -3.77 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.67 	 Y: 1.37 	 Z: 9.96
+roll: 7.85 	 pitch: -3.79 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.41 	 Z: 9.96
+roll: 8.07 	 pitch: -4.24 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.45 	 Z: 10.04
+roll: 8.22 	 pitch: -3.98 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.59 	 Y: 1.41 	 Z: 9.77
+roll: 8.23 	 pitch: -3.41 
+The magnitude is: 9.89
+The step count is: 0
+hello
+X: 1.26 	 Y: 1.65 	 Z: 9.89
+roll: 9.46 	 pitch: -7.14 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.45 	 Z: 10.16
+roll: 8.13 	 pitch: -4.37 
+The magnitude is: 10.29
+The step count is: 0
+hello
+X: 0.98 	 Y: 1.45 	 Z: 9.92
+roll: 8.32 	 pitch: -5.58 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: 0.90 	 Y: 1.57 	 Z: 10.20
+roll: 8.75 	 pitch: -5.00 
+The magnitude is: 10.36
+The step count is: 0
+hello
+X: 0.94 	 Y: 1.53 	 Z: 10.12
+roll: 8.60 	 pitch: -5.26 
+The magnitude is: 10.28
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.33 	 Z: 9.96
+roll: 7.62 	 pitch: -4.02 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.33 	 Z: 10.12
+roll: 7.51 	 pitch: -4.18 
+The magnitude is: 10.24
+The step count is: 0
+hello
+X: 0.59 	 Y: 1.41 	 Z: 10.08
+roll: 7.97 	 pitch: -3.31 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 0.12 	 Y: 1.14 	 Z: 9.89
+roll: 6.57 	 pitch: -0.68 
+The magnitude is: 9.95
+The step count is: 0
+hello
+X: 0.00 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: -0.00 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.08 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: -0.44 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: 0.08 	 Y: 1.10 	 Z: 10.04
+roll: 6.24 	 pitch: -0.44 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.08 	 Y: 1.10 	 Z: 9.96
+roll: 6.29 	 pitch: -0.45 
+The magnitude is: 10.02
+The step count is: 0
+hello
+X: 0.08 	 Y: 1.18 	 Z: 10.08
+roll: 6.66 	 pitch: -0.44 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.04 	 Y: 1.14 	 Z: 10.12
+roll: 6.41 	 pitch: -0.22 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.08 	 Y: 1.14 	 Z: 10.04
+roll: 6.46 	 pitch: -0.44 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: 0.08 	 Y: 1.14 	 Z: 10.00
+roll: 6.49 	 pitch: -0.45 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: 0.39 	 Y: 1.33 	 Z: 10.24
+roll: 7.42 	 pitch: -2.18 
+The magnitude is: 10.33
+The step count is: 0
+hello
+X: 0.35 	 Y: 1.18 	 Z: 9.96
+roll: 6.74 	 pitch: -2.02 
+The magnitude is: 10.04
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -3.99 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.57 	 Z: 10.04
+roll: 8.88 	 pitch: -4.19 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -3.99 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 9.92
+roll: 8.54 	 pitch: -4.47 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 9.96
+roll: 8.51 	 pitch: -4.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.08
+roll: 8.63 	 pitch: -4.62 
+The magnitude is: 10.23
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.88 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.45 	 Z: 9.96
+roll: 8.29 	 pitch: -4.01 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.66 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.49 	 Z: 9.96
+roll: 8.51 	 pitch: -4.23 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.64 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.57 	 Z: 10.00
+roll: 8.92 	 pitch: -4.87 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.53 	 Z: 10.04
+roll: 8.66 	 pitch: -4.42 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.43 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.43 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.04
+roll: 8.66 	 pitch: -4.64 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.53 	 Z: 10.04
+roll: 8.66 	 pitch: -4.42 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.43 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.57 	 Z: 10.04
+roll: 8.88 	 pitch: -4.63 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.66 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.12
+roll: 8.60 	 pitch: -4.60 
+The magnitude is: 10.27
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.86 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 9.96
+roll: 8.51 	 pitch: -4.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.57 	 Z: 10.00
+roll: 8.92 	 pitch: -4.65 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.57 	 Z: 10.04
+roll: 8.88 	 pitch: -4.63 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.49 	 Z: 9.96
+roll: 8.51 	 pitch: -4.23 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.57 	 Z: 10.04
+roll: 8.88 	 pitch: -4.41 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.21 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.08
+roll: 8.41 	 pitch: -4.62 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.94 	 Y: 1.53 	 Z: 10.12
+roll: 8.60 	 pitch: -5.26 
+The magnitude is: 10.28
+The step count is: 0
+hello
+X: 0.63 	 Y: 1.53 	 Z: 9.41
+roll: 9.23 	 pitch: -3.77 
+The magnitude is: 9.56
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.26 	 Z: 9.89
+roll: 7.24 	 pitch: -4.73 
+The magnitude is: 10.00
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.41 	 Z: 10.04
+roll: 8.01 	 pitch: -4.42 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -3.99 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.41 	 Z: 10.00
+roll: 8.04 	 pitch: -4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.41 	 Z: 9.96
+roll: 8.07 	 pitch: -4.01 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.45 	 Z: 10.04
+roll: 8.22 	 pitch: -4.20 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.71 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -3.99 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.90 	 Y: 1.53 	 Z: 10.16
+roll: 8.56 	 pitch: -5.02 
+The magnitude is: 10.31
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.45 	 Z: 10.00
+roll: 8.26 	 pitch: -4.22 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.66 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.45 	 Z: 9.96
+roll: 8.29 	 pitch: -4.23 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.41 	 Z: 10.12
+roll: 7.94 	 pitch: -4.39 
+The magnitude is: 10.25
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.45 	 Z: 9.96
+roll: 8.29 	 pitch: -4.68 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.41 	 Z: 10.00
+roll: 8.04 	 pitch: -4.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.45 	 Z: 10.04
+roll: 8.22 	 pitch: -4.20 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.65 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.64 
+The magnitude is: 10.19
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.45 	 Z: 10.04
+roll: 8.22 	 pitch: -4.64 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.53 	 Z: 10.00
+roll: 8.70 	 pitch: -4.21 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.75 	 Y: 1.41 	 Z: 9.92
+roll: 8.10 	 pitch: -4.25 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 10.04
+roll: 8.44 	 pitch: -4.42 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.82 	 Y: 1.49 	 Z: 10.00
+roll: 8.48 	 pitch: -4.66 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: 0.78 	 Y: 1.49 	 Z: 9.92
+roll: 8.54 	 pitch: -4.47 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: 0.86 	 Y: 1.57 	 Z: 9.96
+roll: 8.95 	 pitch: -4.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 0.90 	 Y: 1.57 	 Z: 10.04
+roll: 8.88 	 pitch: -5.07 
+The magnitude is: 10.20
+The step count is: 0
+hello
+X: -0.04 	 Y: 1.41 	 Z: 10.40
+roll: 7.74 	 pitch: 0.21 
+The magnitude is: 10.49
+The step count is: 0
+hello
+X: -0.16 	 Y: 1.26 	 Z: 9.10
+roll: 7.85 	 pitch: 0.98 
+The magnitude is: 9.19
+The step count is: 0
+hello
+X: -0.51 	 Y: 1.29 	 Z: 9.81
+roll: 7.52 	 pitch: 2.95 
+The magnitude is: 9.90
+The step count is: 0
+hello
+X: 0.67 	 Y: 1.41 	 Z: 10.36
+roll: 7.77 	 pitch: -3.65 
+The magnitude is: 10.47
+The step count is: 0
+hello
+X: 1.18 	 Y: 1.22 	 Z: 9.06
+roll: 7.64 	 pitch: -7.34 
+The magnitude is: 9.22
+The step count is: 0
+hello
+X: 2.12 	 Y: 1.45 	 Z: 10.51
+roll: 7.86 	 pitch: -11.29 
+The magnitude is: 10.82
+The step count is: 0
+hello
+X: 1.10 	 Y: 2.00 	 Z: 10.67
+roll: 10.62 	 pitch: -5.78 
+The magnitude is: 10.91
+The step count is: 0
+hello
+X: 0.00 	 Y: 0.63 	 Z: 9.92
+roll: 3.62 	 pitch: -0.00 
+The magnitude is: 9.94
+The step count is: 0
+hello
+X: 0.67 	 Y: 1.65 	 Z: 9.85
+roll: 9.50 	 pitch: -3.82 
+The magnitude is: 10.01
+The step count is: 0
+hello
+X: 0.47 	 Y: 1.77 	 Z: 9.92
+roll: 10.09 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 2.47 	 Y: 2.24 	 Z: 10.59
+roll: 11.92 	 pitch: -12.86 
+The magnitude is: 11.10
+The step count is: 0
+hello
+X: 0.24 	 Y: 1.18 	 Z: 8.75
+roll: 7.66 	 pitch: -1.53 
+The magnitude is: 8.83
+The step count is: 0
+hello
+X: -0.90 	 Y: 0.00 	 Z: 9.14
+roll: 0.00 	 pitch: 5.64 
+The magnitude is: 9.18
+The step count is: 0
+hello
+X: -1.18 	 Y: -0.24 	 Z: 9.02
+roll: -1.49 	 pitch: 7.43 
+The magnitude is: 9.10
+The step count is: 0
+hello
+X: -0.71 	 Y: 0.78 	 Z: 10.59
+roll: 4.24 	 pitch: 3.80 
+The magnitude is: 10.64
+The step count is: 0
+hello
+X: -0.20 	 Y: 0.82 	 Z: 8.98
+roll: 5.24 	 pitch: 1.25 
+The magnitude is: 9.02
+The step count is: 0
+hello
+X: -0.43 	 Y: 0.82 	 Z: 10.12
+roll: 4.65 	 pitch: 2.43 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -0.35 	 Y: 0.78 	 Z: 10.43
+roll: 4.30 	 pitch: 1.93 
+The magnitude is: 10.47
+The step count is: 0
+hello
+X: 0.08 	 Y: 0.90 	 Z: 9.96
+roll: 5.17 	 pitch: -0.45 
+The magnitude is: 10.00
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.94 	 Z: 10.24
+roll: 5.25 	 pitch: -0.87 
+The magnitude is: 10.28
+The step count is: 0
+hello
+X: 0.08 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: -0.44 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -0.89 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -0.89 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -0.89 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -0.88 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 1.02 	 Z: 10.00
+roll: 5.82 	 pitch: -1.12 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -1.11 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.24 	 Y: 1.02 	 Z: 10.00
+roll: 5.82 	 pitch: -1.34 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.33 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.12 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -0.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.33 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -0.89 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -1.11 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -1.33 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 1.02 	 Z: 10.04
+roll: 5.80 	 pitch: -1.11 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -0.89 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.27 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.55 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.00
+roll: 5.60 	 pitch: -1.12 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 1.02 	 Z: 10.00
+roll: 5.82 	 pitch: -0.89 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -1.34 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -1.33 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -1.11 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.33 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.34 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.12 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: -0.66 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.12 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -0.67 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: 0.20 	 Y: 1.06 	 Z: 10.08
+roll: 6.00 	 pitch: -1.11 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.27 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -1.55 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -1.11 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -0.89 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.34 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.33 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.33 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.11 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.98 	 Z: 10.00
+roll: 5.60 	 pitch: -1.34 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -0.89 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: -1.34 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.20 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -1.11 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.24 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -1.33 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.16 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: -0.89 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.27 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -1.56 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.86 	 Y: 0.86 	 Z: 11.02
+roll: 4.48 	 pitch: -4.46 
+The magnitude is: 11.09
+The step count is: 0
+hello
+X: 0.00 	 Y: 0.63 	 Z: 9.92
+roll: 3.62 	 pitch: -0.00 
+The magnitude is: 9.94
+The step count is: 0
+hello
+X: 0.35 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.00 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.86 	 Z: 10.08
+roll: 4.89 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.39 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: -2.24 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.12
+roll: 5.09 	 pitch: -2.65 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: -2.46 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.35 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.00 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.90 	 Z: 10.16
+roll: 5.08 	 pitch: -2.42 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: 0.31 	 Y: 0.82 	 Z: 10.00
+roll: 4.71 	 pitch: -1.79 
+The magnitude is: 10.04
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.45 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.39 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.23 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.45 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.43 	 Y: 1.02 	 Z: 10.04
+roll: 5.80 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.45 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.43 
+The magnitude is: 10.17
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.16
+roll: 5.51 	 pitch: -2.64 
+The magnitude is: 10.22
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: -2.91 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.16
+roll: 5.29 	 pitch: -2.64 
+The magnitude is: 10.21
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: -2.46 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.00
+roll: 5.60 	 pitch: -2.68 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.44 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 1.02 	 Z: 10.12
+roll: 5.75 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.00
+roll: 5.15 	 pitch: -2.68 
+The magnitude is: 10.05
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.00
+roll: 5.60 	 pitch: -2.68 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.00
+roll: 5.60 	 pitch: -2.68 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -2.87 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.00
+roll: 5.60 	 pitch: -2.68 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.90 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -2.43 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.12
+roll: 5.54 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.55 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -3.10 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 1.02 	 Z: 10.08
+roll: 5.78 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.12
+roll: 5.31 	 pitch: -2.65 
+The magnitude is: 10.18
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.00
+roll: 5.38 	 pitch: -2.68 
+The magnitude is: 10.06
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.44 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -2.88 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.08
+roll: 5.11 	 pitch: -2.66 
+The magnitude is: 10.13
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.90 	 Z: 10.04
+roll: 5.13 	 pitch: -2.67 
+The magnitude is: 10.09
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.89 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.43 	 Y: 0.94 	 Z: 10.04
+roll: 5.36 	 pitch: -2.45 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.94 	 Z: 10.08
+roll: 5.34 	 pitch: -2.66 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.47 	 Y: 0.98 	 Z: 10.04
+roll: 5.58 	 pitch: -2.67 
+The magnitude is: 10.10
+The step count is: 0
+hello
+X: 0.51 	 Y: 0.98 	 Z: 10.08
+roll: 5.56 	 pitch: -2.88 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: 0.31 	 Y: 0.39 	 Z: 11.89
+roll: 1.89 	 pitch: -1.51 
+The magnitude is: 11.90
+The step count is: 0
+hello
+X: -3.53 	 Y: -5.77 	 Z: -0.08
+roll: -90.79 	 pitch: 31.48 
+The magnitude is: 6.76
+The step count is: 0
+hello
+X: -8.43 	 Y: -5.10 	 Z: 0.27
+roll: -86.92 	 pitch: 58.81 
+The magnitude is: 9.86
+The step count is: 0
+hello
+X: -9.10 	 Y: 9.14 	 Z: 11.30
+roll: 38.98 	 pitch: 32.06 
+The magnitude is: 17.15
+The step count is: 0
+hello
+X: -2.90 	 Y: -1.80 	 Z: 2.28
+roll: -38.42 	 pitch: 44.99 
+The magnitude is: 4.11
+The step count is: 0
+hello
+X: -1.49 	 Y: 0.08 	 Z: 10.00
+roll: 0.45 	 pitch: 8.48 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.84 	 Y: 0.43 	 Z: 10.47
+roll: 2.36 	 pitch: 9.98 
+The magnitude is: 10.64
+The step count is: 0
+hello
+X: -1.57 	 Y: 0.08 	 Z: 10.04
+roll: 0.45 	 pitch: 8.88 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -1.53 	 Y: -0.59 	 Z: 10.24
+roll: -3.29 	 pitch: 8.49 
+The magnitude is: 10.37
+The step count is: 0
+hello
+X: -1.65 	 Y: -0.31 	 Z: 9.92
+roll: -1.81 	 pitch: 9.42 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.61 	 Y: -0.43 	 Z: 10.00
+roll: -2.47 	 pitch: 9.13 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -1.65 	 Y: -0.35 	 Z: 10.00
+roll: -2.02 	 pitch: 9.35 
+The magnitude is: 10.14
+The step count is: 0
+hello
+X: -1.45 	 Y: -0.51 	 Z: 10.04
+roll: -2.91 	 pitch: 8.21 
+The magnitude is: 10.16
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.63 	 Z: 10.00
+roll: -3.59 	 pitch: 7.80 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.47 	 Z: 9.96
+roll: -2.71 	 pitch: 7.84 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.55 	 Z: 9.96
+roll: -3.16 	 pitch: 8.06 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.04
+roll: -3.13 	 pitch: 7.77 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 9.96
+roll: -3.16 	 pitch: 7.83 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.59 	 Z: 9.96
+roll: -3.38 	 pitch: 7.83 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 9.96
+roll: -3.16 	 pitch: 7.83 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.55 	 Z: 9.96
+roll: -3.16 	 pitch: 8.06 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 8.02 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.59 	 Z: 9.96
+roll: -3.38 	 pitch: 7.83 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 8.02 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 9.96
+roll: -3.16 	 pitch: 7.83 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.59 	 Z: 10.04
+roll: -3.35 	 pitch: 7.77 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.55 	 Z: 9.96
+roll: -3.16 	 pitch: 8.06 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.59 	 Z: 9.96
+roll: -3.38 	 pitch: 8.05 
+The magnitude is: 10.08
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.33 	 Y: -0.55 	 Z: 9.92
+roll: -3.17 	 pitch: 7.64 
+The magnitude is: 10.03
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 9.96
+roll: -3.16 	 pitch: 7.83 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.04
+roll: -3.13 	 pitch: 7.77 
+The magnitude is: 10.15
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.59 	 Z: 10.00
+roll: -3.37 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.59 	 Z: 10.00
+roll: -3.37 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.59 	 Z: 10.00
+roll: -3.37 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.59 	 Z: 10.00
+roll: -3.37 	 pitch: 8.02 
+The magnitude is: 10.12
+The step count is: 0
+hello
+X: -1.33 	 Y: -0.63 	 Z: 9.96
+roll: -3.60 	 pitch: 7.61 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.33 	 Y: -0.59 	 Z: 10.00
+roll: -3.37 	 pitch: 7.58 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.37 	 Y: -0.59 	 Z: 10.00
+roll: -3.37 	 pitch: 7.80 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.33 	 Y: -0.59 	 Z: 9.96
+roll: -3.38 	 pitch: 7.61 
+The magnitude is: 10.07
+The step count is: 0
+hello
+X: -1.33 	 Y: -0.55 	 Z: 10.00
+roll: -3.14 	 pitch: 7.58 
+The magnitude is: 10.11
+The step count is: 0
+hello
+X: -1.41 	 Y: -0.59 	 Z: 9.96
+roll: -3.38 	 pitch: 8.05 
+The magnitude is: 10.08
+The step count is: 0
