@@ -1,0 +1,1342 @@
+[0m
+[0;32mI (196) boot: Disabling RNG early entropy source... cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu up.[0m
+[0;32mI (208) cpu_start: Star�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  3 2023 22:23:11[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b198h ( 45464) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=0001b1c0 vaddr=3ffb0000 size=0217ch (  8572) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001d344 vaddr=40080000 size=02cd4h ( 11476) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16e54h ( 93780) map[0m
+[0;32mI (171) esp_image: segment 4: paddr=00036e7c vaddr=40082cd4 size=0aa28h ( 43560) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu up.[0m
+[0;32mI (208) cpu_start: Starting app cpu, entry point is 0x40081150[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (226) cpu_start: Pro cpu start user code[0m
+[0;32mI (226) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (226) cpu_start: Application information:[0m
+[0;32mI (231) cpu_start: Project name:     accel[0m
+[0;32mI (236) cpu_start: App version:      d2ca321-dirty[0m
+[0;32mI (241) cpu_start: Compile time:     Oct  4 2023 13:53:48[0m
+[0;32mI (247) cpu_start: ELF file SHA256:  d58255d66...[0m
+[0;32mI (252) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (260) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (264) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (269) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (281) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (287) heap_init: At 3FFB2A10 len 0002D5F0 (181 KiB): DRAM[0m
+[0;32mI (293) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (300) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (306) heap_init: At 4008D6FC len 00012904 (74 KiB): IRAM[0m
+[0;32mI (314) spi_flash: detected chip: generic[0m
+[0;32mI (317) spi_flash: flash io: dio[0m
+[0;33mW (321) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (334) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (345) app_start: Starting scheduler on CPU0[0m
+[0;32mI (350) app_start: Starting scheduler on CPU1[0m
+[0;32mI (350) main_task: Started on CPU0[0m
+[0;32mI (360) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x53
+
+>> Found ADAXL343
+- Range:         +/- 2  g
+- Data Rate:    0.10  Hz
+
+
+>> Polling ADAXL343
+[0;32mI (400) main_task: Returned from app_main()[0m
+10.06
+The step count is: 0
+10.03
+The step count is: 0
+10.02
+The step count is: 0
+9.99
+The step count is: 0
+10.03
+The step count is: 0
+10.03
+The step count is: 0
+10.02
+The step count is: 0
+10.03
+The step count is: 0
+9.95
+The step count is: 0
+10.03
+The step count is: 0
+10.06
+The step count is: 0
+10.02
+The step count is: 0
+10.02
+The step count is: 0
+9.99
+The step count is: 0
+10.02
+The step count is: 0
+10.03
+The step count is: 0
+9.98
+The step count is: 0
+10.03
+The step count is: 0
+10.02
+The step count is: 0
+10.06
+The step count is: 0
+10.02
+The step count is: 0
+9.98
+The step count is: 0
+10.02
+The step count is: 0
+10.03
+The step count is: 0
+9.99
+The step count is: 0
+9.98
+The step count is: 0
+10.02
+The step count is: 0
+10.06
+The step count is: 0
+10.03
+The step count is: 0
+9.98
+The step count is: 0
+10.02
+The step count is: 0
+10.03
+The step count is: 0
+9.99
+The step count is: 0
+9.98
+The step count is: 0
+9.99
+The step count is: 0
+10.02
+The step count is: 0
+10.03
+The step count is: 0
+9.56
+The step count is: 0
+8.25
+The step count is: 0
+10.10
+The step count is: 0
+10.21
+The step count is: 0
+9.83
+The step count is: 0
+9.40
+The step count is: 0
+10.25
+The step count is: 0
+10.02
+The step count is: 0
+10.10
+The step count is: 0
+9.90
+The step count is: 0
+10.03
+The step count is: 0
+10.57
+The step count is: 0
+10.31
+The step count is: 0
+10.86
+The step count is: 0
+12.03
+The step count is: 0
+14.72
+The step count is: 0
+9.63
+The step count is: 0
+11.32
+The step count is: 0
+9.28
+The step count is: 0
+5.99
+The step count is: 0
+8.59
+The step count is: 0
+7.65
+The step count is: 0
+9.39
+The step count is: 0
+11.73
+The step count is: 0
+11.32
+The step count is: 0
+10.25
+The step count is: 0
+10.47
+The step count is: 0
+12.16
+The step count is: 0
+9.96
+The step count is: 0
+11.08
+The step count is: 0
+11.73
+The step count is: 0
+12.30
+The step count is: 0
+9.97
+The step count is: 0
+10.31
+The step count is: 0
+11.42
+The step count is: 0
+8.78
+The step count is: 0
+12.10
+The step count is: 0
+8.74
+The step count is: 0
+7.76
+The step count is: 0
+10.37
+The step count is: 0
+5.20
+The step count is: 0
+10.33
+The step count is: 0
+5.62
+The step count is: 0
+4.23
+The step count is: 0
+25.07
+The step count is: 0
+10.54
+The step count is: 2
+10.33
+The step count is: 2
+9.96
+The step count is: 2
+9.79
+The step count is: 2
+10.14
+The step count is: 2
+10.00
+The step count is: 2
+10.23
+The step count is: 2
+10.34
+The step count is: 2
+10.27
+The step count is: 2
+9.80
+The step count is: 2
+10.23
+The step count is: 2
+10.21
+The step count is: 2
+10.15
+The step count is: 2
+9.96
+The step count is: 2
+10.05
+The step count is: 2
+10.13
+The step count is: 2
+10.22
+The step count is: 2
+10.00
+The step count is: 2
+10.07
+The step count is: 2
+10.29
+The step count is: 2
+9.97
+The step count is: 2
+9.96
+The step count is: 2
+10.24
+The step count is: 2
+9.59
+The step count is: 2
+10.25
+The step count is: 2
+10.34
+The step count is: 2
+9.76
+The step count is: 2
+10.07
+The step count is: 2
+10.02
+The step count is: 2
+9.91
+The step count is: 2
+8.70
+The step count is: 2
+12.34
+The step count is: 2
+9.97
+The step count is: 2
+9.60
+The step count is: 2
+8.92
+The step count is: 2
+9.84
+The step count is: 2
+12.14
+The step count is: 2
+11.34
+The step count is: 2
+10.13
+The step count is: 2
+9.62
+The step count is: 2
+9.75
+The step count is: 2
+10.52
+The step count is: 2
+10.29
+The step count is: 2
+11.29
+The step count is: 2
+11.28
+The step count is: 2
+9.01
+The step count is: 2
+12.74
+The step count is: 2
+10.26
+The step count is: 2
+9.20
+The step count is: 2
+7.91
+The step count is: 2
+9.57
+The step count is: 2
+12.85
+The step count is: 2
+14.82
+The step count is: 2
+3.79
+The step count is: 2
+11.29
+The step count is: 2
+9.54
+The step count is: 2
+9.81
+The step count is: 2
+9.91
+The step count is: 2
+11.03
+The step count is: 2
+13.05
+The step count is: 2
+8.91
+The step count is: 2
+12.74
+The step count is: 2
+8.87
+The step count is: 2
+7.64
+The step count is: 2
+7.60
+The step count is: 2
+15.27
+The step count is: 2
+6.51
+The step count is: 4
+8.40
+The step count is: 4
+15.64
+The step count is: 4
+8.71
+The step count is: 4
+9.71
+The step count is: 4
+9.90
+The step count is: 4
+11.22
+The step count is: 4
+14.61
+The step count is: 4
+10.23
+The step count is: 4
+10.32
+The step count is: 4
+9.85
+The step count is: 4
+8.15
+The step count is: 4
+5.45
+The step count is: 4
+18.56
+The step count is: 4
+18.99
+The step count is: 6
+2.75
+The step count is: 6
+9.88
+The step count is: 6
+9.17
+The step count is: 6
+10.02
+The step count is: 6
+10.36
+The step count is: 6
+11.99
+The step count is: 6
+14.20
+The step count is: 6
+13.76
+The step count is: 6
+7.31
+The step count is: 6
+8.68
+The step count is: 6
+7.36
+The step count is: 6
+16.10
+The step count is: 6
+10.56
+The step count is: 8
+3.98
+The step count is: 8
+17.18
+The step count is: 8
+9.01
+The step count is: 8
+10.66
+The step count is: 8
+9.86
+The step count is: 8
+10.91
+The step count is: 8
+12.68
+The step count is: 8
+10.24
+The step count is: 8
+10.06
+The step count is: 8
+6.52
+The step count is: 8
+5.36
+The step count is: 8
+9.97
+The step count is: 8
+17.56
+The step count is: 8
+15.31
+The step count is: 10
+9.10
+The step count is: 10
+8.92
+The step count is: 10
+8.94
+The step count is: 10
+9.76
+The step count is: 10
+10.21
+The step count is: 10
+13.39
+The step count is: 10
+9.37
+The step count is: 10
+11.40
+The step count is: 10
+7.44
+The step count is: 10
+6.62
+The step count is: 10
+8.45
+The step count is: 10
+18.38
+The step count is: 10
+19.87
+The step count is: 12
+2.37
+The step count is: 12
+9.22
+The step count is: 12
+7.81
+The step count is: 12
+10.03
+The step count is: 12
+10.03
+The step count is: 12
+12.60
+The step count is: 12
+12.79
+The step count is: 12
+13.07
+The step count is: 12
+7.88
+The step count is: 12
+7.90
+The step count is: 12
+7.24
+The step count is: 12
+17.96
+The step count is: 12
+10.60
+The step count is: 14
+2.44
+The step count is: 14
+16.40
+The step count is: 14
+8.66
+The step count is: 14
+10.64
+The step count is: 14
+10.58
+The step count is: 14
+12.40
+The step count is: 14
+12.43
+The step count is: 14
+14.18
+The step count is: 14
+7.22
+The step count is: 14
+7.58
+The step count is: 14
+6.83
+The step count is: 14
+23.42
+The step count is: 14
+17.23
+The step count is: 16
+4.87
+The step count is: 16
+8.87
+The step count is: 16
+8.29
+The step count is: 16
+9.75
+The step count is: 16
+10.48
+The step count is: 16
+12.25
+The step count is: 16
+11.14
+The step count is: 16
+11.29
+The step count is: 16
+7.00
+The step count is: 16
+6.65
+The step count is: 16
+8.09
+The step count is: 16
+18.58
+The step count is: 16
+16.37
+The step count is: 18
+11.40
+The step count is: 18
+8.42
+The step count is: 18
+8.26
+The step count is: 18
+9.05
+The step count is: 18
+11.02
+The step count is: 18
+12.95
+The step count is: 18
+10.19
+The step count is: 18
+9.48
+The step count is: 18
+7.89
+The step count is: 18
+4.67
+The step count is: 18
+10.93
+The step count is: 18
+12.44
+The step count is: 18
+7.27
+The step count is: 18
+18.46
+The step count is: 18
+8.25
+The step count is: 20
+10.11
+The step count is: 20
+10.71
+The step count is: 20
+12.16
+The step count is: 20
+11.20
+The step count is: 20
+13.19
+The step count is: 20
+7.16
+The step count is: 20
+6.70
+The step count is: 20
+7.09
+The step count is: 20
+20.22
+The step count is: 20
+8.71
+The step count is: 20
+12.02
+The step count is: 20
+7.89
+The step count is: 20
+10.11
+The step count is: 20
+9.82
+The step count is: 20
+10.23
+The step count is: 20
+15.04
+The step count is: 20
+13.09
+The step count is: 22
+8.55
+The step count is: 22
+7.95
+The step count is: 22
+5.03
+The step count is: 22
+14.31
+The step count is: 22
+6.98
+The step count is: 22
+3.33
+The step count is: 22
+12.25
+The step count is: 22
+9.01
+The step count is: 22
+9.70
+The step count is: 22
+11.19
+The step count is: 22
+11.92
+The step count is: 22
+15.12
+The step count is: 22
+15.56
+The step count is: 24
+7.54
+The step count is: 24
+8.12
+The step count is: 24
+5.80
+The step count is: 24
+19.88
+The step count is: 24
+14.59
+The step count is: 24
+1.60
+The step count is: 24
+9.69
+The step count is: 24
+8.75
+The step count is: 24
+10.30
+The step count is: 24
+10.77
+The step count is: 24
+11.72
+The step count is: 24
+9.61
+The step count is: 24
+10.46
+The step count is: 24
+7.47
+The step count is: 24
+4.55
+The step count is: 24
+10.00
+The step count is: 24
+15.60
+The step count is: 24
+8.66
+The step count is: 26
+15.64
+The step count is: 26
+8.94
+The step count is: 26
+8.60
+The step count is: 26
+10.21
+The step count is: 26
+11.48
+The step count is: 26
+14.39
+The step count is: 26
+16.70
+The step count is: 26
+7.96
+The step count is: 26
+7.79
+The step count is: 26
+5.61
+The step count is: 26
+26.68
+The step count is: 26
+15.40
+The step count is: 28
+4.52
+The step count is: 28
+7.81
+The step count is: 28
+9.08
+The step count is: 28
+9.70
+The step count is: 28
+11.07
+The step count is: 28
+12.27
+The step count is: 28
+9.08
+The step count is: 28
+11.90
+The step count is: 28
+7.91
+The step count is: 28
+6.87
+The step count is: 28
+10.57
+The step count is: 28
+11.12
+The step count is: 28
+16.34
+The step count is: 28
+9.97
+The step count is: 30
+8.06
+The step count is: 30
+14.85
+The step count is: 30
+8.25
+The step count is: 30
+10.52
+The step count is: 30
+9.66
+The step count is: 30
+10.12
+The step count is: 30
+9.75
+The step count is: 30
+10.35
+The step count is: 30
+10.75
+The step count is: 30
+9.14
+The step count is: 30
+10.28
+The step count is: 30
+11.26
+The step count is: 30
+8.69
+The step count is: 30
+10.00
+The step count is: 30
+9.80
+The step count is: 30
+7.17
+The step count is: 30
+13.69
+The step count is: 30
+10.38
+The step count is: 30
+3.92
+The step count is: 30
+15.06
+The step count is: 30
+9.26
+The step count is: 32
+9.74
+The step count is: 32
+9.41
+The step count is: 32
+11.51
+The step count is: 32
+13.57
+The step count is: 32
+9.94
+The step count is: 32
+10.56
+The step count is: 32
+8.43
+The step count is: 32
+4.77
+The step count is: 32
+8.90
+The step count is: 32
+19.25
+The step count is: 32
+11.99
+The step count is: 34
+16.12
+The step count is: 34
+8.42
+The step count is: 34
+8.52
+The step count is: 34
+9.16
+The step count is: 34
+11.42
+The step count is: 34
+13.91
+The step count is: 34
+15.14
+The step count is: 34
+7.45
+The step count is: 34
+6.36
+The step count is: 34
+6.86
+The step count is: 34
+19.34
+The step count is: 34
+17.72
+The step count is: 36
+12.08
+The step count is: 36
+8.46
+The step count is: 36
+8.62
+The step count is: 36
+9.00
+The step count is: 36
+12.12
+The step count is: 36
+12.99
+The step count is: 36
+13.88
+The step count is: 36
+7.33
+The step count is: 36
+6.52
+The step count is: 36
+6.82
+The step count is: 36
+24.81
+The step count is: 36
+9.67
+The step count is: 38
+14.55
+The step count is: 38
+9.66
+The step count is: 38
+8.68
+The step count is: 38
+8.61
+The step count is: 38
+11.66
+The step count is: 38
+13.91
+The step count is: 38
+17.20
+The step count is: 38
+7.68
+The step count is: 38
+6.32
+The step count is: 38
+5.89
+The step count is: 38
+24.80
+The step count is: 38
+15.92
+The step count is: 40
+13.46
+The step count is: 40
+7.14
+The step count is: 40
+8.52
+The step count is: 40
+10.43
+The step count is: 40
+11.51
+The step count is: 40
+11.87
+The step count is: 40
+10.68
+The step count is: 40
+6.23
+The step count is: 40
+5.24
+The step count is: 40
+10.41
+The step count is: 40
+11.18
+The step count is: 40
+4.70
+The step count is: 40
+15.97
+The step count is: 40
+9.36
+The step count is: 42
+9.74
+The step count is: 42
+10.78
+The step count is: 42
+13.60
+The step count is: 42
+12.44
+The step count is: 42
+7.67
+The step count is: 42
+7.29
+The step count is: 42
+4.58
+The step count is: 42
+15.78
+The step count is: 42
+6.62
+The step count is: 42
+3.72
+The step count is: 42
+9.57
+The step count is: 42
+8.93
+The step count is: 42
+10.40
+The step count is: 42
+11.21
+The step count is: 42
+12.21
+The step count is: 42
+10.99
+The step count is: 42
+15.68
+The step count is: 42
+7.42
+The step count is: 44
+6.92
+The step count is: 44
+6.73
+The step count is: 44
+21.89
+The step count is: 44
+12.45
+The step count is: 44
+14.05
+The step count is: 44
+9.20
+The step count is: 44
+8.24
+The step count is: 44
+9.13
+The step count is: 44
+11.48
+The step count is: 44
+15.74
+The step count is: 44
+17.52
+The step count is: 46
+7.88
+The step count is: 46
+8.53
+The step count is: 46
+4.82
+The step count is: 46
+25.05
+The step count is: 46
+18.07
+The step count is: 46
+2.75
+The step count is: 46
+8.19
+The step count is: 46
+8.76
+The step count is: 46
+10.11
+The step count is: 46
+10.82
+The step count is: 46
+15.05
+The step count is: 46
+10.26
+The step count is: 48
+9.41
+The step count is: 48
+7.00
+The step count is: 48
+4.33
+The step count is: 48
+17.12
+The step count is: 48
+12.61
+The step count is: 48
+3.44
+The step count is: 48
+8.77
+The step count is: 48
+8.25
+The step count is: 48
+9.65
+The step count is: 48
+10.99
+The step count is: 48
+13.05
+The step count is: 48
+11.82
+The step count is: 48
+9.69
+The step count is: 48
+7.14
+The step count is: 48
+5.01
+The step count is: 48
+14.17
+The step count is: 48
+11.00
+The step count is: 48
+3.71
+The step count is: 48
+9.48
+The step count is: 48
+8.24
+The step count is: 48
+9.84
+The step count is: 48
+11.73
+The step count is: 48
+12.78
+The step count is: 48
+9.40
+The step count is: 48
+9.89
+The step count is: 48
+7.40
+The step count is: 48
+5.14
+The step count is: 48
+9.25
+The step count is: 48
+18.01
+The step count is: 48
+10.95
+The step count is: 50
+15.57
+The step count is: 50
+10.55
+The step count is: 50
+8.55
+The step count is: 50
+9.27
+The step count is: 50
+10.16
+The step count is: 50
+14.00
+The step count is: 50
+10.91
+The step count is: 50
+7.46
+The step count is: 50
+8.02
+The step count is: 50
+4.38
+The step count is: 50
+13.50
+The step count is: 50
+10.44
+The step count is: 50
+5.90
+The step count is: 50
+14.94
+The step count is: 50
+10.89
+The step count is: 50
+9.85
+The step count is: 50
+10.15
+The step count is: 50
+10.94
+The step count is: 50
+14.92
+The step count is: 50
+14.35
+The step count is: 50
+9.13
+The step count is: 50
+8.40
+The step count is: 50
+5.89
+The step count is: 50
+15.52
+The step count is: 50
+11.62
+The step count is: 52
+7.10
+The step count is: 52
+13.92
+The step count is: 52
+11.60
+The step count is: 52
+9.07
+The step count is: 52
+9.28
+The step count is: 52
+11.36
+The step count is: 52
+14.93
+The step count is: 52
+14.04
+The step count is: 52
+8.25
+The step count is: 52
+7.80
+The step count is: 52
+5.20
+The step count is: 52
+21.45
+The step count is: 52
+12.46
+The step count is: 54
+4.65
+The step count is: 54
+8.95
+The step count is: 54
+9.14
+The step count is: 54
+9.53
+The step count is: 54
+11.90
+The step count is: 54
+12.92
+The step count is: 54
+10.27
+The step count is: 54
+7.88
+The step count is: 54
+8.15
+The step count is: 54
+4.00
+The step count is: 54
+13.85
+The step count is: 54
+7.74
+The step count is: 54
+4.67
+The step count is: 54
+12.52
+The step count is: 54
+7.99
+The step count is: 54
+9.82
+The step count is: 54
+11.07
+The step count is: 54
+12.76
+The step count is: 54
+10.24
+The step count is: 54
+11.61
+The step count is: 54
+7.22
+The step count is: 54
+5.29
+The step count is: 54
+8.37
+The step count is: 54
+17.67
+The step count is: 54
+6.55
+The step count is: 56
+21.17
+The step count is: 56
+8.17
+The step count is: 56
+9.58
+The step count is: 56
+10.05
+The step count is: 56
+12.59
+The step count is: 56
+10.79
+The step count is: 56
+14.47
+The step count is: 56
+6.77
+The step count is: 56
+7.15
+The step count is: 56
+7.37
+The step count is: 56
+21.53
+The step count is: 56
+22.40
+The step count is: 58
+7.49
+The step count is: 58
+8.26
+The step count is: 58
+7.85
+The step count is: 58
+10.20
+The step count is: 58
+11.71
+The step count is: 58
+15.76
+The step count is: 58
+7.84
+The step count is: 58
+9.40
+The step count is: 58
+8.59
+The step count is: 58
+8.96
+The step count is: 58
+10.66
+The step count is: 58
+10.15
+The step count is: 58
+9.83
+The step count is: 58
+8.99
+The step count is: 58
+10.53
+The step count is: 58
+10.75
+The step count is: 58
+9.70
+The step count is: 58
+9.78
+The step count is: 58
+10.58
+The step count is: 58
+9.93
+The step count is: 58
+9.57
+The step count is: 58
+10.62
+The step count is: 58
+10.58
+The step count is: 58
+10.08
+The step count is: 58
+10.72
+The step count is: 58
+10.05
+The step count is: 58
+9.59
+The step count is: 58
+9.46
+The step count is: 58
+10.01
+The step count is: 58
+9.99
+The step count is: 58
+10.20
+The step count is: 58
+9.87
+The step count is: 58
+10.10
+The step count is: 58
+10.42
+The step count is: 58
+10.18
+The step count is: 58
+10.18
+The step count is: 58
+10.05
+The step count is: 58
+10.08
+The step count is: 58
+10.05
+The step count is: 58
+10.16
+The step count is: 58
+9.99
+The step count is: 58
+9.92
+The step count is: 58
+10.30
+The step count is: 58
+10.10
+The step count is: 58
+10.05
+The step count is: 58
+10.10
+The step count is: 58
+10.10
+The step count is: 58
+10.14
+The step count is: 58
+10.09
+The step count is: 58
+10.11
+The step count is: 58
+9.98
+The step count is: 58
+10.00
+The step count is: 58
+10.01
+The step count is: 58
+9.95
+The step count is: 58
+10.07
+The step count is: 58
+10.08
+The step count is: 58
+10.05
+The step count is: 58
+10.11
+The step count is: 58
+10.07
+The step count is: 58
+10.06
+The step count is: 58
+10.04
+The step count is: 58
+10.11
+The step count is: 58
+10.03
+The step count is: 58
+10.06
+The step count is: 58
+10.00
+The step count is: 58
+10.11
+The step count is: 58
+10.03
+The step count is: 58
+10.04
+The step count is: 58
+9.99
+The step count is: 58
+10.04
+The step count is: 58
+10.02
+The step count is: 58
+10.06
+The step count is: 58

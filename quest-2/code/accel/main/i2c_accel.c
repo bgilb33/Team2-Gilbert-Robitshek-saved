@@ -30,6 +30,10 @@
 double magnitude;
 int step_count = 0; // Counter for step count
 char filename[100] = "dataFile";
+bool wait;
+int stepped = 0;
+int waitCount = 0;
+int mode = 2;
 
 
 
@@ -275,14 +279,29 @@ static void test_adxl343()
         calcMagnitude(xVal, yVal, zVal);
         printf("The step count is: %d\n", step_count);
 
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
 static void counting() {
     while (1){
-        if(magnitude >= 20){step_count++;}
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        switch (mode)
+        {
+        case 0:
+            waitCount++;
+            if(waitCount >= 10){
+                waitCount = 0;
+                mode = 1;
+            }
+            break;
+        default: 
+            if(magnitude >= 15){
+                step_count = step_count + 2;
+                mode = 0;
+            }
+            break;
+        }
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
