@@ -30,8 +30,9 @@
 #define SLAVE_ADDR ADXL343_ADDRESS // 0x53
 
 double magnitude;
-int step_count = 0;  // Counter for step count
-int timer_state = 0; // 0: off, 1: on
+int step_count = 0;     // Counter for step count
+int timer_state = 0;    // 0: off, 1: on
+int activity_ended = 0; // 0: did not just end, 1: just ended
 
 // Display Defs
 #define SLAVE_ADDR_DISPLAY 0x70      // alphanumeric address
@@ -330,9 +331,15 @@ void button_task()
         {
             timer_pause(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
             *current_time = 0.00;
+            if (!activity_ended)
+            {
+                printf("Activity Ended\n");
+                activity_ended = 1;
+            }
         }
         else if (flag)
         {
+            activity_ended = 0;
             step_count = 0;
             printf("Activity Started\n");
             current_time = &start_time;

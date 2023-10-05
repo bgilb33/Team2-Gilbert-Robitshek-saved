@@ -12,12 +12,23 @@ const io = socketIo(server);
 const port = new SerialPort({ path: 'COM7', baudRate: 115200 })
 const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n' }))
 
-parser.on('data', function (data) {
+var activityStatus = "";
 
-    var parsedData = `${Date().split(' ')[4]}, ${data}\n`;
-    fs.appendFile('./data.csv', `${parsedData}`, function (err) {
-        if (err) throw err;
-    })
+parser.on('data', function (data) {
+    if (data == 'Activity Started') {
+        fs.writeFile('./data.csv', 'Time,Temp,Steps\n', function (err) {
+            if (err) throw err;
+        });
+        activityStatus = ": Activity In Progress";
+    }
+    else if (data == "Activity Ended") {
+        activityStatus = ": Activity Ended";
+    }
+    else {
+        fs.appendFile('./data.csv', `${data}\n`, function (err) {
+            if (err) throw err;
+        })
+    }
 
 });
 
@@ -46,7 +57,7 @@ function readAndUpdateCSV() {
         })
         .on('end', () => {
             // Emit the parsed data to all connected clients
-            io.emit('updateData', [data1, data2]);
+            io.emit('updateData', [data1, data2, activityStatus]);
         });
 }
 
