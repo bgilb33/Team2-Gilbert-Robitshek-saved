@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script> <!-- Include Socket.io library -->
+</head>
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+    <script>
+        var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: false,
+            exportEnabled: true,
+            theme: "light2",
+            title:{
+                text: "Carmin Watch"
+            },
+            axisY: [{}],
+            axisX: {
+                title: "Time",
+                valueFormatString: "HH:mm:ss", // Format for displaying time on the X-axis
+                xValueType: "dateTime" // Specify that X values are of type dateTime
+            },
+
+            data: [
+              {
+                type: "line",
+                legendText: "Temperature (oC)",
+                showInLegend: true,
+                indexLabelFontColor: "#5A5757",
+                indexLabelFontSize: 16,
+                indexLabelPlacement: "outside",
+                dataPoints: []
+              },
+              {
+                type: "line",
+                legendText: "Steps",
+                showInLegend: true,
+                indexLabelFontColor: "#5A5757",
+                indexLabelFontSize: 16,
+                indexLabelPlacement: "outside",
+                dataPoints: []
+              },
+            ]
+        });
+        chart.render();
+
+        // Function to update chart with new data
+        function updateChart(newDataPoints) {
+          if (Array.isArray(newDataPoints) && newDataPoints.length === 2) {
+            const newDataSeries1 = newDataPoints[0];
+            const newDataSeries2 = newDataPoints[1];
+
+          // Check if the data series have at least 20 points
+          if (newDataSeries1.length >= 20 && newDataSeries2.length >= 20) {
+              chart.options.data[0].dataPoints = newDataSeries1.slice(-20);
+              chart.options.data[1].dataPoints = newDataSeries2.slice(-20);
+          } else {
+              chart.options.data[0].dataPoints = newDataSeries1;
+              chart.options.data[1].dataPoints = newDataSeries2;
+          }
+
+          chart.render();
+          }
+        }
+
+        // Socket.io to receive data updates from the server
+        var socket = io();
+        socket.on('updateData', function (data) {
+            updateChart(data);
+        });
+    </script>
+</body>
+</html>
