@@ -30,7 +30,8 @@
 #define SLAVE_ADDR ADXL343_ADDRESS // 0x53
 
 double magnitude;
-int step_count = 0; // Counter for step count
+int step_count = 0;  // Counter for step count
+int timer_state = 0; // 0: off, 1: on
 
 // Display Defs
 #define SLAVE_ADDR_DISPLAY 0x70      // alphanumeric address
@@ -50,12 +51,12 @@ int step_count = 0; // Counter for step count
 #define SEVEN 0b00000111 // 7
 #define EIGHT 0b01111111 // 8
 #define NINE 0b01101111  // 9
+#define COLON 0b00001001 // :
 
 uint16_t displaybuffer[3];
-int currentTimeDigits[4];
 
 // Timer Defines
-#define GPIO_INPUT_IO_1 39
+#define GPIO_INPUT_IO_1 4
 #define ESP_INTR_FLAG_DEFAULT 0
 #define GPIO_INPUT_PIN_SEL 1ULL << GPIO_INPUT_IO_1
 #define GPT_TIMER_GROUP TIMER_GROUP_0
@@ -77,6 +78,20 @@ static const adc_atten_t atten = ADC_ATTEN_DB_11;
 static const adc_unit_t unit = ADC_UNIT_1;
 float temp;
 
+// Priorities
+#define ADXL343_TASK_PRIORITY 5
+#define COUNTING_TASK_PRIORITY 4
+#define TEMP_TASK_PRIORITY 4
+#define PRINT_TASK_PRIORITY 4
+#define CHAR_TO_DISPLAY_TASK_PRIORITY 10
+#define ALPHA_DISPLAY_TASK_PRIORITY 2
+#define BUTTON_TASK_PRIORITY 2
+
+static void IRAM_ATTR gpio_isr_handler(void *arg)
+{
+    flag = 1;
+    timer_state = ~timer_state;
+}
 // Function to initiate i2c -- note the MSB declaration!
 static void i2c_master_init()
 {
@@ -166,32 +181,21 @@ void char_to_display_task()
     int digits[3];
     int integerPart;
     int fractionalPart;
-
     while (1)
     {
-        if (display_mode)
-        {
-            digits[0] = currentTimeDigits[0];
-            digits[0] = currentTimeDigits[1];
-            digits[0] = currentTimeDigits[2];
-            digits[0] = currentTimeDigits[3];
-        }
-        else
-        {
-            // From GPT
-            integerPart = (int)*current_time;
-            fractionalPart = (int)((*current_time - integerPart) * 100);
-            // Extract individual digits
-            digits[0] = integerPart / 10;
-            digits[1] = integerPart % 10;
-            digits[2] = fractionalPart / 10;
-            digits[3] = fractionalPart % 10;
-            // End GPT
-        }
+        // From GPT
+        integerPart = (int)*current_time;
+        fractionalPart = (int)((*current_time - integerPart) * 100);
+        // Extract individual digits
+        digits[0] = integerPart / 10;
+        digits[1] = integerPart % 10;
+        digits[2] = fractionalPart / 10;
+        digits[3] = fractionalPart % 10;
+        // End GPT
 
         for (int i = 0; i < 4; i++)
         {
-            switch (currentTimeDigits[i])
+            switch (digits[i])
             {
             case 0:
                 displaybuffer[i] = ZERO;
@@ -281,38 +285,7 @@ static void test_alpha_display()
     }
 }
 
-void updateTime()
-{
-    time_t rawTime;
-    struct tm *timeinfo;
-    int currentHour, currentMinute;
-    while (1)
-    {
-
-        time(&rawTime);
-        timeinfo = localtime(&rawTime);
-
-        // Extract current hour and minute
-        currentHour = timeinfo->tm_hour;
-        currentMinute = timeinfo->tm_min;
-
-        currentTimeDigits[0] = currentMinute % 10;
-        currentTimeDigits[1] = currentMinute / 10;
-        currentTimeDigits[2] = currentHour % 10;
-        currentTimeDigits[3] = currentHour / 10;
-
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }
-}
-
 ////////////////////////////////TIMER FUNCTIONS////////////////////////////////
-
-static void IRAM_ATTR gpio_isr_handler(void *arg)
-{
-    display_mode = !display_mode;
-    printf("Button pressed\n");
-    flag = 1;
-}
 
 void timer_initial()
 {
@@ -326,6 +299,7 @@ void timer_initial()
     // enable pull-up mode
     io_conf.pull_up_en = 1;
     gpio_config(&io_conf);
+    // Attach the interrupt handler to the GPIO pin
     gpio_intr_enable(GPIO_INPUT_IO_1);
     // install gpio isr service
     gpio_install_isr_service(ESP_INTR_FLAG_LEVEL3);
@@ -352,9 +326,15 @@ void button_task()
 {
     while (1)
     {
-        if (flag && display_mode)
+        if (!timer_state)
         {
-            printf("Buttons Pressed In Task\n");
+            timer_pause(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
+            *current_time = 0.00;
+        }
+        else if (flag)
+        {
+            step_count = 0;
+            printf("Activity Started\n");
             current_time = &start_time;
             timer_pause(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
             timer_set_counter_value(GPT_TIMER_GROUP, GPT_TIMER_INDEX, 0);
@@ -374,7 +354,7 @@ void button_task()
         }
         // printf("Current Time: %.2f\n", *current_time);
 
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS); // Delay for 1 second
     }
 }
 
@@ -685,7 +665,10 @@ void print_task()
 {
     while (1)
     {
-        printf("%f, %d\n", temp, step_count);
+        if (timer_state)
+        {
+            printf("%.2f, %f, %d\n", *current_time, temp, step_count);
+        }
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
@@ -707,8 +690,8 @@ void app_main()
         // printf("\n>> Found ADAXL343\n");
     }
 
-    // Disable interrupts
-    writeRegister(ADXL343_REG_INT_ENABLE, 0);
+    // // Disable interrupts
+    // writeRegister(ADXL343_REG_INT_ENABLE, 0);
 
     // Set range
     setRange(ADXL343_RANGE_16_G);
@@ -796,12 +779,11 @@ void app_main()
     writeRegister(ADXL343_REG_POWER_CTL, 0x08);
 
     // Create task to poll ADXL343
-    xTaskCreate(test_adxl343, "test_adxl343", 4096, NULL, 5, NULL);
-    xTaskCreate(counting, "counting", 4096, NULL, 4, NULL);
-    xTaskCreate(temp_task, "temp_task", 4096, NULL, 4, NULL);
-    xTaskCreate(print_task, "print_task", 4096, NULL, 4, NULL);
-    xTaskCreate(updateTime, "updateTime", 4096, NULL, 4, NULL);
-    xTaskCreate(char_to_display_task, "char_to_display_task", 2048, NULL, 10, NULL);
-    xTaskCreate(test_alpha_display, "test_alpha_display", 4096, NULL, 5, NULL);
-    xTaskCreate(button_task, "button_task", 2048, NULL, 10, NULL);
+    xTaskCreate(test_adxl343, "test_adxl343", 4096, NULL, ADXL343_TASK_PRIORITY, NULL);
+    xTaskCreate(counting, "counting", 4096, NULL, COUNTING_TASK_PRIORITY, NULL);
+    xTaskCreate(temp_task, "temp_task", 4096, NULL, TEMP_TASK_PRIORITY, NULL);
+    xTaskCreate(print_task, "print_task", 4096, NULL, PRINT_TASK_PRIORITY, NULL);
+    xTaskCreate(char_to_display_task, "char_to_display_task", 2048, NULL, CHAR_TO_DISPLAY_TASK_PRIORITY, NULL);
+    xTaskCreate(test_alpha_display, "test_alpha_display", 4096, NULL, ALPHA_DISPLAY_TASK_PRIORITY, NULL);
+    xTaskCreate(button_task, "button_task", 2048, NULL, BUTTON_TASK_PRIORITY, NULL);
 }
