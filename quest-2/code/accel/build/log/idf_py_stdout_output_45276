@@ -1,0 +1,4192 @@
+RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct  3 2023 22:23:11[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b1c8h ( 45512) map[0m
+[0;32mI (123) esp_image: segment 1: paddr=0001b1f0 vaddr=3ffb0000 size=0217ch (  8572) load[0m
+[0;32mI (127) esp_image: segment 2: paddr=0001d374 vaddr=40080000 size=02ca4h ( 11428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=16ff0h ( 94192) map[0m
+[0;32mI (171) esp_image: segment 4: paddr=00037018 vaddr=40082ca4 size=0aa58h ( 43608) load[0m
+[0;32mI (196) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (196) boot: Disabling RNG early entropy source...[0m
+[0;32mI (208) cpu_start: Multicore app[0m
+[0;32mI (208) cpu_start: Pro cpu up.[0m
+[0;32mI (208) cpu_start: Starting app cpu, entry point is 0x40081150[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (226) cpu_start: Pro cpu start user code[0m
+[0;32mI (226) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (226) cpu_start: Application information:[0m
+[0;32mI (231) cpu_start: Project name:     accel[0m
+[0;32mI (236) cpu_start: App version:      9ee5dcb[0m
+[0;32mI (241) cpu_start: Compile time:     Oct  3 2023 22:23:04[0m
+[0;32mI (247) cpu_start: ELF file SHA256:  f351179da...[0m
+[0;32mI (252) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (259) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (264) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (269) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (274) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (281) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (287) heap_init: At 3FFB2A00 len 0002D600 (181 KiB): DRAM[0m
+[0;32mI (293) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (299) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (306) heap_init: At 4008D6FC len 00012904 (74 KiB): IRAM[0m
+[0;32mI (313) spi_flash: detected chip: generic[0m
+[0;32mI (317) spi_flash: flash io: dio[0m
+[0;33mW (320) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (334) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (345) app_start: Starting scheduler on CPU0[0m
+[0;32mI (349) app_start: Starting scheduler on CPU1[0m
+[0;32mI (349) main_task: Started on CPU0[0m
+[0;32mI (359) main_task: Calling app_main()[0m
+
+>> i2c Config
+- parameters: ok
+- initialized: yes
+
+>> I2C scanning ...
+- Device found at address: 0x53
+
+>> Found ADAXL343
+- Range:         +/- 2  g
+- Data Rate:    0.10  Hz
+
+
+>> Polling ADAXL343
+[0;32mI (399) main_task: Returned from app_main()[0m
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.12 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.67 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.00
+roll: -4.26 	 pitch: -0.45 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.78 	 Z: 10.04
+roll: -4.47 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.12 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.67 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.00 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.00 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.00 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.12 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.67 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.78 	 Z: 10.00
+roll: -4.48 	 pitch: -0.45 
+The magnitude is: 4.65
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.16
+roll: -4.20 	 pitch: -0.44 
+The magnitude is: 4.70
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.00 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.00
+roll: -4.26 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.78 	 Z: 10.04
+roll: -4.47 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.00
+roll: -3.81 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.00
+roll: -4.04 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.78 	 Z: 10.04
+roll: -4.47 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.16
+roll: -3.98 	 pitch: -0.22 
+The magnitude is: 4.70
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.00
+roll: -4.26 	 pitch: -0.45 
+The magnitude is: 4.65
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.00
+roll: -4.04 	 pitch: -0.45 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.00 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.00 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.67 	 Z: 10.00
+roll: -3.81 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.00 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.00
+roll: -4.26 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.00
+roll: -4.04 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.00
+roll: -4.26 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.00
+roll: -4.26 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.55 	 Z: 10.12
+roll: -3.11 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.00 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.78 	 Z: 10.04
+roll: -4.47 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.00
+roll: -3.81 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.00 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.44 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.00
+roll: -4.04 	 pitch: -0.22 
+The magnitude is: 4.65
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.44 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.67 	 Z: 10.08
+roll: -3.78 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.08 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.45 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.75 	 Z: 10.04
+roll: -4.24 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.67 	 Z: 10.12
+roll: -3.77 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.63 	 Z: 9.85
+roll: -3.65 	 pitch: -0.23 
+The magnitude is: 4.60
+X: 0.04 	 Y: -0.75 	 Z: 10.12
+roll: -4.21 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.04 	 Y: -0.71 	 Z: 10.04
+roll: -4.02 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: -0.71 	 Z: 10.08
+roll: -4.01 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.04 	 Y: -0.71 	 Z: 10.12
+roll: -3.99 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.08 	 Y: -0.67 	 Z: 9.85
+roll: -3.87 	 pitch: -0.46 
+The magnitude is: 4.60
+X: 0.04 	 Y: -0.67 	 Z: 10.04
+roll: -3.80 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.08 	 Y: -0.75 	 Z: 10.08
+roll: -4.23 	 pitch: -0.44 
+The magnitude is: 4.68
+X: 0.12 	 Y: -0.78 	 Z: 10.08
+roll: -4.45 	 pitch: -0.67 
+The magnitude is: 4.68
+X: 0.04 	 Y: -0.71 	 Z: 10.59
+roll: -3.81 	 pitch: -0.21 
+The magnitude is: 4.83
+X: -2.59 	 Y: 2.79 	 Z: 10.43
+roll: 14.95 	 pitch: 13.48 
+The magnitude is: 4.98
+X: -6.20 	 Y: -6.75 	 Z: 11.85
+roll: -29.67 	 pitch: 24.45 
+The magnitude is: 6.08
+X: -5.33 	 Y: -0.59 	 Z: 4.31
+roll: -7.77 	 pitch: 50.78 
+The magnitude is: 3.62
+X: -7.53 	 Y: -1.26 	 Z: 8.98
+roll: -7.96 	 pitch: 39.71 
+The magnitude is: 5.18
+X: -6.79 	 Y: 3.41 	 Z: 5.57
+roll: 31.50 	 pitch: 46.09 
+The magnitude is: 4.46
+X: -2.24 	 Y: 21.06 	 Z: 11.30
+roll: 61.80 	 pitch: 5.34 
+The magnitude is: 8.32
+X: -4.16 	 Y: 7.18 	 Z: 6.12
+roll: 49.56 	 pitch: 23.79 
+The magnitude is: 4.74
+X: -9.38 	 Y: 1.02 	 Z: 5.45
+roll: 10.60 	 pitch: 59.39 
+The magnitude is: 4.91
+X: -8.55 	 Y: -1.77 	 Z: 5.88
+roll: -16.70 	 pitch: 54.31 
+The magnitude is: 4.80
+X: -7.06 	 Y: -0.04 	 Z: 5.53
+roll: -0.41 	 pitch: 51.93 
+The magnitude is: 4.32
+X: -4.51 	 Y: -0.16 	 Z: 6.39
+roll: -1.41 	 pitch: 35.20 
+The magnitude is: 3.94
+X: -4.94 	 Y: -1.02 	 Z: 1.14
+roll: -41.88 	 pitch: 72.83 
+The magnitude is: 2.99
+X: -8.75 	 Y: 1.88 	 Z: 4.31
+roll: 23.58 	 pitch: 61.72 
+The magnitude is: 4.62
+X: -9.18 	 Y: 1.37 	 Z: 4.79
+roll: 16.01 	 pitch: 61.53 
+The magnitude is: 4.78
+X: -3.45 	 Y: -0.63 	 Z: 1.14
+roll: -28.89 	 pitch: 69.38 
+The magnitude is: 2.39
+X: -10.24 	 Y: 6.51 	 Z: 6.43
+roll: 45.35 	 pitch: 48.20 
+The magnitude is: 5.73
+X: -9.81 	 Y: 2.00 	 Z: 3.06
+roll: 33.18 	 pitch: 69.56 
+The magnitude is: 4.78
+X: -9.69 	 Y: -0.63 	 Z: 4.31
+roll: -8.28 	 pitch: 65.78 
+The magnitude is: 4.83
+X: -13.49 	 Y: -0.78 	 Z: 8.39
+roll: -5.34 	 pitch: 58.01 
+The magnitude is: 6.33
+X: -9.22 	 Y: 0.00 	 Z: 2.63
+roll: 0.00 	 pitch: 74.09 
+The magnitude is: 4.51
+X: -10.32 	 Y: -1.96 	 Z: 5.49
+roll: -19.66 	 pitch: 60.53 
+The magnitude is: 5.20
+X: -6.98 	 Y: -1.22 	 Z: 2.39
+roll: -26.94 	 pitch: 68.98 
+The magnitude is: 3.82
+X: -8.98 	 Y: -2.59 	 Z: 3.77
+roll: -34.51 	 pitch: 63.04 
+The magnitude is: 4.67
+X: -7.65 	 Y: -1.37 	 Z: 3.33
+roll: -22.38 	 pitch: 64.77 
+The magnitude is: 4.15
+X: -8.39 	 Y: -1.77 	 Z: 3.88
+roll: -24.45 	 pitch: 63.07 
+The magnitude is: 4.46
+X: -7.02 	 Y: -1.14 	 Z: 2.51
+roll: -24.38 	 pitch: 68.57 
+The magnitude is: 3.85
+X: -8.28 	 Y: -2.31 	 Z: 4.47
+roll: -27.37 	 pitch: 58.69 
+The magnitude is: 4.54
+X: -6.94 	 Y: -0.98 	 Z: 2.12
+roll: -24.84 	 pitch: 71.42 
+The magnitude is: 3.77
+X: -8.75 	 Y: -2.55 	 Z: 4.31
+roll: -30.58 	 pitch: 60.19 
+The magnitude is: 4.67
+X: -5.73 	 Y: -1.45 	 Z: 2.43
+roll: -30.83 	 pitch: 63.69 
+The magnitude is: 3.44
+X: -9.22 	 Y: -1.06 	 Z: 3.57
+roll: -16.53 	 pitch: 68.01 
+The magnitude is: 4.62
+X: -11.41 	 Y: -0.59 	 Z: 5.81
+roll: -5.79 	 pitch: 62.93 
+The magnitude is: 5.48
+X: -7.85 	 Y: -0.75 	 Z: 1.92
+roll: -21.20 	 pitch: 75.28 
+The magnitude is: 4.04
+X: -11.41 	 Y: -2.43 	 Z: 12.75
+roll: -10.80 	 pitch: 41.34 
+The magnitude is: 6.68
+X: -8.83 	 Y: -2.08 	 Z: 5.14
+roll: -22.03 	 pitch: 57.87 
+The magnitude is: 4.77
+X: -8.59 	 Y: 0.08 	 Z: 5.18
+roll: 0.87 	 pitch: 58.92 
+The magnitude is: 4.65
+X: -8.55 	 Y: -0.12 	 Z: 5.45
+roll: -1.24 	 pitch: 57.48 
+The magnitude is: 4.69
+X: -10.43 	 Y: -0.24 	 Z: 6.08
+roll: -2.22 	 pitch: 59.76 
+The magnitude is: 5.26
+X: -4.98 	 Y: -1.29 	 Z: 7.14
+roll: -10.28 	 pitch: 34.48 
+The magnitude is: 4.26
+X: -3.45 	 Y: 3.61 	 Z: 8.00
+roll: 24.28 	 pitch: 21.47 
+The magnitude is: 4.46
+X: -3.77 	 Y: -0.08 	 Z: 8.87
+roll: -0.51 	 pitch: 23.02 
+The magnitude is: 4.53
+X: -4.59 	 Y: 0.35 	 Z: 8.90
+roll: 2.27 	 pitch: 27.25 
+The magnitude is: 4.65
+X: -4.55 	 Y: -0.04 	 Z: 8.75
+roll: -0.26 	 pitch: 27.48 
+The magnitude is: 4.60
+X: -4.98 	 Y: 0.67 	 Z: 8.24
+roll: 4.63 	 pitch: 31.08 
+The magnitude is: 4.53
+X: -4.55 	 Y: 6.24 	 Z: 6.55
+roll: 43.60 	 pitch: 26.71 
+The magnitude is: 4.68
+X: -7.49 	 Y: 3.41 	 Z: 2.55
+roll: 53.24 	 pitch: 60.38 
+The magnitude is: 4.20
+X: -6.67 	 Y: 6.83 	 Z: 3.80
+roll: 60.87 	 pitch: 40.48 
+The magnitude is: 4.73
+X: -6.51 	 Y: 4.24 	 Z: 2.47
+roll: 59.75 	 pitch: 53.02 
+The magnitude is: 4.05
+X: -9.49 	 Y: 2.31 	 Z: 1.88
+roll: 50.87 	 pitch: 72.56 
+The magnitude is: 4.63
+X: -11.10 	 Y: -0.75 	 Z: 1.80
+roll: -22.44 	 pitch: 80.03 
+The magnitude is: 5.03
+X: -2.16 	 Y: 2.98 	 Z: 0.00
+roll: 90.01 	 pitch: 35.90 
+The magnitude is: 2.38
+X: -10.55 	 Y: -1.84 	 Z: 3.96
+roll: -24.96 	 pitch: 67.51 
+The magnitude is: 5.07
+X: -2.82 	 Y: -0.20 	 Z: 0.71
+roll: -15.53 	 pitch: 75.46 
+The magnitude is: 2.04
+X: -6.98 	 Y: -4.00 	 Z: 5.37
+roll: -36.67 	 pitch: 46.19 
+The magnitude is: 4.54
+X: -17.10 	 Y: -2.24 	 Z: 8.71
+roll: -14.40 	 pitch: 62.27 
+The magnitude is: 7.20
+X: -9.89 	 Y: -3.10 	 Z: 5.33
+roll: -30.15 	 pitch: 58.03 
+The magnitude is: 5.14
+X: -6.98 	 Y: -1.92 	 Z: 2.31
+roll: -39.71 	 pitch: 66.70 
+The magnitude is: 3.87
+X: -4.28 	 Y: 2.86 	 Z: -1.22
+roll: 113.02 	 pitch: 53.96 
+The magnitude is: 3.04
+X: -9.34 	 Y: 1.69 	 Z: 6.28
+roll: 15.04 	 pitch: 55.16 
+The magnitude is: 5.06
+X: -9.45 	 Y: -0.86 	 Z: 3.37
+roll: -14.35 	 pitch: 69.78 
+The magnitude is: 4.66
+X: -8.79 	 Y: 4.51 	 Z: -0.43
+roll: 95.47 	 pitch: 62.72 
+The magnitude is: 4.61
+X: -10.40 	 Y: 3.45 	 Z: 2.94
+roll: 49.56 	 pitch: 66.43 
+The magnitude is: 5.05
+X: -9.73 	 Y: 2.67 	 Z: 2.35
+roll: 48.58 	 pitch: 69.92 
+The magnitude is: 4.75
+X: -8.87 	 Y: 4.31 	 Z: 3.41
+roll: 51.66 	 pitch: 58.18 
+The magnitude is: 4.77
+X: -10.00 	 Y: -0.43 	 Z: -0.55
+roll: -141.85 	 pitch: 86.01 
+The magnitude is: 4.65
+X: -10.24 	 Y: 0.35 	 Z: 2.86
+roll: 7.03 	 pitch: 74.27 
+The magnitude is: 4.84
+X: -15.49 	 Y: -7.34 	 Z: 6.20
+roll: -49.81 	 pitch: 58.21 
+The magnitude is: 6.93
+X: -4.28 	 Y: -3.80 	 Z: 5.26
+roll: -35.90 	 pitch: 33.38 
+The magnitude is: 3.92
+X: -7.10 	 Y: 0.16 	 Z: 7.53
+roll: 1.19 	 pitch: 43.31 
+The magnitude is: 4.75
+X: -7.26 	 Y: -7.26 	 Z: 2.16
+roll: -73.45 	 pitch: 43.79 
+The magnitude is: 4.79
+X: -8.39 	 Y: -4.51 	 Z: 2.75
+roll: -58.68 	 pitch: 57.83 
+The magnitude is: 4.62
+X: -8.83 	 Y: -2.90 	 Z: 1.80
+roll: -58.14 	 pitch: 68.84 
+The magnitude is: 4.47
+X: -9.85 	 Y: -1.53 	 Z: 2.59
+roll: -30.58 	 pitch: 73.02 
+The magnitude is: 4.73
+X: -9.92 	 Y: 0.08 	 Z: 2.20
+roll: 2.05 	 pitch: 77.52 
+The magnitude is: 4.69
+X: -9.96 	 Y: 0.31 	 Z: 1.69
+roll: 10.54 	 pitch: 80.24 
+The magnitude is: 4.68
+X: -10.00 	 Y: 1.49 	 Z: 1.18
+roll: 51.71 	 pitch: 79.26 
+The magnitude is: 4.70
+X: -12.83 	 Y: -0.78 	 Z: 3.10
+roll: -14.21 	 pitch: 76.01 
+The magnitude is: 5.59
+X: -14.51 	 Y: 0.94 	 Z: 6.90
+roll: 7.77 	 pitch: 64.36 
+The magnitude is: 6.38
+X: -10.04 	 Y: 1.45 	 Z: 0.82
+roll: 60.43 	 pitch: 80.57 
+The magnitude is: 4.70
+X: -7.61 	 Y: 1.77 	 Z: 3.65
+roll: 25.82 	 pitch: 61.97 
+The magnitude is: 4.20
+X: -11.89 	 Y: 2.47 	 Z: 0.78
+roll: 72.39 	 pitch: 77.70 
+The magnitude is: 5.29
+X: -9.77 	 Y: 0.27 	 Z: -0.08
+roll: 105.95 	 pitch: 88.33 
+The magnitude is: 4.57
+X: -10.12 	 Y: 0.31 	 Z: 1.14
+roll: 15.42 	 pitch: 83.36 
+The magnitude is: 4.70
+X: -9.06 	 Y: 1.02 	 Z: 2.63
+roll: 21.21 	 pitch: 72.72 
+The magnitude is: 4.48
+X: -7.26 	 Y: 0.94 	 Z: 3.22
+roll: 16.32 	 pitch: 65.22 
+The magnitude is: 4.00
+X: -10.16 	 Y: 1.49 	 Z: 1.06
+roll: 54.61 	 pitch: 79.80 
+The magnitude is: 4.74
+X: -9.41 	 Y: 0.51 	 Z: 1.49
+roll: 18.89 	 pitch: 80.51 
+The magnitude is: 4.50
+X: -8.16 	 Y: 3.22 	 Z: 3.06
+roll: 46.44 	 pitch: 61.45 
+The magnitude is: 4.42
+X: -10.32 	 Y: 2.20 	 Z: 1.37
+roll: 58.00 	 pitch: 75.91 
+The magnitude is: 4.84
+X: -10.08 	 Y: 2.43 	 Z: 0.82
+roll: 71.29 	 pitch: 75.72 
+The magnitude is: 4.77
+X: -7.92 	 Y: 2.67 	 Z: 2.94
+roll: 42.20 	 pitch: 63.39 
+The magnitude is: 4.28
+X: -12.47 	 Y: 5.02 	 Z: 1.53
+roll: 73.06 	 pitch: 67.18 
+The magnitude is: 5.68
+X: -9.81 	 Y: 2.24 	 Z: 1.26
+roll: 60.69 	 pitch: 75.35 
+The magnitude is: 4.68
+X: -9.69 	 Y: 1.77 	 Z: 1.29
+roll: 53.75 	 pitch: 77.27 
+The magnitude is: 4.62
+X: -8.90 	 Y: 2.67 	 Z: 4.86
+roll: 28.74 	 pitch: 58.08 
+The magnitude is: 4.79
+X: -9.53 	 Y: 2.43 	 Z: 1.73
+roll: 54.64 	 pitch: 72.63 
+The magnitude is: 4.64
+X: -10.08 	 Y: 2.67 	 Z: 2.08
+roll: 52.07 	 pitch: 71.46 
+The magnitude is: 4.84
+X: -9.49 	 Y: 2.00 	 Z: 2.24
+roll: 41.82 	 pitch: 72.47 
+The magnitude is: 4.63
+X: -9.69 	 Y: 2.39 	 Z: 2.28
+roll: 46.45 	 pitch: 71.19 
+The magnitude is: 4.71
+X: -9.41 	 Y: 4.82 	 Z: 2.71
+roll: 60.71 	 pitch: 59.56 
+The magnitude is: 4.92
+X: -8.90 	 Y: 10.51 	 Z: 5.49
+roll: 62.42 	 pitch: 36.90 
+The magnitude is: 6.04
+X: 0.78 	 Y: 6.90 	 Z: 1.92
+roll: 74.45 	 pitch: -6.25 
+The magnitude is: 3.73
+X: 1.96 	 Y: 7.10 	 Z: -6.51
+roll: 132.53 	 pitch: -11.51 
+The magnitude is: 4.59
+X: 2.20 	 Y: 6.67 	 Z: -8.71
+roll: 142.57 	 pitch: -11.33 
+The magnitude is: 5.00
+X: 0.12 	 Y: 2.79 	 Z: -8.12
+roll: 161.08 	 pitch: -0.79 
+The magnitude is: 4.19
+X: -1.22 	 Y: 6.32 	 Z: -8.43
+roll: 143.18 	 pitch: 6.58 
+The magnitude is: 4.83
+X: -2.39 	 Y: 5.41 	 Z: -7.18
+roll: 142.99 	 pitch: 14.90 
+The magnitude is: 4.42
+X: -2.90 	 Y: 7.85 	 Z: 0.51
+roll: 86.29 	 pitch: 20.27 
+The magnitude is: 4.13
+X: -10.04 	 Y: 7.30 	 Z: 2.39
+roll: 71.85 	 pitch: 52.60 
+The magnitude is: 5.43
+X: -8.67 	 Y: 3.69 	 Z: -1.57
+roll: 113.06 	 pitch: 65.20 
+The magnitude is: 4.50
+X: -11.22 	 Y: 4.12 	 Z: 0.86
+roll: 78.17 	 pitch: 69.44 
+The magnitude is: 5.24
+X: -8.75 	 Y: 1.33 	 Z: 1.88
+roll: 35.31 	 pitch: 75.23 
+The magnitude is: 4.34
+X: -10.79 	 Y: 3.22 	 Z: 1.88
+roll: 59.66 	 pitch: 70.94 
+The magnitude is: 5.07
+X: -7.65 	 Y: 3.73 	 Z: -0.16
+roll: 92.42 	 pitch: 64.01 
+The magnitude is: 4.17
+X: -10.24 	 Y: 8.36 	 Z: 2.59
+roll: 72.79 	 pitch: 49.49 
+The magnitude is: 5.66
+X: -7.49 	 Y: 7.69 	 Z: 1.73
+roll: 77.35 	 pitch: 43.56 
+The magnitude is: 4.91
+X: -3.77 	 Y: 6.94 	 Z: 0.55
+roll: 85.48 	 pitch: 28.40 
+The magnitude is: 3.97
+X: -7.45 	 Y: 4.39 	 Z: 1.14
+roll: 75.49 	 pitch: 58.67 
+The magnitude is: 4.24
+X: -8.43 	 Y: 5.69 	 Z: 0.82
+roll: 81.77 	 pitch: 55.73 
+The magnitude is: 4.71
+X: -8.24 	 Y: 5.61 	 Z: 0.94
+roll: 80.48 	 pitch: 55.38 
+The magnitude is: 4.64
+X: -8.83 	 Y: 5.14 	 Z: 0.59
+roll: 83.47 	 pitch: 59.63 
+The magnitude is: 4.71
+X: -8.47 	 Y: 5.61 	 Z: -0.20
+roll: 92.01 	 pitch: 56.48 
+The magnitude is: 4.69
+X: -8.36 	 Y: 5.77 	 Z: -0.35
+roll: 93.51 	 pitch: 55.34 
+The magnitude is: 4.69
+X: -8.08 	 Y: 6.20 	 Z: -0.24
+roll: 92.18 	 pitch: 52.50 
+The magnitude is: 4.70
+X: -8.55 	 Y: 5.61 	 Z: 0.00
+roll: 90.01 	 pitch: 56.74 
+The magnitude is: 4.71
+X: -8.67 	 Y: 5.06 	 Z: 0.78
+roll: 81.19 	 pitch: 59.43 
+The magnitude is: 4.66
+X: -8.63 	 Y: 5.49 	 Z: 0.71
+roll: 82.68 	 pitch: 57.32 
+The magnitude is: 4.72
+X: -7.49 	 Y: 5.57 	 Z: 2.75
+roll: 63.76 	 pitch: 50.35 
+The magnitude is: 4.56
+X: -5.49 	 Y: 7.14 	 Z: 4.75
+roll: 56.39 	 pitch: 32.65 
+The magnitude is: 4.70
+X: -7.77 	 Y: 5.41 	 Z: 0.27
+roll: 87.10 	 pitch: 55.09 
+The magnitude is: 4.48
+X: -9.30 	 Y: 3.02 	 Z: 0.20
+roll: 86.29 	 pitch: 71.97 
+The magnitude is: 4.57
+X: -8.04 	 Y: 5.96 	 Z: 1.49
+roll: 75.97 	 pitch: 52.61 
+The magnitude is: 4.68
+X: -6.98 	 Y: 6.90 	 Z: 4.79
+roll: 55.28 	 pitch: 39.74 
+The magnitude is: 4.92
+X: -8.94 	 Y: 5.06 	 Z: -0.98
+roll: 100.98 	 pitch: 60.05 
+The magnitude is: 4.74
+X: -8.94 	 Y: 4.67 	 Z: -0.04
+roll: 90.49 	 pitch: 62.44 
+The magnitude is: 4.67
+X: -7.49 	 Y: 5.73 	 Z: 2.35
+roll: 67.66 	 pitch: 50.43 
+The magnitude is: 4.55
+X: -9.06 	 Y: 6.86 	 Z: 2.31
+roll: 71.37 	 pitch: 51.36 
+The magnitude is: 5.12
+X: -8.04 	 Y: 5.73 	 Z: -0.27
+roll: 92.75 	 pitch: 54.51 
+The magnitude is: 4.60
+X: -7.81 	 Y: 6.12 	 Z: -0.82
+roll: 97.67 	 pitch: 51.66 
+The magnitude is: 4.63
+X: -8.32 	 Y: 5.57 	 Z: -0.43
+roll: 94.44 	 pitch: 56.11 
+The magnitude is: 4.65
+X: -7.88 	 Y: 5.14 	 Z: 3.30
+roll: 57.34 	 pitch: 52.26 
+The magnitude is: 4.63
+X: -6.47 	 Y: 6.51 	 Z: 3.80
+roll: 59.71 	 pitch: 40.64 
+The magnitude is: 4.62
+X: -7.73 	 Y: 7.10 	 Z: -0.08
+roll: 90.64 	 pitch: 47.43 
+The magnitude is: 4.79
+X: -8.20 	 Y: 6.04 	 Z: 0.78
+roll: 82.61 	 pitch: 53.39 
+The magnitude is: 4.71
+X: -7.34 	 Y: 6.90 	 Z: 0.08
+roll: 89.36 	 pitch: 46.74 
+The magnitude is: 4.66
+X: -7.34 	 Y: 6.71 	 Z: 3.77
+roll: 60.69 	 pitch: 43.64 
+The magnitude is: 4.83
+X: -8.63 	 Y: 8.59 	 Z: 4.75
+roll: 61.08 	 pitch: 41.33 
+The magnitude is: 5.55
+X: -7.45 	 Y: 5.65 	 Z: -0.16
+roll: 91.60 	 pitch: 52.83 
+The magnitude is: 4.44
+X: -7.37 	 Y: 6.86 	 Z: -1.02
+roll: 98.46 	 pitch: 46.74 
+The magnitude is: 4.68
+X: -8.39 	 Y: 6.94 	 Z: 4.71
+roll: 55.87 	 pitch: 45.02 
+The magnitude is: 5.20
+X: -6.28 	 Y: 7.10 	 Z: 3.49
+roll: 63.82 	 pitch: 38.43 
+The magnitude is: 4.67
+X: -7.92 	 Y: 6.16 	 Z: 0.00
+roll: 90.01 	 pitch: 52.15 
+The magnitude is: 4.65
+X: -7.49 	 Y: 6.83 	 Z: 0.47
+roll: 86.06 	 pitch: 47.60 
+The magnitude is: 4.69
+X: -5.45 	 Y: 5.22 	 Z: 1.49
+roll: 74.06 	 pitch: 45.14 
+The magnitude is: 3.90
+X: -5.92 	 Y: 5.37 	 Z: -1.96
+roll: 110.06 	 pitch: 46.00 
+The magnitude is: 4.08
+X: -7.73 	 Y: 6.20 	 Z: 0.31
+roll: 87.11 	 pitch: 51.24 
+The magnitude is: 4.61
+X: -6.98 	 Y: 6.63 	 Z: 2.86
+roll: 66.64 	 pitch: 44.04 
+The magnitude is: 4.66
+X: -8.83 	 Y: 4.31 	 Z: 0.51
+roll: 83.27 	 pitch: 63.79 
+The magnitude is: 4.59
+X: -13.96 	 Y: 10.28 	 Z: -4.28
+roll: 112.60 	 pitch: 51.45 
+The magnitude is: 6.83
+X: -9.49 	 Y: 2.39 	 Z: 1.26
+roll: 62.32 	 pitch: 74.12 
+The magnitude is: 4.60
+X: -9.77 	 Y: 2.00 	 Z: 2.28
+roll: 41.33 	 pitch: 72.77 
+The magnitude is: 4.71
+X: -8.79 	 Y: 3.65 	 Z: 0.47
+roll: 82.65 	 pitch: 67.29 
+The magnitude is: 4.49
+X: -9.30 	 Y: 4.43 	 Z: 1.37
+roll: 72.80 	 pitch: 63.48 
+The magnitude is: 4.76
+X: -9.26 	 Y: 3.92 	 Z: 1.22
+roll: 72.78 	 pitch: 66.08 
+The magnitude is: 4.68
+X: -9.89 	 Y: 3.88 	 Z: 2.35
+roll: 58.79 	 pitch: 65.33 
+The magnitude is: 4.91
+X: -7.30 	 Y: 5.37 	 Z: 3.30
+roll: 58.49 	 pitch: 49.18 
+The magnitude is: 4.53
+X: -7.73 	 Y: 5.06 	 Z: 0.47
+roll: 84.69 	 pitch: 56.67 
+The magnitude is: 4.41
+X: -9.14 	 Y: 4.16 	 Z: 0.00
+roll: 90.01 	 pitch: 65.54 
+The magnitude is: 4.65
+X: -8.36 	 Y: 2.31 	 Z: 0.86
+roll: 69.56 	 pitch: 73.54 
+The magnitude is: 4.23
+X: -7.57 	 Y: 5.53 	 Z: 4.16
+roll: 53.07 	 pitch: 47.58 
+The magnitude is: 4.72
+X: -8.71 	 Y: 6.63 	 Z: -0.31
+roll: 92.72 	 pitch: 52.69 
+The magnitude is: 4.93
+X: -7.61 	 Y: 5.73 	 Z: 0.47
+roll: 85.31 	 pitch: 52.95 
+The magnitude is: 4.50
+X: -8.98 	 Y: 5.02 	 Z: 4.16
+roll: 50.37 	 pitch: 54.03 
+The magnitude is: 4.98
+X: -7.49 	 Y: 4.51 	 Z: 2.90
+roll: 57.24 	 pitch: 54.40 
+The magnitude is: 4.40
+X: -8.75 	 Y: 4.47 	 Z: -0.16
+roll: 92.02 	 pitch: 62.91 
+The magnitude is: 4.59
+X: -8.39 	 Y: 5.81 	 Z: 0.24
+roll: 87.68 	 pitch: 55.31 
+The magnitude is: 4.71
+X: -9.06 	 Y: 4.79 	 Z: 0.90
+roll: 79.33 	 pitch: 61.75 
+The magnitude is: 4.73
+X: -8.94 	 Y: 5.10 	 Z: 0.75
+roll: 81.69 	 pitch: 60.05 
+The magnitude is: 4.74
+X: -8.94 	 Y: 4.82 	 Z: 0.51
+roll: 83.97 	 pitch: 61.53 
+The magnitude is: 4.70
+X: -8.90 	 Y: 4.71 	 Z: 0.63
+roll: 82.41 	 pitch: 61.93 
+The magnitude is: 4.67
+X: -8.90 	 Y: 4.82 	 Z: 0.75
+roll: 81.22 	 pitch: 61.27 
+The magnitude is: 4.69
+X: -8.94 	 Y: 4.86 	 Z: 0.78
+roll: 80.84 	 pitch: 61.15 
+The magnitude is: 4.71
+X: -8.94 	 Y: 4.94 	 Z: 0.59
+roll: 83.22 	 pitch: 60.91 
+The magnitude is: 4.71
+X: -8.83 	 Y: 4.82 	 Z: 0.82
+roll: 80.32 	 pitch: 60.99 
+The magnitude is: 4.67
+X: -8.94 	 Y: 4.79 	 Z: 0.94
+roll: 78.88 	 pitch: 61.40 
+The magnitude is: 4.70
+X: -8.87 	 Y: 4.82 	 Z: 0.78
+roll: 80.77 	 pitch: 61.13 
+The magnitude is: 4.68
+X: -8.71 	 Y: 5.02 	 Z: 0.71
+roll: 82.00 	 pitch: 59.79 
+The magnitude is: 4.67
+X: -8.71 	 Y: 5.18 	 Z: 0.82
+roll: 80.97 	 pitch: 58.95 
+The magnitude is: 4.69
+X: -8.75 	 Y: 4.98 	 Z: 1.02
+roll: 78.44 	 pitch: 59.83 
+The magnitude is: 4.68
+X: -8.79 	 Y: 4.75 	 Z: 0.98
+roll: 78.33 	 pitch: 61.12 
+The magnitude is: 4.65
+X: -8.87 	 Y: 4.82 	 Z: 0.67
+roll: 82.14 	 pitch: 61.22 
+The magnitude is: 4.68
+X: -8.87 	 Y: 4.94 	 Z: 0.59
+roll: 83.22 	 pitch: 60.69 
+The magnitude is: 4.69
+X: -8.75 	 Y: 4.98 	 Z: 0.67
+roll: 82.38 	 pitch: 60.12 
+The magnitude is: 4.67
+X: -8.79 	 Y: 4.94 	 Z: 0.71
+roll: 81.88 	 pitch: 60.40 
+The magnitude is: 4.67
+X: -8.87 	 Y: 4.94 	 Z: 0.63
+roll: 82.77 	 pitch: 60.67 
+The magnitude is: 4.69
+X: -8.87 	 Y: 4.94 	 Z: 0.82
+roll: 80.54 	 pitch: 60.53 
+The magnitude is: 4.70
+X: -8.87 	 Y: 4.90 	 Z: 0.75
+roll: 81.36 	 pitch: 60.78 
+The magnitude is: 4.69
+X: -8.79 	 Y: 4.98 	 Z: 0.75
+roll: 81.50 	 pitch: 60.18 
+The magnitude is: 4.68
+X: -8.75 	 Y: 4.98 	 Z: 0.67
+roll: 82.38 	 pitch: 60.12 
+The magnitude is: 4.67
+X: -8.83 	 Y: 4.98 	 Z: 0.71
+roll: 81.94 	 pitch: 60.32 
+The magnitude is: 4.69
+X: -8.87 	 Y: 4.94 	 Z: 0.71
+roll: 81.88 	 pitch: 60.62 
+The magnitude is: 4.70
+X: -8.75 	 Y: 4.98 	 Z: 0.67
+roll: 82.38 	 pitch: 60.12 
+The magnitude is: 4.67
+X: -8.79 	 Y: 4.98 	 Z: 0.71
+roll: 81.94 	 pitch: 60.21 
+The magnitude is: 4.68
+X: -8.83 	 Y: 4.94 	 Z: 0.67
+roll: 82.32 	 pitch: 60.53 
+The magnitude is: 4.68
+X: -8.79 	 Y: 4.94 	 Z: 0.71
+roll: 81.88 	 pitch: 60.40 
+The magnitude is: 4.67
+X: -8.83 	 Y: 4.98 	 Z: 0.71
+roll: 81.94 	 pitch: 60.32 
+The magnitude is: 4.69
+X: -8.79 	 Y: 4.94 	 Z: 0.71
+roll: 81.88 	 pitch: 60.40 
+The magnitude is: 4.67
+X: -8.75 	 Y: 4.98 	 Z: 0.75
+roll: 81.50 	 pitch: 60.07 
+The magnitude is: 4.67
+X: -8.63 	 Y: 5.06 	 Z: 0.71
+roll: 82.06 	 pitch: 59.38 
+The magnitude is: 4.65
+X: -9.14 	 Y: 4.63 	 Z: 1.14
+roll: 76.20 	 pitch: 62.46 
+The magnitude is: 4.74
+X: -8.59 	 Y: 5.02 	 Z: 1.53
+roll: 73.06 	 pitch: 58.58 
+The magnitude is: 4.66
+X: -8.71 	 Y: 5.10 	 Z: 1.02
+roll: 78.70 	 pitch: 59.16 
+The magnitude is: 4.69
+X: -8.75 	 Y: 4.98 	 Z: 0.59
+roll: 83.27 	 pitch: 60.17 
+The magnitude is: 4.67
+X: -8.75 	 Y: 5.33 	 Z: 0.90
+roll: 80.41 	 pitch: 58.27 
+The magnitude is: 4.73
+X: -8.67 	 Y: 5.02 	 Z: 1.14
+roll: 77.24 	 pitch: 59.30 
+The magnitude is: 4.67
+X: -8.94 	 Y: 4.75 	 Z: 1.37
+roll: 73.87 	 pitch: 61.09 
+The magnitude is: 4.71
+X: -9.02 	 Y: 3.96 	 Z: 0.78
+roll: 78.81 	 pitch: 65.89 
+The magnitude is: 4.61
+X: -9.02 	 Y: 4.24 	 Z: 1.45
+roll: 71.09 	 pitch: 63.61 
+The magnitude is: 4.66
+X: -8.98 	 Y: 4.16 	 Z: 0.90
+roll: 77.76 	 pitch: 64.66 
+The magnitude is: 4.62
+X: -9.18 	 Y: 4.04 	 Z: 0.82
+roll: 78.48 	 pitch: 65.81 
+The magnitude is: 4.66
+X: -9.26 	 Y: 4.43 	 Z: 1.29
+roll: 73.73 	 pitch: 63.49 
+The magnitude is: 4.75
+X: -9.06 	 Y: 4.20 	 Z: 1.69
+roll: 68.11 	 pitch: 63.48 
+The magnitude is: 4.68
+X: -9.45 	 Y: 3.73 	 Z: 1.53
+roll: 67.69 	 pitch: 66.93 
+The magnitude is: 4.73
+X: -9.34 	 Y: 3.84 	 Z: 1.80
+roll: 64.86 	 pitch: 65.55 
+The magnitude is: 4.72
+X: -9.14 	 Y: 4.16 	 Z: 1.26
+roll: 73.21 	 pitch: 64.59 
+The magnitude is: 4.68
+X: -8.98 	 Y: 5.02 	 Z: 2.00
+roll: 68.28 	 pitch: 58.97 
+The magnitude is: 4.79
+X: -8.12 	 Y: 4.90 	 Z: 2.94
+roll: 59.04 	 pitch: 54.85 
+The magnitude is: 4.62
+X: -9.30 	 Y: 4.20 	 Z: 0.20
+roll: 87.33 	 pitch: 65.68 
+The magnitude is: 4.70
+X: -8.75 	 Y: 5.22 	 Z: 0.43
+roll: 85.28 	 pitch: 59.11 
+The magnitude is: 4.70
+X: -9.53 	 Y: 5.06 	 Z: 2.04
+roll: 68.05 	 pitch: 60.22 
+The magnitude is: 4.94
+X: -7.69 	 Y: 5.69 	 Z: 2.90
+roll: 62.97 	 pitch: 50.29 
+The magnitude is: 4.64
+X: -14.00 	 Y: 11.22 	 Z: 2.28
+roll: 78.54 	 pitch: 50.74 
+The magnitude is: 6.89
+X: -7.92 	 Y: 5.73 	 Z: 0.20
+roll: 88.05 	 pitch: 54.13 
+The magnitude is: 4.57
+X: -10.63 	 Y: 3.80 	 Z: 1.65
+roll: 66.59 	 pitch: 68.70 
+The magnitude is: 5.07
+X: -7.49 	 Y: 6.00 	 Z: 3.73
+roll: 58.17 	 pitch: 46.69 
+The magnitude is: 4.73
+X: -17.69 	 Y: 9.34 	 Z: -1.10
+roll: 96.72 	 pitch: 62.02 
+The magnitude is: 7.38
+X: -7.65 	 Y: 5.92 	 Z: 1.41
+roll: 76.60 	 pitch: 51.48 
+The magnitude is: 4.57
+X: -8.83 	 Y: 7.96 	 Z: 2.59
+roll: 71.99 	 pitch: 46.51 
+The magnitude is: 5.29
+X: -8.04 	 Y: 5.88 	 Z: 0.43
+roll: 85.81 	 pitch: 53.74 
+The magnitude is: 4.63
+X: -7.73 	 Y: 6.20 	 Z: 0.24
+roll: 87.83 	 pitch: 51.25 
+The magnitude is: 4.61
+X: -8.00 	 Y: 5.81 	 Z: 3.88
+roll: 56.22 	 pitch: 48.89 
+The magnitude is: 4.83
+X: -4.63 	 Y: 7.26 	 Z: 4.63
+roll: 57.47 	 pitch: 28.27 
+The magnitude is: 4.57
+X: -7.22 	 Y: 5.30 	 Z: 0.27
+roll: 87.04 	 pitch: 53.70 
+The magnitude is: 4.31
+X: -8.94 	 Y: 4.82 	 Z: 1.14
+roll: 76.74 	 pitch: 61.01 
+The magnitude is: 4.71
+X: -2.75 	 Y: 6.35 	 Z: 5.45
+roll: 49.37 	 pitch: 18.16 
+The magnitude is: 4.27
+X: -8.36 	 Y: 5.65 	 Z: 0.16
+roll: 88.42 	 pitch: 55.93 
+The magnitude is: 4.67
+X: -7.77 	 Y: 6.67 	 Z: -0.04
+roll: 90.34 	 pitch: 49.35 
+The magnitude is: 4.71
+X: -8.55 	 Y: 5.33 	 Z: 0.43
+roll: 85.38 	 pitch: 57.96 
+The magnitude is: 4.67
+X: -9.18 	 Y: 2.08 	 Z: 3.22
+roll: 32.88 	 pitch: 67.36 
+The magnitude is: 4.62
+X: -9.30 	 Y: 3.84 	 Z: 1.37
+roll: 70.35 	 pitch: 66.30 
+The magnitude is: 4.69
+X: -9.65 	 Y: 2.71 	 Z: 1.69
+roll: 58.07 	 pitch: 71.72 
+The magnitude is: 4.69
+X: -9.06 	 Y: 2.28 	 Z: 1.61
+roll: 54.75 	 pitch: 72.91 
+The magnitude is: 4.48
+X: -9.10 	 Y: 5.18 	 Z: 0.98
+roll: 79.28 	 pitch: 59.93 
+The magnitude is: 4.80
+X: -7.61 	 Y: 6.28 	 Z: -0.20
+roll: 91.80 	 pitch: 50.48 
+The magnitude is: 4.60
+X: -10.79 	 Y: 7.69 	 Z: 1.18
+roll: 81.30 	 pitch: 54.21 
+The magnitude is: 5.61
+X: -9.10 	 Y: 4.31 	 Z: 3.65
+roll: 49.79 	 pitch: 58.17 
+The magnitude is: 4.86
+X: -6.04 	 Y: 6.32 	 Z: 3.92
+roll: 58.16 	 pitch: 39.10 
+The magnitude is: 4.51
+X: -8.43 	 Y: 5.88 	 Z: -0.55
+roll: 95.34 	 pitch: 54.98 
+The magnitude is: 4.73
+X: -8.32 	 Y: 5.96 	 Z: 0.75
+roll: 82.88 	 pitch: 54.15 
+The magnitude is: 4.72
+X: -8.55 	 Y: 6.79 	 Z: 2.08
+roll: 72.97 	 pitch: 50.31 
+The magnitude is: 4.98
+X: -6.55 	 Y: 6.12 	 Z: 3.41
+roll: 60.86 	 pitch: 43.08 
+The magnitude is: 4.51
+X: -7.69 	 Y: 4.00 	 Z: 1.26
+roll: 72.59 	 pitch: 61.40 
+The magnitude is: 4.25
+X: -8.04 	 Y: 5.77 	 Z: 0.90
+roll: 81.11 	 pitch: 54.03 
+The magnitude is: 4.62
+X: -9.53 	 Y: 2.24 	 Z: 1.26
+roll: 60.69 	 pitch: 74.95 
+The magnitude is: 4.60
+X: -7.26 	 Y: 5.26 	 Z: 3.77
+roll: 54.39 	 pitch: 48.30 
+The magnitude is: 4.55
+X: -7.02 	 Y: 5.22 	 Z: 4.43
+roll: 49.65 	 pitch: 45.73 
+The magnitude is: 4.58
+X: -9.06 	 Y: 10.04 	 Z: 1.96
+roll: 78.95 	 pitch: 41.53 
+The magnitude is: 5.72
+X: -7.61 	 Y: 6.55 	 Z: 0.31
+roll: 87.26 	 pitch: 49.25 
+The magnitude is: 4.66
+X: -7.77 	 Y: 6.75 	 Z: 1.22
+roll: 79.79 	 pitch: 48.57 
+The magnitude is: 4.75
+X: -6.98 	 Y: 6.71 	 Z: 1.96
+roll: 73.71 	 pitch: 44.98 
+The magnitude is: 4.60
+X: -7.34 	 Y: 6.75 	 Z: 2.51
+roll: 69.60 	 pitch: 45.54 
+The magnitude is: 4.73
+X: -8.32 	 Y: 6.20 	 Z: 1.92
+roll: 72.78 	 pitch: 52.04 
+The magnitude is: 4.81
+X: -7.73 	 Y: 6.32 	 Z: 1.84
+roll: 73.73 	 pitch: 49.59 
+The magnitude is: 4.69
+X: -7.06 	 Y: 6.35 	 Z: 3.02
+roll: 64.58 	 pitch: 45.10 
+The magnitude is: 4.63
+X: -4.20 	 Y: 3.61 	 Z: 7.45
+roll: 25.84 	 pitch: 26.88 
+The magnitude is: 4.42
+X: -8.28 	 Y: 6.16 	 Z: 0.04
+roll: 89.64 	 pitch: 53.35 
+The magnitude is: 4.74
+X: -9.10 	 Y: 5.33 	 Z: 0.04
+roll: 89.59 	 pitch: 59.62 
+The magnitude is: 4.81
+X: -7.53 	 Y: 6.47 	 Z: 1.49
+roll: 77.04 	 pitch: 48.60 
+The magnitude is: 4.65
+X: -7.88 	 Y: 6.20 	 Z: 0.98
+roll: 81.01 	 pitch: 51.49 
+The magnitude is: 4.67
+X: -8.75 	 Y: 5.41 	 Z: 1.33
+roll: 76.16 	 pitch: 57.49 
+The magnitude is: 4.76
+X: -6.98 	 Y: 5.45 	 Z: 3.65
+roll: 56.22 	 pitch: 46.79 
+The magnitude is: 4.51
+X: -8.16 	 Y: 4.63 	 Z: 0.82
+roll: 79.91 	 pitch: 60.05 
+The magnitude is: 4.46
+X: -8.04 	 Y: 6.00 	 Z: 0.75
+roll: 82.93 	 pitch: 53.06 
+The magnitude is: 4.66
+X: -8.12 	 Y: 6.20 	 Z: 0.71
+roll: 83.51 	 pitch: 52.47 
+The magnitude is: 4.72
+X: -8.08 	 Y: 6.12 	 Z: 1.49
+roll: 76.32 	 pitch: 52.07 
+The magnitude is: 4.72
+X: -7.61 	 Y: 6.20 	 Z: 1.84
+roll: 73.44 	 pitch: 49.65 
+The magnitude is: 4.64
+X: -7.96 	 Y: 6.04 	 Z: 1.45
+roll: 76.50 	 pitch: 52.04 
+The magnitude is: 4.67
+X: -7.88 	 Y: 6.20 	 Z: 1.37
+roll: 77.52 	 pitch: 51.17 
+The magnitude is: 4.68
+X: -7.92 	 Y: 6.16 	 Z: 1.29
+roll: 78.14 	 pitch: 51.55 
+The magnitude is: 4.68
+X: -7.85 	 Y: 6.16 	 Z: 1.22
+roll: 78.84 	 pitch: 51.34 
+The magnitude is: 4.66
+X: -7.85 	 Y: 6.20 	 Z: 1.18
+roll: 79.25 	 pitch: 51.20 
+The magnitude is: 4.66
+X: -7.85 	 Y: 6.20 	 Z: 1.06
+roll: 80.31 	 pitch: 51.29 
+The magnitude is: 4.66
+X: -7.77 	 Y: 6.24 	 Z: 1.18
+roll: 79.32 	 pitch: 50.75 
+The magnitude is: 4.65
+X: -7.81 	 Y: 6.24 	 Z: 1.26
+roll: 78.63 	 pitch: 50.82 
+The magnitude is: 4.66
+X: -7.81 	 Y: 6.32 	 Z: 1.10
+roll: 80.14 	 pitch: 50.61 
+The magnitude is: 4.67
+X: -7.96 	 Y: 6.04 	 Z: 1.14
+roll: 79.34 	 pitch: 52.34 
+The magnitude is: 4.66
+X: -7.96 	 Y: 6.04 	 Z: 1.14
+roll: 79.34 	 pitch: 52.34 
+The magnitude is: 4.66
+X: -7.77 	 Y: 6.04 	 Z: 1.57
+roll: 75.45 	 pitch: 51.22 
+The magnitude is: 4.63
+X: -6.24 	 Y: 6.71 	 Z: 3.14
+roll: 64.93 	 pitch: 40.11 
+The magnitude is: 4.54
+X: -5.77 	 Y: 6.47 	 Z: 0.35
+roll: 86.88 	 pitch: 41.66 
+The magnitude is: 4.22
+X: -7.41 	 Y: 6.35 	 Z: 0.04
+roll: 89.65 	 pitch: 49.40 
+The magnitude is: 4.57
+X: -8.90 	 Y: 7.49 	 Z: 0.55
+roll: 85.81 	 pitch: 49.85 
+The magnitude is: 5.14
+X: -8.47 	 Y: 5.41 	 Z: 2.31
+roll: 66.86 	 pitch: 55.21 
+The magnitude is: 4.74
+X: -6.94 	 Y: 5.02 	 Z: 2.90
+roll: 59.97 	 pitch: 50.13 
+The magnitude is: 4.34
+X: -11.49 	 Y: 8.00 	 Z: -2.24
+roll: 105.62 	 pitch: 54.14 
+The magnitude is: 5.86
+X: -6.98 	 Y: 7.06 	 Z: 0.27
+roll: 87.78 	 pitch: 44.66 
+The magnitude is: 4.62
+X: -8.00 	 Y: 5.22 	 Z: 1.26
+roll: 76.48 	 pitch: 56.16 
+The magnitude is: 4.53
+X: -6.16 	 Y: 6.20 	 Z: 2.98
+roll: 64.32 	 pitch: 41.85 
+The magnitude is: 4.40
+X: -10.20 	 Y: 6.59 	 Z: -0.12
+roll: 91.03 	 pitch: 57.13 
+The magnitude is: 5.28
+X: -7.53 	 Y: 6.71 	 Z: 0.59
+roll: 84.99 	 pitch: 48.21 
+The magnitude is: 4.67
+X: -8.71 	 Y: 4.63 	 Z: -0.75
+roll: 99.15 	 pitch: 61.71 
+The magnitude is: 4.61
+X: -5.37 	 Y: 7.22 	 Z: 3.30
+roll: 65.47 	 pitch: 34.11 
+The magnitude is: 4.51
+X: -5.92 	 Y: 7.57 	 Z: 1.45
+roll: 79.15 	 pitch: 37.54 
+The magnitude is: 4.55
+X: -9.18 	 Y: 6.63 	 Z: 1.77
+roll: 75.10 	 pitch: 53.23 
+The magnitude is: 5.08
+X: -7.45 	 Y: 6.79 	 Z: 1.22
+roll: 79.85 	 pitch: 47.23 
+The magnitude is: 4.69
+X: -10.83 	 Y: 9.06 	 Z: -0.35
+roll: 92.24 	 pitch: 50.05 
+The magnitude is: 5.84
+X: -6.90 	 Y: 7.10 	 Z: 0.24
+roll: 88.11 	 pitch: 44.19 
+The magnitude is: 4.61
+X: -7.22 	 Y: 5.88 	 Z: 2.35
+roll: 68.20 	 pitch: 48.72 
+The magnitude is: 4.52
+X: -6.39 	 Y: 7.14 	 Z: 2.16
+roll: 73.19 	 pitch: 40.61 
+The magnitude is: 4.59
+X: -1.96 	 Y: 4.39 	 Z: 4.86
+roll: 42.09 	 pitch: 16.66 
+The magnitude is: 3.60
+X: -7.69 	 Y: 6.47 	 Z: 0.39
+roll: 86.54 	 pitch: 49.86 
+The magnitude is: 4.66
+X: -8.39 	 Y: 5.61 	 Z: 1.37
+roll: 76.25 	 pitch: 55.48 
+The magnitude is: 4.70
+X: -7.37 	 Y: 6.75 	 Z: 2.82
+roll: 67.29 	 pitch: 45.24 
+The magnitude is: 4.76
+X: -8.08 	 Y: 5.96 	 Z: 0.98
+roll: 80.67 	 pitch: 53.22 
+The magnitude is: 4.67
+X: -7.69 	 Y: 6.35 	 Z: 0.67
+roll: 84.02 	 pitch: 50.27 
+The magnitude is: 4.64
+X: -7.77 	 Y: 6.55 	 Z: 1.29
+roll: 78.83 	 pitch: 49.32 
+The magnitude is: 4.72
+X: -5.45 	 Y: 7.18 	 Z: 2.16
+roll: 73.28 	 pitch: 36.04 
+The magnitude is: 4.41
+X: -7.77 	 Y: 6.20 	 Z: 1.53
+roll: 76.14 	 pitch: 50.59 
+The magnitude is: 4.66
+X: -6.98 	 Y: 6.86 	 Z: 0.31
+roll: 87.39 	 pitch: 45.46 
+The magnitude is: 4.58
+X: -8.47 	 Y: 5.92 	 Z: 1.02
+roll: 80.24 	 pitch: 54.65 
+The magnitude is: 4.76
+X: -6.08 	 Y: 6.67 	 Z: 2.39
+roll: 70.27 	 pitch: 40.64 
+The magnitude is: 4.43
+X: -8.20 	 Y: 6.20 	 Z: 0.71
+roll: 83.51 	 pitch: 52.74 
+The magnitude is: 4.73
+X: -7.77 	 Y: 6.24 	 Z: 1.14
+roll: 79.67 	 pitch: 50.78 
+The magnitude is: 4.65
+X: -7.81 	 Y: 6.24 	 Z: 1.18
+roll: 79.32 	 pitch: 50.89 
+The magnitude is: 4.66
+X: -7.81 	 Y: 6.39 	 Z: 1.26
+roll: 78.90 	 pitch: 50.15 
+The magnitude is: 4.69
+X: -7.69 	 Y: 6.32 	 Z: 1.06
+roll: 80.49 	 pitch: 50.21 
+The magnitude is: 4.64
+X: -7.61 	 Y: 6.47 	 Z: 1.49
+roll: 77.04 	 pitch: 48.89 
+The magnitude is: 4.67
+X: -8.90 	 Y: 4.82 	 Z: 0.43
+roll: 84.90 	 pitch: 61.46 
+The magnitude is: 4.68
+X: -11.30 	 Y: 7.77 	 Z: 1.69
+roll: 77.75 	 pitch: 54.88 
+The magnitude is: 5.76
+X: -7.37 	 Y: 6.43 	 Z: 1.14
+roll: 79.98 	 pitch: 48.47 
+The magnitude is: 4.60
+X: -7.41 	 Y: 5.69 	 Z: 1.96
+roll: 70.98 	 pitch: 50.94 
+The magnitude is: 4.50
+X: -4.90 	 Y: 7.88 	 Z: 3.69
+roll: 64.94 	 pitch: 29.40 
+The magnitude is: 4.64
+X: -7.22 	 Y: 6.43 	 Z: 0.51
+roll: 85.47 	 pitch: 48.20 
+The magnitude is: 4.54
+X: -9.38 	 Y: 5.02 	 Z: -0.24
+roll: 92.69 	 pitch: 61.81 
+The magnitude is: 4.84
+X: -5.65 	 Y: 6.47 	 Z: 2.55
+roll: 68.50 	 pitch: 39.08 
+The magnitude is: 4.31
+X: -11.41 	 Y: 8.51 	 Z: -0.12
+roll: 90.80 	 pitch: 53.29 
+The magnitude is: 5.87
+X: -7.30 	 Y: 8.16 	 Z: -0.16
+roll: 91.11 	 pitch: 41.80 
+The magnitude is: 4.93
+X: -8.47 	 Y: 5.37 	 Z: 1.37
+roll: 75.67 	 pitch: 56.79 
+The magnitude is: 4.68
+X: -5.92 	 Y: 7.77 	 Z: 3.49
+roll: 65.80 	 pitch: 34.82 
+The magnitude is: 4.76
+X: -7.61 	 Y: 6.16 	 Z: 0.78
+roll: 82.75 	 pitch: 50.80 
+The magnitude is: 4.59
+X: -7.37 	 Y: 6.51 	 Z: 0.43
+roll: 86.22 	 pitch: 48.50 
+The magnitude is: 4.59
+X: -5.49 	 Y: 6.67 	 Z: 4.47
+roll: 56.16 	 pitch: 34.37 
+The magnitude is: 4.56
+X: -7.73 	 Y: 5.61 	 Z: -0.67
+roll: 96.79 	 pitch: 53.84 
+The magnitude is: 4.51
+X: -7.81 	 Y: 6.67 	 Z: 0.35
+roll: 86.98 	 pitch: 49.46 
+The magnitude is: 4.73
+X: -7.85 	 Y: 6.28 	 Z: 0.78
+roll: 82.88 	 pitch: 51.13 
+The magnitude is: 4.67
+X: -8.08 	 Y: 6.20 	 Z: 0.71
+roll: 83.51 	 pitch: 52.34 
+The magnitude is: 4.71
+X: -7.77 	 Y: 6.35 	 Z: 0.90
+roll: 81.93 	 pitch: 50.43 
+The magnitude is: 4.66
+X: -7.88 	 Y: 6.32 	 Z: 0.51
+roll: 85.39 	 pitch: 51.22 
+The magnitude is: 4.68
+X: -7.14 	 Y: 5.73 	 Z: 1.37
+roll: 76.52 	 pitch: 50.48 
+The magnitude is: 4.41
+X: -5.22 	 Y: 8.36 	 Z: 3.33
+roll: 68.25 	 pitch: 30.11 
+The magnitude is: 4.76
+X: -7.57 	 Y: 7.61 	 Z: 1.37
+roll: 79.78 	 pitch: 44.40 
+The magnitude is: 4.89
+X: -6.94 	 Y: 7.22 	 Z: 1.10
+roll: 81.35 	 pitch: 43.56 
+The magnitude is: 4.66
+X: -7.26 	 Y: 6.67 	 Z: 0.82
+roll: 82.96 	 pitch: 47.21 
+The magnitude is: 4.61
+X: -7.77 	 Y: 6.32 	 Z: 0.63
+roll: 84.33 	 pitch: 50.75 
+The magnitude is: 4.65
+X: -7.77 	 Y: 6.47 	 Z: 0.75
+roll: 83.44 	 pitch: 50.01 
+The magnitude is: 4.68
+X: -7.61 	 Y: 6.43 	 Z: 1.22
+roll: 79.30 	 pitch: 49.30 
+The magnitude is: 4.65
+X: -5.30 	 Y: 7.22 	 Z: 2.67
+roll: 69.72 	 pitch: 34.54 
+The magnitude is: 4.44
+X: -6.00 	 Y: 9.41 	 Z: 1.41
+roll: 81.48 	 pitch: 32.23 
+The magnitude is: 5.02
+X: -7.92 	 Y: 6.35 	 Z: 0.08
+roll: 89.30 	 pitch: 51.27 
+The magnitude is: 4.69
+X: -8.08 	 Y: 5.65 	 Z: 0.71
+roll: 82.88 	 pitch: 54.84 
+The magnitude is: 4.61
+X: -6.28 	 Y: 6.67 	 Z: 2.75
+roll: 67.62 	 pitch: 41.04 
+The magnitude is: 4.50
+X: -10.63 	 Y: 11.49 	 Z: 3.49
+roll: 73.11 	 pitch: 41.51 
+The magnitude is: 6.36
+X: -7.34 	 Y: 6.35 	 Z: 0.39
+roll: 86.47 	 pitch: 49.05 
+The magnitude is: 4.55
+X: -7.65 	 Y: 5.69 	 Z: 1.53
+roll: 74.95 	 pitch: 52.41 
+The magnitude is: 4.53
+X: -8.24 	 Y: 5.22 	 Z: 2.00
+roll: 69.03 	 pitch: 55.86 
+The magnitude is: 4.63
+X: -7.77 	 Y: 6.32 	 Z: 1.45
+roll: 77.06 	 pitch: 50.16 
+The magnitude is: 4.68
+X: -7.69 	 Y: 6.43 	 Z: 1.33
+roll: 78.29 	 pitch: 49.49 
+The magnitude is: 4.68
+X: -7.73 	 Y: 6.32 	 Z: 1.18
+roll: 79.45 	 pitch: 50.27 
+The magnitude is: 4.66
+X: -7.85 	 Y: 6.32 	 Z: 1.10
+roll: 80.14 	 pitch: 50.75 
+The magnitude is: 4.68
+X: -7.81 	 Y: 6.32 	 Z: 1.10
+roll: 80.14 	 pitch: 50.61 
+The magnitude is: 4.67
+X: -7.81 	 Y: 6.24 	 Z: 1.10
+roll: 80.02 	 pitch: 50.95 
+The magnitude is: 4.66
+X: -7.81 	 Y: 6.32 	 Z: 1.14
+roll: 79.80 	 pitch: 50.58 
+The magnitude is: 4.67
+X: -7.88 	 Y: 6.28 	 Z: 1.10
+roll: 80.08 	 pitch: 51.06 
+The magnitude is: 4.68
+X: -7.81 	 Y: 6.32 	 Z: 1.14
+roll: 79.80 	 pitch: 50.58 
+The magnitude is: 4.67
+X: -7.77 	 Y: 6.28 	 Z: 1.18
+roll: 79.39 	 pitch: 50.58 
+The magnitude is: 4.66
+X: -7.81 	 Y: 6.28 	 Z: 1.14
+roll: 79.73 	 pitch: 50.75 
+The magnitude is: 4.67
+X: -7.85 	 Y: 6.20 	 Z: 1.06
+roll: 80.31 	 pitch: 51.29 
+The magnitude is: 4.66
+X: -7.77 	 Y: 6.28 	 Z: 1.18
+roll: 79.39 	 pitch: 50.58 
+The magnitude is: 4.66
+X: -7.81 	 Y: 6.24 	 Z: 1.22
+roll: 78.97 	 pitch: 50.86 
+The magnitude is: 4.66
+X: -5.84 	 Y: 7.69 	 Z: 2.71
+roll: 70.61 	 pitch: 35.65 
+The magnitude is: 4.65
+X: -9.96 	 Y: 7.41 	 Z: 2.20
+roll: 73.50 	 pitch: 52.19 
+The magnitude is: 5.42
+X: -7.10 	 Y: 6.83 	 Z: 1.02
+roll: 81.51 	 pitch: 45.82 
+The magnitude is: 4.61
+X: -7.37 	 Y: 6.86 	 Z: 0.51
+roll: 85.76 	 pitch: 46.98 
+The magnitude is: 4.67
+X: -8.71 	 Y: 5.53 	 Z: 2.51
+roll: 65.59 	 pitch: 55.11 
+The magnitude is: 4.83
+X: -9.22 	 Y: 4.82 	 Z: 1.96
+roll: 67.88 	 pitch: 60.54 
+The magnitude is: 4.82
+X: -5.37 	 Y: 8.51 	 Z: -1.45
+roll: 99.68 	 pitch: 31.90 
+The magnitude is: 4.69
+X: 4.55 	 Y: 14.36 	 Z: 7.61
+roll: 62.08 	 pitch: -15.65 
+The magnitude is: 6.58
+X: 0.82 	 Y: 7.18 	 Z: 4.47
+roll: 58.08 	 pitch: -5.56 
+The magnitude is: 4.16
+X: 0.20 	 Y: 8.16 	 Z: 5.92
+roll: 54.03 	 pitch: -1.11 
+The magnitude is: 4.67
+X: -0.24 	 Y: 8.43 	 Z: 5.69
+roll: 56.01 	 pitch: 1.33 
+The magnitude is: 4.70
+X: -0.12 	 Y: 8.47 	 Z: 5.88
+roll: 55.23 	 pitch: 0.65 
+The magnitude is: 4.74
+X: 0.24 	 Y: 8.28 	 Z: 5.77
+roll: 55.14 	 pitch: -1.34 
+The magnitude is: 4.67
+X: 0.43 	 Y: 8.08 	 Z: 6.04
+roll: 53.22 	 pitch: -2.45 
+The magnitude is: 4.67
+X: 0.55 	 Y: 8.12 	 Z: 6.00
+roll: 53.53 	 pitch: -3.11 
+The magnitude is: 4.68
+X: 0.51 	 Y: 8.28 	 Z: 5.81
+roll: 54.96 	 pitch: -2.89 
+The magnitude is: 4.68
+X: 0.39 	 Y: 8.12 	 Z: 6.00
+roll: 53.53 	 pitch: -2.22 
+The magnitude is: 4.67
+X: 0.35 	 Y: 8.20 	 Z: 5.96
+roll: 53.98 	 pitch: -1.99 
+The magnitude is: 4.69
+X: 0.35 	 Y: 8.12 	 Z: 6.00
+roll: 53.53 	 pitch: -2.00 
+The magnitude is: 4.67
+X: 0.31 	 Y: 8.16 	 Z: 6.00
+roll: 53.67 	 pitch: -1.77 
+The magnitude is: 4.68
+X: 0.43 	 Y: 8.12 	 Z: 5.96
+roll: 53.71 	 pitch: -2.45 
+The magnitude is: 4.67
+X: 0.31 	 Y: 8.24 	 Z: 5.73
+roll: 55.20 	 pitch: -1.79 
+The magnitude is: 4.65
+X: -0.27 	 Y: 8.24 	 Z: 5.96
+roll: 54.11 	 pitch: 1.55 
+The magnitude is: 4.69
+X: 0.00 	 Y: 8.28 	 Z: 5.77
+roll: 55.14 	 pitch: -0.00 
+The magnitude is: 4.67
+X: -0.04 	 Y: 8.39 	 Z: 5.77
+roll: 55.52 	 pitch: 0.22 
+The magnitude is: 4.70
+X: 0.00 	 Y: 8.32 	 Z: 5.77
+roll: 55.27 	 pitch: -0.00 
+The magnitude is: 4.68
+X: 0.04 	 Y: 8.28 	 Z: 5.73
+roll: 55.32 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: 8.28 	 Z: 5.77
+roll: 55.14 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.00 	 Y: 8.28 	 Z: 5.77
+roll: 55.14 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: 8.36 	 Z: 5.81
+roll: 55.21 	 pitch: -0.22 
+The magnitude is: 4.70
+X: 0.04 	 Y: 8.32 	 Z: 5.81
+roll: 55.08 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.00 	 Y: 8.28 	 Z: 5.77
+roll: 55.14 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.08 	 Y: 8.32 	 Z: 5.73
+roll: 55.45 	 pitch: -0.45 
+The magnitude is: 4.67
+X: 0.04 	 Y: 8.28 	 Z: 5.73
+roll: 55.32 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.04 	 Y: 8.32 	 Z: 5.77
+roll: 55.27 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.04 	 Y: 8.28 	 Z: 5.77
+roll: 55.14 	 pitch: -0.22 
+The magnitude is: 4.67
+X: 0.00 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: 8.36 	 Z: 5.73
+roll: 55.58 	 pitch: -0.22 
+The magnitude is: 4.68
+X: 0.00 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: -0.00 
+The magnitude is: 4.68
+X: 0.00 	 Y: 8.32 	 Z: 5.61
+roll: 56.00 	 pitch: -0.00 
+The magnitude is: 4.65
+X: 0.00 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: 8.32 	 Z: 5.69
+roll: 55.63 	 pitch: -0.22 
+The magnitude is: 4.66
+X: 0.00 	 Y: 8.39 	 Z: 5.69
+roll: 55.88 	 pitch: -0.00 
+The magnitude is: 4.68
+X: 0.00 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: -0.00 
+The magnitude is: 4.67
+X: 0.04 	 Y: 8.36 	 Z: 5.77
+roll: 55.39 	 pitch: -0.22 
+The magnitude is: 4.69
+X: 0.00 	 Y: 8.28 	 Z: 6.00
+roll: 54.06 	 pitch: -0.00 
+The magnitude is: 4.71
+X: 0.27 	 Y: 8.51 	 Z: 5.53
+roll: 56.99 	 pitch: -1.55 
+The magnitude is: 4.69
+X: -0.35 	 Y: 8.55 	 Z: 5.57
+roll: 56.92 	 pitch: 1.98 
+The magnitude is: 4.71
+X: -0.47 	 Y: 8.51 	 Z: 5.49
+roll: 57.18 	 pitch: 2.66 
+The magnitude is: 4.69
+X: -0.47 	 Y: 8.43 	 Z: 5.49
+roll: 56.93 	 pitch: 2.68 
+The magnitude is: 4.66
+X: -0.35 	 Y: 8.43 	 Z: 5.53
+roll: 56.75 	 pitch: 2.00 
+The magnitude is: 4.67
+X: -0.12 	 Y: 8.59 	 Z: 5.69
+roll: 56.50 	 pitch: 0.65 
+The magnitude is: 4.74
+X: -0.16 	 Y: 8.20 	 Z: 5.77
+roll: 54.88 	 pitch: 0.90 
+The magnitude is: 4.65
+X: -0.08 	 Y: 8.16 	 Z: 5.81
+roll: 54.57 	 pitch: 0.45 
+The magnitude is: 4.65
+X: -0.04 	 Y: 8.32 	 Z: 5.77
+roll: 55.27 	 pitch: 0.22 
+The magnitude is: 4.68
+X: -0.24 	 Y: 8.24 	 Z: 5.88
+roll: 54.47 	 pitch: 1.33 
+The magnitude is: 4.68
+X: -0.12 	 Y: 8.24 	 Z: 5.88
+roll: 54.47 	 pitch: 0.67 
+The magnitude is: 4.68
+X: -0.20 	 Y: 8.28 	 Z: 5.84
+roll: 54.78 	 pitch: 1.11 
+The magnitude is: 4.68
+X: -0.27 	 Y: 8.43 	 Z: 5.65
+roll: 56.19 	 pitch: 1.55 
+The magnitude is: 4.69
+X: -0.04 	 Y: 8.36 	 Z: 5.81
+roll: 55.21 	 pitch: 0.22 
+The magnitude is: 4.70
+X: -0.04 	 Y: 8.28 	 Z: 5.77
+roll: 55.14 	 pitch: 0.22 
+The magnitude is: 4.67
+X: -0.35 	 Y: 8.39 	 Z: 5.69
+roll: 55.88 	 pitch: 1.99 
+The magnitude is: 4.69
+X: -0.04 	 Y: 8.32 	 Z: 5.73
+roll: 55.45 	 pitch: 0.22 
+The magnitude is: 4.67
+X: -0.04 	 Y: 8.28 	 Z: 5.81
+roll: 54.96 	 pitch: 0.22 
+The magnitude is: 4.68
+X: -0.04 	 Y: 8.32 	 Z: 5.73
+roll: 55.45 	 pitch: 0.22 
+The magnitude is: 4.67
+X: -0.08 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: 0.44 
+The magnitude is: 4.67
+X: -0.04 	 Y: 8.28 	 Z: 5.73
+roll: 55.32 	 pitch: 0.22 
+The magnitude is: 4.66
+X: -0.16 	 Y: 8.32 	 Z: 5.73
+roll: 55.45 	 pitch: 0.89 
+The magnitude is: 4.67
+X: -0.04 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: 0.22 
+The magnitude is: 4.67
+X: -0.12 	 Y: 8.32 	 Z: 5.73
+roll: 55.45 	 pitch: 0.67 
+The magnitude is: 4.67
+X: -0.16 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: 0.89 
+The magnitude is: 4.68
+X: -0.04 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: 0.22 
+The magnitude is: 4.67
+X: -0.12 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: 0.67 
+The magnitude is: 4.67
+X: -0.20 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: 1.11 
+The magnitude is: 4.68
+X: -0.27 	 Y: 8.32 	 Z: 5.77
+roll: 55.27 	 pitch: 1.55 
+The magnitude is: 4.68
+X: -0.27 	 Y: 8.43 	 Z: 5.69
+roll: 56.01 	 pitch: 1.55 
+The magnitude is: 4.70
+X: -0.55 	 Y: 8.24 	 Z: 5.84
+roll: 54.65 	 pitch: 3.11 
+The magnitude is: 4.68
+X: -0.51 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.90 
+The magnitude is: 4.67
+X: -0.39 	 Y: 8.36 	 Z: 5.53
+roll: 56.50 	 pitch: 2.24 
+The magnitude is: 4.65
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.69
+roll: 55.88 	 pitch: 2.66 
+The magnitude is: 4.69
+X: -0.47 	 Y: 8.36 	 Z: 5.69
+roll: 55.76 	 pitch: 2.67 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: 2.45 
+The magnitude is: 4.67
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: 2.67 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.39 	 Z: 5.57
+roll: 56.44 	 pitch: 2.68 
+The magnitude is: 4.67
+X: -0.43 	 Y: 8.32 	 Z: 5.53
+roll: 56.38 	 pitch: 2.47 
+The magnitude is: 4.64
+X: -0.47 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: 2.67 
+The magnitude is: 4.67
+X: -0.43 	 Y: 8.39 	 Z: 5.61
+roll: 56.25 	 pitch: 2.45 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.39 	 Z: 5.61
+roll: 56.25 	 pitch: 2.67 
+The magnitude is: 4.67
+X: -0.43 	 Y: 8.39 	 Z: 5.61
+roll: 56.25 	 pitch: 2.45 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.43 	 Z: 5.65
+roll: 56.19 	 pitch: 2.66 
+The magnitude is: 4.69
+X: -0.43 	 Y: 8.43 	 Z: 5.61
+roll: 56.38 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.39 	 Y: 8.36 	 Z: 5.73
+roll: 55.58 	 pitch: 2.22 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: 2.67 
+The magnitude is: 4.67
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.57
+roll: 56.44 	 pitch: 2.68 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.68 
+The magnitude is: 4.66
+X: -0.43 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.46 
+The magnitude is: 4.66
+X: -0.47 	 Y: 8.43 	 Z: 5.65
+roll: 56.19 	 pitch: 2.66 
+The magnitude is: 4.69
+X: -0.43 	 Y: 8.32 	 Z: 5.61
+roll: 56.00 	 pitch: 2.46 
+The magnitude is: 4.65
+X: -0.43 	 Y: 8.39 	 Z: 5.57
+roll: 56.44 	 pitch: 2.45 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.32 	 Z: 5.69
+roll: 55.63 	 pitch: 2.68 
+The magnitude is: 4.67
+X: -0.51 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.90 
+The magnitude is: 4.67
+X: -0.43 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.46 
+The magnitude is: 4.66
+X: -0.43 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: 2.45 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.32 	 Z: 5.61
+roll: 56.00 	 pitch: 2.69 
+The magnitude is: 4.65
+X: -0.47 	 Y: 8.36 	 Z: 5.65
+roll: 55.94 	 pitch: 2.67 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.43 	 Z: 5.57
+roll: 56.56 	 pitch: 2.67 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.32 	 Z: 5.65
+roll: 55.82 	 pitch: 2.68 
+The magnitude is: 4.66
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.46 
+The magnitude is: 4.66
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.43 	 Z: 5.65
+roll: 56.19 	 pitch: 2.66 
+The magnitude is: 4.69
+X: -0.51 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.89 
+The magnitude is: 4.68
+X: -0.51 	 Y: 8.43 	 Z: 5.57
+roll: 56.56 	 pitch: 2.89 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.51 	 Y: 8.39 	 Z: 5.61
+roll: 56.25 	 pitch: 2.89 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.68 
+The magnitude is: 4.66
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.51 	 Y: 8.39 	 Z: 5.61
+roll: 56.25 	 pitch: 2.89 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.61
+roll: 56.25 	 pitch: 2.67 
+The magnitude is: 4.67
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.66 
+The magnitude is: 4.68
+X: -0.43 	 Y: 8.39 	 Z: 5.65
+roll: 56.07 	 pitch: 2.44 
+The magnitude is: 4.68
+X: -0.47 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.68 
+The magnitude is: 4.66
+X: -0.47 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 2.68 
+The magnitude is: 4.66
+X: -0.55 	 Y: 8.36 	 Z: 5.61
+roll: 56.13 	 pitch: 3.12 
+The magnitude is: 4.67
+X: -0.47 	 Y: 8.39 	 Z: 5.61
+roll: 56.25 	 pitch: 2.67 
+The magnitude is: 4.67
+X: -0.55 	 Y: 8.39 	 Z: 5.73
+roll: 55.70 	 pitch: 3.09 
+The magnitude is: 4.70
+X: -0.12 	 Y: 8.28 	 Z: 5.53
+roll: 56.25 	 pitch: 0.68 
+The magnitude is: 4.63
+X: 2.94 	 Y: 8.12 	 Z: 5.61
+roll: 55.37 	 pitch: -16.60 
+The magnitude is: 4.73
+X: 2.31 	 Y: 9.06 	 Z: 4.75
+roll: 62.36 	 pitch: -12.75 
+The magnitude is: 4.79
+X: 4.55 	 Y: 10.00 	 Z: 3.22
+roll: 72.18 	 pitch: -23.42 
+The magnitude is: 5.08
+X: 2.55 	 Y: 10.00 	 Z: 2.67
+roll: 75.07 	 pitch: -13.84 
+The magnitude is: 4.84
+X: 1.80 	 Y: 8.67 	 Z: 4.79
+roll: 61.10 	 pitch: -10.33 
+The magnitude is: 4.66
+X: 1.77 	 Y: 8.90 	 Z: 4.59
+roll: 62.74 	 pitch: -9.99 
+The magnitude is: 4.69
+X: 2.51 	 Y: 8.87 	 Z: 4.43
+roll: 63.44 	 pitch: -14.21 
+The magnitude is: 4.71
+X: 2.51 	 Y: 8.87 	 Z: 4.31
+roll: 64.05 	 pitch: -14.29 
+The magnitude is: 4.70
+X: 2.51 	 Y: 8.87 	 Z: 4.35
+roll: 63.85 	 pitch: -14.26 
+The magnitude is: 4.70
+X: 2.55 	 Y: 8.83 	 Z: 4.35
+roll: 63.75 	 pitch: -14.53 
+The magnitude is: 4.69
+X: 2.55 	 Y: 8.83 	 Z: 4.31
+roll: 63.95 	 pitch: -14.55 
+The magnitude is: 4.69
+X: 2.59 	 Y: 8.87 	 Z: 4.35
+roll: 63.85 	 pitch: -14.69 
+The magnitude is: 4.71
+X: 2.55 	 Y: 8.83 	 Z: 4.31
+roll: 63.95 	 pitch: -14.55 
+The magnitude is: 4.69
+X: 2.55 	 Y: 8.87 	 Z: 4.35
+roll: 63.85 	 pitch: -14.48 
+The magnitude is: 4.70
+X: 2.55 	 Y: 8.87 	 Z: 4.35
+roll: 63.85 	 pitch: -14.48 
+The magnitude is: 4.70
+X: 2.59 	 Y: 8.83 	 Z: 4.35
+roll: 63.75 	 pitch: -14.74 
+The magnitude is: 4.70
+X: 2.55 	 Y: 8.83 	 Z: 4.35
+roll: 63.75 	 pitch: -14.53 
+The magnitude is: 4.69
+X: 2.59 	 Y: 8.79 	 Z: 4.35
+roll: 63.64 	 pitch: -14.79 
+The magnitude is: 4.69
+X: 2.55 	 Y: 8.83 	 Z: 4.31
+roll: 63.95 	 pitch: -14.55 
+The magnitude is: 4.69
+X: 2.59 	 Y: 8.83 	 Z: 4.39
+roll: 63.54 	 pitch: -14.71 
+The magnitude is: 4.70
+X: 2.55 	 Y: 8.83 	 Z: 4.35
+roll: 63.75 	 pitch: -14.53 
+The magnitude is: 4.69
+X: 2.51 	 Y: 8.83 	 Z: 4.35
+roll: 63.75 	 pitch: -14.31 
+The magnitude is: 4.69
+X: 2.55 	 Y: 8.79 	 Z: 4.35
+roll: 63.64 	 pitch: -14.58 
+The magnitude is: 4.68
+X: 2.59 	 Y: 8.75 	 Z: 4.39
+roll: 63.34 	 pitch: -14.82 
+The magnitude is: 4.68
+X: 2.51 	 Y: 8.90 	 Z: 4.35
+roll: 63.95 	 pitch: -14.21 
+The magnitude is: 4.71
+X: 2.51 	 Y: 8.79 	 Z: 4.39
+roll: 63.44 	 pitch: -14.34 
+The magnitude is: 4.68
+X: 2.67 	 Y: 8.79 	 Z: 4.39
+roll: 63.44 	 pitch: -15.19 
+The magnitude is: 4.70
+X: 2.55 	 Y: 8.87 	 Z: 4.35
+roll: 63.85 	 pitch: -14.48 
+The magnitude is: 4.70
+X: 2.51 	 Y: 8.75 	 Z: 4.35
+roll: 63.54 	 pitch: -14.41 
+The magnitude is: 4.67
+X: 2.55 	 Y: 8.79 	 Z: 4.39
+roll: 63.44 	 pitch: -14.55 
+The magnitude is: 4.69
+X: 2.55 	 Y: 8.79 	 Z: 4.35
+roll: 63.64 	 pitch: -14.58 
+The magnitude is: 4.68
+X: 2.59 	 Y: 8.87 	 Z: 4.35
+roll: 63.85 	 pitch: -14.69 
+The magnitude is: 4.71
+X: 2.59 	 Y: 8.79 	 Z: 4.43
+roll: 63.24 	 pitch: -14.74 
+The magnitude is: 4.70
+X: 2.55 	 Y: 8.79 	 Z: 4.39
+roll: 63.44 	 pitch: -14.55 
+The magnitude is: 4.69
+X: 2.55 	 Y: 8.83 	 Z: 4.35
+roll: 63.75 	 pitch: -14.53 
+The magnitude is: 4.69
+X: 2.59 	 Y: 8.79 	 Z: 4.43
+roll: 63.24 	 pitch: -14.74 
+The magnitude is: 4.70
+X: 2.51 	 Y: 8.90 	 Z: 4.39
+roll: 63.74 	 pitch: -14.19 
+The magnitude is: 4.72
+X: 2.55 	 Y: 8.87 	 Z: 4.39
+roll: 63.64 	 pitch: -14.45 
+The magnitude is: 4.71
+X: 2.55 	 Y: 8.87 	 Z: 4.35
+roll: 63.85 	 pitch: -14.48 
+The magnitude is: 4.70
+X: 2.55 	 Y: 8.87 	 Z: 4.28
+roll: 64.26 	 pitch: -14.52 
+The magnitude is: 4.69
+X: 2.51 	 Y: 8.79 	 Z: 4.35
+roll: 63.64 	 pitch: -14.36 
+The magnitude is: 4.68
+X: 2.47 	 Y: 8.63 	 Z: 4.47
+roll: 62.61 	 pitch: -14.27 
+The magnitude is: 4.65
+X: 2.90 	 Y: 8.87 	 Z: 3.69
+roll: 67.42 	 pitch: -16.82 
+The magnitude is: 4.65
+X: 1.57 	 Y: 9.02 	 Z: 3.49
+roll: 68.85 	 pitch: -9.21 
+The magnitude is: 4.58
+X: 2.51 	 Y: 9.41 	 Z: 3.53
+roll: 69.45 	 pitch: -14.02 
+The magnitude is: 4.75
+X: 2.35 	 Y: 9.30 	 Z: 3.61
+roll: 68.79 	 pitch: -13.28 
+The magnitude is: 4.72
+X: 2.28 	 Y: 9.30 	 Z: 3.57
+roll: 69.00 	 pitch: -12.87 
+The magnitude is: 4.71
+X: 2.31 	 Y: 9.26 	 Z: 3.49
+roll: 69.34 	 pitch: -13.17 
+The magnitude is: 4.69
+X: 2.28 	 Y: 9.41 	 Z: 3.49
+roll: 69.66 	 pitch: -12.77 
+The magnitude is: 4.73
+X: 2.39 	 Y: 9.34 	 Z: 3.37
+roll: 70.14 	 pitch: -13.55 
+The magnitude is: 4.71
+X: 2.39 	 Y: 9.34 	 Z: 3.37
+roll: 70.14 	 pitch: -13.55 
+The magnitude is: 4.71
+X: 2.47 	 Y: 9.22 	 Z: 3.65
+roll: 68.41 	 pitch: -14.00 
+The magnitude is: 4.71
+X: 3.02 	 Y: 9.34 	 Z: 4.20
+roll: 65.80 	 pitch: -16.44 
+The magnitude is: 4.85
+X: 3.53 	 Y: 9.14 	 Z: 3.88
+roll: 66.98 	 pitch: -19.57 
+The magnitude is: 4.81
+X: 2.04 	 Y: 9.30 	 Z: 3.69
+roll: 68.37 	 pitch: -11.53 
+The magnitude is: 4.71
+X: 3.22 	 Y: 8.90 	 Z: 3.61
+roll: 67.94 	 pitch: -18.51 
+The magnitude is: 4.68
+X: 3.10 	 Y: 9.06 	 Z: 3.73
+roll: 67.65 	 pitch: -17.55 
+The magnitude is: 4.73
+X: 2.75 	 Y: 8.83 	 Z: 3.96
+roll: 65.83 	 pitch: -15.85 
+The magnitude is: 4.66
+X: 2.79 	 Y: 9.06 	 Z: 3.84
+roll: 67.02 	 pitch: -15.80 
+The magnitude is: 4.71
+X: 2.82 	 Y: 8.98 	 Z: 3.77
+roll: 67.26 	 pitch: -16.17 
+The magnitude is: 4.69
+X: 2.90 	 Y: 8.90 	 Z: 3.92
+roll: 66.23 	 pitch: -16.61 
+The magnitude is: 4.69
+X: 2.82 	 Y: 8.87 	 Z: 3.88
+roll: 66.35 	 pitch: -16.27 
+The magnitude is: 4.67
+X: 2.71 	 Y: 8.87 	 Z: 3.88
+roll: 66.35 	 pitch: -15.63 
+The magnitude is: 4.66
+X: 2.79 	 Y: 9.02 	 Z: 3.69
+roll: 67.78 	 pitch: -15.95 
+The magnitude is: 4.68
+X: 2.79 	 Y: 9.02 	 Z: 3.80
+roll: 67.14 	 pitch: -15.88 
+The magnitude is: 4.70
+X: 2.90 	 Y: 8.90 	 Z: 3.77
+roll: 67.08 	 pitch: -16.71 
+The magnitude is: 4.67
+X: 2.82 	 Y: 8.94 	 Z: 3.80
+roll: 66.96 	 pitch: -16.20 
+The magnitude is: 4.68
+X: 2.75 	 Y: 9.02 	 Z: 3.80
+roll: 67.14 	 pitch: -15.67 
+The magnitude is: 4.69
+X: 2.71 	 Y: 9.02 	 Z: 3.80
+roll: 67.14 	 pitch: -15.45 
+The magnitude is: 4.69
+X: 2.79 	 Y: 8.98 	 Z: 3.73
+roll: 67.47 	 pitch: -15.98 
+The magnitude is: 4.68
+X: 2.79 	 Y: 8.98 	 Z: 3.80
+roll: 67.05 	 pitch: -15.93 
+The magnitude is: 4.69
+X: 2.75 	 Y: 9.02 	 Z: 3.88
+roll: 66.72 	 pitch: -15.62 
+The magnitude is: 4.70
+X: 2.79 	 Y: 8.98 	 Z: 3.84
+roll: 66.84 	 pitch: -15.91 
+The magnitude is: 4.69
+X: 2.75 	 Y: 9.02 	 Z: 3.84
+roll: 66.93 	 pitch: -15.64 
+The magnitude is: 4.70
+X: 2.79 	 Y: 9.02 	 Z: 3.88
+roll: 66.72 	 pitch: -15.83 
+The magnitude is: 4.71
+X: 2.82 	 Y: 8.98 	 Z: 3.80
+roll: 67.05 	 pitch: -16.15 
+The magnitude is: 4.69
+X: 2.75 	 Y: 8.98 	 Z: 3.88
+roll: 66.63 	 pitch: -15.67 
+The magnitude is: 4.69
+X: 2.79 	 Y: 8.94 	 Z: 3.84
+roll: 66.75 	 pitch: -15.97 
+The magnitude is: 4.68
+X: 2.79 	 Y: 8.98 	 Z: 3.84
+roll: 66.84 	 pitch: -15.91 
+The magnitude is: 4.69
+X: 2.79 	 Y: 8.90 	 Z: 3.84
+roll: 66.65 	 pitch: -16.02 
+The magnitude is: 4.67
+X: 2.79 	 Y: 8.98 	 Z: 3.84
+roll: 66.84 	 pitch: -15.91 
+The magnitude is: 4.69
+X: 2.79 	 Y: 8.98 	 Z: 3.84
+roll: 66.84 	 pitch: -15.91 
+The magnitude is: 4.69
+X: 2.79 	 Y: 9.02 	 Z: 3.84
+roll: 66.93 	 pitch: -15.86 
+The magnitude is: 4.70
+X: 2.71 	 Y: 8.98 	 Z: 3.84
+roll: 66.84 	 pitch: -15.48 
+The magnitude is: 4.68
+X: 2.67 	 Y: 8.98 	 Z: 3.80
+roll: 67.05 	 pitch: -15.29 
+The magnitude is: 4.68
+X: 2.82 	 Y: 8.90 	 Z: 3.84
+roll: 66.65 	 pitch: -16.24 
+The magnitude is: 4.67
+X: 2.79 	 Y: 8.90 	 Z: 3.88
+roll: 66.44 	 pitch: -16.00 
+The magnitude is: 4.67
+X: 2.75 	 Y: 8.94 	 Z: 3.96
+roll: 66.11 	 pitch: -15.68 
+The magnitude is: 4.69
+X: 2.79 	 Y: 8.98 	 Z: 3.88
+roll: 66.63 	 pitch: -15.89 
+The magnitude is: 4.70
+X: 2.79 	 Y: 8.90 	 Z: 3.88
+roll: 66.44 	 pitch: -16.00 
+The magnitude is: 4.67
+X: 2.75 	 Y: 8.94 	 Z: 3.88
+roll: 66.53 	 pitch: -15.73 
+The magnitude is: 4.68
+X: 2.82 	 Y: 8.94 	 Z: 3.92
+roll: 66.32 	 pitch: -16.13 
+The magnitude is: 4.69
+X: 2.79 	 Y: 8.94 	 Z: 3.88
+roll: 66.53 	 pitch: -15.94 
+The magnitude is: 4.68
+X: 2.75 	 Y: 8.94 	 Z: 3.92
+roll: 66.32 	 pitch: -15.71 
+The magnitude is: 4.69
