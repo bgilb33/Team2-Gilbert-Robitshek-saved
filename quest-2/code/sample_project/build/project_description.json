@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "main",
-    "project_version":    "6878fe3-dirty",
+    "project_version":    "52ddcd8-dirty",
     "project_path":       "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-2/code/sample_project",
     "idf_path":           "C:/Users/benja/esp/esp-idf",
     "build_dir":          "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-2/code/sample_project/build",
