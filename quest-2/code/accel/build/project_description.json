@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "accel",
-    "project_version":    "d2ca321-dirty",
+    "project_version":    "1557f4d-dirty",
     "project_path":       "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-2/code/accel",
     "idf_path":           "/Users/noahrobitshek/esp/esp-idf",
     "build_dir":          "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-2/code/accel/build",
