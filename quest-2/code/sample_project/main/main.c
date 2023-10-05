@@ -30,9 +30,18 @@
 #define SLAVE_ADDR ADXL343_ADDRESS // 0x53
 
 double magnitude;
-int step_count = 0;     // Counter for step count
+int step_count = 0; // Counter for step count
+bool wait;
+int stepped = 0;
+int waitCount = 0;
+int mode = 2;
+
 int timer_state = 0;    // 0: off, 1: on
 int activity_ended = 0; // 0: did not just end, 1: just ended
+
+time_t dayTime;
+struct tm *timeInfo;
+int splitTime[2];
 
 // Display Defs
 #define SLAVE_ADDR_DISPLAY 0x70      // alphanumeric address
@@ -73,6 +82,7 @@ int display_mode = 0; // 0: Clock, 1: Timer
 
 #define DEFAULT_VREF 1100 // Use adc2_vref_to_gpio() to obtain a better estimate
 #define NO_OF_SAMPLES 64  // Multisampling
+#define TEMP_ALARM_PIN 13
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc1_channel_t thermistor_channel = ADC1_CHANNEL_6;
 static const adc_atten_t atten = ADC_ATTEN_DB_11;
@@ -185,8 +195,16 @@ void char_to_display_task()
     while (1)
     {
         // From GPT
-        integerPart = (int)*current_time;
-        fractionalPart = (int)((*current_time - integerPart) * 100);
+        if (timer_state)
+        {
+            integerPart = (int)*current_time % 100;
+            fractionalPart = (int)((*current_time - integerPart) * 100);
+        }
+        else
+        {
+            integerPart = splitTime[0];
+            fractionalPart = splitTime[1];
+        }
         // Extract individual digits
         digits[0] = integerPart / 10;
         digits[1] = integerPart % 10;
@@ -352,16 +370,28 @@ void button_task()
         timer_get_counter_time_sec(GPT_TIMER_GROUP, GPT_TIMER_INDEX, current_time);
         *current_time = roundf(*current_time * 100) / 100; // Set to two decimal places
 
-        if (*current_time >= 99.99)
-        {
-            current_time = &start_time;
-            timer_pause(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
-            timer_set_counter_value(GPT_TIMER_GROUP, GPT_TIMER_INDEX, 0);
-            timer_start(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
-        }
+        // if (*current_time >= 99.99)
+        // {
+        //     current_time = &start_time;
+        //     timer_pause(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
+        //     timer_set_counter_value(GPT_TIMER_GROUP, GPT_TIMER_INDEX, 0);
+        //     timer_start(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
+        // }
         // printf("Current Time: %.2f\n", *current_time);
 
         vTaskDelay(10 / portTICK_PERIOD_MS); // Delay for 1 second
+    }
+}
+
+void updateTime_task()
+{
+    while (1)
+    {
+        time(&dayTime);
+        timeInfo = localtime(&dayTime);
+        splitTime[0] = timeInfo->tm_hour;
+        splitTime[1] = timeInfo->tm_min;
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
 
@@ -408,6 +438,8 @@ static void print_char_val_type(esp_adc_cal_value_t val_type)
 
 void temp_init()
 {
+    gpio_reset_pin(TEMP_ALARM_PIN);
+    gpio_set_direction(TEMP_ALARM_PIN, GPIO_MODE_OUTPUT);
     check_efuse();
     if (unit == ADC_UNIT_1)
     {
@@ -449,7 +481,17 @@ void temp_task()
         float resistance = 10000.0 * voltage / (3.0 - voltage);
         // Calculates the temperature in degrees Celcius using the Steinhart equation
         temp = (1.0 / 298.15) + ((1.0 / 3435.0) * (log(resistance / 10000.0)));
-        temp = (1.0 / temp) - 273.1;
+        temp = (1.0 / temp) - 271.1;
+
+        if (temp >= 27.00 && timer_state)
+        {
+            gpio_set_level(TEMP_ALARM_PIN, 1);
+        }
+        else
+        {
+            gpio_set_level(TEMP_ALARM_PIN, 0);
+        }
+
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
@@ -660,11 +702,25 @@ static void counting()
 {
     while (1)
     {
-        if (magnitude >= 20)
+        switch (mode)
         {
-            step_count++;
+        case 0:
+            waitCount++;
+            if (waitCount >= 10)
+            {
+                waitCount = 0;
+                mode = 1;
+            }
+            break;
+        default:
+            if (magnitude >= 15)
+            {
+                step_count = step_count + 2;
+                mode = 0;
+            }
+            break;
         }
-        vTaskDelay(10 / portTICK_PERIOD_MS);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
     }
 }
 
@@ -672,11 +728,13 @@ void print_task()
 {
     while (1)
     {
-        if (timer_state)
+        // int integerPart = (int)*current_time % 100;
+
+        if (timer_state && fmod(*current_time, 10.0) == 0.0)
         {
             printf("%.2f, %f, %d\n", *current_time, temp, step_count);
         }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
     }
 }
 
@@ -793,4 +851,5 @@ void app_main()
     xTaskCreate(char_to_display_task, "char_to_display_task", 2048, NULL, CHAR_TO_DISPLAY_TASK_PRIORITY, NULL);
     xTaskCreate(test_alpha_display, "test_alpha_display", 4096, NULL, ALPHA_DISPLAY_TASK_PRIORITY, NULL);
     xTaskCreate(button_task, "button_task", 2048, NULL, BUTTON_TASK_PRIORITY, NULL);
+    xTaskCreate(updateTime_task, "updateTime_task", 2048, NULL, BUTTON_TASK_PRIORITY, NULL);
 }

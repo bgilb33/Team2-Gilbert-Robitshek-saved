@@ -45,10 +45,20 @@ function readAndUpdateCSV() {
     fs.createReadStream('./data.csv')
         .pipe(csv())
         .on('data', (row) => {
-            data1.push({
-                label: row.Time,
-                y: parseInt(row.Temp), // Assuming temperature data is in column 'Temp'
-            });
+            if (parseInt(row.Temp) >= 27.00) {
+                data1.push({
+                    label: row.Time,
+                    y: parseInt(row.Temp), // Assuming temperature data is in column 'Temp'
+                    color: "Red"
+                });
+            }
+            else {
+                data1.push({
+                    label: row.Time,
+                    y: parseInt(row.Temp), // Assuming temperature data is in column 'Temp'
+                    color: "Blue"
+                });                
+            }
 
             data2.push({
               label: row.Time,
