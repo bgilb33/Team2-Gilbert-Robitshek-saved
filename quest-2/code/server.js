@@ -1,3 +1,9 @@
+// Copyright (c) 2022 by Noah Robitshek and Benji Gilbert All Rights Reserved  
+// No piece of this code can be reused without the expressed written permission from Noah Robitshek and Benji Gilbert
+// File name: chart.html
+// Description: This file is hosted on the node js server. This file contains a number of functions that read, write, and send data into the csv file and via a socket connection to chart.html
+
+
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
