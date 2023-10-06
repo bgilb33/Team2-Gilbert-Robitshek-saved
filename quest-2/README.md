@@ -1,4 +1,4 @@
-# Quest Name
+# The Carmin Watch
 
 Authors: Benji Gilbert, Noah Robitshek
 
@@ -32,6 +32,14 @@ The key features of the wearable are as follows:
 
 
 ## Solution Design
+Below is a spematic of the hardware design. The ESP32 is connected to the many sensors, iputs, and outputs including the Alphanumeric display, the acclerometer, a push button, a thermistor, and a buzzer. The ESP32 is also connected to a laptop via a serial port. 
+
+![Skematic Image](./images/ESP32.png)
+
+
+Below is a highlight of the **Server Side Code** and the **Step Counter** for more information about the project please see the [code readme](./code/README.md)
+
+
 ### Node js and Chart JS
 All data is written to a CSV file with the following format:
 ```
@@ -42,7 +50,7 @@ Time,Temp,Steps
 ```
 The node js file is called "Server.js" This file contains a number of different function that will read and write to the CSV file. 
 
-Additionally, this file will send the data via a web socket to the html file. The html file will then use chart js to plot the data in real time.
+Additionally, this file will sends the data via a web socket to the html file. The html file will then use canvas js to plot the data in real time.
 
 The following javascript code is in the html file. The code below recieves a socket from the server.js file that upon recieving the data will call the updateChart function. This function will then update the chart with the new data.
 ```
@@ -62,11 +70,7 @@ Below is a a graph of the magnitude of the acceleration over time. The peaks rep
 ![hello](./images/AccData.png)
 
 
-
-
-### Sketches/Diagrams
-
-
+<!-- ### Sketches/Diagrams -->
 
 ### Supporting Artifacts
 - [Link to video technical presentation](). Not to exceed 120s

@@ -370,14 +370,6 @@ void button_task()
         timer_get_counter_time_sec(GPT_TIMER_GROUP, GPT_TIMER_INDEX, current_time);
         *current_time = roundf(*current_time * 100) / 100; // Set to two decimal places
 
-        // if (*current_time >= 99.99)
-        // {
-        //     current_time = &start_time;
-        //     timer_pause(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
-        //     timer_set_counter_value(GPT_TIMER_GROUP, GPT_TIMER_INDEX, 0);
-        //     timer_start(GPT_TIMER_GROUP, GPT_TIMER_INDEX);
-        // }
-        // printf("Current Time: %.2f\n", *current_time);
 
         vTaskDelay(10 / portTICK_PERIOD_MS); // Delay for 1 second
     }
