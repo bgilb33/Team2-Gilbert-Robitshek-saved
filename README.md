@@ -1,2 +1,2 @@
-# TeamX-LastName1-LastName2-LastName3
-Quests repository for Team X
+# Team2-Gilbert-Robitshek
+Quests repository for Team 2
