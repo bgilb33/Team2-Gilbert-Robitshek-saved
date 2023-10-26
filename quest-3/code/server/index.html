@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+    <script>
+      var chart = new CanvasJS.Chart("chartContainer", {
+          animationEnabled: false,
+          exportEnabled: true,
+          theme: "light2",
+          title: {
+              text: "Straba",
+              fontSize: 20,
+              fontColor: "navy"
+          },
+          axisY2: {
+              includeZero: true,
+              labelFontColor: "dimgray",  // Subdued color for Y2 axis label
+              labelFontSize: 14
+          },
+          axisX: {
+              title: "Device ID",
+              valueFormatString: "#",
+              labels: [0],
+              labelFontColor: "dimgray",  // Subdued color for X-axis label
+              labelFontSize: 14
+          },
+          data: [
+              {
+                  type: "bar",
+                  barWidth: 20,
+                  name: "Temperature",
+                  axisYType: "secondary",
+                  legendText: "Temperature (°C)",
+                  showInLegend: true,
+                  indexLabelFontColor: "dimgray",  // Subdued color for index labels
+                  indexLabelFontSize: 16,
+                  indexLabelPlacement: "outside",
+                  color: "lightsteelblue",  // Subdued color for Temperature bars
+                  fillOpacity: 0.7,
+                  dataPoints: []
+              },
+              {
+                  type: "bar",
+                  name: "Steps",
+                  barWidth: 20,
+                  axisYType: "secondary",
+                  legendText: "Steps",
+                  showInLegend: true,
+                  indexLabelFontColor: "dimgray",  // Subdued color for index labels
+                  indexLabelFontSize: 16,
+                  indexLabelPlacement: "outside",
+                  color: "lightseagreen",  // Subdued color for Steps bars
+                  fillOpacity: 0.7,
+                  dataPoints: []
+              },
+          ],
+          backgroundColor: "lightgray",  // Subdued background color
+          legend: {
+              fontSize: 12,
+              fontColor: "dimgray"  // Subdued color for legend
+          }
+      });
+        chart.render();
+
+        // Function to update chart with new data
+        function updateChart(newDataPoints) {
+            if (Array.isArray(newDataPoints) && newDataPoints.length === 2) {
+                chart.options.data[0].dataPoints = newDataPoints[0];
+                chart.options.data[1].dataPoints = newDataPoints[1];
+                chart.render();
+            }
+        }
+
+        // Socket.io to receive data updates from the server
+        var socket = io();
+        socket.on('updateData', function (data) {
+            updateChart(data);
+        });
+    </script>
+</body>
+</html>

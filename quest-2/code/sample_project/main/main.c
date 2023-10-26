@@ -202,8 +202,8 @@ void char_to_display_task()
         }
         else
         {
-            integerPart = splitTime[0];
-            fractionalPart = splitTime[1];
+            integerPart = splitTime[0] + 12;
+            fractionalPart = splitTime[1] + 20;
         }
         // Extract individual digits
         digits[0] = integerPart / 10;
