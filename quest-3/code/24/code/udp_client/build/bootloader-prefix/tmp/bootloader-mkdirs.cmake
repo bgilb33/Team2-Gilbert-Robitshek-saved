@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/Users/noahrobitshek/esp/esp-idf/components/bootloader/subproject"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/tmp"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src"
-  "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/benja/esp/esp-idf/components/bootloader/subproject"
+  "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader"
+  "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix"
+  "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/tmp"
+  "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src"
+  "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/benja/Code/School/EC444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -6,11 +6,12 @@ const path = require('path');
 const csv = require('csv-parser'); // Require the csv-parser module
 const { SerialPort } = require('serialport');
 const { ReadlineParser } = require('@serialport/parser-readline')
+const readline = require('readline');
 
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
-const port = new SerialPort({ path: 'COM6', baudRate: 115200 })
+const port = new SerialPort({ path: 'COM8', baudRate: 115200 })
 const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n'}))
 
 
@@ -20,6 +21,7 @@ var deviceList = [];
 var deviceCount = 0;
 var temperatureData = [];
 var stepData = [];
+var leaderboardData = [];
 
 var lastLine = ''
 var secondToLastLine = ''
@@ -60,12 +62,12 @@ function readAndUpdateCSV() {
                     temperatureData.push({
                         label: deviceCount.toString(),
                         y: parseFloat(temperature),
-                        color: "lightsteelblue"
+                        color: "#b0c4de"
                     });
                     stepData.push({
                         label: deviceCount.toString(),
                         y: parseInt(steps),
-                        color: "lightseagreen"
+                        color: "#20b2aa"
                     })
                     deviceCount++;
                 }
@@ -122,19 +124,41 @@ function readAndUpdateCSV() {
 }
 
 // Set up a periodic task to read and update CSV data
-setInterval(readAndUpdateCSV, 1000); // Update data every 1 second (adjust as needed)
+//setInterval(readAndUpdateCSV, 1000); // Update data every 1 second (adjust as needed)
 
-var leaderboard = {}
 function updateLeaderBoard() {
+
+    var leaderboard = {};
+
     fs.readdir('./data', (err, files) => {
         if (err) throw err;
         files.forEach(file => {
             const filePath = path.join('./data', file);
-            fs.createReadStream(filePath)
-                .pipe(csv())
-                .on('data', (row) => {
-                    console.log(row);
-                })
+            var lastRow;
+            var deviceId_lb;
+            const rl = readline.createInterface({
+                input: fs.createReadStream(filePath)
+            });
+
+            rl.on('line', (row) => {
+                if (row.startsWith("Device ID:")) {
+                    // console.log(row.split(' '));
+                    deviceId_lb = row.split(' ')[2];
+                    leaderboard[deviceId_lb] = 0;
+                }
+                if (row == "Activity Ended") {
+                    let steps = lastRow.split(', ')[2];
+                    leaderboard[deviceId_lb] += parseInt(steps);
+                }
+                lastRow = row;
+                // console.log(leaderboard);
+            })
+            rl.on('close', () => {
+                const keyValueArray = Object.entries(leaderboard);
+                keyValueArray.sort((a, b) => a[1] - b[1]);
+                const transformedArray = keyValueArray.map(item => ({ label: item[0], y: item[1] }));
+                io.emit('updateDataLb', [transformedArray]);
+            })
         })
     })
 }
@@ -146,6 +170,7 @@ io.on('connection', (socket) => {
 
     // Send initial data to the connected client (empty array initially)
     socket.emit('updateData', []);
+    socket.emit('updateDataLb', []);
 
     socket.on('disconnect', () => {
         console.log('User disconnected');
