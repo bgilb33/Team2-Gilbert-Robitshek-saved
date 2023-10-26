@@ -1,0 +1,131 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2023 21:06:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2327ch (143996) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000332a4 vaddr=3ffb0000 size=03808h ( 14344) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=00036ab4 vaddr=40080000 size=09564h ( 38244) load[0m
+[0;32mI (181) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8b638h (570936) map[0m
+[0;32mI (387) esp_image: segment 4: paddr=000cb660 vaddr=40089564 size=0dd10h ( 56592) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (422) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu up.[0m
+[0;32mI (434) cpu_start: Starting app cpu, entry point is 0x40081300[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) cpu_start: Application information:[0m
+[0;32mI (457) cpu_start: Project name:     udp_client[0m
+[0;32mI (462) cpu_start: App version:      ea6f4b4-dirty[0m
+[0;32mI (468) cpu_start: Compile time:     Oct 24 2023 21:06:46[0m
+[0;32mI (474) cpu_start: ELF file SHA256:  c53d42f92...[0m
+[0;32mI (479) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (486) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (500) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB7E90 len 00028170 (160 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40097274 len 00008D8C (35 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (580) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (589) app_start: Starting scheduler on CPU0[0m
+[0;32mI (593) app_start: Starting scheduler on CPU1[0m
+[0;32mI (593) main_task: Started on CPU0[0m
+[0;32mI (603) main_task: Calling app_main()[0m
+[0;32mI (653) wifi station: ESP_WIFI_MODE_STA[0m
+I (663) wifi:wifi driver task: 3ffc0014, prio:23, stack:6656, core=0
+I (683) wifi:wifi firmware version: 4fcdbd6
+I (683) wifi:wifi certification version: v7.0
+I (683) wifi:config NVS flash: enabled
+I (683) wifi:config nano formating: disabled
+I (693) wifi:Init data frame dynamic rx buffer num: 32
+I (693) wifi:Init static rx mgmt buffer num: 5
+I (703) wifi:Init management short buffer num: 32
+I (703) wifi:Init dynamic tx buffer num: 32
+I (713) wifi:Init static rx buffer size: 1600
+I (713) wifi:Init static rx buffer num: 10
+I (713) wifi:Init dynamic rx buffer num: 32
+[0;32mI (723) wifi_init: rx ba win: 6[0m
+[0;32mI (723) wifi_init: tcpip mbox: 32[0m
+[0;32mI (733) wifi_init: udp mbox: 6[0m
+[0;32mI (733) wifi_init: tcp mbox: 6[0m
+[0;32mI (733) wifi_init: tcp tx win: 5744[0m
+[0;32mI (743) wifi_init: tcp rx win: 5744[0m
+[0;32mI (743) wifi_init: tcp mss: 1440[0m
+[0;32mI (753) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (753) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (763) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (843) wifi:mode : sta (b8:f0:09:95:ab:74)
+I (843) wifi:enable tsf
+[0;32mI (853) wifi station: wifi_init_sta finished.[0m
+I (913) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (913) wifi:state: init -> auth (b0)
+I (933) wifi:state: auth -> assoc (0)
+I (943) wifi:state: assoc -> run (10)
+I (943) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+I (983) wifi:connected with Group_2, aid = 2, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (983) wifi:security: WPA2-PSK, phy: bgn, rssi: -47
+I (983) wifi:pm start, type: 1
+
+I (1013) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (2493) esp_netif_handlers: sta ip: 192.168.1.21, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2493) wifi station: got ip:192.168.1.21[0m
+[0;32mI (2493) wifi station: connected to ap SSID:Group_2 password:smartsys[0m
+IP Address: 192.168.1.21
+- parameters: ok
+[0;32mI (2533) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+[0;32mI (2533) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+>> Test Alphanumeric Display: 
+STATUS: 192.168.1.21,Activity Ended
+[0;32mI (2563) main_task: Returned from app_main()[0m
+STATUS: 192.168.1.21,In Activity
+INFO: 192.168.1.21,nan,0
+STATUS: 192.168.1.21,Activity Ended
+STATUS: 192.168.1.21,In Activity
+INFO: 192.168.1.21,nan,0
+STATUS: 192.168.1.21,Activity Ended
+STATUS: 192.168.1.21,In Activity
+INFO: 192.168.1.21,nan,0
+STATUS: 192.168.1.21,Activity Ended
+STATUS: 192.168.1.21,In Activity
+INFO: 192.168.1.21,nan,0
+INFO: 192.168.1.21,nan,0
+INFO: 192.168.1.21,nan,0
+INFO: 192.168.1.21,nan,0
+STATUS: 192.168.1.21,Activity Ended
+STATUS: 192.168.1.21,In Activity
+INFO: 192.168.1.21,nan,0
+STATUS: 192.168.1.21,Activity Ended

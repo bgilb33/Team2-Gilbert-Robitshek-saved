@@ -1,0 +1,101 @@
+[0;33m--- esp-idf-monitor 1.3.2 on /dev/cu.usbserial-0246DDC2 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081330: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40081936: panic_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008a5d5: esp_system_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x400919e5: __assert_func at /Users/noahrobitshek/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400fb767: esp_netif_create_wifi at /Users/noahrobitshek/esp/esp-idf/components/esp_wifi/src/wifi_default.c:444 (discriminator 1)
+[0m
+[0;33m0x400d88ef: example_wifi_start at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:144 (discriminator 2)
+[0m
+[0;33m0x400d8bba: example_wifi_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:240
+[0m
+[0;33m0x400d84fb: example_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:93
+[0m
+[0;33m0x400d8263: app_main at /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:1150 (discriminator 2)
+[0m
+[0;33m0x4015d537: main_task at /Users/noahrobitshek/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008d0f5: vPortTaskWrapper at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081330: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40081936: panic_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008a5d5: esp_system_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x400919e5: __assert_func at /Users/noahrobitshek/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400fb767: esp_netif_create_wifi at /Users/noahrobitshek/esp/esp-idf/components/esp_wifi/src/wifi_default.c:444 (discriminator 1)
+[0m
+[0;33m0x400d88ef: example_wifi_start at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:144 (discriminator 2)
+[0m
+[0;33m0x400d8bba: example_wifi_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:240
+[0m
+[0;33m0x400d84fb: example_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:93
+[0m
+[0;33m0x400d8263: app_main at /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:1150 (discriminator 2)
+[0m
+[0;33m0x4015d537: main_task at /Users/noahrobitshek/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008d0f5: vPortTaskWrapper at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081330: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40081936: panic_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008a5d5: esp_system_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x400919e5: __assert_func at /Users/noahrobitshek/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400fb767: esp_netif_create_wifi at /Users/noahrobitshek/esp/esp-idf/components/esp_wifi/src/wifi_default.c:444 (discriminator 1)
+[0m
+[0;33m0x400d88ef: example_wifi_start at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:144 (discriminator 2)
+[0m
+[0;33m0x400d8bba: example_wifi_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:240
+[0m
+[0;33m0x400d84fb: example_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:93
+[0m
+[0;33m0x400d8263: app_main at /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:1150 (discriminator 2)
+[0m
+[0;33m0x4015d537: main_task at /Users/noahrobitshek/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008d0f5: vPortTaskWrapper at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081330: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40081936: panic_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008a5d5: esp_system_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x400919e5: __assert_func at /Users/noahrobitshek/esp/esp-idf/components/newlib/assert.c:81
+[0m
+[0;33m0x400fb767: esp_netif_create_wifi at /Users/noahrobitshek/esp/esp-idf/components/esp_wifi/src/wifi_default.c:444 (discriminator 1)
+[0m
+[0;33m0x400d88ef: example_wifi_start at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:144 (discriminator 2)
+[0m
+[0;33m0x400d8bba: example_wifi_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/wifi_connect.c:240
+[0m
+[0;33m0x400d84fb: example_connect at /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common/connect.c:93
+[0m
+[0;33m0x400d8263: app_main at /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:1150 (discriminator 2)
+[0m
+[0;33m0x4015d537: main_task at /Users/noahrobitshek/esp/esp-idf/components/freertos/app_startup.c:208 (discriminator 13)
+[0m
+[0;33m0x4008d0f5: vPortTaskWrapper at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

@@ -1,0 +1,179 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+NOTICE: Skipping optional dependency: protocol_examples_tapif_io
+Processing 2 dependencies:
+[1/2] idf (5.2.0)
+[2/2] protocol_examples_common (*)
+NOTICE: Skipping optional dependency: protocol_examples_tapif_io
+-- Project sdkconfig file /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/sdkconfig
+Loading defaults file /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/sdkconfig.defaults...
+-- Compiler supported targets: xtensa-esp32-elf
+-- App "udp_client" version: ea6f4b4-dirty
+-- Adding linker script /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocol_examples_common protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ulp unity usb vfs wear_levelling wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /Users/noahrobitshek/esp/esp-idf/components/app_trace /Users/noahrobitshek/esp/esp-idf/components/app_update /Users/noahrobitshek/esp/esp-idf/components/bootloader /Users/noahrobitshek/esp/esp-idf/components/bootloader_support /Users/noahrobitshek/esp/esp-idf/components/bt /Users/noahrobitshek/esp/esp-idf/components/cmock /Users/noahrobitshek/esp/esp-idf/components/console /Users/noahrobitshek/esp/esp-idf/components/cxx /Users/noahrobitshek/esp/esp-idf/components/driver /Users/noahrobitshek/esp/esp-idf/components/efuse /Users/noahrobitshek/esp/esp-idf/components/esp-tls /Users/noahrobitshek/esp/esp-idf/components/esp_adc /Users/noahrobitshek/esp/esp-idf/components/esp_app_format /Users/noahrobitshek/esp/esp-idf/components/esp_bootloader_format /Users/noahrobitshek/esp/esp-idf/components/esp_coex /Users/noahrobitshek/esp/esp-idf/components/esp_common /Users/noahrobitshek/esp/esp-idf/components/esp_eth /Users/noahrobitshek/esp/esp-idf/components/esp_event /Users/noahrobitshek/esp/esp-idf/components/esp_gdbstub /Users/noahrobitshek/esp/esp-idf/components/esp_hid /Users/noahrobitshek/esp/esp-idf/components/esp_http_client /Users/noahrobitshek/esp/esp-idf/components/esp_http_server /Users/noahrobitshek/esp/esp-idf/components/esp_https_ota /Users/noahrobitshek/esp/esp-idf/components/esp_https_server /Users/noahrobitshek/esp/esp-idf/components/esp_hw_support /Users/noahrobitshek/esp/esp-idf/components/esp_lcd /Users/noahrobitshek/esp/esp-idf/components/esp_local_ctrl /Users/noahrobitshek/esp/esp-idf/components/esp_mm /Users/noahrobitshek/esp/esp-idf/components/esp_netif /Users/noahrobitshek/esp/esp-idf/components/esp_netif_stack /Users/noahrobitshek/esp/esp-idf/components/esp_partition /Users/noahrobitshek/esp/esp-idf/components/esp_phy /Users/noahrobitshek/esp/esp-idf/components/esp_pm /Users/noahrobitshek/esp/esp-idf/components/esp_psram /Users/noahrobitshek/esp/esp-idf/components/esp_ringbuf /Users/noahrobitshek/esp/esp-idf/components/esp_rom /Users/noahrobitshek/esp/esp-idf/components/esp_system /Users/noahrobitshek/esp/esp-idf/components/esp_timer /Users/noahrobitshek/esp/esp-idf/components/esp_wifi /Users/noahrobitshek/esp/esp-idf/components/espcoredump /Users/noahrobitshek/esp/esp-idf/components/esptool_py /Users/noahrobitshek/esp/esp-idf/components/fatfs /Users/noahrobitshek/esp/esp-idf/components/freertos /Users/noahrobitshek/esp/esp-idf/components/hal /Users/noahrobitshek/esp/esp-idf/components/heap /Users/noahrobitshek/esp/esp-idf/components/http_parser /Users/noahrobitshek/esp/esp-idf/components/idf_test /Users/noahrobitshek/esp/esp-idf/components/ieee802154 /Users/noahrobitshek/esp/esp-idf/components/json /Users/noahrobitshek/esp/esp-idf/components/log /Users/noahrobitshek/esp/esp-idf/components/lwip /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main /Users/noahrobitshek/esp/esp-idf/components/mbedtls /Users/noahrobitshek/esp/esp-idf/components/mqtt /Users/noahrobitshek/esp/esp-idf/components/newlib /Users/noahrobitshek/esp/esp-idf/components/nvs_flash /Users/noahrobitshek/esp/esp-idf/components/nvs_sec_provider /Users/noahrobitshek/esp/esp-idf/components/openthread /Users/noahrobitshek/esp/esp-idf/components/partition_table /Users/noahrobitshek/esp/esp-idf/components/perfmon /Users/noahrobitshek/esp/esp-idf/components/protobuf-c /Users/noahrobitshek/esp/esp-idf/examples/common_components/protocol_examples_common /Users/noahrobitshek/esp/esp-idf/components/protocomm /Users/noahrobitshek/esp/esp-idf/components/pthread /Users/noahrobitshek/esp/esp-idf/components/sdmmc /Users/noahrobitshek/esp/esp-idf/components/soc /Users/noahrobitshek/esp/esp-idf/components/spi_flash /Users/noahrobitshek/esp/esp-idf/components/spiffs /Users/noahrobitshek/esp/esp-idf/components/tcp_transport /Users/noahrobitshek/esp/esp-idf/components/ulp /Users/noahrobitshek/esp/esp-idf/components/unity /Users/noahrobitshek/esp/esp-idf/components/usb /Users/noahrobitshek/esp/esp-idf/components/vfs /Users/noahrobitshek/esp/esp-idf/components/wear_levelling /Users/noahrobitshek/esp/esp-idf/components/wifi_provisioning /Users/noahrobitshek/esp/esp-idf/components/wpa_supplicant /Users/noahrobitshek/esp/esp-idf/components/xtensa
+-- Configuring done (2.7s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/udp_client.c.obj
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:8:
+/Users/noahrobitshek/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:9:
+/Users/noahrobitshek/esp/esp-idf/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:11:
+/Users/noahrobitshek/esp/esp-idf/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:12:
+/Users/noahrobitshek/esp/esp-idf/components/driver/deprecated/driver/periph_ctrl.h:7:2: warning: #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions. [-Wcpp]
+    7 | #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions.
+      |  ^~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c: In function 'test_alpha_display':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:435:9: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+  435 |     int ret;
+      |         ^~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c: In function 'calcRP':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:847:17: warning: variable 'pitch' set but not used [-Wunused-but-set-variable]
+  847 |     float roll, pitch;
+      |                 ^~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:847:11: warning: variable 'roll' set but not used [-Wunused-but-set-variable]
+  847 |     float roll, pitch;
+      |           ^~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c: In function 'app_main':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:1036:5: warning: 'sntp_setoperatingmode' is deprecated: use esp_sntp_setoperatingmode() instead [-Wdeprecated-declarations]
+ 1036 |     sntp_setoperatingmode(SNTP_OPMODE_POLL);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:23:
+/Users/noahrobitshek/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:235:6: note: declared here
+  235 | void sntp_setoperatingmode(u8_t operating_mode)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:1037:5: warning: 'sntp_setservername' is deprecated: use esp_sntp_setservername() instead [-Wdeprecated-declarations]
+ 1037 |     sntp_setservername(0, "pool.ntp.org"); // Set the NTP server
+      |     ^~~~~~~~~~~~~~~~~~
+/Users/noahrobitshek/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:249:6: note: declared here
+  249 | void sntp_setservername(u8_t idx, const char *server)
+      |      ^~~~~~~~~~~~~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:1038:5: warning: 'sntp_init' is deprecated: use esp_sntp_init() instead [-Wdeprecated-declarations]
+ 1038 |     sntp_init();
+      |     ^~~~~~~~~
+/Users/noahrobitshek/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:255:6: note: declared here
+  255 | void sntp_init(void)
+      |      ^~~~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c: In function 'test_alpha_display':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:470:58: warning: iteration 3 invokes undefined behavior [-Waggressive-loop-optimizations]
+  470 |                 i2c_master_write_byte(cmd4, displaybuffer[i] & 0xFF, ACK_CHECK_EN);
+      |                                             ~~~~~~~~~~~~~^~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/main/udp_client.c:468:35: note: within this loop
+  468 |             for (uint8_t i = 0; i < 4; i++)
+      |                                 ~~^~~
+[2/10] Linking C static library esp-idf/main/libmain.a
+[3/10] Performing build step for 'bootloader'
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/sdkconfig
+-- Compiler supported targets: xtensa-esp32-elf
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Bootloader project name: "bootloader" version: 1
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script /Users/noahrobitshek/esp/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_bootloader_format esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /Users/noahrobitshek/esp/esp-idf/components/bootloader /Users/noahrobitshek/esp/esp-idf/components/bootloader_support /Users/noahrobitshek/esp/esp-idf/components/efuse /Users/noahrobitshek/esp/esp-idf/components/esp_app_format /Users/noahrobitshek/esp/esp-idf/components/esp_bootloader_format /Users/noahrobitshek/esp/esp-idf/components/esp_common /Users/noahrobitshek/esp/esp-idf/components/esp_hw_support /Users/noahrobitshek/esp/esp-idf/components/esp_rom /Users/noahrobitshek/esp/esp-idf/components/esp_system /Users/noahrobitshek/esp/esp-idf/components/esptool_py /Users/noahrobitshek/esp/esp-idf/components/freertos /Users/noahrobitshek/esp/esp-idf/components/hal /Users/noahrobitshek/esp/esp-idf/components/log /Users/noahrobitshek/esp/esp-idf/components/bootloader/subproject/main /Users/noahrobitshek/esp/esp-idf/components/bootloader/subproject/components/micro-ecc /Users/noahrobitshek/esp/esp-idf/components/newlib /Users/noahrobitshek/esp/esp-idf/components/partition_table /Users/noahrobitshek/esp/esp-idf/components/soc /Users/noahrobitshek/esp/esp-idf/components/spi_flash /Users/noahrobitshek/esp/esp-idf/components/xtensa
+-- Configuring done (2.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader
+[1/1] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/bootloader/bootloader.bin
+Bootloader binary size 0x6910 bytes. 0x6f0 bytes (6%) free.
+[4/10] No install step for 'bootloader'
+[5/10] Completed 'bootloader'
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable udp_client.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev2
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/udp_client.bin
+[9/10] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/partition_table/partition-table.bin /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build/udp_client.bin
+udp_client.bin binary size 0xcd3a0 bytes. Smallest app partition is 0x100000 bytes. 0x32c60 bytes (20%) free.
+[9/10] cd /Users/noahrobitshek/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.27.4/bin/cmake -D IDF_PATH=/Users/noahrobitshek/esp/esp-idf -D "SERIAL_TOOL=/Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python;;/Users/noahrobitshek/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D "WORKING_DIRECTORY=/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-3/code/24/code/udp_client/build" -P /Users/noahrobitshek/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/cu.usbserial-0246DDC2 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 udp_client.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev2
+Serial port /dev/cu.usbserial-0246DDC2
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e0:e2:e6:9b:87:04
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000ddfff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26896 bytes to 16890...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768a... (100 %)
+Wrote 26896 bytes (16890 compressed) at 0x00001000 in 0.9 seconds (effective 251.1 kbit/s)...
+Hash of data verified.
+Compressed 840608 bytes to 540454...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c501... (6 %)
+Writing at 0x00026a7f... (9 %)
+Writing at 0x0002bb5a... (12 %)
+Writing at 0x00034353... (15 %)
+Writing at 0x0003beea... (18 %)
+Writing at 0x00041b30... (21 %)
+Writing at 0x00047291... (24 %)
+Writing at 0x0004d1d7... (27 %)
+Writing at 0x00052d8c... (30 %)
+Writing at 0x0005830b... (33 %)
+Writing at 0x0005d868... (36 %)
+Writing at 0x0006308c... (39 %)
+Writing at 0x0006896b... (42 %)
+Writing at 0x0006e5d7... (45 %)
+Writing at 0x00074173... (48 %)
+Writing at 0x000792e3... (51 %)
+Writing at 0x0007e84a... (54 %)
+Writing at 0x00083be2... (57 %)
+Writing at 0x00089240... (60 %)
+Writing at 0x0008e7e7... (63 %)
+Writing at 0x00093fe7... (66 %)
+Writing at 0x00099bb8... (69 %)
+Writing at 0x0009f2b8... (72 %)
+Writing at 0x000a4d0b... (75 %)
+Writing at 0x000aaaab... (78 %)
+Writing at 0x000b03e0... (81 %)
+Writing at 0x000b5b0a... (84 %)
+Writing at 0x000be3c3... (87 %)
+Writing at 0x000c6b00... (90 %)
+Writing at 0x000cc7ed... (93 %)
+Writing at 0x000d254c... (96 %)
+Writing at 0x000d7d91... (100 %)
+Wrote 840608 bytes (540454 compressed) at 0x00010000 in 14.2 seconds (effective 473.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 254.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
