@@ -32,14 +32,14 @@ The key features of the wearable are as follows:
 
 
 ## Solution Design and Skematics
-Below is block diagrams showing all communicaiton methods that are used to send data from the ESP32, the sensors, the laptop, and the two files  on the node server. 
+Below is block diagrams showing all communicaiton methods that are used to send data between the ESP32, the sensors, the laptop, and the two files  on the node server. 
 
 ![Skematic Image](./images/blockDiagram.jpg)
 
 
 Below is a spematic of the hardware design. The ESP32 is connected to the many sensors, inputs, and outputs including the Alphanumeric display, the acclerometer, a push button, a thermistor, and a buzzer. The ESP32 is also connected to a laptop via a serial port. 
 
-![Skematic Image](./images/ESP32.png)
+![Skematic Image](./images/quest2Circuit.png)
 
 
 Below is a highlight of the **Server Side Code** and the **Step Counter** for more information about the project please see the [code readme](./code/README.md)

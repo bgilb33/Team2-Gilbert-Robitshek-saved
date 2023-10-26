@@ -1,0 +1,473 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2023 21:06:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23d74h (146804) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00033d9c vaddr=3ffb0000 size=03808h ( 14344) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=000375ac vaddr=40080000 size=08a6ch ( 35436) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8e900h (583936) map[0m
+[0;32mI (391) esp_image: segment 4: paddr=000ce928 vaddr=40088a6c size=0ea54h ( 59988) load[0m
+[0;32mI (428) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (428) boot: Disabling RNG early entropy source...[0m
+[0;32mI (440) cpu_start: Multicore app[0m
+[0;32mI (440) cpu_start: Pro cpu up.[0m
+[0;32mI (440) cpu_start: Starting app cpu, entry point is 0x40081330[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (458) cpu_start: Pro cpu start user code[0m
+[0;32mI (458) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) cpu_start: Application information:[0m
+[0;32mI (463) cpu_start: Project name:     udp_client[0m
+[0;32mI (468) cpu_start: App version:      ea6f4b4-dirty[0m
+[0;32mI (474) cpu_start: Compile time:     Oct 24 2023 21:06:46[0m
+[0;32mI (480) cpu_start: ELF file SHA256:  4fbc13279...[0m
+[0;32mI (485) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (492) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (497) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (502) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (514) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB7EF0 len 00028110 (160 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (539) heap_init: At 400974C0 len 00008B40 (34 KiB): IRAM[0m
+[0;32mI (546) spi_flash: detected chip: generic[0m
+[0;32mI (549) spi_flash: flash io: dio[0m
+[0;33mW (553) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (567) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (577) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (586) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (595) app_start: Starting scheduler on CPU0[0m
+[0;32mI (599) app_start: Starting scheduler on CPU1[0m
+[0;32mI (599) main_task: Started on CPU0[0m
+[0;32mI (609) main_task: Calling app_main()[0m
+[0;32mI (639) example: ESP_WIFI_MODE_STA[0m
+I (649) wifi:wifi driver task: 3ffbfee8, prio:23, stack:6656, core=0
+I (659) wifi:wifi firmware version: 4fcdbd6
+I (659) wifi:wifi certification version: v7.0
+I (659) wifi:config NVS flash: enabled
+I (659) wifi:config nano formating: disabled
+I (669) wifi:Init data frame dynamic rx buffer num: 32
+I (669) wifi:Init static rx mgmt buffer num: 5
+I (679) wifi:Init management short buffer num: 32
+I (679) wifi:Init dynamic tx buffer num: 32
+I (689) wifi:Init static rx buffer size: 1600
+I (689) wifi:Init static rx buffer num: 10
+I (689) wifi:Init dynamic rx buffer num: 32
+[0;32mI (699) wifi_init: rx ba win: 6[0m
+[0;32mI (699) wifi_init: tcpip mbox: 32[0m
+[0;32mI (709) wifi_init: udp mbox: 6[0m
+[0;32mI (709) wifi_init: tcp mbox: 6[0m
+[0;32mI (709) wifi_init: tcp tx win: 5744[0m
+[0;32mI (719) wifi_init: tcp rx win: 5744[0m
+[0;32mI (719) wifi_init: tcp mss: 1440[0m
+[0;32mI (729) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (729) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (739) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (819) wifi:mode : sta (e0:e2:e6:9b:87:04)
+I (819) wifi:enable tsf
+[0;32mI (829) example: wifi_init_sta finished.[0m
+I (839) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (839) wifi:state: init -> auth (b0)
+I (849) wifi:state: auth -> assoc (0)
+I (879) wifi:state: assoc -> run (10)
+I (889) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+I (969) wifi:connected with Group_2, aid = 1, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (969) wifi:security: WPA2-PSK, phy: bgn, rssi: -40
+I (979) wifi:pm start, type: 1
+
+I (979) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (3479) esp_netif_handlers: sta ip: 192.168.1.8, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3479) example: got ip:192.168.1.8[0m
+[0;32mI (3479) example: connected to ap SSID:Group_2 password:smartsys[0m
+IP Address: 192.168.1.8
+- parameters: ok
+[0;32mI (3519) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+eFuse Two Point: NOT supported
+eFuse Vref: Supported
+Characterized using eFuse Vref
+[0;32mI (3519) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+[0;32mI (3539) gpio: GPIO[13]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (3549) example: Socket created, sending to 192.168.1.7:49152[0m
+>> Test Alphanumeric Display: 
+STATUS: 192.168.1.8,Activity Ended
+[0;32mI (3559) example: Message sent[0m
+[0;32mI (3549) main_task: Returned from app_main()[0m
+[0;32mI (3649) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (3649) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (13649) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (13649) example: Message sent[0m
+[0;32mI (13659) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (13659) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (23659) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (23659) example: Message sent[0m
+[0;32mI (23669) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (23669) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (33669) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (33669) example: Message sent[0m
+[0;32mI (33849) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (33859) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (43859) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (43859) example: Message sent[0m
+[0;32mI (43889) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (43889) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (53889) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (53889) example: Message sent[0m
+[0;32mI (54129) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (54129) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (64129) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (64129) example: Message sent[0m
+[0;32mI (64139) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (64139) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (74139) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (74139) example: Message sent[0m
+[0;32mI (74169) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (74169) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (84169) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (84169) example: Message sent[0m
+[0;32mI (84179) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (84179) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (94179) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (94179) example: Message sent[0m
+[0;32mI (94189) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (94189) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (104189) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (104189) example: Message sent[0m
+[0;32mI (104299) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (104299) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (114309) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (114309) example: Message sent[0m
+[0;32mI (114319) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (114319) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (124319) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (124319) example: Message sent[0m
+[0;32mI (124369) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (124379) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (134379) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (134379) example: Message sent[0m
+[0;32mI (134509) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (134509) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (144519) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (144519) example: Message sent[0m
+[0;32mI (144549) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (144549) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (154549) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (154549) example: Message sent[0m
+[0;32mI (154579) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (154579) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (164579) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (164579) example: Message sent[0m
+[0;32mI (164619) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (164619) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (174619) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (174619) example: Message sent[0m
+[0;32mI (174629) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (174629) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (184629) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (184629) example: Message sent[0m
+[0;32mI (184639) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (184639) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (194639) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (194639) example: Message sent[0m
+[0;32mI (194819) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (194829) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (204829) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (204829) example: Message sent[0m
+[0;32mI (204839) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (204839) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (214839) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (214839) example: Message sent[0m
+[0;32mI (214849) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (214849) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (224849) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (224849) example: Message sent[0m
+[0;32mI (225029) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (225029) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (235029) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (235029) example: Message sent[0m
+[0;32mI (235069) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (235069) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (245069) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (245069) example: Message sent[0m
+[0;32mI (245099) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (245109) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (255109) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (255109) example: Message sent[0m
+[0;32mI (255139) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (255139) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (265139) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (265139) example: Message sent[0m
+[0;32mI (265179) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (265179) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (275179) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (275179) example: Message sent[0m
+[0;32mI (275209) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (275209) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (285209) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (285209) example: Message sent[0m
+[0;32mI (285249) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (285259) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (295259) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (295259) example: Message sent[0m
+[0;32mI (295279) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (295279) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (305279) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (305279) example: Message sent[0m
+[0;32mI (305309) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (305319) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (315319) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (315319) example: Message sent[0m
+[0;32mI (315349) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (315349) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (325349) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (325349) example: Message sent[0m
+[0;32mI (325379) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (325389) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (335389) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (335389) example: Message sent[0m
+[0;32mI (335419) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (335419) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (345419) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (345419) example: Message sent[0m
+[0;32mI (345459) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (345459) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (355459) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (355459) example: Message sent[0m
+[0;32mI (355489) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (355489) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (365489) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (365489) example: Message sent[0m
+[0;32mI (365529) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (365529) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (375529) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (375529) example: Message sent[0m
+[0;32mI (375559) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (375559) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (385559) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (385559) example: Message sent[0m
+[0;32mI (385599) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (385599) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (395599) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (395599) example: Message sent[0m
+[0;32mI (395639) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (395639) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (405649) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (405649) example: Message sent[0m
+[0;32mI (405659) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (405659) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (415669) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (415669) example: Message sent[0m
+[0;32mI (415699) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (415699) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (425709) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (425709) example: Message sent[0m
+[0;32mI (425839) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (425839) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (435839) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (435839) example: Message sent[0m
+[0;32mI (435879) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (435879) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (445879) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (445879) example: Message sent[0m
+[0;32mI (445909) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (445909) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (455919) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (455919) example: Message sent[0m
+[0;32mI (455939) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (455949) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (465949) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (465949) example: Message sent[0m
+[0;32mI (465999) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (465999) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (476009) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (476009) example: Message sent[0m
+[0;32mI (476219) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (476229) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (486229) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (486229) example: Message sent[0m
+[0;32mI (486259) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (486259) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (496259) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (496259) example: Message sent[0m
+[0;32mI (496269) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (496269) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (506269) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (506269) example: Message sent[0m
+[0;32mI (506329) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (506329) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (516329) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (516329) example: Message sent[0m
+[0;32mI (516359) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (516359) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (526359) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (526359) example: Message sent[0m
+[0;32mI (526369) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (526369) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (536369) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (536369) example: Message sent[0m
+[0;32mI (536529) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (536529) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (546529) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (546529) example: Message sent[0m
+[0;32mI (546579) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (546579) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (556579) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (556579) example: Message sent[0m
+[0;32mI (556609) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (556609) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (566609) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (566609) example: Message sent[0m
+[0;32mI (566639) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (566639) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (576639) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (576639) example: Message sent[0m
+[0;32mI (576769) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (576779) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (586779) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (586779) example: Message sent[0m
+[0;32mI (586809) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (586809) example: all good[0m
+the buffer is: all good
+ok we are done now
+[0;32mI (596819) example: Socket created, sending to 192.168.1.7:49152[0m
+[0;32mI (596819) example: Message sent[0m
+[0;32mI (596849) example: Received 8 bytes from 192.168.1.7:[0m
+[0;32mI (596849) example: all good[0m
+the buffer is: all good
