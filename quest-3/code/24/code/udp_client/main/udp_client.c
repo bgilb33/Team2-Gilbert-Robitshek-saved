@@ -1,3 +1,12 @@
+// Title: udp_client.c
+// Description: This is the main file on the esp32. It sends a UDP packet to the server with data from the sensors
+
+// Author: Benji Gilbert, Noah Robitshek
+// Date: October 26th 
+
+// This code is provided as-is, without any warranties or guarantees. Use it at your own risk.
+// Please feel free to modify and distribute it as needed for your projects.
+
 #include <stdio.h>
 #include <math.h>
 #include <time.h>
@@ -22,7 +31,6 @@
 #include "lwip/sys.h"
 #include "esp_sntp.h"
 #include "esp_netif.h"
-
 #include <string.h>
 #include <sys/param.h>
 #include "freertos/FreeRTOS.h"
