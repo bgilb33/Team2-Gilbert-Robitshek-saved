@@ -1,7 +1,6 @@
 # Code Readme
 
-Please describe in this readme what is in your code folder and
-subfolders. Make it easy for us to navigate this space.
+In this readme is a discription of what is in our code folder and subfolder. 
 
 ## Folders
 ### Server
@@ -18,3 +17,28 @@ This folder contains all of the code that is hosted on the server. Throughout th
 This folder contains all of the code that is placed on the esp32. It contains all the header files, build files, and make files
 
 **udpclient.c** This is the main file that runs on the esp32. This file is a combination of UDP client code written by Noah and Carmin code that was from a previous project. 
+
+
+## Attribution
+We used a number of different sources throghout our project. Below is a quick list:
+
+- esp-idf UDP client
+- esp-idf UDP server
+- Canvas.js templates
+
+
+
+## AI Use
+
+Artificial Intelligence (AI) was used once throughout the project. In all cases below they are documented in the codebase with the attributes:
+
+```
+// (1) gpt start
+code
+// gpt end
+```
+The number of the comment indicates the prompt below that was used to generate the code.
+
+#### Prompt 1
+Prompt: Write a function in C to convert a double to a 4 digit integer array for an alphanumeric display?
+
