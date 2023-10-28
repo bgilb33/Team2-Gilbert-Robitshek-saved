@@ -51,8 +51,8 @@ Below is the user interface for the straba system. We used cancas.js extensively
 <!-- ### Sketches/Diagrams -->
 
 ### Supporting Artifacts
-- [Link to video technical presentation](https://drive.google.com/file/d/1ERCD2oMkIhZVGaLaNPalutlR1fPXqUc7/view?usp=sharing).
-- [Link to video demo](https://drive.google.com/file/d/1qolVzl7hNmvBFcL3OL9UBY5b4C22Pprh/view?usp=sharing)
+- [Link to video technical presentation](https://drive.google.com/file/d/1pkpx4NmxKyjVlp_iVe1VntZx9MDvZBp9/view?usp=sharing).
+- [Link to video demo](https://drive.google.com/file/d/18GJ_X3S1tXW5GydRIoc1lyyQ3HQPn7M8/view?usp=drive_link)
 
 
 ### Modules, Tools, Source Used Including Attribution
