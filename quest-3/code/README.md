@@ -28,17 +28,5 @@ We used a number of different sources throghout our project. Below is a quick li
 
 
 
-## AI Use
 
-Artificial Intelligence (AI) was used once throughout the project. In all cases below they are documented in the codebase with the attributes:
-
-```
-// (1) gpt start
-code
-// gpt end
-```
-The number of the comment indicates the prompt below that was used to generate the code.
-
-#### Prompt 1
-Prompt: Write a function in C to convert a double to a 4 digit integer array for an alphanumeric display?
 
