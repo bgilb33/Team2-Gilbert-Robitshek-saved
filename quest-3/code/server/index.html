@@ -13,22 +13,19 @@
             margin: 0;
             padding: 0;
         }
-        /* Style for the form container */
         #downloadForm {
             text-align: center;
             margin: 20px;
         }
 
-        /* Style for the select dropdown */
         #fileIndex {
             padding: 10px;
             font-size: 16px;
         }
 
-        /* Style for the download button */
         #downloadButton {
-            background-color: #20b2aa; /* Blue background color */
-            color: #fff; /* White text color */
+            background-color: #20b2aa;
+            color: #fff;
             padding: 10px 20px;
             font-size: 16px;
             border: none;
@@ -36,23 +33,22 @@
             transition: background-color 0.3s;
         }
 
-        /* Hover effect for the download button */
         #downloadButton:hover {
-            background-color: #289892; /* Darker blue background color on hover */
+            background-color: #289892;
         }
         .formTitle {
             text-align: center;
-            font-size: 24px; /* Adjust the font size as needed */
-            color: #333; /* Adjust the color as needed */
-            margin-top: 20px; /* Adjust the top margin as needed */
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
         }
         #pageTitle {
             text-align: center;
-            font-size: 32px; /* Adjust the font size as needed */
-            color: #fff; /* Adjust the color to make it stand out */
-            background-color: #6B6C6D; /* Background color for the title */
-            padding: 10px; /* Padding to give it some space */
-            margin: 0; /* Remove any potential margin */
+            font-size: 32px;
+            color: #fff;
+            background-color: #6B6C6D;
+            padding: 10px;
+            margin: 0;
         }
     </style>
 </head>
@@ -60,7 +56,6 @@
     <h1 id="pageTitle">Straba</h1>
     <div id="chartContainer" style="height: 280px; width: 100%;"></div>
     <div id="chartContainerLb" style="height: 280px; width: 100%;"></div>
-    <!-- <button id="downloadCustomCSV">Download Custom CSV</button> -->
     <h1 class="formTitle">Download Your Data</h1>
     <form id="downloadForm">
         <label for="fileIndex">Carmin ID:</label>
@@ -80,14 +75,14 @@
           },
           axisY2: {
               includeZero: true,
-              labelFontColor: "dimgray",  // Subdued color for Y2 axis label
+              labelFontColor: "dimgray",
               labelFontSize: 14
           },
           axisX: {
               title: "Carmin ID",
               valueFormatString: "#",
               labels: [0],
-              labelFontColor: "dimgray",  // Subdued color for X-axis label
+              labelFontColor: "dimgray",
               labelFontSize: 14
           },
           data: [
@@ -98,10 +93,10 @@
                   axisYType: "secondary",
                   legendText: "Temperature (°C)",
                   showInLegend: true,
-                  indexLabelFontColor: "dimgray",  // Subdued color for index labels
+                  indexLabelFontColor: "dimgray",
                   indexLabelFontSize: 16,
                   indexLabelPlacement: "outside",
-                  color: "#b0c4de",  // Subdued color for Temperature bars
+                  color: "#b0c4de",
                   fillOpacity: 0.7,
                   dataPoints: []
               },
@@ -112,18 +107,18 @@
                   axisYType: "secondary",
                   legendText: "Steps",
                   showInLegend: true,
-                  indexLabelFontColor: "dimgray",  // Subdued color for index labels
+                  indexLabelFontColor: "dimgray",
                   indexLabelFontSize: 16,
                   indexLabelPlacement: "outside",
-                  color: "#20b2aa",  // Subdued color for Steps bars
+                  color: "#20b2aa",
                   fillOpacity: 0.7,
                   dataPoints: []
               },
           ],
-          backgroundColor: "#D3D3D3",  // Subdued background color
+          backgroundColor: "#D3D3D3",
           legend: {
               fontSize: 12,
-              fontColor: "dimgray"  // Subdued color for legend
+              fontColor: "dimgray"
           }
         });
         chart.render();
@@ -139,14 +134,14 @@
           },
           axisY2: {
               includeZero: true,
-              labelFontColor: "dimgray",  // Subdued color for Y2 axis label
+              labelFontColor: "dimgray",
               labelFontSize: 14
           },
           axisX: {
               title: "Carmin ID",
               valueFormatString: "#",
               labels: [0],
-              labelFontColor: "dimgray",  // Subdued color for X-axis label
+              labelFontColor: "dimgray",
               labelFontSize: 14
           },
           data: [{
@@ -156,22 +151,21 @@
                   axisYType: "secondary",
                   legendText: "Steps",
                   showInLegend: true,
-                  indexLabelFontColor: "dimgray",  // Subdued color for index labels
+                  indexLabelFontColor: "dimgray",
                   indexLabelFontSize: 16,
                   indexLabelPlacement: "outside",
-                  color: "#20b2aa",  // Subdued color for Steps bars
+                  color: "#20b2aa",
                   fillOpacity: 0.7,
                   dataPoints: []
             }],
-          backgroundColor: "#D3D3D3",  // Subdued background color
+          backgroundColor: "#D3D3D3",
           legend: {
               fontSize: 12,
-              fontColor: "dimgray"  // Subdued color for legend
+              fontColor: "dimgray"
           }
         });
         chart_lb.render();
 
-        // Function to update chart with new data
         function updateChart(newDataPoints) {
             if (Array.isArray(newDataPoints) && newDataPoints.length === 2) {
                 chart.options.data[0].dataPoints = newDataPoints[0];
@@ -188,7 +182,6 @@
             }
         }
 
-        // Socket.io to receive data updates from the server
         var socket = io();
         socket.on('updateData', function (data) {
             updateChart(data);
@@ -216,31 +209,22 @@
         function handleFormSubmission() {
             event.preventDefault();
 
-            // Get the selected file index from the dropdown
             const selectedFileIndex = document.getElementById('fileIndex').value;
 
-            // Define the path to the selected CSV file
             const filePath = `./data/data_${selectedFileIndex}.csv`;
 
-            // Fetch the CSV file's contents
             fetch(filePath)
                 .then((response) => response.text())
                 .then((csvData) => {
-                    // Create a Blob containing the fetched CSV data
                     const blob = new Blob([csvData], { type: 'text/csv' });
-
-                    // Create a temporary URL for the Blob
                     const url = URL.createObjectURL(blob);
 
-                    // Create a link element for the download
                     const a = document.createElement('a');
                     a.href = url;
                     a.download = `carmin_${selectedFileIndex}_data.csv`; // Specify the desired filename
 
-                    // Trigger a click event on the link to initiate the download
                     a.click();
 
-                    // Release the URL object
                     URL.revokeObjectURL(url);
                 })
                 .catch((error) => {
@@ -248,7 +232,6 @@
                 });
         }
 
-        // Link the downloadCustomCSV function to the button click event
         document.getElementById('downloadForm').addEventListener('submit', handleFormSubmission);
 
         document.getElementById('sendLeaderBoard').addEventListener('click', function () {

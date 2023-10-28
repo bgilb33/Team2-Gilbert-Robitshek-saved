@@ -11,11 +11,11 @@ const io = socketIo(server2);
 var dgram = require('dgram');
 const readline = require('readline');
 
-// Port and IP
+// Define the UDP server's PORT and HOST
 var PORT = 49152;
 var HOST = '192.168.1.23';
 
-// Create socket
+// Create UDP socket
 var server = dgram.createSocket('udp4');
 
 server.on('listening', function () {
@@ -23,8 +23,9 @@ server.on('listening', function () {
     console.log('UDP Server listening on ' + address.address + ":" + address.port);
 });
 
-app.use(express.static(__dirname)); // Serve files from the current directory
+app.use(express.static(__dirname));
 
+// Initialize emptdy data variables
 var deviceList = [];
 var deviceCount = 0;
 var temperatureData = [];
@@ -34,35 +35,42 @@ var leader = 0;
 var lastLine = ''
 var secondToLastLine = ''
 var last_status = 0;
+
+// Handle data from UDP server
 server.on('message', async function (message, remote) {
     var line = message.toString();
-    console.log(line);
+
+    // Send current leader back to ESP32
     if (Object.keys(leaderboard).length > 0) {
         var dataToSend = `LEADER: ${leader}`;
     }
     else {
         dataToSend = "LEADER: 0";
     }
-    console.log(dataToSend);
+
     server.send(dataToSend, remote.port, remote.address, function (error) {
         if (error) throw error;
     });
 
+    // Parse and process incoming data
     var date = Date();
     var time = date.split(' ')[4]
     var espId, temperature, steps, status;
     var temp_color, step_color;
     var activity_ended = 0;
     var deviceId;
+
     if (line != lastLine && line != secondToLastLine) {
         dataCheck = line.split(',');
         dataCheckFront = dataCheck[0].split(' ');
 
+        // Check if incoming message is data we want
         if (dataCheckFront[dataCheckFront.length - 2] == 'DATA:') {
             [espId, status,temperature, steps] = line.split(',')
             espId = espId.split(' ')[1];
             var deviceExists = false;
 
+            // Check if device has been seen yet
             if (deviceCount != 0) {
                 for (let i = 0; i < deviceCount; i++) {
                     if (espId == deviceList[i].EspId) {
@@ -72,16 +80,12 @@ server.on('message', async function (message, remote) {
                 }
             }
 
-            // In Activity
-            console.log("Status:", status)
+            // Manage data color
             if (status == -1) {
-                console.log("blue")
                 temp_color = "lightsteelblue";
                 step_color = "lightseagreen";
             }
-            // Not in Activity
             else if (status == 0) {
-                console.log("red")
                 temp_color = "#D62600";
                 step_color = "#FF6F50";
             }
@@ -92,6 +96,8 @@ server.on('message', async function (message, remote) {
             else {
                 activity_ended = 0;
             }
+            
+            // Get device ID
             if (deviceCount > 0) {
                 for (let i = 0; i < deviceCount; i++) {
                     if (deviceList[i].EspId == espId) {
@@ -99,6 +105,7 @@ server.on('message', async function (message, remote) {
                     }                   
                 }
             }
+
             // Add device if it has not been seen yet
             if (!deviceExists) {
                 let header = `Device ID: ${deviceCount}\nESP32 ID: ${espId.replace(/\0/g, '')}\nTime, Temperature, Steps\nActivity Started\n${time.replace(/\0/g, '')}, ${temperature.replace(/\0/g, '')}, ${steps.replace(/\0/g, '')}`;
@@ -121,6 +128,7 @@ server.on('message', async function (message, remote) {
                 })
                 deviceCount++;
             }
+            // In Activity: log data
             else if (status == -1) {
                 for (let i = 0; i < deviceCount; i++) {
                     if (temperatureData[i].label == deviceId) {
@@ -136,6 +144,7 @@ server.on('message', async function (message, remote) {
                     }
                 }
             }
+            // Update data color
             else {
                 for (let i = 0; i < deviceCount; i++) {
                     if (temperatureData[i].label == deviceId) {
@@ -144,6 +153,7 @@ server.on('message', async function (message, remote) {
                     }
                 }
             }
+            // Write activity status to CSV
             if (activity_ended && deviceCount > 0 && lastLine != "Activity Ended") {
                 if (deviceId != undefined) {
                     fs.appendFile(`./data/data_${deviceId}.csv`, "Activity Ended\n", function (err) {
@@ -151,11 +161,6 @@ server.on('message', async function (message, remote) {
                     })
                 }
             }
-            // else if (status == -1 && last_status == 0 && deviceCount > 0) {
-            //     fs.appendFile(`./data/data_${deviceId}.csv`, "Activity Started\n", function (err) {
-            //         if (err) throw err;
-            //     })
-            // }
         }
         last_status = status;
         secondToLastLine = lastLine;
@@ -165,10 +170,12 @@ server.on('message', async function (message, remote) {
     }
 });
 
+// Function to update the leaderboad
 var leaderboard = {};
 function updateLeaderBoard() {
     leaderboard = {};
 
+    // Read all device's data and update the csv
     fs.readdir('./data', (err, files) => {
         if (err) throw err;
         files.forEach(file => {
@@ -181,7 +188,6 @@ function updateLeaderBoard() {
 
             rl.on('line', (row) => {
                 if (row.startsWith("Device ID:")) {
-                    // console.log(row.split(' '));
                     deviceId_lb = row.split(' ')[2];
                     leaderboard[deviceId_lb] = 0;
                 }
@@ -190,7 +196,6 @@ function updateLeaderBoard() {
                     leaderboard[deviceId_lb] += parseInt(steps);
                 }
                 lastRow = row;
-                // console.log(leaderboard);
             })
             rl.on('close', () => {
                 const keyValueArray = Object.entries(leaderboard);
@@ -204,24 +209,11 @@ function updateLeaderBoard() {
     })
 }
 
-// async function resetSendLb() {
-//     setTimeout(() => {
-//         sendLeaderBoard = 0;
-//     }, 1100);
-// }
-// Socket.io connection handling
 io.on('connection', (socket) => {
     console.log('A user connected');
 
-    // Send initial data to the connected client (empty array initially)
     socket.emit('updateData', []);
     socket.emit('updateDataLb', []);
-
-    // socket.on('sendLeaderBoardSignal', () => {
-    //     console.log("Received signal");
-    //     sendLeaderBoard = 1;
-    //     resetSendLb();
-    // })
 
     socket.on('disconnect', () => {
         console.log('User disconnected');
