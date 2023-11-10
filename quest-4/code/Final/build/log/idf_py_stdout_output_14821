@@ -1,0 +1,594 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 10 2023 02:40:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2494ch (149836) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00034974 vaddr=3ffb0000 size=037c8h ( 14280) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=00038144 vaddr=40080000 size=07ed4h ( 32468) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8a088h (565384) map[0m
+[0;32mI (385) esp_image: segment 4: paddr=000ca0b0 vaddr=40087ed4 size=0f370h ( 62320) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (422) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu up.[0m
+[0;32mI (434) cpu_start: Starting app cpu, entry point is 0x400812fc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) cpu_start: Application information:[0m
+[0;32mI (457) cpu_start: Project name:     udp_server[0m
+[0;32mI (462) cpu_start: App version:      45a9a11-dirty[0m
+[0;32mI (468) cpu_start: Compile time:     Nov 10 2023 02:40:48[0m
+[0;32mI (474) cpu_start: ELF file SHA256:  4c836be74...[0m
+[0;32mI (479) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (486) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB78D8 len 00028728 (161 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40097244 len 00008DBC (35 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (580) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (589) app_start: Starting scheduler on CPU0[0m
+[0;32mI (593) app_start: Starting scheduler on CPU1[0m
+[0;32mI (593) main_task: Started on CPU0[0m
+[0;32mI (603) main_task: Calling app_main()[0m
+[0;32mI (603) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (613) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) example: Create timer and operator[0m
+[0;32mI (663) example: Connect timer and operator[0m
+[0;32mI (663) example: Create comparator and generator from the operator[0m
+[0;32mI (673) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (683) example: Set generator action on timer and compare event[0m
+[0;32mI (693) example: Enable and start timer[0m
+[0;32mI (693) example: Create timer and operator[0m
+[0;32mI (703) example: Connect timer and operator[0m
+[0;32mI (703) example: Create comparator and generator from the operator[0m
+[0;32mI (713) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (723) example: Set generator action on timer and compare event[0m
+[0;32mI (723) example: Enable and start timer[0m
+The distance is: 0
+Distance Sensor 2: 31.44 cm
+
+>> I2C scanning ...
+Distance Sensor 1: 1077.95 cm
+The distance is: 0
+Distance Sensor 2: 147.39 cm
+The distance is: 0
+Distance Sensor 1: 12.01 cm
+Distance Sensor 2: 130.20 cm
+The distance is: 0
+Distance Sensor 2: 9.86 cm
+The distance is: 0
+Distance Sensor 1: 21.52 cm
+The distance is: 0
+Distance Sensor 2: 130.34 cm
+The distance is: 0
+Distance Sensor 1: 1378.52 cm
+Distance Sensor 2: 5.32 cm
+The distance is: 0
+Distance Sensor 2: 12.26 cm
+The distance is: 0
+Distance Sensor 1: 1378.52 cm
+The distance is: 0
+Distance Sensor 2: 4.46 cm
+The distance is: 0
+Distance Sensor 2: 5.64 cm
+Distance Sensor 1: 1378.29 cm
+The distance is: 0
+Distance Sensor 2: 4.01 cm
+The distance is: 0
+Distance Sensor 1: 27.17 cm
+The distance is: 0
+Distance Sensor 2: 12.57 cm
+The distance is: 0
+Distance Sensor 2: 4.94 cm
+Distance Sensor 1: 32.04 cm
+The distance is: 0
+Distance Sensor 2: 6.09 cm
+The distance is: 0
+Distance Sensor 1: 469.72 cm
+Distance Sensor 2: 6.19 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 6.31 cm
+Distance Sensor 1: 470.36 cm
+The distance is: 0
+Distance Sensor 2: 4.66 cm
+The distance is: 0
+Distance Sensor 2: 6.98 cm
+Distance Sensor 1: 1119.36 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 5.49 cm
+Distance Sensor 1: 1378.67 cm
+The distance is: 0
+Distance Sensor 2: 15.25 cm
+The distance is: 0
+Distance Sensor 2: 12.21 cm
+The distance is: 0
+Distance Sensor 1: 1378.65 cm
+The distance is: 0
+Distance Sensor 2: 9.71 cm
+The distance is: 0
+Distance Sensor 1: 28.95 cm
+Distance Sensor 2: 8.15 cm
+The distance is: 0
+Distance Sensor 2: 9.31 cm
+The distance is: 0
+Distance Sensor 1: 30.68 cm
+Distance Sensor 2: 32.83 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 1: 29.57 cm
+Distance Sensor 2: 32.91 cm
+The distance is: 0
+Distance Sensor 2: 10.08 cm
+The distance is: 0
+Distance Sensor 1: 1378.60 cm
+Distance Sensor 2: 10.00 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 14.87 cm
+Distance Sensor 1: 29.64 cm
+The distance is: 0
+Distance Sensor 2: 54.09 cm
+The distance is: 0
+Distance Sensor 1: 33.63 cm
+Distance Sensor 2: 54.31 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 54.73 cm
+Distance Sensor 1: 27.51 cm
+The distance is: 0
+Distance Sensor 2: 11.94 cm
+The distance is: 0
+Distance Sensor 1: 33.58 cm
+Distance Sensor 2: 17.22 cm
+The distance is: 0
+Distance Sensor 2: 6.43 cm
+The distance is: 0
+Distance Sensor 1: 1378.76 cm
+The distance is: 0
+Distance Sensor 2: 10.22 cm
+The distance is: 0
+Distance Sensor 1: 29.50 cm
+Distance Sensor 2: 149.53 cm
+The distance is: 0
+Distance Sensor 2: 136.87 cm
+The distance is: 0
+Distance Sensor 1: 30.18 cm
+The distance is: 0
+Distance Sensor 2: 150.75 cm
+The distance is: 0
+Distance Sensor 2: 130.25 cm
+Distance Sensor 1: 29.09 cm
+The distance is: 0
+Distance Sensor 2: 140.32 cm
+The distance is: 0
+Distance Sensor 1: 30.54 cm
+The distance is: 0
+Distance Sensor 2: 137.22 cm
+The distance is: 0
+Distance Sensor 2: 137.75 cm
+Distance Sensor 1: 27.97 cm
+The distance is: 0
+Distance Sensor 2: 137.90 cm
+The distance is: 0
+Distance Sensor 1: 28.61 cm
+Distance Sensor 2: 140.49 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 141.62 cm
+Distance Sensor 1: 37.51 cm
+The distance is: 0
+Distance Sensor 2: 140.15 cm
+The distance is: 0
+Distance Sensor 1: 28.06 cm
+Distance Sensor 2: 138.74 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 144.81 cm
+Distance Sensor 1: 31.23 cm
+The distance is: 0
+Distance Sensor 2: 150.17 cm
+The distance is: 0
+Distance Sensor 1: 28.83 cm
+Distance Sensor 2: 148.52 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 149.51 cm
+Distance Sensor 1: 24.27 cm
+The distance is: 0
+Distance Sensor 2: 148.23 cm
+The distance is: 0
+Distance Sensor 1: 28.67 cm
+Distance Sensor 2: 470.25 cm
+The distance is: 0
+Distance Sensor 2: 9.76 cm
+The distance is: 0
+Distance Sensor 1: 29.84 cm
+The distance is: 0
+Distance Sensor 2: 130.36 cm
+The distance is: 0
+Distance Sensor 1: 43.42 cm
+Distance Sensor 2: 12.02 cm
+The distance is: 0
+Distance Sensor 2: 130.72 cm
+The distance is: 0
+Distance Sensor 1: 47.01 cm
+The distance is: 0
+Distance Sensor 2: 50.54 cm
+The distance is: 0
+Distance Sensor 1: 100.70 cm
+Distance Sensor 2: 47.44 cm
+The distance is: 0
+Distance Sensor 2: 10.27 cm
+The distance is: 0
+Distance Sensor 1: 24.06 cm
+The distance is: 0
+Distance Sensor 2: 21.30 cm
+The distance is: 0
+Distance Sensor 2: 149.45 cm
+Distance Sensor 1: 1378.71 cm
+The distance is: 0
+Distance Sensor 2: 139.58 cm
+The distance is: 0
+Distance Sensor 1: 1378.81 cm
+Distance Sensor 2: 140.75 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 144.97 cm
+Distance Sensor 1: 1378.79 cm
+The distance is: 0
+Distance Sensor 2: 32.02 cm
+The distance is: 0
+Distance Sensor 2: 129.84 cm
+Distance Sensor 1: 49.15 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 10.00 cm
+Distance Sensor 1: 51.79 cm
+The distance is: 0
+Distance Sensor 2: 129.71 cm
+The distance is: 0
+Distance Sensor 2: 144.01 cm
+Distance Sensor 1: 48.17 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 145.81 cm
+Distance Sensor 1: 47.69 cm
+The distance is: 0
+Distance Sensor 2: 150.89 cm
+The distance is: 0
+Distance Sensor 2: 130.67 cm
+The distance is: 0
+Distance Sensor 1: 1377.97 cm
+Distance Sensor 2: 10.75 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 1: 50.27 cm
+Distance Sensor 2: 130.27 cm
+The distance is: 0
+Distance Sensor 2: 153.08 cm
+The distance is: 0
+Distance Sensor 1: 1378.64 cm
+Distance Sensor 2: 152.74 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 153.25 cm
+Distance Sensor 1: 48.95 cm
+The distance is: 0
+Distance Sensor 2: 152.88 cm
+The distance is: 0
+Distance Sensor 1: 48.47 cm
+Distance Sensor 2: 152.57 cm
+The distance is: 0
+The distance is: 0
+Distance Sensor 2: 153.12 cm
+Distance Sensor 1: 47.99 cm
+The distance is: 0
+Distance Sensor 2: 149.14 cm
+The distance is: 0
+Distance Sensor 1: 47.16 cm
+Distance Sensor 2: 149.45 cm
+The distance is: 0
+Distance Sensor 2: 148.45 cm
+The distance is: 0
+Distance Sensor 1: 47.69 cm
+The distance is: 0
+Distance Sensor 2: 148.76 cm
+The distance is: 0
+Distance Sensor 1: 47.68 cm
+Distance Sensor 2: 148.45 cm
+The distance is: 0
+Distance Sensor 2: 144.69 cm
+The distance is: 0
+Distance Sensor 1: 30.27 cm
+The distance is: 0
+Distance Sensor 2: 144.49 cm
+- No I2C devices found!
+[0;32mI (57393) example_connect: Start example_connect.[0m
+I (57403) wifi:wifi driver task: 3ffc661c, prio:23, stack:6656, core=0
+I (57423) wifi:wifi firmware version: 4fcdbd6
+I (57423) wifi:wifi certification version: v7.0
+I (57423) wifi:config NVS flash: enabled
+I (57423) wifi:config nano formating: disabled
+I (57423) wifi:Init data frame dynamic rx buffer num: 32
+I (57433) wifi:Init static rx mgmt buffer num: 5
+I (57433) wifi:Init management short buffer num: 32
+I (57443) wifi:Init dynamic tx buffer num: 32
+I (57443) wifi:Init static rx buffer size: 1600
+I (57453) wifi:Init static rx buffer num: 10
+I (57453) wifi:Init dynamic rx buffer num: 32
+[0;32mI (57463) wifi_init: rx ba win: 6[0m
+[0;32mI (57463) wifi_init: tcpip mbox: 32[0m
+[0;32mI (57463) wifi_init: udp mbox: 6[0m
+[0;32mI (57473) wifi_init: tcp mbox: 6[0m
+[0;32mI (57473) wifi_init: tcp tx win: 5744[0m
+[0;32mI (57483) wifi_init: tcp rx win: 5744[0m
+[0;32mI (57483) wifi_init: tcp mss: 1440[0m
+[0;32mI (57483) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (57493) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (57503) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (57583) wifi:mode : sta (0c:dc:7e:cc:59:28)
+I (57583) wifi:enable tsf
+[0;32mI (57593) example_connect: Connecting to Group_2...[0m
+[0;32mI (57593) example_connect: Waiting for IP(s)[0m
+The distance is: 0
+Distance Sensor 1: 28.90 cm
+Distance Sensor 2: 134.11 cm
+The distance is: 0
+Distance Sensor 2: 134.04 cm
+Guru Meditation Error: Core  0 panic'ed (Interrupt wdt timeout on CPU0). 
+
+Core  0 register dump:
+PC      : 0x40083b7c  PS      : 0x00050034  A0      : 0x40083524  A1      : 0x3ffb1bd0  
+A2      : 0x3ffbf504  A3      : 0x00000000  A4      : 0x00000000  A5      : 0x4008d2a2  
+A6      : 0x00000901  A7      : 0x00000001  A8      : 0x00000001  A9      : 0x3ff53000  
+A10     : 0x00013ffc  A11     : 0x00000001  A12     : 0x8008d21e  A13     : 0x3ffc1710  
+A14     : 0x00000003  A15     : 0x00060d23  SAR     : 0x00000018  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0x00000000  
+Core  0 was running in ISR context:
+EPC1    : 0x400d3973  EPC2    : 0x00000000  EPC3    : 0x00000000  EPC4    : 0x40083b7c
+
+
+Backtrace: 0x40083b79:0x3ffb1bd0 0x40083521:0x3ffb1c10 0x40083a14:0x3ffc1740 0x400dc17d:0x3ffc1770 0x400d7cb8:0x3ffc17b0 0x400d7d59:0x3ffc17e0 0x4008ce79:0x3ffc1800
+
+
+Core  1 register dump:
+PC      : 0x400884de  PS      : 0x00060634  A0      : 0x800d380a  A1      : 0x3ffba7b0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3ffaf960  A5      : 0x3ffaf940  
+A6      : 0x4008569c  A7      : 0x00000001  A8      : 0x800df74e  A9      : 0x3ffba770  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x8008d21e  A13     : 0x3ffba6c0  
+A14     : 0x00000003  A15     : 0x00060023  SAR     : 0x00000000  EXCCAUSE: 0x00000005  
+EXCVADDR: 0x00000000  LBEG    : 0x00000000  LEND    : 0x00000000  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x400884db:0x3ffba7b0 0x400d3807:0x3ffba7d0 0x4008b33d:0x3ffba7f0 0x4008ce79:0x3ffba810
+
+
+
+
+ELF file SHA256: 4c836be74
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 10 2023 02:40:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2494ch (149836) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=00034974 vaddr=3ffb0000 size=037c8h ( 14280) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=00038144 vaddr=40080000 size=07ed4h ( 32468) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8a088h (565384) map[0m
+[0;32mI (384) esp_image: segment 4: paddr=000ca0b0 vaddr=40087ed4 size=0f370h ( 62320) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (422) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu up.[0m
+[0;32mI (434) cpu_start: Starting app cpu, entry point is 0x400812fc[0m
+[0;32mI (422) cpu_start: App cpu up.[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) cpu_start: Application information:[0m
+[0;32mI (457) cpu_start: Project name:     udp_server[0m
+[0;32mI (462) cpu_start: App version:      45a9a11-dirty[0m
+[0;32mI (468) cpu_start: Compile time:     Nov 10 2023 02:40:48[0m
+[0;32mI (474) cpu_start: ELF file SHA256:  4c836be74...[0m
+[0;32mI (479) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (486) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB78D8 len 00028728 (161 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40097244 len 00008DBC (35 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (580) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (589) app_start: Starting scheduler on CPU0[0m
+[0;32mI (593) app_start: Starting scheduler on CPU1[0m
+[0;32mI (593) main_task: Started on CPU0[0m
+[0;32mI (603) main_task: Calling app_main()[0m
+[0;32mI (603) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (613) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) example: Create timer and operator[0m
+[0;32mI (663) example: Connect timer and operator[0m
+[0;32mI (663) example: Create comparator and generator from the operator[0m
+[0;32mI (673) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (683) example: Set generator action on timer and compare event[0m
+[0;32mI (693) example: Enable and start timer[0m
+[0;32mI (693) example: Create timer and operator[0m
+[0;32mI (703) example: Connect timer and operator[0m
+[0;32mI (703) example: Create comparator and generator from the operator[0m
+[0;32mI (713) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (723) example: Set generator action on timer and compare event[0m
+[0;32mI (723) example: Enable and start timer[0m
+The distance is: 0
+Distance Sensor 1: 26.65 cm
+
+>> I2C scanning ...
+Distance Sensor 2: 136.67 cm
+The distance is: 0
+Distance Sensor 2: 131.49 cm
+The distance is: 0
+Distance Sensor 1: 29.57 cm
+Distance Sensor 2: 12.28 cm
+The distance is: 0
+Distance Sensor 2: 134.51 cm
+The distance is: 0
+Distance Sensor 1: 30.39 cm
+- Device found at address: 0x62
+- Device found at address: 0x70
+[0;32mI (2783) example_connect: Start example_connect.[0m
+I (2793) wifi:wifi driver task: 3ffc6628, prio:23, stack:6656, core=0
+I (2813) wifi:wifi firmware version: 4fcdbd6
+I (2813) wifi:wifi certification version: v7.0
+I (2813) wifi:config NVS flash: enabled
+I (2813) wifi:config nano formating: disabled
+I (2813) wifi:Init data frame dynamic rx buffer num: 32
+I (2823) wifi:Init static rx mgmt buffer num: 5
+I (2823) wifi:Init management short buffer num: 32
+I (2833) wifi:Init dynamic tx buffer num: 32
+I (2833) wifi:Init static rx buffer size: 1600
+I (2843) wifi:Init static rx buffer num: 10
+I (284) wifi:Init dynamic rx buffer num: 32
+[0;32mI (2843) wifi_init: rx ba win: 6[0m
+[0;32mI (2853) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2853) wifi_init: udp mbox: 6[0m
+[0;32mI (2863) wifi_init: tcp mbox: 6[0m
+[0;32mI (2863) wifi_init: tcp tx win: 5744[0m
+[0;32mI (2863) wifi_init: tcp rx win: 5744[0m
+[0;32mI (2873) wifi_init: tcp mss: 1440[0m
+[0;32mI (2873) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2883) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2883) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (2973) wifi:mode : sta (0c:dc:7e:cc:59:28)
+I (2973) wifi:enable tsf
+[0;32mI (2983) example_connect: Connecting to Group_2...[0m
+[0;32mI (2983) example_connect: Waiting for IP(s)[0m
+The distance is: 22
+Distance Sensor 2: 28.42 cm
+The distance is: 21
+Distance Sensor 1: 29.70 cm
+Distance Sensor 2: 129.36 cm
+The distance is: 21
+Distance Sensor 2: 132.02 cm
+The distance is: 21
+Distance Sensor 1: 43.54 cm
+The distance is: 46
+Distance Sensor 2: 474.54 cm
+I (5403) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (5643) wifi:state: init -> auth (b0)
+I (5653) wifi:state: auth -> assoc (0)
+I (5653) wifi:state: assoc -> run (10)
+I (5663) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+I (5703) wifi:connected with Group_2, aid = 2, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (5703) wifi:security: WPA2-PSK, phy: bgn, rssi: -53
+I (5703) wifi:pm start, type: 1
+
+I (5713) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+The distance is: 53
+Distance Sensor 1: 807.90 cm
+Distance Sensor 2: 18.71 cm
+The distance is: 52
+Distance Sensor 2: 135.59 cm
+The distance is: 52
+[0;32mI (6783) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+Distance Sensor 1: 1378.04 cm
+The distance is: 52
+Distance Sensor 2: 19.95 cm
+The distance is: 52
+Distance Sensor 1: 23.79 cm
+Distance Sensor 2: 132.93 cm
+[0;32mI (8213) esp_netif_handlers: example_netif_sta ip: 192.168.1.27, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (8213) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.27[0m
+[0;32mI (8223) example_common: Connected to example_netif_sta[0m
+[0;32mI (8223) example_common: - IPv4 address: 192.168.1.27,[0m
+The distance is: 52
+[0;32mI (8233) example_common: - IPv6 address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (8243) example: Socket created[0m
+[0;32mI (8253) example: Socket bound, port 12345[0m
+[0;32mI (8253) example: Waiting for data[0m
+[0;32mI (8253) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+>> Test Alphanumeric Display: 
+[0;32mI (8273) main_task: Returned from app_main()[0m
+- oscillator: ok 
+Distance Sensor 2: 22.84 cm
+- blink: off 
+The distance is: 53
+Distance Sensor 1: 29.84 cm
+- brightness: max 
+Distance Sensor 2: 126.88 cm
+The distance is: 52
+The distance is: 52
+Distance Sensor 1: 31.50 cm
+Distance Sensor 2: 9.14 cm
+The distance is: 52
+Distance Sensor 2: 126.72 cm
+The distance is: 52
+Distance Sensor 1: 23.02 cm

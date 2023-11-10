@@ -1,0 +1,110 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build/bootloader/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build/bootloader/bootloader.bin
+Bootloader binary size 0x6910 bytes. 0x6f0 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/udp_server.c.obj
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:7:
+/Users/noahrobitshek/esp/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:46:
+/Users/noahrobitshek/esp/esp-idf/components/driver/deprecated/driver/periph_ctrl.h:7:2: warning: #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions. [-Wcpp]
+    7 | #warning driver/periph_ctrl.h header is no longer used, and will be removed in future versions.
+      |  ^~~~~~~
+In file included from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:47:
+/Users/noahrobitshek/esp/esp-idf/components/driver/deprecated/driver/timer.h:16:2: warning: #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h" [-Wcpp]
+   16 | #warning "legacy timer group driver is deprecated, please migrate to driver/gptimer.h"
+      |  ^~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c: In function 'timerTask':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:690:15: warning: unused variable 'inchesPerSecond' [-Wunused-variable]
+  690 |         float inchesPerSecond = rotationPerSec * (7);
+      |               ^~~~~~~~~~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c: In function 'adc_task':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:700:14: warning: variable 'color' set but not used [-Wunused-but-set-variable]
+  700 |     uint16_t color;
+      |              ^~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c: In function 'test_alpha_display':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:365:58: warning: iteration 3 invokes undefined behavior [-Waggressive-loop-optimizations]
+  365 |                 i2c_master_write_byte(cmd4, displaybuffer[i] & 0xFF, ACK_CHECK_EN);
+      |                                             ~~~~~~~~~~~~~^~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:363:35: note: within this loop
+  363 |             for (uint8_t i = 0; i < 4; i++)
+      |                                 ~~^~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable udp_server.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev2
+Creating esp32 image...
+Merged 26 ELF sections
+Successfully created esp32 image.
+Generated /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build/udp_server.bin
+[9/10] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build/partition_table/partition-table.bin /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build/udp_server.bin
+udp_server.bin binary size 0xc95c0 bytes. Smallest app partition is 0x100000 bytes. 0x36a40 bytes (21%) free.
+[9/10] cd /Users/noahrobitshek/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.27.4/bin/cmake -D IDF_PATH=/Users/noahrobitshek/esp/esp-idf -D "SERIAL_TOOL=/Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python;;/Users/noahrobitshek/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D "WORKING_DIRECTORY=/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build" -P /Users/noahrobitshek/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/cu.usbserial-02650595 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 udp_server.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev2
+Serial port /dev/cu.usbserial-02650595
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 0c:dc:7e:cc:59:28
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26896 bytes to 16889...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768a... (100 %)
+Wrote 26896 bytes (16889 compressed) at 0x00001000 in 0.8 seconds (effective 265.2 kbit/s)...
+Hash of data verified.
+Compressed 824768 bytes to 526454...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cf06... (6 %)
+Writing at 0x000277f8... (9 %)
+Writing at 0x0002c894... (12 %)
+Writing at 0x00034da1... (15 %)
+Writing at 0x0003ca6c... (18 %)
+Writing at 0x000426e5... (21 %)
+Writing at 0x00047d0f... (24 %)
+Writing at 0x0004ddc6... (27 %)
+Writing at 0x000539b4... (30 %)
+Writing at 0x00058f2a... (33 %)
+Writing at 0x0005e723... (36 %)
+Writing at 0x00063e68... (39 %)
+Writing at 0x0006975b... (42 %)
+Writing at 0x0006f64f... (45 %)
+Writing at 0x00074d7c... (48 %)
+Writing at 0x00079fdf... (51 %)
+Writing at 0x0007f57d... (54 %)
+Writing at 0x000847a9... (57 %)
+Writing at 0x00089f23... (60 %)
+Writing at 0x0008f5b2... (63 %)
+Writing at 0x00095231... (66 %)
+Writing at 0x0009a8e7... (69 %)
+Writing at 0x000a027b... (72 %)
+Writing at 0x000a5b75... (75 %)
+Writing at 0x000ab833... (78 %)
+Writing at 0x000b1263... (81 %)
+Writing at 0x000b7a50... (84 %)
+Writing at 0x000c1fdd... (87 %)
+Writing at 0x000c7c3d... (90 %)
+Writing at 0x000cd9ae... (93 %)
+Writing at 0x000d33da... (96 %)
+Writing at 0x000d8776... (100 %)
+Wrote 824768 bytes (526454 compressed) at 0x00010000 in 13.7 seconds (effective 479.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 282.5 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

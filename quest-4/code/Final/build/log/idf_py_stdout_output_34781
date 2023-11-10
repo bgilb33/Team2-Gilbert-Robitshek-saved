@@ -1,0 +1,372 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 10 2023 02:40:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a0ch (150028) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00034a34 vaddr=3ffb0000 size=037c8h ( 14280) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=00038204 vaddr=40080000 size=07e14h ( 32276) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8a144h (565572) map[0m
+[0;32mI (385) esp_image: segment 4: paddr=000ca16c vaddr=40087e14 size=0f430h ( 62512) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (422) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu up.[0m
+[0;32mI (434) cpu_start: Starting app cpu, entry point is 0x400812fc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) cpu_start: Application information:[0m
+[0;32mI (457) cpu_start: Project name:     udp_server[0m
+[0;32mI (462) cpu_start: App version:      45a9a11-dirty[0m
+[0;32mI (468) cpu_start: Compile time:     Nov 10 2023 02:40:48[0m
+[0;32mI (474) cpu_start: ELF file SHA256:  28edfe183...[0m
+[0;32mI (479) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (486) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB78D8 len 00028728 (161 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40097244 len 00008DBC (35 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (580) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (589) app_start: Starting scheduler on CPU0[0m
+[0;32mI (593) app_start: Starting scheduler on CPU1[0m
+[0;32mI (593) main_task: Started on CPU0[0m
+[0;32mI (603) main_task: Calling app_main()[0m
+[0;32mI (603) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (613) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) example: Create timer and operator[0m
+[0;32mI (663) example: Connect timer and operator[0m
+[0;32mI (663) example: Create comparator and generator from the operator[0m
+[0;32mI (673) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (683) example: Set generator action on timer and compare event[0m
+[0;32mI (693) example: Enable and start timer[0m
+[0;32mI (693) example: Create timer and operator[0m
+[0;32mI (703) example: Connect timer and operator[0m
+[0;32mI (703) example: Create comparator and generator from the operator[0m
+[0;32mI (713) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (723) example: Set generator action on timer and compare event[0m
+[0;32mI (723) example: Enable and start timer[0m
+The distance is: 0
+Wheel speed = 0 cm per second
+>> I2C scanning ...
+Distance Sensor 2: 117.49 cm
+Distance Sensor 1: 197.07 cm
+- Device found at address: 0x62
+- Device found at address: 0x70
+[0;32mI (803) example_connect: Start example_connect.[0m
+I (813) wifi:wifi driver task: 3ffc6630, prio:23, stack:6656, core=0
+I (833) wifi:wifi firmware version: 4fcdbd6
+I (833) wifi:wifi certification version: v7.0
+I (833) wifi:config NVS flash: enabled
+I (833) wifi:config nano formating: disabled
+I (833) wifi:Init data frame dynamic rx buffer num: 32
+I (843) wifi:Init static rx mgmt buffer num: 5
+I (843) wifi:Init management short buffer num: 32
+I (853) wifi:Init dynamic tx buffer num: 32
+I (853) wifi:Init static rx buffer size: 1600
+I (863) wifi:Init static rx buffer num: 10
+I (863) wifi:Init dynamic rx buffer num: 32
+[0;32mI (863) wifi_init: rx ba win: 6[0m
+[0;32mI (873) wifi_init: tcpip mbox: 32[0m
+[0;32mI (873) wifi_init: udp mbox: 6[0m
+[0;32mI (873) wifi_init: tcp mbox: 6[0m
+[0;32mI (883) wifi_init: tcp tx win: 5744[0m
+[0;32mI (883) wifi_init: tcp rx win: 5744[0m
+[0;32mI (893) wifi_init: tcp mss: 1440[0m
+[0;32mI (893) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (903) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (903) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (993) wifi:mode : sta (0c:dc:7e:cc:59:28)
+I (993) wifi:enable tsf
+[0;32mI (993) example_connect: Connecting to Group_2...[0m
+[0;32mI (1003) example_connect: Waiting for IP(s)[0m
+The distance is: 52
+Wheel speed = 0 cm per secondDistance Sensor 2: 36.10 cm
+The distance is: 52
+Wheel speed = 0 cm per secondDistance Sensor 1: 289.05 cm
+Distance Sensor 2: 302.42 cm
+The distance is: 52
+Wheel speed = 0 cm per secondDistance Sensor 2: 145.19 cm
+The distance is: 53
+Wheel speed = 0 cm per secondDistance Sensor 1: 15.52 cm
+The distance is: 48
+Wheel speed = 0 cm per secondDistance Sensor 2: 812.69 cm
+I (3413) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (3663) wifi:state: init -> auth (b0)
+I (3703) wifi:state: auth -> assoc (0)
+I (3713) wifi:state: assoc -> run (10)
+I (3713) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+The distance is: 47
+Wheel speed = 0 cm per secondI (3743) wifi:connected with Group_2, aid = 2, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (3743) wifi:security: WPA2-PSK, phy: bgn, rssi: -74
+I (3743) wifi:pm start, type: 1
+
+Distance Sensor 1: 15.18 cm
+I (3783) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Distance Sensor 2: 301.96 cm
+The distance is: 50
+Wheel speed = 0 cm per secondDistance Sensor 2: 301.05 cm
+The distance is: 49
+Wheel speed = 0 cm per secondDistance Sensor 1: 12.01 cm
+[0;32mI (4803) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[m
+The distance is: 51
+Wheel speed = 0 cm per secondDistance Sensor 2: 298.58 cm
+The distance is: 53
+Wheel speed = 0 cm per secondDistance Sensor 1: 62.82 cm
+Distance Sensor 2: 116.76 cm
+The distance is: 55
+Wheel speed = 0 cm per second[0;32mI (6253) esp_netif_handlers: example_netif_sta ip: 192.168.1.27, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (6253) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.27[0m
+[0;32mI (6263) example_common: Connected to example_netif_sta[0m
+[0;32mI (6263) example_common: - IPv4 address: 192.168.1.27,[0m
+[0;32mI (6273) example_common: - IPv6 address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6283) example: Socket created[0m
+[0;32mI (6293) example: Socket bound, port 12345[0m
+[0;32mI (6293) example: Waiting for data[0m
+[0;32mI (6293) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+>> Test Alphanumeric Display: 
+[0;32mI (6313) main_task: Returned from app_main()[0m
+- oscillator: ok 
+Distance Sensor 2: 111.78 cm
+- blink: off 
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 112.56 cm
+- brightness: max 
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 2: 113.22 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 1: 10.68 cm
+Distance Sensor 2: 111.11 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 2: 113.16 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 113.05 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 2: 111.94 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 116.64 cm
+Distance Sensor 2: 637.91 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 2: 114.77 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 110.17 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 2: 111.42 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 1: 4.13 cm
+Distance Sensor 2: 113.76 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 2: 112.01 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 1: 113.07 cm
+Distance Sensor 2: 113.34 cm
+The distance is: 64
+Wheel speed = 0 cm per secondThe distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 111.87 cm
+Distance Sensor 2: 111.56 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 2: 114.36 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 111.03 cm
+Distance Sensor 2: 110.69 cm
+The distance is: 65
+Wheel speed = 0 cm per secondThe distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 1: 112.64 cm
+Distance Sensor 2: 114.56 cm
+The distance is: 65
+Wheel speed = 0 cm per second[0;31mE (16293) example: recvfrom failed: errno 11[0m
+[0;31mE (16293) example: Shutting down socket and restarting...[0m
+[0;32mI (16293) example: Socket created[0m
+[0;32mI (16293) example: Socket bound, port 12345[0m
+[0;32mI (16303) example: Waiting for data[0m
+Distance Sensor 2: 2.47 cm
+The distance is: 64
+Wheel speed = 0 cm per secondDistance Sensor 1: 112.01 cm
+Distance Sensor 2: 113.93 cm
+The distance is: 65
+Wheel speed = 0 cm per secondThe distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 2: 111.78 cm
+Distance Sensor 1: 104.86 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 2: 296.52 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 112.98 cm
+Distance Sensor 2: 113.12 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 2: 111.22 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 112.64 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 2: 296.39 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 1: 111.87 cm
+[0;32mI (20903) example: Received 1 bytes from 192.168.1.7:[0m
+[0;32mI (20903) example: f[0m
+[0;32mI (20903) example: Waiting for data[0m
+Distance Sensor 2: 114.03 cm
+The distance is: 65
+Wheel speed = 0 cm per secondDistance Sensor 2: 111.94 cm
+The distance is: 64
+Wheel speed = 8 cm per secondDistance Sensor 1: 111.32 cm
+The distance is: 48
+Wheel speed = 8 cm per secondDistance Sensor 2: 110.65 cm
+The distance is: 24
+Wheel speed = 8 cm per secondDistance Sensor 1: 101.63 cm
+Distance Sensor 2: 15.59 cm
+The distance is: 7
+Wheel speed = 8 cm per secondDistance Sensor 2: 637.29 cm
+The distance is: 7
+Wheel speed = 8 cm per secondDistance Sensor 1: 96.07 cm
+The distance is: 8
+Wheel speed = 8 cm per secondDistance Sensor 2: 294.81 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.19 cm
+Distance Sensor 2: 298.27 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 206.55 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.21 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 204.48 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.78 cm
+Distance Sensor 2: 202.90 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 201.58 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.85 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 2: 202.06 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.86 cm
+Distance Sensor 2: 201.68 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 207.46 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.86 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 2: 202.87 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.62 cm
+[0;31mE (30903) example: recvfrom failed: errno 11[0m
+[0;31mE (30903) example: Shutting down socket and restarting...[0m
+[0;32mI (30903) example: Socket created[0m
+[0;32mI (30903) example: Socket bound, port 12345[0m
+[0;32mI (30903) example: Waiting for data[0m
+Distance Sensor 2: 272.22 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 206.06 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.79 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 202.13 cm
+The distance is: 9
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.69 cm
+Distance Sensor 2: 296.64 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 122.13 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.00 cm
+Distance Sensor 2: 100.02 cm
+The distance is: 7
+Wheel speed = 0 cm per secondThe distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.21 cm
+Distance Sensor 2: 99.74 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 101.41 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.69 cm
+Distance Sensor 2: 101.00 cm
+The distance is: 8
+Wheel speed = 0 cm per secondThe distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.19 cm
+Distance Sensor 2: 102.06 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 118.82 cm
+The distance is: 9
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.22 cm
+Distance Sensor 2: 99.33 cm
+The distance is: 8
+Wheel speed = 0 cm per secondThe distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 193.01 cm
+Distance Sensor 1: 96.86 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 2: 194.76 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.62 cm
+Distance Sensor 2: 199.95 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 114.20 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.16 cm
+[0;31mE (40913) example: recvfrom failed: errno 11[0m
+[0;31mE (40913) example: Shutting down socket and restarting...[0m
+[0;32mI (40913) example: Socket created[0m
+[0;32mI (40913) example: Socket bound, port 12345[0m
+[0;32mI (40913) example: Waiting for data[0m
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 99.68 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.19 cm
+Distance Sensor 2: 100.60 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 101.41 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.55 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 106.88 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.93 cm
+Distance Sensor 2: 99.88 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 2: 1027.87 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.97 cm
+The distance is: 9
+Wheel speed = 0 cm per secondDistance Sensor 2: 101.32 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.86 cm
+Distance Sensor 2: 100.46 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 100.04 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 1: 97.62 cm
+The distance is: 8
+Wheel speed = 0 cm per secondDistance Sensor 2: 203.50 cm
+The distance is: 7
+Wheel speed = 0 cm per secondDistance Sensor 1: 96.85 cm
+Distance Sensor 2: 119.57 cm

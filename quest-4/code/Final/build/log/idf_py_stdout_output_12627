@@ -1,0 +1,1505 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 10 2023 02:40:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24644h (149060) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=0003466c vaddr=3ffb0000 size=037c8h ( 14280) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=00037e3c vaddr=40080000 size=081dch ( 33244) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=89724h (562980) map[0m
+[0;32mI (384) esp_image: segment 4: paddr=000c974c vaddr=400881dc size=0eebch ( 61116) load[0m
+[0;32mI (421) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (421) boot: Disabling RNG early entropy source...[0m
+[0;32mI (432) cpu_start: Multicore app[0m
+[0;32mI (433) cpu_start: Pro cpu up.[0m
+[0;32mI (433) cpu_start: Starting app cpu, entry point is 0x400812f4[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (451) cpu_start: Pro cpu start user code[0m
+[0;32mI (451) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) cpu_start: Application information:[0m
+[0;32mI (456) cpu_start: Project name:     udp_server[0m
+[0;32mI (461) cpu_start: App version:      45a9a11-dirty[0m
+[0;32mI (466) cpu_start: Compile time:     Nov 10 2023 02:40:48[0m
+[0;32mI (472) cpu_start: ELF file SHA256:  38ced2464...[0m
+[0;32mI (478) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (485) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (489) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (494) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (499) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (506) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (512) heap_init: At 3FFB78D0 len 00028730 (161 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (525) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 40097098 len 00008F68 (35 KiB): IRAM[0m
+[0;32mI (539) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (559) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (570) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (578) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (587) app_start: Starting scheduler on CPU0[0m
+[0;32mI (592) app_start: Starting scheduler on CPU1[0m
+[0;32mI (592) main_task: Started on CPU0[0m
+[0;32mI (602) main_task: Calling app_main()[0m
+[0;32mI (602) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (612) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (622) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (632) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (642) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (642) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (652) example: Create timer and operator[0m
+[0;32mI (662) example: Connect timer and operator[0m
+[0;32mI (662) example: Create comparator and generator from the operator[0m
+[0;32mI (672) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (682) example: Set generator action on timer and compare event[0m
+[0;32mI (692) example: Enable and start timer[0m
+[0;32mI (692) example: Create timer and operator[0m
+[0;32mI (702) example: Connect timer and operator[0m
+[0;32mI (702) example: Create comparator and generator from the operator[0m
+[0;32mI (712) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (722) example: Set generator action on timer and compare event[0m
+[0;32mI (722) example: Enable and start timer[0m
+The distance is: 0
+
+>> I2C scanning ...
+Distance Sensor 1: 66.18 cm
+- Device found at address: 0x62
+- Device found at address: 0x70
+Distance Sensor 2: 1025.02 cm
+[0;32mI (832) example_connect: Start example_connect.[0m
+I (842) wifi:wifi driver task: 3ffc6624, prio:23, stack:6656, core=0
+I (862) wifi:wifi firmware version: 4fcdbd6
+I (862) wifi:wifi certification version: v7.0
+I (862) wifi:config NVS flash: enabled
+I (862) wifi:config nano formating: disabled
+I (862) wifi:Init data frame dynamic rx buffer num: 32
+I (872) wifi:Init static rx mgmt buffer num: 5
+I (872) wifi:Init management short buffer num: 32
+I (882) wifi:Init dynamic tx buffer num: 32
+I (882) wifi:Init static rx buffer size: 1600
+I (892) wifi:Init static rx buffer num: 10
+I (892) wifi:Init dynamic rx buffer num: 32
+[0;32mI (892) wifi_init: rx ba win: 6[0m
+[0;32mI (902) wifi_init: tcpip mbox: 32[0m
+[0;32mI (902) wifi_init: udp mbox: 6[0m
+[0;32mI (902) wifi_init: tcp mbox: 6[0m
+[0;32mI (912) wifi_init: tcp tx win: 5744[0m
+[0;32mI (912) wifi_init: tcp rx win: 5744[0m
+[0;32mI (922) wifi_init: tcp mss: 1440[0m
+[0;32mI (922) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (932) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (932) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (1022) wifi:mode : sta (0c:dc:7e:cc:59:28)
+I (1022) wifi:enable tsf
+[0;32mI (1022) example_connect: Connecting to Group_2...[0m
+[0;32mI (1032) example_connect: Waiting for IP(s)[0m
+The distance is: 41
+Distance Sensor 2: 986.61 cm
+The distance is: 40
+Distance Sensor 1: 172.82 cm
+Distance Sensor 2: 117.39 cm
+The distance is: 41
+The distance is: 42
+Distance Sensor 1: 82.13 cm
+Distance Sensor 2: 143.31 cm
+The distance is: 41
+Distance Sensor 2: 50.87 cm
+I (3442) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (3692) wifi:state: init -> auth (b0)
+I (3702) wifi:state: auth -> assoc (0)
+I (3712) wifi:state: assoc -> run (10)
+I (3722) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+The distance is: 41
+I (3742) wifi:connected with Group_2, aid = 2, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (3752) wifi:security: WPA2-PSK, phy: bgn, rssi: -55
+I (3752) wifi:pm start, type: 1
+
+I (3802) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Distance Sensor 1: 1377.97 cm
+Distance Sensor 2: 101.82 cm
+The distance is: 41
+The distance is: 41
+Distance Sensor 2: 105.59 cm
+[0;32mI (4832) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+Distance Sensor 1: 82.61 cm
+The distance is: 40
+Distance Sensor 2: 1027.82 cm
+The distance is: 40
+Distance Sensor 1: 83.74 cm
+Distance Sensor 2: 53.17 cm
+The distance is: 39
+[0;32mI (6252) esp_netif_handlers: example_netif_sta ip: 192.168.1.27, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (6252) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.27[0m
+[0;32mI (6262) example_common: Connected to example_netif_sta[0m
+[0;32mI (6262) example_common: - IPv4 address: 192.168.1.27,[0m
+[0;32mI (6272) example_common: - IPv6 address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6282) example: Socket created[0m
+[0;32mI (6282) example: Socket bound, port 12345[0m
+[0;32mI (6292) example: Waiting for data[0m
+>> Test Alphanumeric Display: 
+[0;31mE (6302) timer_group: timer_pause(121): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6302) timer_group: timer_set_counter_value(98): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6312) timer_group: timer_start(109): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;32mI (6322) main_task: Returned from app_main()[0m
+[0;31mE (6332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+- oscillator: ok 
+[0;31mE (6512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+- blink: off 
+[0;31mE (6712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (6742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 121.70 cm
+[0;31mE (6762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 157.93 cm
+[0;31mE (6862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+- brightness: max 
+[0;31mE (6912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (7242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 1027.68 cm
+[0;31mE (7472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (7742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 81.48 cm
+[0;31mE (7862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (7992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 104.32 cm
+[0;31mE (8122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 39
+[0;31mE (8242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (8742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 131.45 cm
+[0;31mE (8772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 1377.64 cm
+[0;31mE (8942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (8992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (9242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 1027.23 cm
+[0;31mE (9482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (9742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 81.41 cm
+[0;31mE (9942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (9992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 104.55 cm
+[0;31mE (10132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 39
+[0;31mE (10242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (10742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 109.62 cm
+[0;31mE (10782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 83.49 cm
+[0;31mE (10942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (10992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 38
+[0;31mE (11242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 294.47 cm
+[0;31mE (11442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 41
+[0;31mE (11742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (11992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 1377.92 cm
+[0;31mE (12022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 105.83 cm
+[0;31mE (12092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 41
+[0;31mE (12242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 41
+Distance Sensor 2: 95.44 cm
+[0;31mE (12742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (12992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 82.53 cm
+[0;31mE (13022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (13242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 96.69 cm
+[0;31mE (13392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 41
+[0;31mE (13742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (13992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 83.43 cm
+[0;31mE (14022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 462.93 cm
+[0;31mE (14062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 41
+[0;31mE (14242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 6.47 cm
+[0;31mE (14712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (14742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (14992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 800.85 cm
+[0;31mE (15062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 40
+[0;31mE (15242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15332) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 128.09 cm
+[0;31mE (15362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 39
+[0;31mE (15742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (15992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 51.95 cm
+[0;31mE (16012) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16022) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16032) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16042) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16052) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16062) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16072) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 1: 458.45 cm
+[0;31mE (16082) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16092) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16102) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16112) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16122) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16132) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16142) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16152) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16162) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16172) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16182) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16192) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16202) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16212) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16222) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16232) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 41
+[0;31mE (16242) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16252) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16262) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16272) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16282) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16292) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16292) example: recvfrom failed: errno 11[0m
+[0;31mE (16292) example: Shutting down socket and restarting...[0m
+[0;31mE (16302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;32mI (16302) example: Socket created[0m
+[0;31mE (16312) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;32mI (16312) example: Socket bound, port 12345[0m
+[0;31mE (16322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;32mI (16322) example: Waiting for data[0m
+[0;31mE (16342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 87.17 cm
+[0;31mE (16662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16722) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16732) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+The distance is: 41
+[0;31mE (16742) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16752) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16762) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16772) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16782) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16792) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16802) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16812) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16822) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16832) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16842) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16852) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16862) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16872) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16882) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16892) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16902) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16912) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16922) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16932) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16942) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16952) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16962) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16972) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16982) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (16992) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (17002) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+
+***ERROR*** A stack overflow in task button_task has been detected.
+
+
+Backtrace: 0x400818fa:0x3ffd04b0 0x4008a229:0x3ffd04d0 0x4008d0ba:0x3ffd04f0 0x4008b72b:0x3ffd0570 0x4008d1c4:0x3ffd0590 0x4008d176:0xa5a5a5a5 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 38ced2464
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 10 2023 02:40:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24644h (149060) map[0m
+[0;32mI (160) esp_image: segment 1: paddr=0003466c vaddr=3ffb0000 size=037c8h ( 14280) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=00037e3c vaddr=40080000 size=081dch ( 33244) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=89724h (562980) map[0m
+[0;32mI (384) esp_image: segment 4: paddr=000c974c vaddr=400881dc size=0eebch ( 61116) load[0m
+[0;32mI (421) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (421) boot: Disabling RNG early entropy source...[0m
+[0;32mI (432) cpu_start: Multicore app[0m
+[0;32mI (433) cpu_start: Pro cpu up.[0m
+[0;32mI (433) cpu_start: Starting app cpu, entry point is 0x400812f4[0m
+[0;32mI (420) cpu_start: App cpu up.[0m
+[0;32mI (451) cpu_start: Pro cpu start user code[0m
+[0;32mI (451) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (451) cpu_start: Application information:[0m
+[0;32mI (456) cpu_start: Project name:     udp_server[0m
+[0;32mI (461) cpu_start: App version:      45a9a11-dirty[0m
+[0;32mI (466) cpu_start: Compile time:     Nov 10 2023 02:40:48[0m
+[0;32mI (472) cpu_start: ELF file SHA256:  38ced2464...[0m
+[0;32mI (478) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (485) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (489) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (494) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (499) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (506) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (512) heap_init: At 3FFB78D0 len 00028730 (161 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (525) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 40097098 len 00008F68 (35 KiB): IRAM[0m
+[0;32mI (539) spi_flash: detected chip: generic[0m
+[0;32mI (542) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (559) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (570) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (578) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (587) app_start: Starting scheduler on CPU0[0m
+[0;32mI (592) app_start: Starting scheduler on CPU1[0m
+[0;32mI (592) main_task: Started on CPU0[0m
+[0;32mI (602) main_task: Calling app_main()[0m
+[0;32mI (602) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (612) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (622) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (632) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (642) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (642) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (652) example: Create timer and operator[0m
+[0;32mI (662) example: Connect timer and operator[0m
+[0;32mI (662) example: Create comparator and generator from the operator[0m
+[0;32mI (672) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (682) example: Set generator action on timer and compare event[0m
+[0;32mI (692) example: Enable and start timer[0m
+[0;32mI (692) example: Create timer and operator[0m
+[0;32mI (702) example: Connect timer and operator[0m
+[0;32mI (702) example: Create comparator and generator from the operator[0m
+[0;32mI (712) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (722) example: Set generator action on timer and compare event[0m
+[0;32mI (722) example: Enable and start timer[0m
+The distance is: 0
+
+>> I2C scanning ...
+Distance Sensor 1: 195.18 cm
+Distance Sensor 2: 373.41 cm
+- Device found at address: 0x62
+- Device found at address: 0x70
+[0;32mI (822) example_connect: Start example_connect.[0m
+I (832) wifi:wifi driver task: 3ffc6628, prio:23, stack:6656, core=0
+I (852) wifi:wifi firmware version: 4fcdbd6
+I (852) wifi:wifi certification version: v7.0
+I (852) wifi:config NVS flash: enabled
+I (852) wifi:config nano formating: disabled
+I (862) wifi:Init data frame dynamic rx buffer num: 32
+I (862) wifi:Init static rx mgmt buffer num: 5
+I (872) wifi:Init management short buffer num: 32
+I (872) wifi:Init dynamic tx buffer num: 32
+I (872) wifi:Init static rx buffer size: 1600
+I (882) wifi:Init static rx buffer num: 10
+I (882) wifi:Init dynamic rx buffer num: 32
+[0;32mI (892) wifi_init: rx ba win: 6[0m
+[0;32mI (892) wifi_init: tcpip mbox: 32[0m
+[0;32mI (892) wifi_init: udp mbox: 6[0m
+[0;32mI (902) wifi_init: tcp mbox: 6[0m
+[0;32mI (902) wifi_init: tcp tx win: 5744[0m
+[0;32mI (902) wifi_init: tcp rx win: 5744[0m
+[0;32mI (912) wifi_init: tcp mss: 1440[0m
+[0;32mI (912) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (922) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (922) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (1012) wifi:mode : sta (0c:dc:7e:cc:59:28)
+I (1012) wifi:enable tsf
+[0;32mI (1022) example_connect: Connecting to Group_2...[0m
+[0;32mI (1022) example_connect: Waiting for IP(s)[0m
+The distance is: 40
+Distance Sensor 2: 109.86 cm
+The distance is: 39
+Distance Sensor 1: 50.68 cm
+Distance Sensor 2: 132.16 cm
+The distance is: 38
+Distance Sensor 2: 52.65 cm
+The distance is: 38
+Distance Sensor 1: 50.22 cm
+The distance is: 38
+Distance Sensor 2: 85.61 cm
+I (3442) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (3682) wifi:state: init -> auth (b0)
+I (3692) wifi:state: auth -> assoc (0)
+I (3702) wifi:state: assoc -> run (10)
+I (3712) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+The distance is: 39
+I (3732) wifi:connected with Group_2, aid = 2, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (3732) wifi:security: WPA2-PSK, phy: bgn, rssi: -52
+I (3732) wifi:pm start, type: 1
+
+Distance Sensor 1: 74.52 cm
+I (3762) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+Distance Sensor 2: 51.83 cm
+The distance is: 39
+Distance Sensor 2: 126.72 cm
+The distance is: 40
+Distance Sensor 1: 45.12 cm
+[0;32mI (4822) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+The distance is: 39
+Distance Sensor 2: 50.52 cm
+The distance is: 40
+Distance Sensor 1: 79.20 cm
+Distance Sensor 2: 105.01 cm
+The distance is: 39
+[0;32mI (6242) esp_netif_handlers: example_netif_sta ip: 192.168.1.27, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (6242) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.27[0m
+[0;32mI (6252) example_common: Connected to example_netif_sta[0m
+[0;32mI (6252) example_common: - IPv4 address: 192.168.1.27,[0m
+[0;32mI (6262) example_common: - IPv6 address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6272) example: Socket created[0m
+[0;31mE (6272) timer_group: timer_pause(121): HW TIMER NEVER INIT ERROR[0m
+>> Test Alphanumeric Display: 
+[0;31mE (6282) timer_group: timer_set_counter_value(98): HW TIMER NEVER INIT ERROR[0m
+[0;32mI (6282) example: Socket bound, port 12345[0m
+[0;31mE (6292) timer_group: timer_start(109): HW TIMER NEVER INIT ERROR[0m
+[0;32mI (6302) example: Waiting for data[0m
+[0;31mE (6302) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;32mI (6272) main_task: Returned from app_main()[0m
+[0;31mE (6322) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6342) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6352) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6362) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6372) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6382) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6392) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6402) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6412) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6422) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6432) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6442) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6452) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6462) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6472) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6482) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6492) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+- oscillator: ok 
+[0;31mE (6502) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6512) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6522) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6532) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6542) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6552) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6562) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6572) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6582) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6592) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6602) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+Distance Sensor 2: 53.49 cm
+[0;31mE (6612) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6622) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6632) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6642) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6652) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6662) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6672) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6682) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6692) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+- blink: off 
+[0;31mE (6702) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m
+[0;31mE (6712) timer_group: timer_get_counter_time_sec(82): HW TIMER NEVER INIT ERROR[0m

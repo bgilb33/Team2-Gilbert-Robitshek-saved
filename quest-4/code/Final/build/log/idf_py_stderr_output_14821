@@ -1,0 +1,52 @@
+[0;33m--- esp-idf-monitor 1.3.3 on /dev/cu.usbserial-02650595 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812fc: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x40083b7c: i2c_isr_handler_default at /Users/noahrobitshek/esp/esp-idf/components/driver/i2c/i2c.c:537
+[0m
+[0;33m0x40083524: _xt_lowint1 at /Users/noahrobitshek/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x4008d2a2: _frxt_int_enter at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:139
+[0m
+[0;33m0x4000c2e0: memcpy in ROM
+[0m
+[0;33m0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x400d3973: uart_hal_write_txfifo at /Users/noahrobitshek/esp/esp-idf/components/hal/uart_hal_iram.c:27
+[0m
+[0;33m0x40083b7c: i2c_isr_handler_default at /Users/noahrobitshek/esp/esp-idf/components/driver/i2c/i2c.c:537
+[0m
+[0;33m0x40083b79: i2c_isr_handler_default at /Users/noahrobitshek/esp/esp-idf/components/driver/i2c/i2c.c:536
+[0m
+[0;33m0x40083521: _xt_lowint1 at /Users/noahrobitshek/esp/esp-idf/components/xtensa/xtensa_vectors.S:1236
+[0m
+[0;33m0x40083a14: i2c_master_cmd_begin_static at /Users/noahrobitshek/esp/esp-idf/components/driver/i2c/i2c.c:1420
+[0m
+[0;33m0x400dc17d: i2c_master_cmd_begin at /Users/noahrobitshek/esp/esp-idf/components/driver/i2c/i2c.c:1525
+[0m
+[0;33m0x400d7cb8: readRegister at /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:780
+[0m
+[0;33m0x400d7d59: calcDistance at /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/main/udp_server.c:834
+[0m
+[0;33m0x4008ce79: vPortTaskWrapper at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x400884de: esp_cpu_wait_for_intr at /Users/noahrobitshek/esp/esp-idf/components/esp_hw_support/cpu.c:145
+[0m
+[0;33m0x4008569c: ipc_task at /Users/noahrobitshek/esp/esp-idf/components/esp_system/esp_ipc.c:48
+[0m
+[0;33m0x400884db: xt_utils_wait_for_intr at /Users/noahrobitshek/esp/esp-idf/components/xtensa/include/xt_utils.h:81
+ (inlined by) esp_cpu_wait_for_intr at /Users/noahrobitshek/esp/esp-idf/components/esp_hw_support/cpu.c:132
+[0m
+[0;33m0x400d3807: esp_vApplicationIdleHook at /Users/noahrobitshek/esp/esp-idf/components/esp_system/freertos_hooks.c:59
+[0m
+[0;33m0x4008b33d: prvIdleTask at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4058 (discriminator 1)
+[0m
+[0;33m0x4008ce79: vPortTaskWrapper at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812fc: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0m

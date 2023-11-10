@@ -1,0 +1,23 @@
+[0;33m--- esp-idf-monitor 1.3.3 on /dev/cu.usbserial-02650595 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812f4: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0;33m0x400818fa: panic_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/panic.c:452
+[0m
+[0;33m0x4008a229: esp_system_abort at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+[0m
+[0;33m0x4008d0ba: vApplicationStackOverflowHook at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+[0m
+[0;33m0x4008b72b: vTaskSwitchContext at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3441
+[0m
+[0;33m0x4008d1c4: _frxt_dispatch at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+[0m
+[0;33m0x4008d176: _frxt_int_exit at /Users/noahrobitshek/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400812f4: call_start_cpu1 at /Users/noahrobitshek/esp/esp-idf/components/esp_system/port/cpu_start.c:178
+[0m
+[0m
