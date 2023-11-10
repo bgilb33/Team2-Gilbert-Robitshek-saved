@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "udp_server",
-    "project_version":    "0122755-dirty",
+    "project_version":    "e6a616e-dirty",
     "project_path":       "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final",
     "idf_path":           "/Users/noahrobitshek/esp/esp-idf",
     "build_dir":          "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-4/code/Final/build",

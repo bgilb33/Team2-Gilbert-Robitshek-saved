@@ -556,21 +556,7 @@ void run_motor_task()
     vTaskDelay(pdMS_TO_TICKS(3100));
     while (1)
     {
-        // Logic for hard stop
-        if (control[0] == 'z')
-        {
-            control[0] = 'b';
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(-10)));
-            vTaskDelay(pdMS_TO_TICKS(300));
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(0)));
-            vTaskDelay(pdMS_TO_TICKS(300));
-            ESP_ERROR_CHECK(mcpwm_comparator_set_compare_value(comparator, example_angle_to_compare(-70)));
-            vTaskDelay(pdMS_TO_TICKS(1000));
-            wheelSpeed = 0;
-
-
-        }
-        else if (control[0] == 'f')
+        if (control[0] == 'f')
         {
             firstControl = 0;
             inReverse = 0;
@@ -855,16 +841,7 @@ void calcDistance(void *pvParameters) {
         frontDistance = read16(0x10);
         vTaskDelay(50 / portTICK_PERIOD_MS);
 
-        // detech distance
-        if((frontDistance < 80)  &&  (control[0] == 'f')){
-            control[0] = 'z'; // If the device is moving forward and it has something in front of it. Do a hard stop.
-        }
-        
-        // detect distance
-        averageDistance = (distance_1 + distance_2) / 2;
-        if((averageDistance < 30) &&  (control[0] == 'f') && sideSensor){
-            control[0] = 'z'; // If the device is moving forward and it has something in front of it. Do a hard stop.
-        }
+
     }
 }
 ////////////////////////
@@ -982,13 +959,7 @@ static void udp_server_task(void *pvParameters)
                 ESP_LOGI(TAG, "Received %d bytes from %s:", len, addr_str);
                 control[0] = *rx_buffer;
 
-                // A small state Logic:
-                if(control[0] == 'r') {// reversing after a stoppage
-                    autoBreak = 0;
-                    largeBreak = 1;
-                    // reversing after a stoppage
-                } 
-                if(control[0] == 'k'){sideSensor = !sideSensor;}
+
 
                 ESP_LOGI(TAG, "%s", rx_buffer);
 
