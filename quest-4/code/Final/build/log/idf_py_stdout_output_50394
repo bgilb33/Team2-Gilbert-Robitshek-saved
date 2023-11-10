@@ -1,0 +1,182 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 10 2023 02:40:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a0ch (150028) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00034a34 vaddr=3ffb0000 size=037c8h ( 14280) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=00038204 vaddr=40080000 size=07e14h ( 32276) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8a144h (565572) map[0m
+[0;32mI (385) esp_image: segment 4: paddr=000ca16c vaddr=40087e14 size=0f430h ( 62512) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (422) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu up.[0m
+[0;32mI (434) cpu_start: Starting app cpu, entry point is 0x400812fc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) cpu_start: Application information:[0m
+[0;32mI (457) cpu_start: Project name:     udp_server[0m
+[0;32mI (462) cpu_start: App version:      0122755-dirty[0m
+[0;32mI (468) cpu_start: Compile time:     Nov 10 2023 11:31:28[0m
+[0;32mI (474) cpu_start: ELF file SHA256:  829787f68...[0m
+[0;32mI (479) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (486) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB78D8 len 00028728 (161 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40097244 len 00008DBC (35 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (547) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (580) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (589) app_start: Starting scheduler on CPU0[0m
+[0;32mI (593) app_start: Starting scheduler on CPU1[0m
+[0;32mI (593) main_task: Started on CPU0[0m
+[0;32mI (603) main_task: Calling app_main()[0m
+[0;32mI (603) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (613) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) example: Create timer and operator[0m
+[0;32mI (663) example: Connect timer and operator[0m
+[0;32mI (663) example: Create comparator and generator from the operator[0m
+[0;32mI (673) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (683) example: Set generator action on timer and compare event[0m
+[0;32mI (693) example: Enable and start timer[0m
+[0;32mI (693) example: Create timer and operator[0m
+[0;32mI (703) example: Connect timer and operator[0m
+[0;32mI (703) example: Create comparator and generator from the operator[0m
+[0;32mI (713) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (723) example: Set generator action on timer and compare event[0m
+[0;32mI (723) example: Enable and start timer[0m
+The distance is: 0
+Wheel speed = 0 cm per second
+>> I2C scanning ...
+The distance is: 41
+Wheel speed = 0 cm per secondDistance Sensor 2: 1024.44 cm
+Distance Sensor 1: 1373.08 cm
+- Device found at address: 0x62
+- Device found at address: 0x70
+The distance is: 41
+Wheel speed = 0 cm per second[0;32mI (863) example_connect: Start example_connect.[0m
+I (873) wifi:wifi driver task: 3ffc6630, prio:23, stack:6656, core=0
+The distance is: 41
+Wheel speed = 0 cm per secondI (893) wifi:wifi firmware version: 4fcdbd6
+I (893) wifi:wifi certification version: v7.0
+I (893) wifi:config NVS flash: enabled
+I (893) wifi:config nano formating: disabled
+I (903) wifi:Init data frame dynamic rx buffer num: 32
+I (903) wifi:Init static rx mgmt buffer num: 5
+I (913) wifi:Init management short buffer num: 32
+I (93) wifi:Init dynamic tx buffer num: 32
+I (913) wifi:Init static rx buffer size: 1600
+I (923) wifi:Init static rx buffer num: 10
+I (923) wifi:Init dynamic rx buffer num: 32
+The distance is: 41
+Wheel speed = 0 cm per second[0;32mI (933) wifi_init: rx ba win: 6[0m
+[0;32mI (933) wifi_init: tcpip mbox: 32[0m
+[0;32mI (943) wifi_init: udp mbox: 6[0m
+[0;32mI (943) wifi_init: tcp mbox: 6[0m
+[0;32mI (953) wifi_init: tcp tx win: 5744[0m
+[0;32mI (953) wifi_init: tcp rx win: 5744[0m
+[0;32mI (953) wifi_init: tcp mss: 1440[0m
+[0;32mI (963) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (963) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (973) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+The distance is: 38
+Wheel speed = 0 cm per secondThe distance is: 38
+Wheel speed = 0 cm per secondI (1063) wifi:mode : sta (0c:dc:7e:cc:59:28)
+I (1063) wifi:enable tsf
+[0;32mI (1063) example_connect: Connecting to Group_2...[0m
+[0;32mI (1063) example_connect: Waiting for IP(s)[0m
+The distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondDistance Sensor 2: 263.29 cm
+The distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondDistance Sensor 1: 265.04 cm
+The distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondDistance Sensor 2: 262.96 cm
+The distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 41
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondDistance Sensor 2: 263.39 cm
+The distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondDistance Sensor 1: 264.49 cm
+The distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 40
+Wheel speed = 0 cm per secondDistance Sensor 2: 263.44 cm
+The distance is: 40
+Wheel speed = 0 cm per secondI (3483) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+The distance is: 40
+Wheel speed = 0 cm per secondThe distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 39
+Wheel speed = 0 cm per secondThe distance is: 40

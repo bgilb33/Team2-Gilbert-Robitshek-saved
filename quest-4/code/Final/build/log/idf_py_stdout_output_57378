@@ -1,0 +1,1346 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7136
+load:0x40078000,len:15780
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3884
+entry 0x40080650
+[0;32mI (31) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 10 2023 02:40:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24a4ch (150092) map[0m
+[0;32mI (161) esp_image: segment 1: paddr=00034a74 vaddr=3ffb0000 size=037c8h ( 14280) load[0m
+[0;32mI (167) esp_image: segment 2: paddr=00038244 vaddr=40080000 size=07dd4h ( 32212) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8a204h (565764) map[0m
+[0;32mI (385) esp_image: segment 4: paddr=000ca22c vaddr=40087dd4 size=0f470h ( 62576) load[0m
+[0;32mI (422) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (423) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (434) cpu_start: Pro cpu up.[0m
+[0;32mI (435) cpu_start: Starting app cpu, entry point is 0x400812fc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (452) cpu_start: Pro cpu start user code[0m
+[0;32mI (452) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (452) cpu_start: Application information:[0m
+[0;32mI (457) cpu_start: Project name:     udp_server[0m
+[0;32mI (462) cpu_start: App version:      0122755-dirty[0m
+[0;32mI (468) cpu_start: Compile time:     Nov 10 2023 11:31:28[0m
+[0;32mI (474) cpu_start: ELF file SHA256:  6efe2710b...[0m
+[0;32mI (479) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (486) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB78D8 len 00028728 (161 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (526) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40097244 len 00008DBC (35 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) timer_group: legacy driver is deprecated, please migrate to `driver/gptimer.h`[0m
+[0;33mW (580) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (589) app_start: Starting scheduler on CPU0[0m
+[0;32mI (593) app_start: Starting scheduler on CPU1[0m
+[0;32mI (593) main_task: Started on CPU0[0m
+[0;32mI (603) main_task: Calling app_main()[0m
+[0;32mI (603) gpio: GPIO[16]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (613) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (623) gpio: GPIO[16]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (633) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (643) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (653) example: Create timer and operator[0m
+[0;32mI (663) example: Connect timer and operator[0m
+[0;32mI (663) example: Create comparator and generator from the operator[0m
+[0;32mI (673) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (683) example: Set generator action on timer and compare event[0m
+[0;32mI (693) example: Enable and start timer[0m
+[0;32mI (693) example: Create timer and operator[0m
+[0;32mI (703) example: Connect timer and operator[0m
+[0;32mI (703) example: Create comparator and generator from the operator[0m
+[0;32mI (713) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (723) example: Set generator action on timer and compare event[0m
+[0;32mI (723) example: Enable and start timer[0m
+///
+The distance is: 0
+Wheel speed = 0 cm per second
+
+>> I2C scanning ...
+Distance Sensor 2: 0.00 cm
+Distance Sensor 1: 0.00 cm
+Average Distance = 0.00 cm per second
+SideSensor = 1 
+- Device found at address: 0x62
+[0;32mI (813) example_connect: Start example_connect.[0m
+I (823) wifi:wifi driver task: 3ffc648c, prio:23, stack:6656, core=0
+I (843) wifi:wifi firmware version: 4fcdbd6
+I (843) wifi:wifi certification version: v7.0
+I (843) wifi:config NVS flash: enabled
+I (843) wifi:config nano formating: disabled
+I (843) wifi:Init data frame dynamic rx buffer num: 32
+I (853) wifi:Init static rx mgmt buffer num: 5
+I (853) wifi:Init management short buffer num: 32
+I (863) wifi:Init dynamic tx buffer num: 32
+I (863) wifi:Init static rx buffer size: 1600
+I (873) wifi:Init static rx buffer num: 10
+I (873) wifi:Init dynamic rx buffer num: 32
+[0;32mI (883) wifi_init: rx ba win: 6[0m
+[0;32mI (883) wifi_init: tcpip mbox: 32[0m
+[0;32mI (883) wifi_init: udp mbox: 6[0m
+[0;32mI (883) wifi_init: tcp mbox: 6[0m
+[0;32mI (893) wifi_init: tcp tx win: 5744[0m
+[0;32mI (893) wifi_init: tcp rx win: 5744[0m
+[0;32mI (903) wifi_init: tcp mss: 1440[0m
+[0;32mI (903) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (913) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (913) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 139.98 cm
+Distance Sensor 1: 141.93 cm
+Average Distance = 140.96 cm per second
+SideSensor = 1 
+I (1003) wifi:mode : sta (0c:dc:7e:cc:59:28)
+I (1003) wifi:enable tsf
+[0;32mI (1003) example_connect: Connecting to Group_2...[0m
+[0;32mI (1013) example_connect: Waiting for IP(s)[0m
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 139.98 cm
+Distance Sensor 1: 141.93 cm
+Average Distance = 140.96 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.16 cm
+Distance Sensor 1: 141.93 cm
+Average Distance = 584.55 cm per second
+SideSensor = 1 
+///
+The distance is: 124
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.16 cm
+Distance Sensor 1: 141.93 cm
+Average Distance = 584.55 cm per second
+SideSensor = 1 
+///
+The distance is: 119
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.16 cm
+Distance Sensor 1: 144.95 cm
+Average Distance = 586.06 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 36.53 cm
+Distance Sensor 1: 144.95 cm
+Average Distance = 90.74 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 36.53 cm
+Distance Sensor 1: 144.95 cm
+Average Distance = 90.74 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 36.53 cm
+Distance Sensor 1: 144.95 cm
+Average Distance = 90.74 cm per second
+SideSensor = 1 
+///
+The distance is: 107
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1028.64 cm
+Distance Sensor 1: 148.24 cm
+Average Distance = 588.44 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1028.64 cm
+Distance Sensor 1: 148.24 cm
+Average Distance = 588.44 cm per second
+SideSensor = 1 
+I (3433) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.65 cm
+Distance Sensor 1: 148.24 cm
+Average Distance = 588.44 cm per second
+SideSensor = 1 
+I (3673) wifi:state: init -> auth (b0)
+I (3683) wifi:state: auth -> assoc (0)
+I (3703) wifi:state: assoc -> run (10)
+///
+The distance is: 121
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.65 cm
+Distance Sensor 1: 148.24 cm
+Average Distance = 150.95 cm per second
+SideSensor = 1 
+I (3763) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+I (3913) wifi:connected with Group_2, aid = 2, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (3913) wifi:security: WPA2-PSK, phy: bgn, rssi: -49
+I (3913) wifi:pm start, type: 1
+
+I (3973) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.65 cm
+Distance Sensor 1: 148.45 cm
+Average Distance = 151.05 cm per second
+SideSensor = 1 
+///
+The distance is: 109
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.87 cm
+Distance Sensor 1: 148.45 cm
+Average Distance = 93.16 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.87 cm
+Distance Sensor 1: 148.45 cm
+Average Distance = 93.16 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.87 cm
+Distance Sensor 1: 148.45 cm
+Average Distance = 93.16 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.73 cm
+Distance Sensor 1: 148.79 cm
+Average Distance = 93.26 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.73 cm
+Distance Sensor 1: 148.79 cm
+Average Distance = 93.26 cm per second
+SideSensor = 1 
+[0;32mI (5423) esp_netif_handlers: example_netif_sta ip: 192.168.1.27, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5423) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.68.1.27[0m
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.06 cm
+Distance Sensor 1: 148.79 cm
+Average Distance = 149.43 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.06 cm
+Distance Sensor 1: 148.79 cm
+Average Distance = 149.43 cm per second
+SideSensor = 1 
+[0;32mI (5813) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5813) example_common: Connected to example_netif_sta[0m
+[0;32mI (5823) example_common: - IPv4 address: 192.168.1.27,[0m
+[0;32mI (5823) example_common: - IPv6 address: fe80:0000:0000:0000:0edc:7eff:fecc:5928, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5843) example: Socket created[0m
+[0;32mI (5843) example: Socket bound, port 12345[0m
+[0;32mI (5843) example: Waiting for data[0m
+[0;32mI (5853) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:1 [0m
+>> Test Alphanumeric Display: 
+[0;32mI (5863) main_task: Returned from app_main()[0m
+///
+The distance is: 106
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.06 cm
+Distance Sensor 1: 149.10 cm
+Average Distance = 149.58 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 148.16 cm
+Distance Sensor 1: 149.10 cm
+Average Distance = 148.63 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 148.16 cm
+Distance Sensor 1: 149.10 cm
+Average Distance = 148.63 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 148.16 cm
+Distance Sensor 1: 149.10 cm
+Average Distance = 148.63 cm per second
+SideSensor = 1 
+///
+The distance is: 124
+Wheel speed = 0 cm per second
+Distance Sensor 2: 196.47 cm
+Distance Sensor 1: 153.13 cm
+Average Distance = 174.80 cm per second
+SideSensor = 1 
+///
+The distance is: 120
+Wheel speed = 0 cm per second
+Distance Sensor 2: 196.47 cm
+Distance Sensor 1: 153.13 cm
+Average Distance = 174.80 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 38.47 cm
+Distance Sensor 1: 153.13 cm
+Average Distance = 95.80 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 38.47 cm
+Distance Sensor 1: 153.13 cm
+Average Distance = 95.80 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 38.47 cm
+Distance Sensor 1: 145.14 cm
+Average Distance = 91.80 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 148.74 cm
+Distance Sensor 1: 145.14 cm
+Average Distance = 146.94 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 148.74 cm
+Distance Sensor 1: 145.14 cm
+Average Distance = 146.94 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 165.86 cm
+Distance Sensor 1: 145.14 cm
+Average Distance = 155.50 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 165.86 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 157.24 cm per second
+SideSensor = 1 
+///
+The distance is: 110
+Wheel speed = 0 cm per second
+Distance Sensor 2: 165.86 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 157.24 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.53 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 588.07 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.53 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 588.07 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.53 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 588.07 cm per second
+SideSensor = 1 
+///
+The distance is: 119
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.97 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 93.30 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.97 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 93.30 cm per second
+SideSensor = 1 
+///
+The distance is: 107
+Wheel speed = 0 cm per second
+Distance Sensor 2: 37.97 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 93.30 cm per second
+SideSensor = 1 
+///
+The distance is: 123
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.35 cm
+Distance Sensor 1: 148.72 cm
+Average Distance = 588.04 cm per second
+SideSensor = 1 
+///
+The distance is: 106
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.35 cm
+Distance Sensor 1: 148.72 cm
+Average Distance = 588.04 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 39.43 cm
+Distance Sensor 1: 148.72 cm
+Average Distance = 94.08 cm per second
+SideSensor = 1 
+///
+The distance is: 129
+Wheel speed = 0 cm per second
+Distance Sensor 2: 39.43 cm
+Distance Sensor 1: 148.72 cm
+Average Distance = 94.08 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 39.43 cm
+Distance Sensor 1: 157.23 cm
+Average Distance = 98.33 cm per second
+SideSensor = 1 
+///
+The distance is: 123
+Wheel speed = 0 cm per second
+Distance Sensor 2: 164.64 cm
+Distance Sensor 1: 157.23 cm
+Average Distance = 160.94 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 164.64 cm
+Distance Sensor 1: 157.23 cm
+Average Distance = 160.94 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 164.64 cm
+Distance Sensor 1: 157.23 cm
+Average Distance = 160.94 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1017.68 cm
+Distance Sensor 1: 151.38 cm
+Average Distance = 584.53 cm per second
+SideSensor = 1 
+///
+The distance is: 119
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1017.68 cm
+Distance Sensor 1: 151.38 cm
+Average Distance = 584.53 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.58 cm
+Distance Sensor 1: 151.38 cm
+Average Distance = 150.48 cm per second
+SideSensor = 1 
+///
+The distance is: 108
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.58 cm
+Distance Sensor 1: 151.38 cm
+Average Distance = 150.48 cm per second
+SideSensor = 1 
+///
+The distance is: 122
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.58 cm
+Distance Sensor 1: 148.76 cm
+Average Distance = 149.17 cm per second
+SideSensor = 1 
+///
+The distance is: 121
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.20 cm
+Distance Sensor 1: 148.76 cm
+Average Distance = 587.98 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.20 cm
+Distance Sensor 1: 148.76 cm
+Average Distance = 587.98 cm per second
+SideSensor = 1 
+///
+The distance is: 110
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.20 cm
+Distance Sensor 1: 148.76 cm
+Average Distance = 587.98 cm per second
+SideSensor = 1 
+///
+The distance is: 127
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.90 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 149.76 cm per second
+SideSensor = 1 
+///
+The distance is: 110
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.90 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 149.76 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.90 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 149.76 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.08 cm
+Distance Sensor 1: 148.62 cm
+Average Distance = 587.85 cm per second
+SideSensor = 1 
+[0;31mE (15853) example: recvfrom failed: errno 11[0m
+[0;31mE (15853) example: Shutting down socket and restarting...[0m
+[0;32mI (15853) example: Socket created[0m
+[0;32mI (15853) example: Socket bound, port 12345[0m
+[0;32mI (15853) example: Waiting for data[0m
+///
+The distance is: 120
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.08 cm
+Distance Sensor 1: 148.38 cm
+Average Distance = 587.73 cm per second
+SideSensor = 1 
+///
+The distance is: 107
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.31 cm
+Distance Sensor 1: 148.38 cm
+Average Distance = 148.84 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.31 cm
+Distance Sensor 1: 148.38 cm
+Average Distance = 148.84 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.31 cm
+Distance Sensor 1: 148.38 cm
+Average Distance = 148.84 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 161.95 cm
+Distance Sensor 1: 150.47 cm
+Average Distance = 156.21 cm per second
+SideSensor = 1 
+///
+The distance is: 110
+Wheel speed = 0 cm per second
+Distance Sensor 2: 161.95 cm
+Distance Sensor 1: 150.47 cm
+Average Distance = 156.21 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 161.95 cm
+Distance Sensor 1: 150.47 cm
+Average Distance = 156.21 cm per second
+SideSensor = 1 
+///
+The distance is: 121
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.27 cm
+Distance Sensor 1: 150.47 cm
+Average Distance = 588.87 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.27 cm
+Distance Sensor 1: 145.09 cm
+Average Distance = 586.18 cm per second
+SideSensor = 1 
+///
+The distance is: 109
+Wheel speed = 0 cm per second
+Distance Sensor 2: 158.89 cm
+Distance Sensor 1: 145.09 cm
+Average Distance = 151.99 cm per second
+SideSensor = 1 
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 158.89 cm
+Distance Sensor 1: 145.09 cm
+Average Distance = 151.99 cm per second
+SideSensor = 1 
+///
+The distance is: 107
+Wheel speed = 0 cm per second
+Distance Sensor 2: 158.89 cm
+Distance Sensor 1: 145.09 cm
+Average Distance = 151.99 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 35.19 cm
+Distance Sensor 1: 151.67 cm
+Average Distance = 93.43 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 35.19 cm
+Distance Sensor 1: 151.67 cm
+Average Distance = 93.43 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 35.19 cm
+Distance Sensor 1: 151.67 cm
+Average Distance = 93.43 cm per second
+SideSensor = 1 
+///
+The distance is: 119
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.05 cm
+Distance Sensor 1: 151.67 cm
+Average Distance = 152.36 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.05 cm
+Distance Sensor 1: 145.24 cm
+Average Distance = 149.14 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 152.88 cm
+Distance Sensor 1: 145.24 cm
+Average Distance = 149.06 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 152.88 cm
+Distance Sensor 1: 145.24 cm
+Average Distance = 149.06 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 152.88 cm
+Distance Sensor 1: 145.24 cm
+Average Distance = 149.06 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 310.90 cm
+Distance Sensor 1: 145.02 cm
+Average Distance = 227.96 cm per second
+SideSensor = 1 
+///
+The distance is: 125
+Wheel speed = 0 cm per second
+Distance Sensor 2: 310.90 cm
+Distance Sensor 1: 145.02 cm
+Average Distance = 227.96 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 310.90 cm
+Distance Sensor 1: 145.02 cm
+Average Distance = 227.96 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.15 cm
+Distance Sensor 1: 145.02 cm
+Average Distance = 586.08 cm per second
+SideSensor = 1 
+///
+The distance is: 110
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.15 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 586.08 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 142.96 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 143.98 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 142.96 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 143.98 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 142.96 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 143.98 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1026.67 cm
+Distance Sensor 1: 31.45 cm
+Average Distance = 529.06 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1026.67 cm
+Distance Sensor 1: 31.45 cm
+Average Distance = 529.06 cm per second
+SideSensor = 1 
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1026.67 cm
+Distance Sensor 1: 31.45 cm
+Average Distance = 529.06 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 144.63 cm
+Distance Sensor 1: 31.45 cm
+Average Distance = 88.04 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 144.63 cm
+Distance Sensor 1: 41.98 cm
+Average Distance = 93.30 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 144.63 cm
+Distance Sensor 1: 41.98 cm
+Average Distance = 93.30 cm per second
+SideSensor = 1 
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.10 cm
+Distance Sensor 1: 41.98 cm
+Average Distance = 534.54 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.10 cm
+Distance Sensor 1: 41.98 cm
+Average Distance = 534.54 cm per second
+SideSensor = 1 
+///
+The distance is: 121
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.65 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 144.33 cm per second
+SideSensor = 1 
+///
+The distance is: 119
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.65 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 144.33 cm per second
+SideSensor = 1 
+///
+The distance is: 125
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.65 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 144.33 cm per second
+SideSensor = 1 
+///
+The distance is: 122
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.23 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 586.12 cm per second
+SideSensor = 1 
+[0;31mE (25863) example: recvfrom failed: errno 11[0m
+[0;31mE (25863) example: Shutting down socket and restarting...[0m
+[0;32mI (25863) example: Socket created[0m
+[0;32mI (25863) example: Socket bound, port 12345[0m
+[0;32mI (25863) example: Waiting for data[0m
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.23 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 586.12 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.23 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 586.12 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.67 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 144.33 cm per second
+SideSensor = 1 
+///
+The distance is: 119
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.67 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 144.33 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.20 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 586.10 cm per second
+SideSensor = 1 
+///
+The distance is: 122
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.20 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 586.10 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.20 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 586.10 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.72 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 144.36 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.72 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 144.35 cm per second
+SideSensor = 1 
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 143.72 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 144.35 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.68 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 586.33 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.68 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 586.33 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 145.12 cm
+Distance Sensor 1: 44.76 cm
+Average Distance = 536.22 cm per second
+SideSensor = 1 
+///
+The distance is: 120
+Wheel speed = 0 cm per second
+Distance Sensor 2: 145.12 cm
+Distance Sensor 1: 44.76 cm
+Average Distance = 94.94 cm per second
+SideSensor = 1 
+///
+The distance is: 121
+Wheel speed = 0 cm per second
+Distance Sensor 2: 145.12 cm
+Distance Sensor 1: 44.76 cm
+Average Distance = 94.94 cm per second
+SideSensor = 1 
+///
+The distance is: 123
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.25 cm
+Distance Sensor 1: 44.76 cm
+Average Distance = 536.01 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.25 cm
+Distance Sensor 1: 41.25 cm
+Average Distance = 534.25 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.25 cm
+Distance Sensor 1: 41.25 cm
+Average Distance = 534.25 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.10 cm
+Distance Sensor 1: 41.25 cm
+Average Distance = 97.17 cm per second
+SideSensor = 1 
+///
+The distance is: 109
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.10 cm
+Distance Sensor 1: 41.25 cm
+Average Distance = 97.17 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 153.10 cm
+Distance Sensor 1: 145.12 cm
+Average Distance = 149.11 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 166.73 cm
+Distance Sensor 1: 145.12 cm
+Average Distance = 155.93 cm per second
+SideSensor = 1 
+///
+The distance is: 126
+Wheel speed = 0 cm per second
+Distance Sensor 2: 166.73 cm
+Distance Sensor 1: 145.12 cm
+Average Distance = 155.93 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.18 cm
+Distance Sensor 1: 145.12 cm
+Average Distance = 586.15 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.18 cm
+Distance Sensor 1: 145.31 cm
+Average Distance = 586.25 cm per second
+SideSensor = 1 
+///
+The distance is: 120
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.18 cm
+Distance Sensor 1: 145.31 cm
+Average Distance = 586.25 cm per second
+SideSensor = 1 
+///
+The distance is: 119
+Wheel speed = 0 cm per second
+Distance Sensor 2: 163.10 cm
+Distance Sensor 1: 145.31 cm
+Average Distance = 154.20 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 163.10 cm
+Distance Sensor 1: 145.31 cm
+Average Distance = 154.20 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 163.10 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 154.16 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 158.28 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 151.75 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 158.28 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 151.75 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.37 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 151.75 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.37 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 586.30 cm per second
+SideSensor = 1 
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.37 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 586.30 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 164.31 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 154.77 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 164.31 cm
+Distance Sensor 1: 145.23 cm
+Average Distance = 154.77 cm per second
+SideSensor = 1 
+///
+The distance is: 117
+Wheel speed = 0 cm per second
+Distance Sensor 2: 164.31 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 154.66 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 162.80 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 153.90 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 162.80 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 153.90 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.68 cm
+Distance Sensor 1: 145.00 cm
+Average Distance = 147.84 cm per second
+SideSensor = 1 
+[0;31mE (35873) example: recvfrom failed: errno 11[0m
+[0;31mE (35873) example: Shutting down socket and restarting...[0m
+[0;32mI (35873) example: Socket created[0m
+[0;32mI (35873) example: Socket bound, port 12345[0m
+[0;32mI (35873) example: Waiting for data[0m
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.68 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 147.83 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 150.68 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 147.83 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.16 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 586.08 cm per second
+SideSensor = 1 
+///
+The distance is: 103
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.16 cm
+Distance Sensor 1: 144.99 cm
+Average Distance = 586.08 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.16 cm
+Distance Sensor 1: 19.35 cm
+Average Distance = 523.26 cm per second
+SideSensor = 1 
+///
+The distance is: 123
+Wheel speed = 0 cm per second
+Distance Sensor 2: 19.24 cm
+Distance Sensor 1: 19.35 cm
+Average Distance = 19.29 cm per second
+SideSensor = 1 
+///
+The distance is: 109
+Wheel speed = 0 cm per second
+Distance Sensor 2: 19.24 cm
+Distance Sensor 1: 19.35 cm
+Average Distance = 19.29 cm per second
+SideSensor = 1 
+///
+The distance is: 121
+Wheel speed = 0 cm per second
+Distance Sensor 2: 15.85 cm
+Distance Sensor 1: 19.35 cm
+Average Distance = 17.60 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 15.85 cm
+Distance Sensor 1: 14.53 cm
+Average Distance = 15.19 cm per second
+SideSensor = 1 
+///
+The distance is: 118
+Wheel speed = 0 cm per second
+Distance Sensor 2: 15.85 cm
+Distance Sensor 1: 14.53 cm
+Average Distance = 15.19 cm per second
+SideSensor = 1 
+///
+The distance is: 108
+Wheel speed = 0 cm per second
+Distance Sensor 2: 12.83 cm
+Distance Sensor 1: 14.53 cm
+Average Distance = 13.68 cm per second
+SideSensor = 1 
+///
+The distance is: 113
+Wheel speed = 0 cm per second
+Distance Sensor 2: 12.83 cm
+Distance Sensor 1: 14.53 cm
+Average Distance = 13.68 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 12.83 cm
+Distance Sensor 1: 15.01 cm
+Average Distance = 13.92 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 14.53 cm
+Distance Sensor 1: 15.01 cm
+Average Distance = 14.77 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 14.53 cm
+Distance Sensor 1: 15.01 cm
+Average Distance = 14.77 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 135.91 cm
+Distance Sensor 1: 15.01 cm
+Average Distance = 75.46 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 135.91 cm
+Distance Sensor 1: 156.75 cm
+Average Distance = 146.33 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 135.91 cm
+Distance Sensor 1: 156.75 cm
+Average Distance = 146.33 cm per second
+SideSensor = 1 
+///
+The distance is: 111
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.82 cm
+Distance Sensor 1: 156.75 cm
+Average Distance = 153.29 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 149.82 cm
+Distance Sensor 1: 156.75 cm
+Average Distance = 153.29 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 136.55 cm
+Distance Sensor 1: 153.30 cm
+Average Distance = 144.93 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 136.55 cm
+Distance Sensor 1: 153.30 cm
+Average Distance = 144.93 cm per second
+SideSensor = 1 
+///
+The distance is: 123
+Wheel speed = 0 cm per second
+Distance Sensor 2: 136.55 cm
+Distance Sensor 1: 153.30 cm
+Average Distance = 144.93 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 10.17 cm
+Distance Sensor 1: 153.30 cm
+Average Distance = 81.74 cm per second
+SideSensor = 1 
+///
+The distance is: 114
+Wheel speed = 0 cm per second
+Distance Sensor 2: 10.17 cm
+Distance Sensor 1: 155.55 cm
+Average Distance = 82.86 cm per second
+SideSensor = 1 
+///
+The distance is: 107
+Wheel speed = 0 cm per second
+Distance Sensor 2: 10.17 cm
+Distance Sensor 1: 155.55 cm
+Average Distance = 82.86 cm per second
+SideSensor = 1 
+///
+The distance is: 120
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.34 cm
+Distance Sensor 1: 155.55 cm
+Average Distance = 591.44 cm per second
+SideSensor = 1 
+///
+The distance is: 112
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.34 cm
+Distance Sensor 1: 155.55 cm
+Average Distance = 591.44 cm per second
+SideSensor = 1 
+///
+The distance is: 116
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1027.34 cm
+Distance Sensor 1: 149.48 cm
+Average Distance = 588.41 cm per second
+SideSensor = 1 
+///
+The distance is: 115
+Wheel speed = 0 cm per second
+Distance Sensor 2: 1028.69 cm
+Distance Sensor 1: 149.48 cm
+Average Distance = 589.09 cm per second
+SideSensor = 1 

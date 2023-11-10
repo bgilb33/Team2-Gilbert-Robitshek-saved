@@ -52,6 +52,8 @@
 int count = 0;
 int previousColor = 0;
 
+float averageDistance = 0;
+
 static const char *TAG = "example";
 char control[] = " ";
 
@@ -144,6 +146,8 @@ double *current_time = &start_time;
 uint16_t displaybuffer[3];
 
 int wheelSpeed = 0;
+
+bool sideSensor = 1;
 
 
 int flag = 0;
@@ -609,27 +613,19 @@ void ultrasonic_task()
         // Wait for the echo signal from the first sensor
         while (gpio_get_level(ECHO_PIN) == 0)
         {
+            taskYIELD();
         }
 
         // Measure the duration of the echo signal from the first sensor
         uint64_t start_time_1 = esp_timer_get_time();
         while (gpio_get_level(ECHO_PIN) == 1)
         {
+            taskYIELD();
         }
         uint64_t end_time_1 = esp_timer_get_time();
 
         // Calculate distance based on the speed of sound for the first sensor
         distance_1 = ((end_time_1 - start_time_1) * 0.0343) / 2.0;
-        printf("Distance Sensor 1: %.2f cm\n", distance_1);
-
-        // if (distance_1 < 20)
-        // {
-        //     autoBreak = 1;
-        // }
-        // else
-        // {
-        //     autoBreak = 0;
-        // }
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
@@ -645,18 +641,19 @@ void ultrasonic_task2()
         // Wait for the echo signal from the first sensor
         while (gpio_get_level(ECHO_PIN_2) == 0)
         {
+            taskYIELD();
         }
 
         // Measure the duration of the echo signal from the first sensor
         uint64_t start_time_2 = esp_timer_get_time();
         while (gpio_get_level(ECHO_PIN_2) == 1)
         {
+            taskYIELD();
         }
         uint64_t end_time_2 = esp_timer_get_time();
 
         // Calculate distance based on the speed of sound for the first sensor
         distance_2 = ((end_time_2 - start_time_2) * 0.0343) / 2.0;
-        printf("Distance Sensor 2: %.2f cm\n", distance_2);
         vTaskDelay(650 / portTICK_PERIOD_MS);
     }
 }
@@ -830,12 +827,16 @@ void printDistance(void *pvParameters) {
     // Your task code goes here
     
     while (1) {
+        printf("///\n");
         printf("The distance is: %i\n", frontDistance);
-        printf("Wheel speed = %i cm per second", wheelSpeed);
-        if((frontDistance < 80)  &&  (control[0] == 'f')){
-            control[0] = 'z'; // If the device is moving forward and it has something in front of it. Do a hard stop.
-        }
-        vTaskDelay(pdMS_TO_TICKS(500)); // Example: Delay for 1 second
+        printf("Wheel speed = %i cm per second\n", wheelSpeed);
+        printf("Distance Sensor 2: %.2f cm\n", distance_2);
+        printf("Distance Sensor 1: %.2f cm\n", distance_1);
+        printf("Average Distance = %.2f cm per second\n", averageDistance);
+        printf("SideSensor = %i \n", sideSensor);
+
+
+        vTaskDelay(pdMS_TO_TICKS(250)); // Example: Delay for 1 second
     }
 }
 
@@ -852,7 +853,18 @@ void calcDistance(void *pvParameters) {
             LSB = regValue & 1;
         }
         frontDistance = read16(0x10);
-        vTaskDelay(100 / portTICK_PERIOD_MS);
+        vTaskDelay(50 / portTICK_PERIOD_MS);
+
+        // detech distance
+        if((frontDistance < 80)  &&  (control[0] == 'f')){
+            control[0] = 'z'; // If the device is moving forward and it has something in front of it. Do a hard stop.
+        }
+        
+        // detect distance
+        averageDistance = (distance_1 + distance_2) / 2;
+        if((averageDistance < 30) &&  (control[0] == 'f') && sideSensor){
+            control[0] = 'z'; // If the device is moving forward and it has something in front of it. Do a hard stop.
+        }
     }
 }
 ////////////////////////
@@ -976,6 +988,7 @@ static void udp_server_task(void *pvParameters)
                     largeBreak = 1;
                     // reversing after a stoppage
                 } 
+                if(control[0] == 'k'){sideSensor = !sideSensor;}
 
                 ESP_LOGI(TAG, "%s", rx_buffer);
 
