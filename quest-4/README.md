@@ -69,7 +69,7 @@ the server, the ESP32, the motor controller, and the sensors.
 
 
 ### Supporting Artifacts
-- [Link to video technical presentation COMING SOON...]() 
+- [Link to video technical presentation](https://drive.google.com/file/d/1qsrj2o6hQORZjJGwfrBsoyek1hAKKnuL/view) 
 - [Link to video demo](https://drive.google.com/file/d/1aWwn9DN10OqOR5xulVerRv73vTjGwFK4/view?usp=sharing). 
 
 <!-- ### Modules, Tools, Source Used Including Attribution -->
