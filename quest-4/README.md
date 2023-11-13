@@ -42,11 +42,11 @@ State machine with three states. Transitions between states is controlled by the
 #### PID Ideas
 From the start we planned on using a "PID loop" to control the angle of the vehicle. We planned on using two ultrasonic sensors and were going to calculate the error between the two measurements to detect whether the vehicle was turning left or right. Below is the initial planning for the PID loop.
 
-![picture3](./images/PID2.JPG)
+![picture3](./images/PID2.jpg)
 ***<p style="text-align: center;">Linear P controller </p>***
 
 
-![picture4](./images/PID1.jpg)
+![picture4](./images/PID1.JPG)
 ***<p style="text-align: center;">Calculation of error as: e = (d2 - d1) / 2</p>***
 
 
