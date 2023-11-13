@@ -35,7 +35,7 @@ While working through the turning requirement, we drafted the following state ma
 ![picture1](./images/STATE1.JPG)
 State machine with two states. Transitions between states is controlled by the user input
 
-![picture2](./images/STATE2.JPG)
+![picture2](./images/STATE2.jpg)
 State machine with three states. Transitions between states is controlled by the user input.
 
 
@@ -46,7 +46,7 @@ From the start we planned on using a "PID loop" to control the angle of the vehi
 ***<p style="text-align: center;">Linear P controller </p>***
 
 
-![picture4](./images/PID1.JPG)
+![picture4](./images/PID1.jpg)
 ***<p style="text-align: center;">Calculation of error as: e = (d2 - d1) / 2</p>***
 
 
