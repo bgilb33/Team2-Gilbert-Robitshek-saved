@@ -1,4 +1,4 @@
-# Code Readme
+# Project Readme
 Below is a descrion of the code used for the project. The code for the porject is a folder called Final and a javascript file called controller.js. The Final folder contains the code for the ESP32. The controller.js file contains the code for the server. 
 
 The folder named Final is built on the udp server starter code found from esp-idf. 
