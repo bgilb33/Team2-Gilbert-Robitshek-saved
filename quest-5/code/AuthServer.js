@@ -46,6 +46,18 @@ const meterLookupTable = {
     // Add more devices as needed
 };
 
+function sendUdpMessage(clientIp, clientPort, message) {
+    const clientSocket = dgram.createSocket('udp4');
+    clientSocket.send(message, 0, message.length, clientPort, clientIp, (err) => {
+        if (err) {
+            console.error(`Error sending UDP message to ${clientIp}:${clientPort}: ${err.message}`);
+        } else {
+            console.log(`UDP message sent to ${clientIp}:${clientPort}: ${message}`);
+        }
+        clientSocket.close();
+    });
+}
+
 // Event handler for when the server is listening
 server.on('listening', () => {
     const address = server.address();
