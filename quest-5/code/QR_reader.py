@@ -24,7 +24,6 @@ def send_udp_data(data):
         # Close the socket
         client_socket.close()
 
-# Function to read QR code from an image
 def read_qr_code(image_path):
     # Read the image
     image = cv2.imread(image_path)
@@ -32,8 +31,13 @@ def read_qr_code(image_path):
     # Decode QR codes
     decoded_objects = decode(image)
 
-    # Print the decoded information
-    return decoded_objects[0].data.decode('utf-8')
+    # Check if any QR code is detected
+    if decoded_objects:
+        # Return the decoded information
+        return decoded_objects[0].data.decode('utf-8')
+    else:
+        # Return None when no QR code is detected
+        return None
 
 # QRMeter2Fob1.png
 # QRMeter1Fob1.png
@@ -47,9 +51,7 @@ def main():
         if image_path.lower() == 'exit':
             break
 
-        data = read_qr_code(image_path)
-        send_udp_data(data)
-        
+        data = read_qr_code(image_path)        
         print(data)
 
 if __name__ == "__main__":
