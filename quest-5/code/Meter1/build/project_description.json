@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "serial-example",
-    "project_version":    "24cd81e-dirty",
+    "project_version":    "e5f7298-dirty",
     "project_path":       "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1",
     "idf_path":           "/Users/noahrobitshek/esp/esp-idf",
     "build_dir":          "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build",
