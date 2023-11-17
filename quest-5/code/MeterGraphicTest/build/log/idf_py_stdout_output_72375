@@ -1,0 +1,17 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/MeterDisplayTest1/build/bootloader/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-5/code/MeterDisplayTest1/build/bootloader/bootloader.bin
+Bootloader binary size 0x6910 bytes. 0x6f0 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/serial-example-main.c.obj
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/MeterDisplayTest1/main/serial-example-main.c:41:22: warning: 'bitmap2' initialized and declared 'extern'
+   41 | extern const uint8_t bitmap2[1024] = {
+      |                      ^~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/MeterDisplayTest1/main/serial-example-main.c:109:22: warning: 'bitmap1' initialized and declared 'extern'
+  109 | extern const uint8_t bitmap1[1024] = {
+      |                      ^~~~~~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/MeterDisplayTest1/main/serial-example-main.c:178:22: warning: 'bitmap3' initialized and declared 'extern'
+  178 | extern const uint8_t bitmap3[1024] = {
+      |                      ^~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
