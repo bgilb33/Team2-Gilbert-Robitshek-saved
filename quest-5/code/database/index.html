@@ -1,0 +1,158 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Make the body take the full height of the viewport */
+        }
+
+        #pageTitle {
+            margin: 20px 0;
+            font-size: 24px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #parkingLot {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            width: 500px;
+        }
+        #visualLot {
+            justify-content: center;
+            background-color: black;
+            margin-top: 20px;
+            width: 500px;
+            height: 350px;
+            position: relative;
+        }
+
+        #visualLot::before,
+        #visualLot::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: yellow;
+        }
+
+        #visualLot::before {
+            left: 33.33%;
+        }
+
+        #visualLot::after {
+            left: 66.66%;
+        }
+
+        #carContainer {
+            position: absolute;
+            top: 0;
+            width: 33.33%; /* Divide the visualLot into three sections */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parkingSpace {
+            height: 80px;
+            width: 100px;
+            border: 2px solid #333;
+            background-color: #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #333;
+            position: relative;
+        }
+
+        .open {
+            background-color: lightgreen;
+        }
+
+        .taken {
+            background-color: lightcoral;
+            color: white;
+        }
+
+        .unknown {
+            background-color: #ddd;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">Parking Lot Status</h1>
+    <div id="parkingLot"></div>
+    <div id="visualLot">
+        <!-- Separate car containers for each meter -->
+        <div class="carContainer" id="carContainer1"></div>
+        <div class="carContainer" id="carContainer2"></div>
+        <div class="carContainer" id="carContainer3"></div>
+    </div>
+    
+    <script>
+        function updateParkingLot(data) {
+            const parkingLot = document.getElementById('parkingLot');
+            parkingLot.innerHTML = '';
+
+            data[0].forEach(meter => {
+                const parkingSpace = document.createElement('div');
+
+                if (meter && meter.Status) {
+                    parkingSpace.className = `parkingSpace ${meter.Status.toLowerCase()}`;
+                    parkingSpace.innerHTML = `<strong>Meter ${meter.Meter_ID}</strong>`;
+
+                    // Display car image if the meter is taken
+                    if (meter.Status === 'Taken' && meter.Fob_ID !== null) {
+                        const carContainer = document.getElementById(`carContainer${meter['Meter_ID']}`);
+                        console.log("Parking in ",carContainer);
+                        const carImage = document.createElement('img');
+                        carImage.src = './media/car.png'; // Replace with the actual path
+                        carImage.alt = 'Car';
+                        carContainer.innerHTML = ''; // Clear previous content
+                        carContainer.appendChild(carImage);
+
+                        // Display fob_id if the meter is taken
+                        parkingSpace.innerHTML += `<br><span>Fob ID: ${meter.Fob_ID}</span>`;
+                    }
+                } else {
+                    parkingSpace.className = 'parkingSpace unknown';
+                    parkingSpace.innerHTML = `<strong>Meter ${meter.Meter_ID}</strong> (Unknown Status)`;
+                }
+
+                parkingLot.appendChild(parkingSpace);
+            });
+        }
+
+        var socket = io();
+        socket.on('updateData', function (data) {
+            if (data[0] != null) {
+                updateParkingLot(data);
+            }
+        });
+    </script>
+</body>
+</html>
