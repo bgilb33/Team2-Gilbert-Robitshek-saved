@@ -12,7 +12,7 @@ const client = dgram.createSocket('udp4');
 
 
 // Set the server address and port
-const serverAddress = '192.168.1.23'; // Change this to your server's IP address
+const serverAddress = '192.168.1.8'; // Change this to your server's IP address
 const serverPort = 12345; // Change this to your server's port
 
 client.bind(serverPort);
