@@ -1,4 +1,4 @@
-# Install script for directory: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/udp_server/main
+# Install script for directory: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/NewFob/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/udp_server
+# Install script for directory: /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/NewFob
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/udp_server/build/esp-idf/cmake_install.cmake")
+  include("/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/NewFob/build/esp-idf/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/udp_server/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/NewFob/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,4 +1,4 @@
-/* * Data converted from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/udp_server/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/NewFob/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

@@ -1,0 +1,163 @@
+[0;32mI (13) boot: ESP-IDF v5.2-dev-2934-g3b748a6cb7-dirty 2nd stage bootloader[0m
+[0;32mI (13) boot: compile time Nov 28 2023 01:07:00[0m
+[0;32mI (15) boot: Multicore bootloader[0m
+[0;32mI (19) boot: chip revision: v3.0[0m
+[0;32mI (23) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (27) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (32) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (36) boot: Enabling RNG early entropy source...[0m
+[0;32mI (42) boot: Partition Table:[0m
+[0;32mI (45) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (68) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2580ch (153612) map[0m
+[0;32mI (143) esp_image: segment 1: paddr=00035834 vaddr=3ffb0000 size=037b8h ( 14264) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00038ff4 vaddr=40080000 size=07024h ( 28708) load[0m
+[0;32mI (161) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8a220h (565792) map[0m
+[0;32mI (366) esp_image: segment 4: paddr=000ca248 vaddr=40087024 size=1027ch ( 66172) load[0m
+[0;32mI (405) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (405) boot: Disabling RNG early entropy source...[0m
+[0;32mI (417) cpu_start: Multicore app[0m
+[0;32mI (417) cpu_start: Pro cpu up.[0m
+[0;32mI (417) cpu_start: Starting app cpu, entry point is 0x40081324[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (435) cpu_start: Pro cpu start user code[0m
+[0;32mI (435) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (435) cpu_start: Application information:[0m
+[0;32mI (440) cpu_start: Project name:     udp_server[0m
+[0;32mI (445) cpu_start: App version:      1ff3f7d-dirty[0m
+[0;32mI (450) cpu_start: Compile time:     Nov 28 2023 01:06:58[0m
+[0;32mI (457) cpu_start: ELF file SHA256:  74f019790...[0m
+[0;32mI (462) cpu_start: ESP-IDF:          v5.2-dev-2934-g3b748a6cb7-dirty[0m
+[0;32mI (469) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (474) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (478) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (483) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (491) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFB7880 len 00028780 (161 KiB): DRAM[0m
+[0;32mI (503) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 400972A0 len 00008D60 (35 KiB): IRAM[0m
+[0;32mI (523) spi_flash: detected chip: generic[0m
+[0;32mI (526) spi_flash: flash io: dio[0m
+[0;33mW (530) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (544) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (555) app_start: Starting scheduler on CPU0[0m
+[0;32mI (559) app_start: Starting scheduler on CPU1[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (599) example_connect: Start example_connect.[0m
+I (609) wifi:wifi driver task: 3ffbf4a8, prio:23, stack:6656, core=0
+I (619) wifi:wifi firmware version: 4fcdbd6
+I (619) wifi:wifi certification version: v7.0
+I (619) wifi:config NVS flash: enabled
+I (619) wifi:config nano formating: disabled
+I (629) wifi:Init data frame dynamic rx buffer num: 32
+I (629) wifi:Init static rx mgmt buffer num: 5
+I (639) wifi:Init management short buffer num: 32
+I (639) wifi:Init dynamic tx buffer num: 32
+I (649) wifi:Init static rx buffer size: 1600
+I (649) wifi:Init static rx buffer num: 10
+I (649) wifi:Init dynamic rx buffer num: 32
+[0;32mI (659) wifi_init: rx ba win: 6[0m
+[0;32mI (659) wifi_init: tcpip mbox: 32[0m
+[0;32mI (669) wifi_init: udp mbox: 6[0m
+[0;32mI (669) wifi_init: tcp mbox: 6[0m
+[0;32mI (669) wifi_init: tcp tx win: 5744[0m
+[0;32mI (679) wifi_init: tcp rx win: 5744[0m
+[0;32mI (679) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (689) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4771,450c73b,Aug 16 2023,11:03:10[0m
+I (779) wifi:mode : sta (e0:e2:e6:9b:87:04)
+I (779) wifi:enable tsf
+[0;32mI (779) example_connect: Connecting to Group_2...[0m
+[0;32mI (789) example_connect: Waiting for IP(s)[0m
+I (3199) wifi:new:<6,2>, old:<1,0>, ap:<255,255>, sta:<6,2>, prof:1
+I (3449) wifi:state: init -> auth (b0)
+I (3449) wifi:state: auth -> assoc (0)
+I (3459) wifi:state: assoc -> run (10)
+I (3459) wifi:<ba-add>idx:0 (ifx:0, 30:23:03:c7:9f:f8), tid:0, ssn:0, winSize:64
+I (3499) wifi:connected with Group_2, aid = 4, channel 6, 40D, bssid = 30:23:03:c7:9f:f8
+I (3499) wifi:security: WPA2-PSK, phy: bgn, rssi: -48
+I (3499) wifi:pm start, type: 1
+
+I (3559) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4599) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:e2e2:e6ff:fe9b:8704, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5009) esp_netif_handlers: example_netif_sta ip: 192.168.1.8, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5009) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.1.8[0m
+[0;32mI (5019) example_common: Connected to example_netif_sta[0m
+[0;32mI (5019) example_common: - IPv4 address: 192.168.1.8,[0m
+[0;32mI (5029) example_common: - IPv6 address: fe80:0000:0000:0000:e2e2:e6ff:fe9b:8704, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (5039) example: Socket created[0m
+[0;32mI (5039) example: Socket bound, port 12345[0m
+[0;32mI (5049) example: Waiting for data[0m
+[0;32mI (5049) SSD1306: OLED configured successfully[0m
+[0;32mI (5059) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (5069) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (5079) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (5089) gpio: GPIO[32]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (5099) main_task: Returned from app_main()[0m
+[0;31mE (15049) example: recvfrom failed: errno 11[0m
+[0;31mE (15049) example: Shutting down socket and restarting...[0m
+[0;32mI (15049) example: Socket created[0m
+[0;32mI (15049) example: Socket bound, port 12345[0m
+[0;32mI (15059) example: Waiting for data[0m
+[0;31mE (25059) example: recvfrom failed: errno 11[0m
+[0;31mE (25059) example: Shutting down socket and restarting...[0m
+[0;32mI (25059) example: Socket created[0m
+[0;32mI (25059) example: Socket bound, port 12345[0m
+[0;32mI (25069) example: Waiting for data[0m
+FOB ID: 3
+[0;31mE (35069) example: recvfrom failed: errno 11[0m
+[0;31mE (35069) example: Shutting down socket and restarting...[0m
+[0;32mI (35069) example: Socket created[0m
+[0;32mI (35069) example: Socket bound, port 12345[0m
+[0;32mI (35079) example: Waiting for data[0m
+[0;31mE (45079) example: recvfrom failed: errno 11[0m
+[0;31mE (45079) example: Shutting down socket and restarting...[0m
+[0;32mI (45079) example: Socket created[0m
+[0;32mI (45079) example: Socket bound, port 12345[0m
+[0;32mI (45089) example: Waiting for data[0m
+[0;31mE (55089) example: recvfrom failed: errno 11[0m
+[0;31mE (55089) example: Shutting down socket and restarting...[0m
+[0;32mI (55089) example: Socket created[0m
+[0;32mI (55089) example: Socket bound, port 12345[0m
+[0;32mI (55099) example: Waiting for data[0m
+[0;31mE (65099) example: recvfrom failed: errno 11[0m
+[0;31mE (65099) example: Shutting down socket and restarting...[0m
+[0;32mI (65099) example: Socket created[0m
+[0;32mI (65099) example: Socket bound, port 12345[0m
+[0;32mI (65109) example: Waiting for data[0m
+[0;31mE (75109) example: recvfrom failed: errno 11[0m
+[0;31mE (75109) example: Shutting down socket and restarting...[0m
+[0;32mI (75109) example: Socket created[0m
+[0;32mI (75109) example: Socket bound, port 12345[0m
+[0;32mI (75119) example: Waiting for data[0m
+[0;31mE (85119) example: recvfrom failed: errno 11[0m
+[0;31mE (85119) example: Shutting down socket and restarting...[0m
+[0;32mI (85119) example: Socket created[0m
+[0;32mI (85119) example: Socket bound, port 12345[0m
+[0;32mI (85129) example: Waiting for data[0m
+[0;31mE (95129) example: recvfrom failed: errno 11[0m
+[0;31mE (95129) example: Shutting down socket and restarting...[0m
+[0;32mI (95129) example: Socket created[0m
+[0;32mI (95129) example: Socket bound, port 12345[0m
+[0;32mI (95139) example: Waiting for data[0m
+[0;31mE (105139) example: recvfrom failed: errno 11[0m
+[0;31mE (105139) example: Shutting down socket and restarting...[0m
+[0;32mI (105139) example: Socket created[0m
+[0;32mI (105139) example: Socket bound, port 12345[0m
+[0;32mI (105149) example: Waiting for data[0m
+[0;31mE (115149) example: recvfrom failed: errno 11[0m
+[0;31mE (115149) example: Shutting down socket and restarting...[0m
+[0;32mI (115149) example: Socket created[0m
+[0;32mI (115159) example: Socket bound, port 12345[0m
+[0;32mI (115159) example: Waiting for data[0m
+[0;31mE (125159) example: recvfrom failed: errno 11[0m
+[0;31mE (125159) example: Shutting down socket and restarting...[0m
+[0;32mI (125159) example: Socket created[0m
+[0;32mI (125159) example: Socket bound, port 12345[0m
+[0;32mI (125169) example: Waiting for data[0m
