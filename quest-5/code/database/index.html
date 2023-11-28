@@ -37,46 +37,32 @@
             gap: 60px;
             width: 500px;
         }
-        #visualLot {
-            justify-content: center;
-            background-color: black;
+        #timerWrapper {
             margin-top: 20px;
-            width: 500px;
-            height: 350px;
-            position: relative;
-        }
-
-        #visualLot::before,
-        #visualLot::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: yellow;
-        }
-
-        #visualLot::before {
-            left: 33.33%;
-        }
-
-        #visualLot::after {
-            left: 66.66%;
-        }
-
-        #carContainer {
-            position: absolute;
-            top: 0;
-            width: 33.33%; /* Divide the visualLot into three sections */
-            height: 100%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
+            gap: 30px;
+            width: 500px;
         }
 
         .parkingSpace {
             height: 80px;
             width: 100px;
+            border: 2px solid #333;
+            background-color: #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #333;
+            position: relative;
+        }
+
+        .timer {
+            height: 80px;
+            width: 135px;
             border: 2px solid #333;
             background-color: #ddd;
             display: flex;
@@ -101,42 +87,102 @@
             background-color: #ddd;
             color: #333;
         }
+
+        #visualLot {
+            justify-content: center;
+            background-color: black;
+            margin-top: 20px;
+            width: 500px;
+            height: 50%;
+            position: relative;
+            display:-webkit-flex;
+            -webkit-justify-content:center;
+            display:flex;
+            justify-content:center;
+        }
+
+        #visualLot::before,
+        #visualLot::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: yellow;
+        }
+
+        #visualLot::before {
+            left: 33.33%;
+        }
+
+        #visualLot::after {
+            left: 66.66%;
+        }
+        #carContainer0,
+        #carContainer1,
+        #carContainer2 {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #carContainer0 img,
+        #carContainer1 img,
+        #carContainer2 img {
+            max-width: 200%;
+            max-height: 200%;
+        }
     </style>
 </head>
 <body>
     <h1 id="pageTitle">Parking Lot Status</h1>
     <div id="parkingLot"></div>
     <div id="visualLot">
-        <!-- Separate car containers for each meter -->
-        <div class="carContainer" id="carContainer1"></div>
-        <div class="carContainer" id="carContainer2"></div>
-        <div class="carContainer" id="carContainer3"></div>
+        <div id="carContainer0"></div>
+        <div id="carContainer1"></div>
+        <div id="carContainer2"></div>
     </div>
+    <div id="timerWrapper"></div>
     
     <script>
         function updateParkingLot(data) {
             const parkingLot = document.getElementById('parkingLot');
             parkingLot.innerHTML = '';
+            const timerWrapper = document.getElementById('timerWrapper');
+            timerWrapper.innerHTML = '';
+
 
             data[0].forEach(meter => {
                 const parkingSpace = document.createElement('div');
+                const timer = document.createElement('div');
+                const carContainer = document.getElementById(`carContainer${meter.Meter_ID}`)
+                const carImage = document.createElement('img');
+
 
                 if (meter && meter.Status) {
                     parkingSpace.className = `parkingSpace ${meter.Status.toLowerCase()}`;
                     parkingSpace.innerHTML = `<strong>Meter ${meter.Meter_ID}</strong>`;
+                    timer.className = `timer ${meter.Status.toLowerCase()}`;
 
                     // Display car image if the meter is taken
                     if (meter.Status === 'Taken' && meter.Fob_ID !== null) {
-                        const carContainer = document.getElementById(`carContainer${meter['Meter_ID']}`);
-                        console.log("Parking in ",carContainer);
-                        const carImage = document.createElement('img');
-                        carImage.src = './media/car.png'; // Replace with the actual path
-                        carImage.alt = 'Car';
-                        carContainer.innerHTML = ''; // Clear previous content
-                        carContainer.appendChild(carImage);
-
                         // Display fob_id if the meter is taken
                         parkingSpace.innerHTML += `<br><span>Fob ID: ${meter.Fob_ID}</span>`;
+
+                        if (meter.End_Time) {
+                            const timeLeft = calculateTimeLeft(meter.End_Time);
+                            timer.innerHTML = `<span>Time Left: ${timeLeft}</span>`;
+                        }
+
+                        if (carContainer.childNodes.length == 0) {
+                            carImage.src = './media/car.png';
+                            carContainer.appendChild(carImage);
+                        }
+                    }
+                    else if (meter.Status === "Open") {
+                        carContainer.innerHTML = null;
+                        timer.innerHTML = `<span>Time Left: 0h 2m 0s</span>`
                     }
                 } else {
                     parkingSpace.className = 'parkingSpace unknown';
@@ -144,7 +190,26 @@
                 }
 
                 parkingLot.appendChild(parkingSpace);
+                timerWrapper.appendChild(timer);
             });
+        }
+
+        function calculateTimeLeft(endTime) {
+            const currentTime = new Date();
+            const endTimeDate = new Date(endTime);
+
+            // Check if the current time is after the end time
+            if (currentTime > endTimeDate) {
+                return 'Expired';
+            }
+
+            const timeDifference = endTimeDate - currentTime;
+
+            const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+            return `${hours}h ${minutes}m ${seconds}s`;
         }
 
         var socket = io();

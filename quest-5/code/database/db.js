@@ -69,7 +69,7 @@ const parkCar = (db, meter_id, fob_id, callback) => {
     'Meter_ID': meter_id
   };
   const startTime = new Date();
-  const endTime = new Date(startTime.getTime() + 1 * 60000);
+  const endTime = new Date(startTime.getTime() + 2 * 60000);
 
   const updateData = { $set: { 'Fob_ID': fob_id, 'Status': 'Taken', 'Start_Time': startTime, 'End_Time': endTime } };
 
