@@ -21,21 +21,21 @@ let isProcessing = false;
 // SEND MESSAGE BACK WHEN TIME IS COMPLETE
 
 const fobLookupTable = {
-  1: { id: 1, ip: '192.168.1.7', name: 'Fob 1' },
-  2: { id: 2, ip: '192.168.1.3', name: 'Fob 2' },
-  3: { id: 3, ip: '192.168.1.4', name: 'Fob 3' },
+  0: { id: 0, ip: '192.168.1.3', name: 'Fob 1' },
+  1: { id: 1, ip: '192.168.1.27', name: 'Fob 2' },
+  2: { id: 2, ip: '192.168.1.4', name: 'Fob 3' },
 };
 
 const meterLookupTable = {
-  1: { id: 1, ip: '192.168.1.7', name: 'Meter 1' },
-  2: { id: 2, ip: '192.168.1.3', name: 'Meter 2' },
-  3: { id: 3, ip: '192.168.1.4', name: 'Meter 3' },
+  0: { id: 0, ip: '192.168.1.3', name: 'Meter 1' },
+  1: { id: 1, ip: '192.168.1.8', name: 'Meter 2' },
+  2: { id: 2, ip: '192.168.1.4', name: 'Meter 3' },
 };
 
 let meterData;
 let dbInstance;
 
-let parkQueue = [{'meter_id': 1, 'fob_id': 1}]
+let parkQueue = []
 
 // Connect to db
 connectToDatabase((err, db) => {
@@ -48,7 +48,7 @@ connectToDatabase((err, db) => {
   initializeMeters(db, (initErr, result) => {
     if (initErr) throw initErr;
     else {
-      console.log("Meters Initialized: ", result);
+      // console.log("Meters Initialized: ", result);
 
       // Continually check meter status, and update based on time left
       checkMeterStatus(dbInstance);
@@ -61,13 +61,13 @@ connectToDatabase((err, db) => {
       if (getDataErr) throw getDataErr;
       else {
         meterData = data;
-        console.log("Current Data: ", data);
+        // console.log("Current Data: ", data);
         if (meterData[0] != null) {
           io.emit('updateData', [meterData]);
         }
       }
     });
-  }, 5 * 1000);
+  }, 1 * 1000);
 
   // Park Cars in queue every 10 seconds
 
@@ -122,16 +122,10 @@ server.on('message', async (message) => {
   const meterIP = fobLookupTable[meterID].ip;
   const fobIP = meterLookupTable[fobID].ip;
 
-  if (meterStatus === 'Taken') {
-    console.log("Sending APPROVED to fob IP: " + fobIP.toString() + " and a meter IP: " + meterIP.toString());
-    sendUdpMessage(fobIP.toString(), 12345, meterStatus);
-    sendUdpMessage(meterIP.toString(), 12345, meterStatus);
-  } else {
-    console.log("Sending NOT APPROVED to fob IP: " + fobIP.toString() + " and a meter IP: " + meterIP.toString());
-    sendUdpMessage(fobIP.toString(), 12345, meterStatus);
-    sendUdpMessage(meterIP.toString(), 12345, meterStatus);
-  }
-
+  console.log("Sending APPROVED to fob IP: " + fobIP.toString() + " and a meter IP: " + meterIP.toString());
+  sendUdpMessage(fobIP.toString(), 12345, "Alert: Park");
+  sendUdpMessage(meterIP.toString(), 12345, "Alert: Park");
+  
   isProcessing = false;
 });
 
@@ -149,18 +143,18 @@ function sendUdpMessage(clientIp, clientPort, message) {
 
 function handleTimeUpQueue() {
   if (timeUpQueue.length == 0) {
-    console.log("Time up queue is empty!");
+    // console.log("Time up queue is empty!");
   }
   else {
-    console.log("TimeUp Queue in call: ",timeUpQueue);
+    // console.log("TimeUp Queue in call: ",timeUpQueue);
     const queueCopy = [...timeUpQueue];
 
     queueCopy.forEach((entry, index) => {
       const meterIP = fobLookupTable[entry['meter_id']].ip;
       const fobIP = meterLookupTable[entry['fob_id']].ip;
       console.log("Sending TIME UP to fob IP: " + fobIP.toString() + " and a meter IP: " + meterIP.toString());
-      sendUdpMessage(fobIP.toString(), 12345, "Open");
-      sendUdpMessage(meterIP.toString(), 12345, "Open");
+      sendUdpMessage(fobIP.toString(), 12345, "Alert: Timeout");
+      sendUdpMessage(meterIP.toString(), 12345, "Alert: Timeout");
 
       const entryIndex = timeUpQueue.findIndex((item) => item === entry);
       if (entryIndex !== -1) {
