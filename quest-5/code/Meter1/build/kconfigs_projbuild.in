@@ -1,6 +1,0 @@
-source "/Users/noahrobitshek/esp/esp-idf/components/bootloader/Kconfig.projbuild"
-source "/Users/noahrobitshek/esp/esp-idf/components/esp_app_format/Kconfig.projbuild"
-source "/Users/noahrobitshek/esp/esp-idf/components/esp_rom/Kconfig.projbuild"
-source "/Users/noahrobitshek/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
-source "/Users/noahrobitshek/esp/esp-idf/components/partition_table/Kconfig.projbuild"
-source "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/main/Kconfig.projbuild"
