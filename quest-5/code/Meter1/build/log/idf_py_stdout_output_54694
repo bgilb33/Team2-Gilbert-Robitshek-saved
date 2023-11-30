@@ -1,0 +1,66 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build/bootloader/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build/bootloader/bootloader.bin
+Bootloader binary size 0x6910 bytes. 0x6f0 bytes (6%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/serial-example-main.c.obj
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/main/serial-example-main.c: In function 'task_ssd1306_display_bitmap':
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/main/serial-example-main.c:4659:20: warning: unused variable 'cmd' [-Wunused-variable]
+ 4659 |   i2c_cmd_handle_t cmd;
+      |                    ^~~
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/main/serial-example-main.c: At top level:
+/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/main/serial-example-main.c:65:22: warning: 'gpio_evt_queue' defined but not used [-Wunused-variable]
+   65 | static QueueHandle_t gpio_evt_queue = NULL; // 2023: Changed
+      |                      ^~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable serial-example.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.dev3
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build/serial-example.bin
+[9/10] cd "/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build/esp-idf/esptool_py" && /Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python /Users/noahrobitshek/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build/partition_table/partition-table.bin /Users/noahrobitshek/esp/EC\ 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build/serial-example.bin
+serial-example.bin binary size 0x38db0 bytes. Smallest app partition is 0x100000 bytes. 0xc7250 bytes (78%) free.
+[9/10] cd /Users/noahrobitshek/esp/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.27.8/bin/cmake -D IDF_PATH=/Users/noahrobitshek/esp/esp-idf -D "SERIAL_TOOL=/Users/noahrobitshek/.espressif/python_env/idf5.2_py3.10_env/bin/python;;/Users/noahrobitshek/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D "WORKING_DIRECTORY=/Users/noahrobitshek/esp/EC 444/Team2-Gilbert-Robitshek/quest-5/code/Meter1/build" -P /Users/noahrobitshek/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/cu.usbserial-0246DDC2 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 serial-example.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.dev3
+Serial port /dev/cu.usbserial-0246DDC2
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e0:e2:e6:9b:87:04
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00048fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26896 bytes to 16890...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000768a... (100 %)
+Wrote 26896 bytes (16890 compressed) at 0x00001000 in 0.9 seconds (effective 234.4 kbit/s)...
+Hash of data verified.
+Compressed 232880 bytes to 126137...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001d45a... (25 %)
+Writing at 0x000248dd... (37 %)
+Writing at 0x0002a88c... (50 %)
+Writing at 0x0003029b... (62 %)
+Writing at 0x00037cd1... (75 %)
+Writing at 0x0003edfa... (87 %)
+Writing at 0x00044a16... (100 %)
+Wrote 232880 bytes (126137 compressed) at 0x00010000 in 3.5 seconds (effective 527.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 238.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

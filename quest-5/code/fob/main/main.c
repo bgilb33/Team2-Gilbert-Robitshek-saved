@@ -17,6 +17,27 @@
 #include "driver/mcpwm_prelude.h" // Added in 2023
 #include "driver/ledc.h"          // Added in 2023
 
+// UDP Start
+#include <string.h>
+#include <sys/param.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "esp_log.h"
+#include "nvs_flash.h"
+#include "esp_netif.h"
+#include "protocol_examples_common.h"
+
+#include "lwip/err.h"
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include <lwip/netdb.h>
+
+#define PORT CONFIG_EXAMPLE_PORT
+// UDP End
+
 // MCPWM defintions -- 2023: modified
 #define MCPWM_TIMER_RESOLUTION_HZ 10000000 // 10MHz, 1 tick = 0.1us
 #define MCPWM_FREQ_HZ 38000                // 38KHz PWM -- 1/38kHz = 26.3us
@@ -59,6 +80,8 @@ char myID = (char)ID;
 int len_out = 3;
 int sending = 0;
 
+int state = 0;
+
 // Mutex (for resources), and Queues (for button)
 SemaphoreHandle_t mux = NULL;               // 2023: no changes
 static QueueHandle_t gpio_evt_queue = NULL; // 2023: Changed
@@ -77,7 +100,6 @@ QueueHandle_t timer_queue;
 // System tags for diagnostics -- 2023: modified
 // static const char *TAG_SYSTEM = "ec444: system";       // For debug logs
 static const char *TAG_TIMER = "ec444: timer"; // For timer logs
-static const char *TAG_UART = "ec444: uart";   // For UART logs
 
 // Button interrupt handler -- add to queue -- 2023: no changes
 static void IRAM_ATTR gpio_isr_handler(void *arg)
@@ -249,11 +271,11 @@ void button_task()
             sending = ~sending;
             if (sending)
             {
-                gpio_set_level(YELLOWPIN, 1);
+                state = 2;
             }
             else
             {
-                gpio_set_level(YELLOWPIN, 0);
+                state = 1;
             }
             xSemaphoreGive(mux);
             printf("Button pressed.\n");
@@ -283,8 +305,198 @@ void send_task()
     }
 }
 
+void fob_state()
+{
+    while (1)
+    {
+        // Parking Open
+        if (state == 1)
+        {
+            gpio_set_level(REDPIN, 0);
+            gpio_set_level(YELLOWPIN, 0);
+            gpio_set_level(GREENPIN, 1);
+        }
+        // Loading
+        else if (state == 2)
+        {
+            gpio_set_level(REDPIN, 0);
+            gpio_set_level(YELLOWPIN, 1);
+            gpio_set_level(GREENPIN, 0);
+        }
+        // Parking Taken
+        else if (state == 3)
+        {
+            gpio_set_level(REDPIN, 1);
+            gpio_set_level(YELLOWPIN, 0);
+            gpio_set_level(GREENPIN, 0);
+        }
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+    }
+}
+
+// UDP Server Start
+static void udp_server_task(void *pvParameters)
+{
+    char rx_buffer[128];
+    char addr_str[128];
+    int addr_family = (int)pvParameters;
+    int ip_protocol = 0;
+    struct sockaddr_in6 dest_addr;
+
+    while (1) {
+
+        if (addr_family == AF_INET) {
+            struct sockaddr_in *dest_addr_ip4 = (struct sockaddr_in *)&dest_addr;
+            dest_addr_ip4->sin_addr.s_addr = htonl(INADDR_ANY);
+            dest_addr_ip4->sin_family = AF_INET;
+            dest_addr_ip4->sin_port = htons(PORT);
+            ip_protocol = IPPROTO_IP;
+        } else if (addr_family == AF_INET6) {
+            bzero(&dest_addr.sin6_addr.un, sizeof(dest_addr.sin6_addr.un));
+            dest_addr.sin6_family = AF_INET6;
+            dest_addr.sin6_port = htons(PORT);
+            ip_protocol = IPPROTO_IPV6;
+        }
+
+        int sock = socket(addr_family, SOCK_DGRAM, ip_protocol);
+        if (sock < 0) {
+            ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
+            break;
+        }
+        ESP_LOGI(TAG, "Socket created");
+
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+        int enable = 1;
+        lwip_setsockopt(sock, IPPROTO_IP, IP_PKTINFO, &enable, sizeof(enable));
+#endif
+
+#if defined(CONFIG_EXAMPLE_IPV4) && defined(CONFIG_EXAMPLE_IPV6)
+        if (addr_family == AF_INET6) {
+            // Note that by default IPV6 binds to both protocols, it is must be disabled
+            // if both protocols used at the same time (used in CI)
+            int opt = 1;
+            setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+            setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &opt, sizeof(opt));
+        }
+#endif
+        // Set timeout
+        struct timeval timeout;
+        timeout.tv_sec = 10;
+        timeout.tv_usec = 0;
+        setsockopt (sock, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof timeout);
+
+        int err = bind(sock, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+        if (err < 0) {
+            ESP_LOGE(TAG, "Socket unable to bind: errno %d", errno);
+        }
+        ESP_LOGI(TAG, "Socket bound, port %d", PORT);
+
+        struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
+        socklen_t socklen = sizeof(source_addr);
+
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+        struct iovec iov;
+        struct msghdr msg;
+        struct cmsghdr *cmsgtmp;
+        u8_t cmsg_buf[CMSG_SPACE(sizeof(struct in_pktinfo))];
+
+        iov.iov_base = rx_buffer;
+        iov.iov_len = sizeof(rx_buffer);
+        msg.msg_control = cmsg_buf;
+        msg.msg_controllen = sizeof(cmsg_buf);
+        msg.msg_flags = 0;
+        msg.msg_iov = &iov;
+        msg.msg_iovlen = 1;
+        msg.msg_name = (struct sockaddr *)&source_addr;
+        msg.msg_namelen = socklen;
+#endif
+
+        while (1) {
+            ESP_LOGI(TAG, "Waiting for data");
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+            int len = recvmsg(sock, &msg, 0);
+#else
+            int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
+#endif
+            // Error occurred during receiving
+            if (len < 0) {
+                ESP_LOGE(TAG, "recvfrom failed: errno %d", errno);
+                break;
+            }
+            // Data received
+            else {
+                // Get the sender's ip address as string
+                if (source_addr.ss_family == PF_INET) {
+                    inet_ntoa_r(((struct sockaddr_in *)&source_addr)->sin_addr, addr_str, sizeof(addr_str) - 1);
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+                    for ( cmsgtmp = CMSG_FIRSTHDR(&msg); cmsgtmp != NULL; cmsgtmp = CMSG_NXTHDR(&msg, cmsgtmp) ) {
+                        if ( cmsgtmp->cmsg_level == IPPROTO_IP && cmsgtmp->cmsg_type == IP_PKTINFO ) {
+                            struct in_pktinfo *pktinfo;
+                            pktinfo = (struct in_pktinfo*)CMSG_DATA(cmsgtmp);
+                            ESP_LOGI(TAG, "dest ip: %s", inet_ntoa(pktinfo->ipi_addr));
+                        }
+                    }
+#endif
+                } else if (source_addr.ss_family == PF_INET6) {
+                    inet6_ntoa_r(((struct sockaddr_in6 *)&source_addr)->sin6_addr, addr_str, sizeof(addr_str) - 1);
+                }
+
+                rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string...
+                ESP_LOGI(TAG, "Received %d bytes from %s:", len, addr_str);
+                ESP_LOGI(TAG, "%s", rx_buffer);
+
+                // Alert: Park 
+                // This will park the car, change the light to red, and change the led status to 3
+
+                // Alert: Timeout
+                // This will unpark the care, change the light to green and change the led status to 2
+                if (strncmp(rx_buffer, "Alert: ", strlen("Alert: ")) == 0) {
+                    // Move the pointer to the position after "Alert: "
+                    const char *afterAlert = rx_buffer + strlen("Alert: ");
+
+                    // Check if the characters after "Alert: " are "Park Car"
+                    if (strncmp(afterAlert, "Park", strlen("Park")) == 0) {
+                        printf("Alert is for Parking the Car.\n");
+                    } else if (strncmp(afterAlert, "Timeout", strlen("Timeout")) == 0) {
+                        printf("Alert is for Timeout.\n");
+                    } else {
+                        printf("Alert is for something else.\n");
+                    }
+                } else {
+                    printf("String does not start with 'Alert: '.\n");
+                }
+
+                int err = sendto(sock, "Fob 1 data recieved", 20, 0, (struct sockaddr *)&source_addr, sizeof(source_addr));
+                if (err < 0) {
+                    ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+                    break;
+                }
+            }
+        }
+
+        if (sock != -1) {
+            ESP_LOGE(TAG, "Shutting down socket and restarting...");
+            shutdown(sock, 0);
+            close(sock);
+        }
+    }
+    vTaskDelete(NULL);
+}
+// UDP Server End
+
+
 void app_main()
 {
+    // UDP Init Functions
+    ESP_ERROR_CHECK(nvs_flash_init());
+    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    ESP_ERROR_CHECK(example_connect());
+    // UDP End Functions
+
+    // UDP Function
+    xTaskCreate(udp_server_task, "udp_server", 4096, (void*)AF_INET6, 5, NULL);
+    // UDP Function End
 
     // Mutex for current values when sending -- no changes
     mux = xSemaphoreCreateMutex();
@@ -314,6 +526,8 @@ void app_main()
     // *****Create one receiver and one transmitter (but not both)
     xTaskCreate(send_task, "uart_tx_task", 1024 * 2, NULL, configMAX_PRIORITIES, NULL);
     xTaskCreate(button_task, "button_task", 1024 * 2, NULL, configMAX_PRIORITIES, NULL);
+    xTaskCreate(fob_state, "fob_state", 1024 * 2, NULL, configMAX_PRIORITIES, NULL);
+
     while (1)
     {
         vTaskDelay(1000 / portTICK_PERIOD_MS);

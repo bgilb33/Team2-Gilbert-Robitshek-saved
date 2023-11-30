@@ -24,6 +24,29 @@
 #include "driver/mcpwm_prelude.h" // Added in 2023
 #include "driver/ledc.h"          // Added in 2023
 
+//UDP Start
+#include <string.h>
+#include <sys/param.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "esp_system.h"
+#include "esp_wifi.h"
+#include "esp_event.h"
+#include "esp_log.h"
+#include "nvs_flash.h"
+#include "esp_netif.h"
+#include "protocol_examples_common.h"
+
+#include "lwip/err.h"
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include <lwip/netdb.h>
+
+#define PORT CONFIG_EXAMPLE_PORT
+
+static const char *TAG = "example";
+//UDP End
+
 // Defines for the OLED
 #define SDA_PIN 23 // CHANGED TO OUR ESP PINOUT
 #define SCL_PIN 22 // CHANGED TO OUR ESP PINOUT
@@ -59,8 +82,7 @@ int len_out = 3;
 int fobID = -1; // IF FOB ID == -1, no fob connected
 // int led_state = 0; // 0: NONE, 1: YELLOW, 2: GREEN, 3: RED
 
-int state = S5;
-int lastState = S1;
+int state = S1;
 
 SemaphoreHandle_t mux = NULL;               // 2023: no changes
 static QueueHandle_t gpio_evt_queue = NULL; // 2023: Changed
@@ -72,8 +94,8 @@ typedef struct
 example_queue_element_t ele;
 QueueHandle_t timer_queue;
 
-// 'parked', 128x64px
-const uint8_t bitmap4[1024] = {
+// bitmaps
+const uint8_t bitmapParked[1024] = {
     0xff,
     0xff,
     0xff,
@@ -1099,9 +1121,7 @@ const uint8_t bitmap4[1024] = {
     0xff,
     0xff,
 };
-
-// 'unlocked', 128x64px
-const uint8_t bitmap5[1024] = {
+const uint8_t bitmapUnlocked[1024] = {
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
@@ -1166,7 +1186,6 @@ const uint8_t bitmap5[1024] = {
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
     0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
-
 const uint8_t bitmap1[1024] = {
     // '11', 128x64px
     0xff,
@@ -4248,6 +4267,135 @@ const uint8_t bitmap3[1024] = {
     0xff,
 };
 
+// UDP Start
+static void udp_server_task(void *pvParameters)
+{
+    char rx_buffer[128];
+    char addr_str[128];
+    int addr_family = (int)pvParameters;
+    int ip_protocol = 0;
+    struct sockaddr_in6 dest_addr;
+
+    while (1) {
+
+        if (addr_family == AF_INET) {
+            struct sockaddr_in *dest_addr_ip4 = (struct sockaddr_in *)&dest_addr;
+            dest_addr_ip4->sin_addr.s_addr = htonl(INADDR_ANY);
+            dest_addr_ip4->sin_family = AF_INET;
+            dest_addr_ip4->sin_port = htons(PORT);
+            ip_protocol = IPPROTO_IP;
+        } else if (addr_family == AF_INET6) {
+            bzero(&dest_addr.sin6_addr.un, sizeof(dest_addr.sin6_addr.un));
+            dest_addr.sin6_family = AF_INET6;
+            dest_addr.sin6_port = htons(PORT);
+            ip_protocol = IPPROTO_IPV6;
+        }
+
+        int sock = socket(addr_family, SOCK_DGRAM, ip_protocol);
+        if (sock < 0) {
+            ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
+            break;
+        }
+        ESP_LOGI(TAG, "Socket created");
+
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+        int enable = 1;
+        lwip_setsockopt(sock, IPPROTO_IP, IP_PKTINFO, &enable, sizeof(enable));
+#endif
+
+#if defined(CONFIG_EXAMPLE_IPV4) && defined(CONFIG_EXAMPLE_IPV6)
+        if (addr_family == AF_INET6) {
+            // Note that by default IPV6 binds to both protocols, it is must be disabled
+            // if both protocols used at the same time (used in CI)
+            int opt = 1;
+            setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+            setsockopt(sock, IPPROTO_IPV6, IPV6_V6ONLY, &opt, sizeof(opt));
+        }
+#endif
+        // Set timeout
+        struct timeval timeout;
+        timeout.tv_sec = 10;
+        timeout.tv_usec = 0;
+        setsockopt (sock, SOL_SOCKET, SO_RCVTIMEO, &timeout, sizeof timeout);
+
+        int err = bind(sock, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
+        if (err < 0) {
+            ESP_LOGE(TAG, "Socket unable to bind: errno %d", errno);
+        }
+        ESP_LOGI(TAG, "Socket bound, port %d", PORT);
+
+        struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
+        socklen_t socklen = sizeof(source_addr);
+
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+        struct iovec iov;
+        struct msghdr msg;
+        struct cmsghdr *cmsgtmp;
+        u8_t cmsg_buf[CMSG_SPACE(sizeof(struct in_pktinfo))];
+
+        iov.iov_base = rx_buffer;
+        iov.iov_len = sizeof(rx_buffer);
+        msg.msg_control = cmsg_buf;
+        msg.msg_controllen = sizeof(cmsg_buf);
+        msg.msg_flags = 0;
+        msg.msg_iov = &iov;
+        msg.msg_iovlen = 1;
+        msg.msg_name = (struct sockaddr *)&source_addr;
+        msg.msg_namelen = socklen;
+#endif
+
+        while (1) {
+            ESP_LOGI(TAG, "Waiting for data");
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+            int len = recvmsg(sock, &msg, 0);
+#else
+            int len = recvfrom(sock, rx_buffer, sizeof(rx_buffer) - 1, 0, (struct sockaddr *)&source_addr, &socklen);
+#endif
+            // Error occurred during receiving
+            if (len < 0) {
+                ESP_LOGE(TAG, "recvfrom failed: errno %d", errno);
+                break;
+            }
+            // Data received
+            else {
+                // Get the sender's ip address as string
+                if (source_addr.ss_family == PF_INET) {
+                    inet_ntoa_r(((struct sockaddr_in *)&source_addr)->sin_addr, addr_str, sizeof(addr_str) - 1);
+#if defined(CONFIG_LWIP_NETBUF_RECVINFO) && !defined(CONFIG_EXAMPLE_IPV6)
+                    for ( cmsgtmp = CMSG_FIRSTHDR(&msg); cmsgtmp != NULL; cmsgtmp = CMSG_NXTHDR(&msg, cmsgtmp) ) {
+                        if ( cmsgtmp->cmsg_level == IPPROTO_IP && cmsgtmp->cmsg_type == IP_PKTINFO ) {
+                            struct in_pktinfo *pktinfo;
+                            pktinfo = (struct in_pktinfo*)CMSG_DATA(cmsgtmp);
+                            ESP_LOGI(TAG, "dest ip: %s", inet_ntoa(pktinfo->ipi_addr));
+                        }
+                    }
+#endif
+                } else if (source_addr.ss_family == PF_INET6) {
+                    inet6_ntoa_r(((struct sockaddr_in6 *)&source_addr)->sin6_addr, addr_str, sizeof(addr_str) - 1);
+                }
+
+                rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string...
+                ESP_LOGI(TAG, "Received %d bytes from %s:", len, addr_str);
+                ESP_LOGI(TAG, "%s", rx_buffer);
+
+                int err = sendto(sock, rx_buffer, len, 0, (struct sockaddr *)&source_addr, sizeof(source_addr));
+                if (err < 0) {
+                    ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+                    break;
+                }
+            }
+        }
+
+        if (sock != -1) {
+            ESP_LOGE(TAG, "Shutting down socket and restarting...");
+            shutdown(sock, 0);
+            close(sock);
+        }
+    }
+    vTaskDelete(NULL);
+}
+// UDP END
+
 // Checksum -- 2023: no changes
 char genCheckSum(char *p, int len)
 {
@@ -4282,7 +4430,6 @@ bool checkCheckSum(uint8_t *p, int len)
 // MCPWM Initialize -- 2023: this is to create 38kHz carrier
 static void pwm_init()
 {
-
   // Create timer
   mcpwm_timer_handle_t pwm_timer = NULL;
   mcpwm_timer_config_t pwm_timer_config = {
@@ -4335,6 +4482,17 @@ static void pwm_init()
   ESP_ERROR_CHECK(mcpwm_timer_start_stop(pwm_timer, MCPWM_TIMER_START_NO_STOP));
 }
 
+// GPIO init for LEDs -- 2023: modified
+static void led_init()
+{
+  gpio_reset_pin(YELLOWPIN);
+  gpio_set_direction(YELLOWPIN, GPIO_MODE_OUTPUT);
+  gpio_reset_pin(REDPIN);
+  gpio_set_direction(REDPIN, GPIO_MODE_OUTPUT);
+  gpio_reset_pin(GREENPIN);
+  gpio_set_direction(GREENPIN, GPIO_MODE_OUTPUT);
+}
+
 // Configure UART -- 2023: minor changes
 static void uart_init()
 {
@@ -4356,17 +4514,6 @@ static void uart_init()
 
   // Install UART driver
   uart_driver_install(UART_NUM_1, BUF_SIZE * 2, 0, 0, NULL, 0);
-}
-
-// GPIO init for LEDs -- 2023: modified
-static void led_init()
-{
-  gpio_reset_pin(YELLOWPIN);
-  gpio_set_direction(YELLOWPIN, GPIO_MODE_OUTPUT);
-  gpio_reset_pin(REDPIN);
-  gpio_set_direction(REDPIN, GPIO_MODE_OUTPUT);
-  gpio_reset_pin(GREENPIN);
-  gpio_set_direction(GREENPIN, GPIO_MODE_OUTPUT);
 }
 
 // Receive task -- looks for Start byte then stores received values -- 2023: minor changes
@@ -4392,22 +4539,11 @@ void recv_task()
       // ESP_LOG_BUFFER_HEXDUMP("DATA IN", copied, len_out, ESP_LOG_INFO);
       if (checkCheckSum(copied, len_out))
       {
+        state = S2;
         // printf("after checksum\n");
         if (copied[1] != fobID)
         {
           fobID = copied[1];
-          if (fobID == 1)
-          {
-            state = S1;
-          }
-          else if (fobID == 2)
-          {
-            state = S2;
-          }
-          else if (fobID == 3)
-          {
-            state = S3;
-          }
         }
         printf("FOB ID: %i\n", fobID);
         uart_flush(UART_NUM_1);
@@ -4428,22 +4564,22 @@ void led_task()
   {
     // printf("FOB ID: %i\n", fobID);
     // printf("STATE: %i", state);
-    if (state == S5)
+    if (state == S1)
     {
       gpio_set_level(REDPIN, 0);
       gpio_set_level(YELLOWPIN, 0);
       gpio_set_level(GREENPIN, 1);
     }
-    else if (state == S4)
+    else if (state == S2)
     {
-      gpio_set_level(REDPIN, 1);
-      gpio_set_level(YELLOWPIN, 0);
+      gpio_set_level(REDPIN, 0);
+      gpio_set_level(YELLOWPIN, 1);
       gpio_set_level(GREENPIN, 0);
     }
     else
     {
-      gpio_set_level(REDPIN, 0);
-      gpio_set_level(YELLOWPIN, 1);
+      gpio_set_level(REDPIN, 1);
+      gpio_set_level(YELLOWPIN, 0);
       gpio_set_level(GREENPIN, 0);
     }
     vTaskDelay(10 / portTICK_PERIOD_MS);
@@ -4555,37 +4691,16 @@ void task_ssd1306_contrast(void *ignore)
   vTaskDelete(NULL);
 }
 
-void task_ssd1306_display_bitmap()
-{
+void display_bitmap(int QRtoShow){
   i2c_cmd_handle_t cmd;
 
   uint8_t zero[128];
   memset(zero, 0, sizeof(zero));
 
-  for (uint8_t i = 0; i < 8; i++)
+  switch (QRtoShow)
   {
-    cmd = i2c_cmd_link_create();
-    i2c_master_start(cmd);
-    i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
-    i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
-    i2c_master_write_byte(cmd, 0xB0 | i, true);
-
-    i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
-    i2c_master_write(cmd, zero, 128, true);
-    i2c_master_stop(cmd);
-    i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
-    i2c_cmd_link_delete(cmd);
-  }
-  vTaskDelay(10 / portTICK_PERIOD_MS);
-
-  while (1)
-  {
-
-    printf("STATE: %i\n", state);
-    if (state == S2)
-    {
-      // printf("Printing state S1\n");
-      for (uint8_t i = 0; i < 8; i++)
+  case 0: // open
+    for (uint8_t i = 0; i < 8; i++)
       {
         cmd = i2c_cmd_link_create();
         i2c_master_start(cmd);
@@ -4593,67 +4708,15 @@ void task_ssd1306_display_bitmap()
         i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
         i2c_master_write_byte(cmd, 0xB0 | i, true);
         i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
-        i2c_master_write(cmd, &bitmap2[i * 128], 128, true);
+        i2c_master_write(cmd, &bitmapUnlocked[i * 128], 128, true);
         i2c_master_stop(cmd);
         i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
         i2c_cmd_link_delete(cmd);
       }
-    }
-    else if (state == S3)
-    {
-      // printf("Printing state S2\n");
-      for (uint8_t i = 0; i < 8; i++)
-      {
-        cmd = i2c_cmd_link_create();
-        i2c_master_start(cmd);
-        i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
-        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
-        i2c_master_write_byte(cmd, 0xB0 | i, true);
-        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
-        i2c_master_write(cmd, &bitmap3[i * 128], 128, true);
-        i2c_master_stop(cmd);
-        i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
-        i2c_cmd_link_delete(cmd);
-      }
-    }
-    else if (state == S4)
-    {
-      // printf("Printing state S2\n");
-      for (uint8_t i = 0; i < 8; i++)
-      {
-        cmd = i2c_cmd_link_create();
-        i2c_master_start(cmd);
-        i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
-        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
-        i2c_master_write_byte(cmd, 0xB0 | i, true);
-        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
-        i2c_master_write(cmd, &bitmap4[i * 128], 128, true);
-        i2c_master_stop(cmd);
-        i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
-        i2c_cmd_link_delete(cmd);
-      }
-    }
-    else if (state == S5)
-    {
-      // printf("Printing state S2\n");
-      for (uint8_t i = 0; i < 8; i++)
-      {
-        cmd = i2c_cmd_link_create();
-        i2c_master_start(cmd);
-        i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
-        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
-        i2c_master_write_byte(cmd, 0xB0 | i, true);
-        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
-        i2c_master_write(cmd, &bitmap5[i * 128], 128, true);
-        i2c_master_stop(cmd);
-        i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
-        i2c_cmd_link_delete(cmd);
-      }
-    }
-    else if (state == S1)
-    {
-      // printf("Printing state S0\n");
-      for (uint8_t i = 0; i < 8; i++)
+    break;
+  
+  case 1: // bitmap 1
+    for (uint8_t i = 0; i < 8; i++)
       {
         cmd = i2c_cmd_link_create();
         i2c_master_start(cmd);
@@ -4666,6 +4729,118 @@ void task_ssd1306_display_bitmap()
         i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
         i2c_cmd_link_delete(cmd);
       }
+    break;
+
+  case 2: // bitmap 2
+    for (uint8_t i = 0; i < 8; i++)
+      {
+        cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
+        i2c_master_write_byte(cmd, 0xB0 | i, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
+        i2c_master_write(cmd, &bitmap2[i * 128], 128, true);
+        i2c_master_stop(cmd);
+        i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
+        i2c_cmd_link_delete(cmd);
+      }
+    break;
+
+  case 3: // bitmap 3
+    for (uint8_t i = 0; i < 8; i++)
+      {
+        cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
+        i2c_master_write_byte(cmd, 0xB0 | i, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
+        i2c_master_write(cmd, &bitmap3[i * 128], 128, true);
+        i2c_master_stop(cmd);
+        i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
+        i2c_cmd_link_delete(cmd);
+      }
+    break;
+
+  case 4: // parked
+    for (uint8_t i = 0; i < 8; i++)
+      {
+        cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
+        i2c_master_write_byte(cmd, 0xB0 | i, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
+        i2c_master_write(cmd, &bitmapParked[i * 128], 128, true);
+        i2c_master_stop(cmd);
+        i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
+        i2c_cmd_link_delete(cmd);
+      }
+    break;
+  
+  case 5: // zero lol
+    for (uint8_t i = 0; i < 8; i++)
+      {
+        cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (OLED_I2C_ADDRESS << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_CMD_SINGLE, true);
+        i2c_master_write_byte(cmd, 0xB0 | i, true);
+        i2c_master_write_byte(cmd, OLED_CONTROL_BYTE_DATA_STREAM, true);
+        i2c_master_write(cmd, zero, 128, true);
+        i2c_master_stop(cmd);
+        i2c_master_cmd_begin(I2C_NUM_0, cmd, 10 / portTICK_PERIOD_MS);
+        i2c_cmd_link_delete(cmd);
+      }
+    break;
+  default:
+    break;
+  }
+
+
+
+}
+
+void task_ssd1306_display_bitmap()
+{
+  i2c_cmd_handle_t cmd;
+
+  uint8_t zero[128];
+  memset(zero, 0, sizeof(zero));
+
+  display_bitmap(5);
+  vTaskDelay(10 / portTICK_PERIOD_MS);
+
+  while (1)
+  {
+    if (state == S1) //Open
+    {
+      display_bitmap(0);
+      vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+    else if (state == S2) // Loading
+    {
+      switch (fobID)
+      {
+        case 1:
+          display_bitmap(1);
+          break;
+        case 2:
+          display_bitmap(2);
+          break;
+        case 3:
+          display_bitmap(3);
+          break;
+        
+        default:
+          break;
+      }
+      vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+    else if (state == S3) // Parked
+    {
+      display_bitmap(4);
     }
     vTaskDelay(10 / portTICK_PERIOD_MS);
   }
@@ -4673,6 +4848,14 @@ void task_ssd1306_display_bitmap()
 
 void app_main()
 {
+  // UDP
+    ESP_ERROR_CHECK(nvs_flash_init());
+    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    ESP_ERROR_CHECK(example_connect());
+
+    xTaskCreate(udp_server_task, "udp_server", 4096, (void*)AF_INET6, 5, NULL);
+
   // OLED Calls
   i2c_master_init();
   ssd1306_init();
@@ -4689,13 +4872,4 @@ void app_main()
   xTaskCreate(led_task, "led_task", 1024 * 4, NULL, configMAX_PRIORITIES, NULL);
   xTaskCreate(task_ssd1306_display_bitmap, "ssd1306_display_bitmap", 2048, NULL, 6, NULL);
 
-  // while (1)
-  // {
-
-  //   xTaskCreate(&task_ssd1306_display_clear, "ssd1306_display_clear", 2048, NULL, 6, NULL);
-  //   vTaskDelay(10 / portTICK_PERIOD_MS);
-  //   xTaskCreate(&task_ssd1306_display_bitmap, "ssd1306_display_bitmap", 2048, NULL, 6, NULL);
-
-  //   vTaskDelay(10 / portTICK_PERIOD_MS);
-  // }
 }
