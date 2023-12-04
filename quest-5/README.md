@@ -61,6 +61,6 @@ For the fob and the meter we used a state machine to keep track of the state of 
 <!-- ## Sketches/Diagrams -->
 
 ### Supporting Artifacts
-- [Link to video technical presentation](). Not to exceed 120s
-- [Link to video demo](). Not to exceed 120s
+- [Link to video technical presentation](https://drive.google.com/file/d/1mLaIuK4o-TNCTuqJSkAK7iVZUW_xHEZl/view?usp=sharing).
+- [Link to video demo](https://drive.google.com/file/d/10m33f4BUG5leeTuqzZNhOuBv_DvpJjDm/view?usp=sharing). 
 
