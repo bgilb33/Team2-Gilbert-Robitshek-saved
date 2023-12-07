@@ -1,0 +1,72 @@
+/* device-config.component.css */
+
+.config-header {
+    margin: 40px;
+}
+
+.config-container {
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.device-container {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 310px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.device-info {
+    color: #333;
+}
+
+.device-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-button,
+.delete-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #369;
+    color: #fff;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}
+
+.add-button {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    height: 330px;
+    cursor: pointer;
+    font-size: 50px;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.add-button:hover {
+background-color: black;
+color: white;
+}

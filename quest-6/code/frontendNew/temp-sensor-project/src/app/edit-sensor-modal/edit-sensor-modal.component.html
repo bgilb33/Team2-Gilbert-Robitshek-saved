@@ -1,0 +1,30 @@
+
+<div class="modal-overlay">
+  <div class="modal-content">
+    <h2>Edit Sensor</h2>
+    <form>
+      <div class="form-group">
+        <label for="editedName"> Device Name:</label>
+        <input type="text" id="editedName" name="editedName" [(ngModel)]="editedSensor.DeviceName" placeholder="{{ editedSensor.DeviceName }}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="editedFreq">Frequency:</label>
+        <input type="number" id="editedFreq" name="editedFreq" [(ngModel)]="editedSensor.Frequency" placeholder="{{ editedSensor.Frequency }}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="editedFreqUnit">Frequency Unit:</label>
+        <select id="editedFreqUnit" name="editedFreqUnit" [(ngModel)]="editedSensor.Units" [ngModelOptions]="{standalone: true}" required>
+          <option value="Minute" [selected]="editedSensor.Units === 'Minute'">Minute</option>
+          <option value="Hour" [selected]="editedSensor.Units === 'Hour'">Hour</option>
+        </select>
+      </div>
+
+      <div class="button-group">
+        <button type="button" class="save-button" (click)="saveChanges()">Save Changes</button>
+        <button type="button" class="cancel-button" (click)="closeModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="modal-overlay">
+    <div class="modal-content">
+        <h2>Delete Alarm</h2>
+        <p>Are you sure you want to delete alarm: {{ deletedSensor.Name }}?</p>
+        <div class="button-group">
+            <button type="button" class="delete-button" (click)="deleteSensor()">Delete</button>
+            <button type="button" class="cancel-button" (click)="closeModal()">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- edit-alarm-modal.component.html -->
+
+<div class="modal-overlay">
+  <div class="modal-content">
+    <h2>Edit Alarm</h2>
+    <p>Name: {{ editedAlarm.Name }}</p>
+    <form>
+      <div class="form-group">
+        <label for="editedSensorType">Unit:</label>
+        <select id="editedSensorType" name="editedSensorType" [(ngModel)]="editedAlarm.SensorType" [ngModelOptions]="{standalone: true}" required>
+          <option value="Temperature" [selected]="editedAlarm.SensorType === 'Temperature'">Temperature</option>
+          <option value="Humidity" [selected]="editedAlarm.SensorType === 'Humidity'">Humidity</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="editedCompare">Compare:</label>
+        <select id="editedCompare" name="editedCompare" [(ngModel)]="editedAlarm.Compare" [ngModelOptions]="{standalone: true}" required>
+          <option value=">" [selected]="editedAlarm.Compare === '>'">Greater Than</option>
+          <option value="<" [selected]="editedAlarm.Compare === '<'">Less Than</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="editedThreshold">Threshold:</label>
+        <input type="text" id="editedThreshold" name="editedThreshold" [(ngModel)]="editedAlarm.Threshold" placeholder="{{ editedAlarm.Threshold }}" required>
+      </div>
+
+      <div class="button-group">
+        <button type="button" class="save-button" (click)="saveChanges()">Save Changes</button>
+        <button type="button" class="cancel-button" (click)="closeModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<app-nav-bar></app-nav-bar>
+<div class="lab-header">
+  <h1 class="lab-name">{{ labName }}</h1>
+  <h1 class="devices-active">Devices Active: {{ activeDevices }}</h1>
+</div>
+<div class="sensor-wrapper">
+  <div *ngFor="let sensor of tempSensors" class="sensor-container">
+    <h2>Name: {{ sensor.Name }}</h2>
+    <p>Temperature: {{ sensor.Temperature }}</p>
+    <p>Humidity: {{ sensor.Humidity }}</p>
+  </div>
+  <button>+</button>
+</div>

@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+<div class="alarm-header">
+    <h1>Current Alarms:</h1>
+</div>
+<div class="alarm-wrapper">
+    <div *ngFor="let alarm of alarms" class="alarm-container">
+        <div class="device-info">
+            <h2>Device: {{ alarm.DeviceName }}</h2>
+            <p>Send alarm if: {{ alarm.SensorType }} {{ alarm.Compare }} {{ alarm.Threshold }} {{ alarm.SensorType == "Temperature" ? '&deg;C' : '%' }}</p>
+            <p>Status: {{ alarm.Status}}</p>
+        </div>
+        <div class="alarm-actions">
+            <button class="edit-button" (click)="editAlarm(alarm)">Edit</button>
+            <button class="delete-button" (click)="deleteAlarm(alarm)">Delete</button>
+        </div>
+    </div>
+    <button class="add-button" (click)="openAlarmModal()">+</button>
+</div>
+
+<ng-template #editAlarmModal let-c="close" let-d="dismiss">
+    <app-edit-alarm-modal
+        [editedAlarm]="editedAlarm"
+        (saveChangesEvent)="saveChanges($event)"
+        (closeModalEvent)="closeModal()"
+    ></app-edit-alarm-modal>
+</ng-template>

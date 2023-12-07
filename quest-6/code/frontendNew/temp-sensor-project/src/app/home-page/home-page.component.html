@@ -1,0 +1,17 @@
+<app-nav-bar></app-nav-bar>
+<div class="lab-header">
+  <h1 class="lab-name">{{ labName }}</h1>
+  <h1 class="devices-active">Devices Active: {{ tempSensors.length }}</h1>
+</div>
+<div class="sensor-wrapper">
+  <div *ngFor="let sensor of tempSensors" class="sensor-container">
+    <div class="sensor-info">
+      <h2>Name: {{ sensor.DeviceName }}</h2>
+      <p>Temperature: {{ sensor.Temperature }}&deg;C</p>
+      <p>Humidity: {{ sensor.Humidity }}%</p>
+      <p>Last updated: {{ convertEpochToDateTime(sensor.Time) | date:'short' }}</p>
+    </div>
+    <div class="sensor-actions">
+    </div>
+  </div>
+</div>

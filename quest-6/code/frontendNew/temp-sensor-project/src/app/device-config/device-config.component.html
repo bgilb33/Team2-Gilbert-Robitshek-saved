@@ -1,0 +1,36 @@
+<!-- device-config.component.html -->
+
+<app-nav-bar></app-nav-bar>
+<div class="config-header">
+    <h1>Available Devices:</h1>
+</div>
+<div class="config-container">
+    <div *ngFor="let sensor of tempSensors" class="device-container">
+        <div class="device-info">
+            <h2>Name: {{ sensor.DeviceName }}</h2>
+            <p>Sample Frequency: {{ sensor.Frequency }}</p>
+            <p>Sample Units: {{ sensor.Units}}</p>
+        </div>
+        <div class="device-actions">
+            <button class="edit-button" (click)="editDevice(sensor)">Edit</button>
+            <button class="delete-button" (click)="deleteDevice(sensor)">Delete</button>
+        </div>
+    </div>
+    <!-- <button class="add-button">+</button> -->
+</div>
+
+<ng-template #editSensorModal let-c="close" let-d="dismiss">
+    <app-edit-sensor-modal
+        [editedSensor]="editedSensor"
+        (saveChangesEvent)="saveChanges($event)"
+        (closeModalEvent)="closeModal()"
+    ></app-edit-sensor-modal>
+</ng-template>
+
+<ng-template #deleteSensorModal let-c="close" let-d="dismiss">
+    <app-delete-sensor-modal
+        [deletedSensor]="deletedSensor"
+        (deleteSensorEvent)="deleteSensor()"
+        (closeModalEvent)="closeModal()"
+    ></app-delete-sensor-modal>
+</ng-template>
