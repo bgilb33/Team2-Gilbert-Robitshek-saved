@@ -47,8 +47,8 @@ We used google slides to draft the initial proof of concept. As can be seen abov
 The backend structure is shown above. The system can be broken down into three parts. On the bottom, we have the ESP32 sensors. In the middle we have the raspberry pi running a few node scripts and the broker. Finally we have the cloud layer which hosts the web application.
 
 ### Supporting Artifacts
-- [Link to video technical presentation](). Not to exceed 120s
-- [Link to video demo](). Not to exceed 120s
+- [Link to video technical presentation](https://drive.google.com/file/d/1N9WBhp2ar-CIXDCniFfqR3rF6JSaDKhe/view?usp=sharing).
+- [Link to video demo](https://drive.google.com/file/d/17sFJTIUjfslip1hy_dq-g2xbJMmLG3lS/view?usp=sharing).
 
 
 ### Modules, Tools, Source Used Including Attribution
